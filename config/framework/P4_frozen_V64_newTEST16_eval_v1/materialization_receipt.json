@@ -1,0 +1,208 @@
+{
+  "schema": "V64_reserved_TEST16_evaluation_materialization_receipt_v1",
+  "complete": true,
+  "evaluation_only": true,
+  "public_hold_gate_passed": false,
+  "partition": {
+    "path": "config/framework/P4_new_heldout_TEST_partition_v59_20261103_v1.json",
+    "sha256": "c917d28f7889258b8961a3e462bf511dd9819d1ee01df9f63951998b15c59234"
+  },
+  "protocol": {
+    "path": "artifacts/framework/local_mpc_20261102/V64_reserved_TEST16_evaluation_only_protocol_v1/protocol.json",
+    "sha256": "17ed236d7da53c7b04a552e237e452d0415fd0a7adfd0d3f5ede6bc9a9962136"
+  },
+  "authorization": {
+    "path": "artifacts/framework/local_mpc_20261102/V64_TEST16_root_evaluation_authorization_v1.json",
+    "sha256": "4d95584b54b61d8a7db7d282163dbe43567176371007b2827ac706713597ea7d"
+  },
+  "configs": [
+    {
+      "id": "00_test_static",
+      "parent_id": "p4_new_heldout_TEST_v59_20261103_00_seed261103500",
+      "seed": 261103500,
+      "scene": "static",
+      "canonical_motion_sha256": "d0683c9bd653e6740c3e95b7441e83611b324d5d5cd8f2986b5a82e36623e5a6",
+      "config": {
+        "path": "config/framework/P4_frozen_V64_newTEST16_eval_v1/00_test_static.json",
+        "sha256": "f0e4fc0724aae8d37b9db4f5d609ab57d79a72b9736edf016f1791c8758fbf0b"
+      }
+    },
+    {
+      "id": "01_test_static",
+      "parent_id": "p4_new_heldout_TEST_v59_20261103_01_seed261103501",
+      "seed": 261103501,
+      "scene": "static",
+      "canonical_motion_sha256": "1a524eac430e2d05f90bfdb46f8b513375477e2148fecc68d91354e631526a1c",
+      "config": {
+        "path": "config/framework/P4_frozen_V64_newTEST16_eval_v1/01_test_static.json",
+        "sha256": "c34a49c4a3466e5385ebbc44bed08cc0eff16e3fbca0511cf33733cdd080ecd3"
+      }
+    },
+    {
+      "id": "02_test_uniform",
+      "parent_id": "p4_new_heldout_TEST_v59_20261103_02_seed261103502",
+      "seed": 261103502,
+      "scene": "uniform",
+      "canonical_motion_sha256": "178a925c52a6a3405c4beea2190595af3859d6300d76a1e6654985ca72807b52",
+      "config": {
+        "path": "config/framework/P4_frozen_V64_newTEST16_eval_v1/02_test_uniform.json",
+        "sha256": "10d4c33e7d50d5cd77083c71d511efa4775ac9e66a7d5b0c0750c96209f9ee11"
+      }
+    },
+    {
+      "id": "03_test_uniform",
+      "parent_id": "p4_new_heldout_TEST_v59_20261103_03_seed261103503",
+      "seed": 261103503,
+      "scene": "uniform",
+      "canonical_motion_sha256": "8c2335cfc81bd3e909745520a95554053c3f3d587730c6f8d665871c58ca6a9a",
+      "config": {
+        "path": "config/framework/P4_frozen_V64_newTEST16_eval_v1/03_test_uniform.json",
+        "sha256": "86e39e1a7a09685c3456f0ee5cbe9ab7ef840ff6fdff40f2fa8807401ce52296"
+      }
+    },
+    {
+      "id": "04_test_uniform",
+      "parent_id": "p4_new_heldout_TEST_v59_20261103_04_seed261103504",
+      "seed": 261103504,
+      "scene": "uniform",
+      "canonical_motion_sha256": "ad9081ae1d4972a6a0d8c53ecdc84f610d7fcc6a87dc187988f21a7ea40d3411",
+      "config": {
+        "path": "config/framework/P4_frozen_V64_newTEST16_eval_v1/04_test_uniform.json",
+        "sha256": "7f16921028f6020adec8374b5b4af0681071d086b65dd8ef1a903f48324bf307"
+      }
+    },
+    {
+      "id": "05_test_uniform",
+      "parent_id": "p4_new_heldout_TEST_v59_20261103_05_seed261103505",
+      "seed": 261103505,
+      "scene": "uniform",
+      "canonical_motion_sha256": "171500957d15b5ed974cc99775bb9af88ace99b1a118ba76ab24c8cdd61b6142",
+      "config": {
+        "path": "config/framework/P4_frozen_V64_newTEST16_eval_v1/05_test_uniform.json",
+        "sha256": "b2f5884226983d9de0761be89e17b339026601ec431023b4c459bf1094dd2929"
+      }
+    },
+    {
+      "id": "06_test_uniform",
+      "parent_id": "p4_new_heldout_TEST_v59_20261103_06_seed261103506",
+      "seed": 261103506,
+      "scene": "uniform",
+      "canonical_motion_sha256": "0fb0382e4bfbcd1ee4d90b9d1c041c267d1345a0ce4066151617493136fb4c59",
+      "config": {
+        "path": "config/framework/P4_frozen_V64_newTEST16_eval_v1/06_test_uniform.json",
+        "sha256": "a4673ca4eb2f19464d84c1c8d916381d90b8353556f7ec10047b5892f0fbf7c0"
+      }
+    },
+    {
+      "id": "07_test_uniform",
+      "parent_id": "p4_new_heldout_TEST_v59_20261103_07_seed261103507",
+      "seed": 261103507,
+      "scene": "uniform",
+      "canonical_motion_sha256": "d0e85ccc7aba95ddf810b8a7abc0b1f11d9deb681f1b08ace0efd7a313e4137f",
+      "config": {
+        "path": "config/framework/P4_frozen_V64_newTEST16_eval_v1/07_test_uniform.json",
+        "sha256": "d94f24127a4e613e9a968c43705da089757fdff95d0fcb716bb849b7043f678d"
+      }
+    },
+    {
+      "id": "08_test_uniform",
+      "parent_id": "p4_new_heldout_TEST_v59_20261103_08_seed261103508",
+      "seed": 261103508,
+      "scene": "uniform",
+      "canonical_motion_sha256": "c2603c6a1c4bb12b4cf77a3837f1c52fcbde1382b45fbc35ff8201dabc32a547",
+      "config": {
+        "path": "config/framework/P4_frozen_V64_newTEST16_eval_v1/08_test_uniform.json",
+        "sha256": "ec463e0c63140898f2d5b6cc812d490d07efc34632b7797b499b92996d8d3574"
+      }
+    },
+    {
+      "id": "09_test_uniform",
+      "parent_id": "p4_new_heldout_TEST_v59_20261103_09_seed261103509",
+      "seed": 261103509,
+      "scene": "uniform",
+      "canonical_motion_sha256": "543aae80863ce0167941646457b8991f99b6b5ebd9781b77592db0f4424e8ebf",
+      "config": {
+        "path": "config/framework/P4_frozen_V64_newTEST16_eval_v1/09_test_uniform.json",
+        "sha256": "e194ae498594f4b6d203ba194c0a011ae6f6526e1638f7f90f9d4fa39121dc0e"
+      }
+    },
+    {
+      "id": "10_test_speed_change",
+      "parent_id": "p4_new_heldout_TEST_v59_20261103_10_seed261103510",
+      "seed": 261103510,
+      "scene": "speed_change",
+      "canonical_motion_sha256": "ee8c11cc45a37eee8985bf8960ec9c6c7d88f50de199e3329addd45b6b8cd381",
+      "config": {
+        "path": "config/framework/P4_frozen_V64_newTEST16_eval_v1/10_test_speed_change.json",
+        "sha256": "928facf507f3d5e5192f15fb4abee4e04ded584b36cc5e3ca95b57a73f1b140f"
+      }
+    },
+    {
+      "id": "11_test_speed_change",
+      "parent_id": "p4_new_heldout_TEST_v59_20261103_11_seed261103511",
+      "seed": 261103511,
+      "scene": "speed_change",
+      "canonical_motion_sha256": "2084837544b3d02ac2c017d3d2f4809a4e5388c51b858d7b71203797ea5f49f4",
+      "config": {
+        "path": "config/framework/P4_frozen_V64_newTEST16_eval_v1/11_test_speed_change.json",
+        "sha256": "735d7302b4d91263572369fd655bf0b05ce1ec8db19bbaf3e54061876efa52a5"
+      }
+    },
+    {
+      "id": "12_test_speed_change",
+      "parent_id": "p4_new_heldout_TEST_v59_20261103_12_seed261103512",
+      "seed": 261103512,
+      "scene": "speed_change",
+      "canonical_motion_sha256": "646aa93e234c2027f4e81801d55ebbb8a27f0e338cc1b971ab997a561b40a29b",
+      "config": {
+        "path": "config/framework/P4_frozen_V64_newTEST16_eval_v1/12_test_speed_change.json",
+        "sha256": "2bb1ef3a2b5f4acb45761d73f69e78338f582546668b5d6027fda2f4d700d598"
+      }
+    },
+    {
+      "id": "13_test_speed_change",
+      "parent_id": "p4_new_heldout_TEST_v59_20261103_13_seed261103513",
+      "seed": 261103513,
+      "scene": "speed_change",
+      "canonical_motion_sha256": "5da0804c5a11efc1c50f54a5e8d902a87a4059331397b3c246e70da6494fff37",
+      "config": {
+        "path": "config/framework/P4_frozen_V64_newTEST16_eval_v1/13_test_speed_change.json",
+        "sha256": "ee8c915b99dcf5e5080bc4cdb757f841df5ee1ce4116a9c98826694b4e39fec1"
+      }
+    },
+    {
+      "id": "14_test_speed_change",
+      "parent_id": "p4_new_heldout_TEST_v59_20261103_14_seed261103514",
+      "seed": 261103514,
+      "scene": "speed_change",
+      "canonical_motion_sha256": "d4bb38fb4575a875a058335a08f78b50ef9eb06c572d7f7686dee70b1043958d",
+      "config": {
+        "path": "config/framework/P4_frozen_V64_newTEST16_eval_v1/14_test_speed_change.json",
+        "sha256": "48aa911b7540c4e0ecdf7d2b4082cfdbfc11fc8980d743378793b63708e26e5f"
+      }
+    },
+    {
+      "id": "15_test_speed_change",
+      "parent_id": "p4_new_heldout_TEST_v59_20261103_15_seed261103515",
+      "seed": 261103515,
+      "scene": "speed_change",
+      "canonical_motion_sha256": "1dfa4b193ae4551c0cb240e7d29a51be80abed305b8879cc231a0ce321e06ba3",
+      "config": {
+        "path": "config/framework/P4_frozen_V64_newTEST16_eval_v1/15_test_speed_change.json",
+        "sha256": "982f3eb377ebcb49966822c55210d42e1e081b1bbd27d4dc006eff855dcdb830"
+      }
+    }
+  ],
+  "case_configs_generated": true,
+  "TEST_data_generated": false,
+  "Native_started": false,
+  "all16_regardless_of_task_outcomes": true,
+  "pending_materialization": {
+    "path": "config/framework/P4_frozen_V64_newTEST16_eval_v1/materialization_receipt.pending_freeze.json",
+    "sha256": "c02f9a2805bfecca85556916bcb8a0a3ca971bd46c51e598b4139bf4ebfda7a1"
+  },
+  "source_freeze": {
+    "path": "artifacts/framework/local_mpc_20261102/V64_frozen_TEST16_preparation_v1/execution_source_freeze.json",
+    "sha256": "8c6dc29ced46eeddc6fe0469d218ebc1a903eccde1746636f057042aaba1c4e1"
+  }
+}

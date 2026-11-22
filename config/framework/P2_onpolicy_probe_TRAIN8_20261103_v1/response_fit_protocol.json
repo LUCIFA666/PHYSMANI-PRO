@@ -1,0 +1,36 @@
+{
+  "schema": "P2_onpolicy_probe_response_predeclared_fit_protocol_v1",
+  "plan": "config/framework/P2_onpolicy_probe_TRAIN8_20261103_v1/plan.json",
+  "plan_sha256": "ffb27596d46f63afefb309b29f48986954534ea0f8ed39312f2026ab1e0f07d0",
+  "assigned_before_collection": true,
+  "fit_parent_ids": [
+    "p2_onpolicy_probe_train_20261103_00_seed261103400",
+    "p2_onpolicy_probe_train_20261103_02_seed261103402",
+    "p2_onpolicy_probe_train_20261103_03_seed261103403",
+    "p2_onpolicy_probe_train_20261103_04_seed261103404",
+    "p2_onpolicy_probe_train_20261103_06_seed261103406",
+    "p2_onpolicy_probe_train_20261103_07_seed261103407"
+  ],
+  "internal_val_parent_ids": [
+    "p2_onpolicy_probe_train_20261103_01_seed261103401",
+    "p2_onpolicy_probe_train_20261103_05_seed261103405"
+  ],
+  "internal_val_is_official_VAL": false,
+  "no_development_VAL_or_TEST_for_fitting": true,
+  "model_baseline": "frozen B43features/ridge1e-3; old weights preserved",
+  "ridge": 0.001,
+  "native_dt": 0.05,
+  "fit_target": "actual_robot_q_next_minus_q",
+  "normalization_fit_split": "fit_parents_only",
+  "parent_balanced_weights": true,
+  "probe_weighting": "within each fit parent give equal total mass to active verification probe and other samples when both exist; no positive success filtering",
+  "candidate_weights_frozen": true,
+  "checkpoint_selection": "single predeclared fit; internal_val reporting only",
+  "report_required": [
+    "50ms conditional q and FK errors",
+    "regenerated-reference 800ms multi-step q/FK error",
+    "actual public TCP minus static PoE FK residual",
+    "probe subset and all transitions separately",
+    "number of parents and available probe sequences, no success-only filtering"
+  ]
+}

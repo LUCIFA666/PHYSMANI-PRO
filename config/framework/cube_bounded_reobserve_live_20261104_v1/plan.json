@@ -1,0 +1,97 @@
+{
+  "schema": "Cube_bounded_reobserve_matched_native_development_20261104_v1",
+  "reference": {
+    "path": "config/framework/P4_position_dwell_v72_development_canaries_v1/00_val_static.json",
+    "sha256": "ebc11b7da749556482bc0167d8683714acec9dd29816d39122386a066362fa13"
+  },
+  "baseline_execution_plan": {
+    "path": "config/framework/cube_v72_live_20261104_v1/plan.json",
+    "sha256": "7d6bd9f31282995f64e418994b720405de1e98a7c8a50928320760e7914a0f3b"
+  },
+  "preparation_only": true,
+  "execution_authorized": false,
+  "formal_VAL_TEST": false,
+  "native_repo": "/home/ubuntu/\u684c\u9762/phsimani/PhysMani",
+  "profiles_order": [
+    "corrected_matched_reobserve"
+  ],
+  "cases": [
+    {
+      "id": "ordinary_00",
+      "task": "pick_moving_target_on_the_table",
+      "seed": 2611041100,
+      "variation": 0,
+      "simulation_seconds": 8.0,
+      "budget_ticks": 160,
+      "calibration_episode": "/home/ubuntu/\u684c\u9762/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/pick_moving_target_on_the_table/all_variations/episodes/episode0/data.h5",
+      "native_source_sha256": "39486843383652996da289048d8d5220e27c64ba55821dc00f4e536ab46f36cd",
+      "native_scene_sha256": "65a2ce9740f2e6104082aa6a541b88eaefdadf20f8dc5880db67d7b434a5337a"
+    },
+    {
+      "id": "ordinary_01",
+      "task": "pick_moving_target_on_the_table",
+      "seed": 2611041101,
+      "variation": 0,
+      "simulation_seconds": 8.0,
+      "budget_ticks": 160,
+      "calibration_episode": "/home/ubuntu/\u684c\u9762/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/pick_moving_target_on_the_table/all_variations/episodes/episode0/data.h5",
+      "native_source_sha256": "39486843383652996da289048d8d5220e27c64ba55821dc00f4e536ab46f36cd",
+      "native_scene_sha256": "65a2ce9740f2e6104082aa6a541b88eaefdadf20f8dc5880db67d7b434a5337a"
+    },
+    {
+      "id": "highspeed_00",
+      "task": "pick_moving_target_on_the_table_high_speed",
+      "seed": 2611041110,
+      "variation": 0,
+      "simulation_seconds": 8.0,
+      "budget_ticks": 160,
+      "calibration_episode": "/home/ubuntu/\u684c\u9762/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/pick_moving_target_on_the_table_high_speed/all_variations/episodes/episode100/data.h5",
+      "native_source_sha256": "51a16de1de230213e9bf798411c0286baa9125330cb0f344790891a9c3292bb7",
+      "native_scene_sha256": "8c0c2ca1537344cc7e7cf8292324bad1fc3e652cf655141169c750fd3479ab4c"
+    },
+    {
+      "id": "highspeed_01",
+      "task": "pick_moving_target_on_the_table_high_speed",
+      "seed": 2611041111,
+      "variation": 0,
+      "simulation_seconds": 8.0,
+      "budget_ticks": 160,
+      "calibration_episode": "/home/ubuntu/\u684c\u9762/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/pick_moving_target_on_the_table_high_speed/all_variations/episodes/episode100/data.h5",
+      "native_source_sha256": "51a16de1de230213e9bf798411c0286baa9125330cb0f344790891a9c3292bb7",
+      "native_scene_sha256": "8c0c2ca1537344cc7e7cf8292324bad1fc3e652cf655141169c750fd3479ab4c"
+    }
+  ],
+  "all_cases_regardless_of_task_outcome": true,
+  "retry_or_replacement": false,
+  "control_policy": "Original matched corrected V72 plus explicitly bounded preclose reobserve on UNAVAILABLE/actionNone; accepted two-tick retreat REPLACES hold; original proof/closed attempts never reset",
+  "native_motion": "native-generated actual task original init_episode/task.step; no customuniform overwrite",
+  "runtime_profile": "current_runtime_after_host_library_update; old_v820_OS_equivalence_not_claimed",
+  "motion_forecast": {
+    "checkpoint": null,
+    "sha256": null,
+    "evidence": [],
+    "status": "pending_Root_actual_motion_v2_selected; no old checkpoint substitution"
+  },
+  "candidate_profiles": {
+    "corrected_matched_reobserve": {
+      "checkpoint": null,
+      "sha256": null,
+      "evidence": [],
+      "status": "pending_actual_matched_candidate_fit_with_new_motion_checkpoint; no substitution"
+    }
+  },
+  "source_archive_contract": "all repository code/models/plans canonical ROOT-relative; seven external Native sources separate and never passed to repository archive",
+  "execution_scope": "Prepared only; actual motion/candidate checkpoints and Root final sourcefreeze required. Four fixed generated development cases, one Native process at a time, no retry or formal VAL/TEST.",
+  "reobserve_protocol": {
+    "maximum_reobserve_cycles": 3,
+    "joint_retreat_cap_rad": 0.03,
+    "hint_horizon_seconds": 0.15,
+    "actual50ms_frames_before_new_close": 5,
+    "only_when_original_action_none_and_mode_unavailable": true,
+    "original_endpoint_and_seven_path_qualification": true,
+    "one_original_two_tick_executor_call_per_cycle": true,
+    "OPEN_no_attempt_no_confirmed_only": true,
+    "measurement_or_Sphere_rewritten": false,
+    "original_closed_or_failed_proof_owner_reset": false
+  }
+}

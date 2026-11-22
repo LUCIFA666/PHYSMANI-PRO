@@ -1,0 +1,26 @@
+{
+  "schema": "large_network_training_continuation_20261104_v1_QA_admission",
+  "approved": true,
+  "visually_inspected": true,
+  "capture_plan": {
+    "path": "/home/ubuntu/桌面/our-mani/config/framework/current_cube_dual_crop_CF_pilot40_cap12_20261104_v3/plan.json",
+    "sha256": "b62ffa6fe4e827d492bda4bbc7a668669be98ca59cdaf42e9b0b4cf8102a8d12"
+  },
+  "report": {
+    "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/large_network_training_continuation_run_v1/artifacts/CF_first_fit_QA/report.json",
+    "sha256": "0bbc638fd0e26b416b2dacaa3f6f9aaedc97d06e8d7c1e11e0bcca705d280f29"
+  },
+  "figure": {
+    "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/large_network_training_continuation_run_v1/artifacts/CF_first_fit_QA/RGBD_owner_dual_crop_QA.png",
+    "sha256": "7fceb0f2f80559972e17cd3016e4287e7af27a593d6cf2dcf50b80094716005f"
+  },
+  "utc": "2026-11-03T17:16:46.784060+00:00",
+  "target_counts": {
+    "-1": 0,
+    "0": 3,
+    "1": 10
+  },
+  "all13_shots_retained": true,
+  "normal_renderer_restoration_checks_passed": true,
+  "model_accuracy_or_visibility_qualification_claim": false
+}

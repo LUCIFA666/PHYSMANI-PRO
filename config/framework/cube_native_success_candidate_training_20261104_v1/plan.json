@@ -1,0 +1,45 @@
+{
+  "schema": "cube_revision_serial_phase_20261104_v2",
+  "phase_id": "cube_native_success_candidate_fit_20261104_v1",
+  "method_sources": {
+    "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/cube_native_success_candidate_training_preparation_v1/method_sources.json",
+    "sha256": "4ff92dd3ff7e95f575d0f6f2d76a6e09a4a147155c6b7b84e62d1c810bae04ac"
+  },
+  "output_root": "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/cube_native_success_candidate_training_run_v1",
+  "jobs": [
+    {
+      "id": "candidate_fit150",
+      "output": "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/cube_native_success_candidate_training_run_v1/artifacts/fit150",
+      "native": false,
+      "cpu": false,
+      "argv": [
+        "scripts/train_cube_matched_candidate_20261104_v1.py",
+        "--plan",
+        "/home/ubuntu/桌面/our-mani/config/framework/cube_native_success_candidate_training_20261104_v1/training.json",
+        "--plan-sha256",
+        "59b7ecdf0dc12237f4cf1c72fe19e198419d2535e77f7a214f307ec7887b2fe2",
+        "--execute"
+      ],
+      "json_checks": [
+        {
+          "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/cube_native_success_candidate_training_run_v1/artifacts/fit150/fit_status.json",
+          "fields": {
+            "complete": true,
+            "training_complete": true,
+            "epochs_completed": 150,
+            "actual_optimizer_steps": 1200,
+            "heldout_payloads_read": false
+          }
+        }
+      ]
+    }
+  ],
+  "python": "/home/ubuntu/桌面/our-mani/.conda-env/bin/python",
+  "stage_timeout_seconds": {
+    "candidate_fit150": 1800
+  },
+  "stop_grace_seconds": 30,
+  "poll_seconds": 0.5,
+  "wait_timeout_seconds": 1800,
+  "CF_output_root": "/home/ubuntu/桌面/our-mani/runtime/framework/cube_native_contact_worker_20261104_v1"
+}

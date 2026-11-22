@@ -1,0 +1,95 @@
+{
+  "schema": "shared_all16_task_time_limits_20261111_v1",
+  "task_budget": {
+    "task_time_limit_seconds": 60.0,
+    "budget_ticks": 1200,
+    "physics_dt": 0.05,
+    "applies_to": "all_tasks_without_task_specific_timeout_override",
+    "previous_comparison_seconds": 8.0,
+    "success_sampling_period_seconds": 0.05,
+    "stop_at_first_original_success": true,
+    "time_limit_is_wall_clock": false,
+    "Native_physics_or_success_changed": false,
+    "common_default_seconds": 60.0,
+    "previous_common_default_seconds": 16.0,
+    "legacy16_previous_seconds": 10.0
+  },
+  "user_authorization": "所有任务; 也包括旧系统16类任务入口; 16秒扩展到60秒",
+  "tasks": {
+    "beat_the_rotating_buzz": {
+      "simulation_seconds": 60.0,
+      "budget_ticks": 1200
+    },
+    "beat_the_rotating_buzz_high_speed": {
+      "simulation_seconds": 60.0,
+      "budget_ticks": 1200
+    },
+    "insert_onto_rotating_peg": {
+      "simulation_seconds": 60.0,
+      "budget_ticks": 1200
+    },
+    "insert_onto_rotating_peg_high_speed": {
+      "simulation_seconds": 60.0,
+      "budget_ticks": 1200
+    },
+    "moving_basketball_in_hoop": {
+      "simulation_seconds": 60.0,
+      "budget_ticks": 1200
+    },
+    "moving_basketball_in_hoop_high_speed": {
+      "simulation_seconds": 60.0,
+      "budget_ticks": 1200
+    },
+    "pick_moving_target_on_the_table": {
+      "simulation_seconds": 60.0,
+      "budget_ticks": 1200
+    },
+    "pick_moving_target_on_the_table_high_speed": {
+      "simulation_seconds": 60.0,
+      "budget_ticks": 1200
+    },
+    "place_cups_on_rotating_frame": {
+      "simulation_seconds": 60.0,
+      "budget_ticks": 1200
+    },
+    "place_cups_on_rotating_frame_high_speed": {
+      "simulation_seconds": 60.0,
+      "budget_ticks": 1200
+    },
+    "push_moving_button": {
+      "simulation_seconds": 60.0,
+      "budget_ticks": 1200
+    },
+    "push_moving_button_high_speed": {
+      "simulation_seconds": 60.0,
+      "budget_ticks": 1200
+    },
+    "put_rubbish_in_moving_bin": {
+      "simulation_seconds": 60.0,
+      "budget_ticks": 1200
+    },
+    "put_rubbish_in_moving_bin_high_speed": {
+      "simulation_seconds": 60.0,
+      "budget_ticks": 1200
+    },
+    "remove_cups_from_rotating_frame": {
+      "simulation_seconds": 60.0,
+      "budget_ticks": 1200
+    },
+    "remove_cups_from_rotating_frame_high_speed": {
+      "simulation_seconds": 60.0,
+      "budget_ticks": 1200
+    }
+  },
+  "entrypoints": {
+    "legacy_all16": "scripts/evaluate_multitask_case.py",
+    "cube": "scripts/run_physmani_cube.py",
+    "generic_feedback_backend": "our_mani.task_time_limits_20261111_v1.feedback_backend.ExtendedTimeFeedbackBackend",
+    "cube_worker": "our_mani.perception_repair_20261111_v1.native_worker",
+    "cube_owner": "scripts/validate_perception_repair_20261111_v1.py"
+  },
+  "legacy_10s_and_cube_8s_frozen_sources_preserved": true,
+  "old_queues_resumed": false,
+  "cube_measurement_route": "current_public_RGBD_repaired_cube_v1",
+  "experimental_control_variants_active": false
+}

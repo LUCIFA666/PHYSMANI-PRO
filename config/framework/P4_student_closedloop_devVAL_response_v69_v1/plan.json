@@ -1,0 +1,239 @@
+{
+  "schema": "P4_V69_complete8_reused_development_evaluation_frozen_v1",
+  "protocol_revision": "frozen_response_seed_V69_scope12_V10_devVAL8_v1",
+  "rationale": "Expand fixed reused development evaluation with unchanged V69 strategy; public goal/finalhold task gate remains unpassed",
+  "evaluation_only": true,
+  "reuse_development": true,
+  "new_independent_validation": false,
+  "formal_TEST_read": false,
+  "formal_TEST_used": false,
+  "new_TEST_500_515_read_or_materialized": false,
+  "reference_plan": {
+    "path": "config/framework/P4_student_closedloop_devVAL_v64_v1/plan.json",
+    "sha256": "d2eddcbf305428dc10bd7d552deec81cf168d90bf3a956f395d0c845d1f5eb06"
+  },
+  "jobs": [
+    {
+      "id": "00_val_static",
+      "parent_id": "p4_new_devVAL_20261103_00_seed261103100",
+      "seed": 261103100,
+      "split": "val",
+      "scene": "static",
+      "config": "config/framework/P4_student_closedloop_devVAL_response_v69_v1/00_val_static.json",
+      "path": "runtime/framework/local_mpc_20261102/P4_student_closedloop_devVAL_response_v69_v1/00_val_static",
+      "evaluation": "artifacts/framework/local_mpc_20261102/P4_student_closedloop_devVAL_response_v69_v1/00_val_static",
+      "reference_config": {
+        "path": "config/framework/P4_student_closedloop_devVAL_v64_v1/00_val_static.json",
+        "sha256": "dbdecb013dad215e48e8f92828a12c5961b237fffb3959517639c30971a3f6c9"
+      },
+      "reference_development_parent": "p4_new_devVAL_20261103_00_seed261103100"
+    },
+    {
+      "id": "01_val_static",
+      "parent_id": "p4_new_devVAL_20261103_01_seed261103101",
+      "seed": 261103101,
+      "split": "val",
+      "scene": "static",
+      "config": "config/framework/P4_student_closedloop_devVAL_response_v69_v1/01_val_static.json",
+      "path": "runtime/framework/local_mpc_20261102/P4_student_closedloop_devVAL_response_v69_v1/01_val_static",
+      "evaluation": "artifacts/framework/local_mpc_20261102/P4_student_closedloop_devVAL_response_v69_v1/01_val_static",
+      "reference_config": {
+        "path": "config/framework/P4_student_closedloop_devVAL_v64_v1/01_val_static.json",
+        "sha256": "94a7c6976ec1ddff4e698dbf6d7d9417ad4ddde99008a8a655bb0033e3c4d2bb"
+      },
+      "reference_development_parent": "p4_new_devVAL_20261103_01_seed261103101"
+    },
+    {
+      "id": "02_val_uniform",
+      "parent_id": "p4_new_devVAL_20261103_02_seed261103102",
+      "seed": 261103102,
+      "split": "val",
+      "scene": "uniform",
+      "config": "config/framework/P4_student_closedloop_devVAL_response_v69_v1/02_val_uniform.json",
+      "path": "runtime/framework/local_mpc_20261102/P4_student_closedloop_devVAL_response_v69_v1/02_val_uniform",
+      "evaluation": "artifacts/framework/local_mpc_20261102/P4_student_closedloop_devVAL_response_v69_v1/02_val_uniform",
+      "reference_config": {
+        "path": "config/framework/P4_student_closedloop_devVAL_v64_v1/02_val_uniform.json",
+        "sha256": "9c51eeac0f3c3d6cd32f29d1bd1f65bf4da5638735b471f6e53a63f46b7ac04e"
+      },
+      "reference_development_parent": "p4_new_devVAL_20261103_02_seed261103102"
+    },
+    {
+      "id": "03_val_uniform",
+      "parent_id": "p4_new_devVAL_20261103_03_seed261103103",
+      "seed": 261103103,
+      "split": "val",
+      "scene": "uniform",
+      "config": "config/framework/P4_student_closedloop_devVAL_response_v69_v1/03_val_uniform.json",
+      "path": "runtime/framework/local_mpc_20261102/P4_student_closedloop_devVAL_response_v69_v1/03_val_uniform",
+      "evaluation": "artifacts/framework/local_mpc_20261102/P4_student_closedloop_devVAL_response_v69_v1/03_val_uniform",
+      "reference_config": {
+        "path": "config/framework/P4_student_closedloop_devVAL_v64_v1/03_val_uniform.json",
+        "sha256": "9018210d17502f4496093ad099818c85c0c0847ef171379268ec6dd1317bec71"
+      },
+      "reference_development_parent": "p4_new_devVAL_20261103_03_seed261103103"
+    },
+    {
+      "id": "04_val_uniform",
+      "parent_id": "p4_new_devVAL_20261103_04_seed261103104",
+      "seed": 261103104,
+      "split": "val",
+      "scene": "uniform",
+      "config": "config/framework/P4_student_closedloop_devVAL_response_v69_v1/04_val_uniform.json",
+      "path": "runtime/framework/local_mpc_20261102/P4_student_closedloop_devVAL_response_v69_v1/04_val_uniform",
+      "evaluation": "artifacts/framework/local_mpc_20261102/P4_student_closedloop_devVAL_response_v69_v1/04_val_uniform",
+      "reference_config": {
+        "path": "config/framework/P4_student_closedloop_devVAL_v64_v1/04_val_uniform.json",
+        "sha256": "c6773ee27bf7e007588398f6a7ee4a42d14344cb1b39095c85253dd963d38091"
+      },
+      "reference_development_parent": "p4_new_devVAL_20261103_04_seed261103104"
+    },
+    {
+      "id": "05_val_uniform",
+      "parent_id": "p4_new_devVAL_20261103_05_seed261103105",
+      "seed": 261103105,
+      "split": "val",
+      "scene": "uniform",
+      "config": "config/framework/P4_student_closedloop_devVAL_response_v69_v1/05_val_uniform.json",
+      "path": "runtime/framework/local_mpc_20261102/P4_student_closedloop_devVAL_response_v69_v1/05_val_uniform",
+      "evaluation": "artifacts/framework/local_mpc_20261102/P4_student_closedloop_devVAL_response_v69_v1/05_val_uniform",
+      "reference_config": {
+        "path": "config/framework/P4_student_closedloop_devVAL_v64_v1/05_val_uniform.json",
+        "sha256": "4d59a2406e7b0a8a593721db9f1bff03849766190fc6279c66be7108c6cc059d"
+      },
+      "reference_development_parent": "p4_new_devVAL_20261103_05_seed261103105"
+    },
+    {
+      "id": "06_val_speed_change",
+      "parent_id": "p4_new_devVAL_20261103_06_seed261103106",
+      "seed": 261103106,
+      "split": "val",
+      "scene": "speed_change",
+      "config": "config/framework/P4_student_closedloop_devVAL_response_v69_v1/06_val_speed_change.json",
+      "path": "runtime/framework/local_mpc_20261102/P4_student_closedloop_devVAL_response_v69_v1/06_val_speed_change",
+      "evaluation": "artifacts/framework/local_mpc_20261102/P4_student_closedloop_devVAL_response_v69_v1/06_val_speed_change",
+      "reference_config": {
+        "path": "config/framework/P4_student_closedloop_devVAL_v64_v1/06_val_speed_change.json",
+        "sha256": "21ffd8147e7ac34229ab474fe07d7eabc5334d5a3e4977dc8d32904c2c0aaa88"
+      },
+      "reference_development_parent": "p4_new_devVAL_20261103_06_seed261103106"
+    },
+    {
+      "id": "07_val_speed_change",
+      "parent_id": "p4_new_devVAL_20261103_07_seed261103107",
+      "seed": 261103107,
+      "split": "val",
+      "scene": "speed_change",
+      "config": "config/framework/P4_student_closedloop_devVAL_response_v69_v1/07_val_speed_change.json",
+      "path": "runtime/framework/local_mpc_20261102/P4_student_closedloop_devVAL_response_v69_v1/07_val_speed_change",
+      "evaluation": "artifacts/framework/local_mpc_20261102/P4_student_closedloop_devVAL_response_v69_v1/07_val_speed_change",
+      "reference_config": {
+        "path": "config/framework/P4_student_closedloop_devVAL_v64_v1/07_val_speed_change.json",
+        "sha256": "a1394e4d61a078d258fa02e49d0fed16d67790ed57da5fa0ca5f912e8642355b"
+      },
+      "reference_development_parent": "p4_new_devVAL_20261103_07_seed261103107"
+    }
+  ],
+  "all8_regardless_of_task_outcomes": true,
+  "retry_or_case_replacement_based_on_outcome": false,
+  "task_failure_retry": false,
+  "case_replacement": false,
+  "infrastructure_failure_stops_queue": true,
+  "public_hold_canary_gate": {
+    "current_V69_fixed6": "completed_all6_actual0_reaped_original_afterexit_report",
+    "passed": false,
+    "passed_is_not_asserted": true,
+    "positive_samples": 5,
+    "finalNativeGoalAndCurrentHold_positive": 3,
+    "actual_current_lifted_hold_positive": 4,
+    "public_everhold_positive": 4,
+    "public_finalhold_positive": 0,
+    "public_finalgoal_positive": 0,
+    "negative_false_confirmations": 0,
+    "evaluation_only_despite_incomplete_public_task_gate": true
+  },
+  "position_certificate": {
+    "path": "artifacts/framework/near_goal_segmentation_20261103/position_measurement_scope12_fresh8_v10/calibrated.pt",
+    "sha256": "ee079d1f0ea302f65ed4123c5137328005f582f5347e282497dc2d2e07dc0884",
+    "position_measurement_qualified": true,
+    "scope12_EF_qualified": true,
+    "composite_global_coverage_qualified": false,
+    "raw_mask_model_qualified": false,
+    "model_qualified": false,
+    "Native_control_qualified": false
+  },
+  "controller": "frozen public_candidate_response_seed_v69; exact same V69 strategy as fixed6",
+  "producer": {
+    "path": "our_mani/local_mpc_control_20261103/public_candidate_response_seed_v69.py",
+    "sha256": "9d5f516c18a6481c892b0bfed62fc2ed984755e8edd2d708464b6df697467a95"
+  },
+  "protocol": {
+    "path": "artifacts/framework/local_mpc_20261102/V66_hold_micro_guard_local12mm_development_protocol_v1/protocol.json",
+    "sha256": "f48f6cd1cf42592eed8b527182fb2152f621a19a30f3407a78ac718f370a5020"
+  },
+  "natural_witness_only": true,
+  "active_new_probe_execution": false,
+  "physics_dt": 0.05,
+  "control_dt": 0.1,
+  "decision_ticks": 2,
+  "budget": {
+    "sequences": 256,
+    "horizon_steps": 8,
+    "iterations": [
+      88,
+      88,
+      80
+    ]
+  },
+  "weights_q_cost_latents_unchanged": true,
+  "task_judge": "unchanged native_task_evaluation.evaluate_case; only after actual exit/nativeclose/source/archive checks",
+  "evaluation_script": "scripts/evaluate_public_position_closed_cases_with_alignment_20261103.py",
+  "execution_ready": true,
+  "execution_authorized": true,
+  "Native_started": false,
+  "fit_started": false,
+  "pending": [],
+  "cold_addendum": {
+    "path": "artifacts/framework/local_mpc_20261102/V66_hold_micro_guard_local12mm_development_protocol_v1/cold_hold_initialization_addendum.json",
+    "sha256": "1ad569f5db68c83de80be71aa59c398b08ed233f8040c2e32c1f2402a63ba7ed"
+  },
+  "maximum_hold_model_micro_rotation_rad": 0.04,
+  "maximum_hold_nominal_translation_m": 0.012,
+  "hold_warm_policy": "cold each actual hold replan, all incoming hold warm discarded; nonhold unchanged",
+  "V65_natural_reverification_unchanged": true,
+  "complete_preparation": true,
+  "preparation_only": false,
+  "qualification_claimed": false,
+  "V67_scope12_V10_measurement": true,
+  "qualified_scope_radius_m": 0.12,
+  "scope12_not_raw_or_grasp_or_composite_qualification": true,
+  "fixed6_closed_evidence": {
+    "path": "artifacts/framework/local_mpc_20261102/V69_closed6_originaljudge_public_alignment_v1/report.json",
+    "sha256": "559ce04458b13212bb2e660e0416d05233d81f3a2b86b62b7063ce5e8ccbc5d8"
+  },
+  "response_proposal_budget": {
+    "iteration_sequences": [
+      88,
+      88,
+      80
+    ],
+    "total": 256,
+    "fresh": 1,
+    "injection_iteration": 0,
+    "generator_calls_separately_reported": true,
+    "unchanged_from_fixed6": true
+  },
+  "finalized_utc": "2026-11-03T07:50:42.519026+00:00",
+  "fixed6_result": {
+    "path": "artifacts/framework/local_mpc_20261102/V69_closed6_originaljudge_public_alignment_v1/root_execution_receipt.json",
+    "sha256": "3178f8935f8c00dd6756e1c35c2d827512afc6a89e48a43fb489072d72ee2a1c"
+  },
+  "fixed5_positive_paired": {
+    "path": "artifacts/framework/local_mpc_20261102/V69_paired_V67_fixed5_report_only_v1/report.json",
+    "sha256": "16c12f050207cf8137a2614b425e52863987e4877ac9b52093de6790039d578c"
+  },
+  "evaluation_rationale": "Same-case Native finalgoal+currenthold1to3of5 and physcurrenthold2to4of5;publicfinalhold1to0of5 and publicgoal0;NoProxyfalseconfirmation0. Reused-development evaluation only, not public grasp qualification.",
+  "public_full_task_gate_passed": false,
+  "position_measurement_qualified_only": true,
+  "realtime_qualified": false
+}

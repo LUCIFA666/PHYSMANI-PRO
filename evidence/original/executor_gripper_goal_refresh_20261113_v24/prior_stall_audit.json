@@ -1,0 +1,51 @@
+{
+  "rows": [
+    {
+      "case": "artifacts/framework/executor_continuous_posture_20261113_v22/release_alignment/00_cup_seed2611164201/worker",
+      "wait_chunks": 343,
+      "unissued_open_wait_chunks": 342,
+      "first_wait_time": 8.800000011920929,
+      "max_retained_observation_age": 39.29999923706055,
+      "release_gate_calls": 834,
+      "allowed_release_gate_calls": 0,
+      "minimum_release_position_error_m": 0.02300592930516982,
+      "minimum_release_rotation_error_rad": 0.04574220346264544
+    },
+    {
+      "case": "artifacts/framework/executor_continuous_posture_20261113_v22/release_alignment/01_cup_seed2611164203/worker",
+      "wait_chunks": 340,
+      "unissued_open_wait_chunks": 339,
+      "first_wait_time": 8.699999630451202,
+      "max_retained_observation_age": 43.099998474121094,
+      "release_gate_calls": 754,
+      "allowed_release_gate_calls": 0,
+      "minimum_release_position_error_m": 0.019946519032836507,
+      "minimum_release_rotation_error_rad": 0.03241891325369966
+    },
+    {
+      "case": "artifacts/framework/executor_continuous_posture_20261113_v22/release_alignment/02_cup_seed2611164200/worker",
+      "wait_chunks": 292,
+      "unissued_open_wait_chunks": 291,
+      "first_wait_time": 8.699999630451202,
+      "max_retained_observation_age": 40.5,
+      "release_gate_calls": 678,
+      "allowed_release_gate_calls": 0,
+      "minimum_release_position_error_m": 0.014221285030368387,
+      "minimum_release_rotation_error_rad": 0.056900270771186326
+    },
+    {
+      "case": "artifacts/framework/executor_continuous_posture_20261113_v22/release_alignment/03_cup_seed2611164202/worker",
+      "wait_chunks": 125,
+      "unissued_open_wait_chunks": 124,
+      "first_wait_time": 8.699999630451202,
+      "max_retained_observation_age": 8.599998474121094,
+      "release_gate_calls": 972,
+      "allowed_release_gate_calls": 0,
+      "minimum_release_position_error_m": 0.026208822843796522,
+      "minimum_release_rotation_error_rad": 0.040357326560371234
+    }
+  ],
+  "Task_body_pose_used": false,
+  "diagnosis": "same stage opposite opening intent blocked fresh pose while previous open event had never physically started",
+  "causal_fix_requires_paired_Native_confirmation": true
+}

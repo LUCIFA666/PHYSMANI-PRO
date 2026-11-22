@@ -1,0 +1,626 @@
+{
+  "schema": "cube_revision_serial_phase_20261104_v1",
+  "phase_id": "cube_trueclock_motion_capture_20261104_v1",
+  "method_sources": {
+    "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/cube_trueclock_motion_capture_preparation_v1/method_sources.json",
+    "sha256": "23619fbc77b0125adba7a6bf821c912da4b9a8dd5af62a64e1f2e31282d3379e"
+  },
+  "output_root": "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/cube_trueclock_motion_capture_run_v1",
+  "jobs": [
+    {
+      "id": "Cube_native_generated_ordinary_seed2611042000",
+      "output": "/home/ubuntu/桌面/our-mani/runtime/framework/cube_motion_TRAIN_20261104_v1/Cube_native_generated_ordinary_seed2611042000",
+      "native": true,
+      "cpu": false,
+      "argv": [
+        "scripts/launch_cube_motion_TRAIN_20261104_v1.py",
+        "--plan",
+        "/home/ubuntu/桌面/our-mani/config/framework/cube_trueclock_motion_TRAIN16_20261104_v1/plan.json",
+        "--parent-id",
+        "Cube_native_generated_ordinary_seed2611042000",
+        "--output",
+        "/home/ubuntu/桌面/our-mani/runtime/framework/cube_motion_TRAIN_20261104_v1/Cube_native_generated_ordinary_seed2611042000",
+        "--source-freeze",
+        "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/cube_trueclock_motion_capture_preparation_v1/execution_source_freeze.json",
+        "--source-freeze-sha256",
+        "b82db78c67d85e3d5ec54758ec593707882f42ae63b0ddf84c05d56d3751e8ac",
+        "--collect"
+      ],
+      "json_checks": [
+        {
+          "path": "/home/ubuntu/桌面/our-mani/runtime/framework/cube_motion_TRAIN_20261104_v1/Cube_native_generated_ordinary_seed2611042000/worker_exit.json",
+          "fields": {
+            "actual_worker_returncode": 0,
+            "native_closed": true,
+            "result_recorded": true
+          }
+        },
+        {
+          "path": "/home/ubuntu/桌面/our-mani/runtime/framework/cube_motion_TRAIN_20261104_v1/Cube_native_generated_ordinary_seed2611042000/result.json",
+          "fields": {
+            "complete": true,
+            "attempt_complete": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "Cube_native_generated_ordinary_seed2611042001",
+      "output": "/home/ubuntu/桌面/our-mani/runtime/framework/cube_motion_TRAIN_20261104_v1/Cube_native_generated_ordinary_seed2611042001",
+      "native": true,
+      "cpu": false,
+      "argv": [
+        "scripts/launch_cube_motion_TRAIN_20261104_v1.py",
+        "--plan",
+        "/home/ubuntu/桌面/our-mani/config/framework/cube_trueclock_motion_TRAIN16_20261104_v1/plan.json",
+        "--parent-id",
+        "Cube_native_generated_ordinary_seed2611042001",
+        "--output",
+        "/home/ubuntu/桌面/our-mani/runtime/framework/cube_motion_TRAIN_20261104_v1/Cube_native_generated_ordinary_seed2611042001",
+        "--source-freeze",
+        "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/cube_trueclock_motion_capture_preparation_v1/execution_source_freeze.json",
+        "--source-freeze-sha256",
+        "b82db78c67d85e3d5ec54758ec593707882f42ae63b0ddf84c05d56d3751e8ac",
+        "--collect"
+      ],
+      "json_checks": [
+        {
+          "path": "/home/ubuntu/桌面/our-mani/runtime/framework/cube_motion_TRAIN_20261104_v1/Cube_native_generated_ordinary_seed2611042001/worker_exit.json",
+          "fields": {
+            "actual_worker_returncode": 0,
+            "native_closed": true,
+            "result_recorded": true
+          }
+        },
+        {
+          "path": "/home/ubuntu/桌面/our-mani/runtime/framework/cube_motion_TRAIN_20261104_v1/Cube_native_generated_ordinary_seed2611042001/result.json",
+          "fields": {
+            "complete": true,
+            "attempt_complete": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "Cube_native_generated_ordinary_seed2611042002",
+      "output": "/home/ubuntu/桌面/our-mani/runtime/framework/cube_motion_TRAIN_20261104_v1/Cube_native_generated_ordinary_seed2611042002",
+      "native": true,
+      "cpu": false,
+      "argv": [
+        "scripts/launch_cube_motion_TRAIN_20261104_v1.py",
+        "--plan",
+        "/home/ubuntu/桌面/our-mani/config/framework/cube_trueclock_motion_TRAIN16_20261104_v1/plan.json",
+        "--parent-id",
+        "Cube_native_generated_ordinary_seed2611042002",
+        "--output",
+        "/home/ubuntu/桌面/our-mani/runtime/framework/cube_motion_TRAIN_20261104_v1/Cube_native_generated_ordinary_seed2611042002",
+        "--source-freeze",
+        "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/cube_trueclock_motion_capture_preparation_v1/execution_source_freeze.json",
+        "--source-freeze-sha256",
+        "b82db78c67d85e3d5ec54758ec593707882f42ae63b0ddf84c05d56d3751e8ac",
+        "--collect"
+      ],
+      "json_checks": [
+        {
+          "path": "/home/ubuntu/桌面/our-mani/runtime/framework/cube_motion_TRAIN_20261104_v1/Cube_native_generated_ordinary_seed2611042002/worker_exit.json",
+          "fields": {
+            "actual_worker_returncode": 0,
+            "native_closed": true,
+            "result_recorded": true
+          }
+        },
+        {
+          "path": "/home/ubuntu/桌面/our-mani/runtime/framework/cube_motion_TRAIN_20261104_v1/Cube_native_generated_ordinary_seed2611042002/result.json",
+          "fields": {
+            "complete": true,
+            "attempt_complete": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "Cube_native_generated_ordinary_seed2611042003",
+      "output": "/home/ubuntu/桌面/our-mani/runtime/framework/cube_motion_TRAIN_20261104_v1/Cube_native_generated_ordinary_seed2611042003",
+      "native": true,
+      "cpu": false,
+      "argv": [
+        "scripts/launch_cube_motion_TRAIN_20261104_v1.py",
+        "--plan",
+        "/home/ubuntu/桌面/our-mani/config/framework/cube_trueclock_motion_TRAIN16_20261104_v1/plan.json",
+        "--parent-id",
+        "Cube_native_generated_ordinary_seed2611042003",
+        "--output",
+        "/home/ubuntu/桌面/our-mani/runtime/framework/cube_motion_TRAIN_20261104_v1/Cube_native_generated_ordinary_seed2611042003",
+        "--source-freeze",
+        "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/cube_trueclock_motion_capture_preparation_v1/execution_source_freeze.json",
+        "--source-freeze-sha256",
+        "b82db78c67d85e3d5ec54758ec593707882f42ae63b0ddf84c05d56d3751e8ac",
+        "--collect"
+      ],
+      "json_checks": [
+        {
+          "path": "/home/ubuntu/桌面/our-mani/runtime/framework/cube_motion_TRAIN_20261104_v1/Cube_native_generated_ordinary_seed2611042003/worker_exit.json",
+          "fields": {
+            "actual_worker_returncode": 0,
+            "native_closed": true,
+            "result_recorded": true
+          }
+        },
+        {
+          "path": "/home/ubuntu/桌面/our-mani/runtime/framework/cube_motion_TRAIN_20261104_v1/Cube_native_generated_ordinary_seed2611042003/result.json",
+          "fields": {
+            "complete": true,
+            "attempt_complete": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "Cube_native_generated_ordinary_seed2611042004",
+      "output": "/home/ubuntu/桌面/our-mani/runtime/framework/cube_motion_TRAIN_20261104_v1/Cube_native_generated_ordinary_seed2611042004",
+      "native": true,
+      "cpu": false,
+      "argv": [
+        "scripts/launch_cube_motion_TRAIN_20261104_v1.py",
+        "--plan",
+        "/home/ubuntu/桌面/our-mani/config/framework/cube_trueclock_motion_TRAIN16_20261104_v1/plan.json",
+        "--parent-id",
+        "Cube_native_generated_ordinary_seed2611042004",
+        "--output",
+        "/home/ubuntu/桌面/our-mani/runtime/framework/cube_motion_TRAIN_20261104_v1/Cube_native_generated_ordinary_seed2611042004",
+        "--source-freeze",
+        "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/cube_trueclock_motion_capture_preparation_v1/execution_source_freeze.json",
+        "--source-freeze-sha256",
+        "b82db78c67d85e3d5ec54758ec593707882f42ae63b0ddf84c05d56d3751e8ac",
+        "--collect"
+      ],
+      "json_checks": [
+        {
+          "path": "/home/ubuntu/桌面/our-mani/runtime/framework/cube_motion_TRAIN_20261104_v1/Cube_native_generated_ordinary_seed2611042004/worker_exit.json",
+          "fields": {
+            "actual_worker_returncode": 0,
+            "native_closed": true,
+            "result_recorded": true
+          }
+        },
+        {
+          "path": "/home/ubuntu/桌面/our-mani/runtime/framework/cube_motion_TRAIN_20261104_v1/Cube_native_generated_ordinary_seed2611042004/result.json",
+          "fields": {
+            "complete": true,
+            "attempt_complete": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "Cube_native_generated_ordinary_seed2611042005",
+      "output": "/home/ubuntu/桌面/our-mani/runtime/framework/cube_motion_TRAIN_20261104_v1/Cube_native_generated_ordinary_seed2611042005",
+      "native": true,
+      "cpu": false,
+      "argv": [
+        "scripts/launch_cube_motion_TRAIN_20261104_v1.py",
+        "--plan",
+        "/home/ubuntu/桌面/our-mani/config/framework/cube_trueclock_motion_TRAIN16_20261104_v1/plan.json",
+        "--parent-id",
+        "Cube_native_generated_ordinary_seed2611042005",
+        "--output",
+        "/home/ubuntu/桌面/our-mani/runtime/framework/cube_motion_TRAIN_20261104_v1/Cube_native_generated_ordinary_seed2611042005",
+        "--source-freeze",
+        "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/cube_trueclock_motion_capture_preparation_v1/execution_source_freeze.json",
+        "--source-freeze-sha256",
+        "b82db78c67d85e3d5ec54758ec593707882f42ae63b0ddf84c05d56d3751e8ac",
+        "--collect"
+      ],
+      "json_checks": [
+        {
+          "path": "/home/ubuntu/桌面/our-mani/runtime/framework/cube_motion_TRAIN_20261104_v1/Cube_native_generated_ordinary_seed2611042005/worker_exit.json",
+          "fields": {
+            "actual_worker_returncode": 0,
+            "native_closed": true,
+            "result_recorded": true
+          }
+        },
+        {
+          "path": "/home/ubuntu/桌面/our-mani/runtime/framework/cube_motion_TRAIN_20261104_v1/Cube_native_generated_ordinary_seed2611042005/result.json",
+          "fields": {
+            "complete": true,
+            "attempt_complete": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "Cube_native_generated_ordinary_seed2611042006",
+      "output": "/home/ubuntu/桌面/our-mani/runtime/framework/cube_motion_TRAIN_20261104_v1/Cube_native_generated_ordinary_seed2611042006",
+      "native": true,
+      "cpu": false,
+      "argv": [
+        "scripts/launch_cube_motion_TRAIN_20261104_v1.py",
+        "--plan",
+        "/home/ubuntu/桌面/our-mani/config/framework/cube_trueclock_motion_TRAIN16_20261104_v1/plan.json",
+        "--parent-id",
+        "Cube_native_generated_ordinary_seed2611042006",
+        "--output",
+        "/home/ubuntu/桌面/our-mani/runtime/framework/cube_motion_TRAIN_20261104_v1/Cube_native_generated_ordinary_seed2611042006",
+        "--source-freeze",
+        "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/cube_trueclock_motion_capture_preparation_v1/execution_source_freeze.json",
+        "--source-freeze-sha256",
+        "b82db78c67d85e3d5ec54758ec593707882f42ae63b0ddf84c05d56d3751e8ac",
+        "--collect"
+      ],
+      "json_checks": [
+        {
+          "path": "/home/ubuntu/桌面/our-mani/runtime/framework/cube_motion_TRAIN_20261104_v1/Cube_native_generated_ordinary_seed2611042006/worker_exit.json",
+          "fields": {
+            "actual_worker_returncode": 0,
+            "native_closed": true,
+            "result_recorded": true
+          }
+        },
+        {
+          "path": "/home/ubuntu/桌面/our-mani/runtime/framework/cube_motion_TRAIN_20261104_v1/Cube_native_generated_ordinary_seed2611042006/result.json",
+          "fields": {
+            "complete": true,
+            "attempt_complete": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "Cube_native_generated_ordinary_seed2611042007",
+      "output": "/home/ubuntu/桌面/our-mani/runtime/framework/cube_motion_TRAIN_20261104_v1/Cube_native_generated_ordinary_seed2611042007",
+      "native": true,
+      "cpu": false,
+      "argv": [
+        "scripts/launch_cube_motion_TRAIN_20261104_v1.py",
+        "--plan",
+        "/home/ubuntu/桌面/our-mani/config/framework/cube_trueclock_motion_TRAIN16_20261104_v1/plan.json",
+        "--parent-id",
+        "Cube_native_generated_ordinary_seed2611042007",
+        "--output",
+        "/home/ubuntu/桌面/our-mani/runtime/framework/cube_motion_TRAIN_20261104_v1/Cube_native_generated_ordinary_seed2611042007",
+        "--source-freeze",
+        "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/cube_trueclock_motion_capture_preparation_v1/execution_source_freeze.json",
+        "--source-freeze-sha256",
+        "b82db78c67d85e3d5ec54758ec593707882f42ae63b0ddf84c05d56d3751e8ac",
+        "--collect"
+      ],
+      "json_checks": [
+        {
+          "path": "/home/ubuntu/桌面/our-mani/runtime/framework/cube_motion_TRAIN_20261104_v1/Cube_native_generated_ordinary_seed2611042007/worker_exit.json",
+          "fields": {
+            "actual_worker_returncode": 0,
+            "native_closed": true,
+            "result_recorded": true
+          }
+        },
+        {
+          "path": "/home/ubuntu/桌面/our-mani/runtime/framework/cube_motion_TRAIN_20261104_v1/Cube_native_generated_ordinary_seed2611042007/result.json",
+          "fields": {
+            "complete": true,
+            "attempt_complete": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "Cube_native_generated_high_speed_seed2611042100",
+      "output": "/home/ubuntu/桌面/our-mani/runtime/framework/cube_motion_TRAIN_20261104_v1/Cube_native_generated_high_speed_seed2611042100",
+      "native": true,
+      "cpu": false,
+      "argv": [
+        "scripts/launch_cube_motion_TRAIN_20261104_v1.py",
+        "--plan",
+        "/home/ubuntu/桌面/our-mani/config/framework/cube_trueclock_motion_TRAIN16_20261104_v1/plan.json",
+        "--parent-id",
+        "Cube_native_generated_high_speed_seed2611042100",
+        "--output",
+        "/home/ubuntu/桌面/our-mani/runtime/framework/cube_motion_TRAIN_20261104_v1/Cube_native_generated_high_speed_seed2611042100",
+        "--source-freeze",
+        "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/cube_trueclock_motion_capture_preparation_v1/execution_source_freeze.json",
+        "--source-freeze-sha256",
+        "b82db78c67d85e3d5ec54758ec593707882f42ae63b0ddf84c05d56d3751e8ac",
+        "--collect"
+      ],
+      "json_checks": [
+        {
+          "path": "/home/ubuntu/桌面/our-mani/runtime/framework/cube_motion_TRAIN_20261104_v1/Cube_native_generated_high_speed_seed2611042100/worker_exit.json",
+          "fields": {
+            "actual_worker_returncode": 0,
+            "native_closed": true,
+            "result_recorded": true
+          }
+        },
+        {
+          "path": "/home/ubuntu/桌面/our-mani/runtime/framework/cube_motion_TRAIN_20261104_v1/Cube_native_generated_high_speed_seed2611042100/result.json",
+          "fields": {
+            "complete": true,
+            "attempt_complete": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "Cube_native_generated_high_speed_seed2611042101",
+      "output": "/home/ubuntu/桌面/our-mani/runtime/framework/cube_motion_TRAIN_20261104_v1/Cube_native_generated_high_speed_seed2611042101",
+      "native": true,
+      "cpu": false,
+      "argv": [
+        "scripts/launch_cube_motion_TRAIN_20261104_v1.py",
+        "--plan",
+        "/home/ubuntu/桌面/our-mani/config/framework/cube_trueclock_motion_TRAIN16_20261104_v1/plan.json",
+        "--parent-id",
+        "Cube_native_generated_high_speed_seed2611042101",
+        "--output",
+        "/home/ubuntu/桌面/our-mani/runtime/framework/cube_motion_TRAIN_20261104_v1/Cube_native_generated_high_speed_seed2611042101",
+        "--source-freeze",
+        "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/cube_trueclock_motion_capture_preparation_v1/execution_source_freeze.json",
+        "--source-freeze-sha256",
+        "b82db78c67d85e3d5ec54758ec593707882f42ae63b0ddf84c05d56d3751e8ac",
+        "--collect"
+      ],
+      "json_checks": [
+        {
+          "path": "/home/ubuntu/桌面/our-mani/runtime/framework/cube_motion_TRAIN_20261104_v1/Cube_native_generated_high_speed_seed2611042101/worker_exit.json",
+          "fields": {
+            "actual_worker_returncode": 0,
+            "native_closed": true,
+            "result_recorded": true
+          }
+        },
+        {
+          "path": "/home/ubuntu/桌面/our-mani/runtime/framework/cube_motion_TRAIN_20261104_v1/Cube_native_generated_high_speed_seed2611042101/result.json",
+          "fields": {
+            "complete": true,
+            "attempt_complete": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "Cube_native_generated_high_speed_seed2611042102",
+      "output": "/home/ubuntu/桌面/our-mani/runtime/framework/cube_motion_TRAIN_20261104_v1/Cube_native_generated_high_speed_seed2611042102",
+      "native": true,
+      "cpu": false,
+      "argv": [
+        "scripts/launch_cube_motion_TRAIN_20261104_v1.py",
+        "--plan",
+        "/home/ubuntu/桌面/our-mani/config/framework/cube_trueclock_motion_TRAIN16_20261104_v1/plan.json",
+        "--parent-id",
+        "Cube_native_generated_high_speed_seed2611042102",
+        "--output",
+        "/home/ubuntu/桌面/our-mani/runtime/framework/cube_motion_TRAIN_20261104_v1/Cube_native_generated_high_speed_seed2611042102",
+        "--source-freeze",
+        "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/cube_trueclock_motion_capture_preparation_v1/execution_source_freeze.json",
+        "--source-freeze-sha256",
+        "b82db78c67d85e3d5ec54758ec593707882f42ae63b0ddf84c05d56d3751e8ac",
+        "--collect"
+      ],
+      "json_checks": [
+        {
+          "path": "/home/ubuntu/桌面/our-mani/runtime/framework/cube_motion_TRAIN_20261104_v1/Cube_native_generated_high_speed_seed2611042102/worker_exit.json",
+          "fields": {
+            "actual_worker_returncode": 0,
+            "native_closed": true,
+            "result_recorded": true
+          }
+        },
+        {
+          "path": "/home/ubuntu/桌面/our-mani/runtime/framework/cube_motion_TRAIN_20261104_v1/Cube_native_generated_high_speed_seed2611042102/result.json",
+          "fields": {
+            "complete": true,
+            "attempt_complete": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "Cube_native_generated_high_speed_seed2611042103",
+      "output": "/home/ubuntu/桌面/our-mani/runtime/framework/cube_motion_TRAIN_20261104_v1/Cube_native_generated_high_speed_seed2611042103",
+      "native": true,
+      "cpu": false,
+      "argv": [
+        "scripts/launch_cube_motion_TRAIN_20261104_v1.py",
+        "--plan",
+        "/home/ubuntu/桌面/our-mani/config/framework/cube_trueclock_motion_TRAIN16_20261104_v1/plan.json",
+        "--parent-id",
+        "Cube_native_generated_high_speed_seed2611042103",
+        "--output",
+        "/home/ubuntu/桌面/our-mani/runtime/framework/cube_motion_TRAIN_20261104_v1/Cube_native_generated_high_speed_seed2611042103",
+        "--source-freeze",
+        "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/cube_trueclock_motion_capture_preparation_v1/execution_source_freeze.json",
+        "--source-freeze-sha256",
+        "b82db78c67d85e3d5ec54758ec593707882f42ae63b0ddf84c05d56d3751e8ac",
+        "--collect"
+      ],
+      "json_checks": [
+        {
+          "path": "/home/ubuntu/桌面/our-mani/runtime/framework/cube_motion_TRAIN_20261104_v1/Cube_native_generated_high_speed_seed2611042103/worker_exit.json",
+          "fields": {
+            "actual_worker_returncode": 0,
+            "native_closed": true,
+            "result_recorded": true
+          }
+        },
+        {
+          "path": "/home/ubuntu/桌面/our-mani/runtime/framework/cube_motion_TRAIN_20261104_v1/Cube_native_generated_high_speed_seed2611042103/result.json",
+          "fields": {
+            "complete": true,
+            "attempt_complete": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "Cube_native_generated_high_speed_seed2611042104",
+      "output": "/home/ubuntu/桌面/our-mani/runtime/framework/cube_motion_TRAIN_20261104_v1/Cube_native_generated_high_speed_seed2611042104",
+      "native": true,
+      "cpu": false,
+      "argv": [
+        "scripts/launch_cube_motion_TRAIN_20261104_v1.py",
+        "--plan",
+        "/home/ubuntu/桌面/our-mani/config/framework/cube_trueclock_motion_TRAIN16_20261104_v1/plan.json",
+        "--parent-id",
+        "Cube_native_generated_high_speed_seed2611042104",
+        "--output",
+        "/home/ubuntu/桌面/our-mani/runtime/framework/cube_motion_TRAIN_20261104_v1/Cube_native_generated_high_speed_seed2611042104",
+        "--source-freeze",
+        "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/cube_trueclock_motion_capture_preparation_v1/execution_source_freeze.json",
+        "--source-freeze-sha256",
+        "b82db78c67d85e3d5ec54758ec593707882f42ae63b0ddf84c05d56d3751e8ac",
+        "--collect"
+      ],
+      "json_checks": [
+        {
+          "path": "/home/ubuntu/桌面/our-mani/runtime/framework/cube_motion_TRAIN_20261104_v1/Cube_native_generated_high_speed_seed2611042104/worker_exit.json",
+          "fields": {
+            "actual_worker_returncode": 0,
+            "native_closed": true,
+            "result_recorded": true
+          }
+        },
+        {
+          "path": "/home/ubuntu/桌面/our-mani/runtime/framework/cube_motion_TRAIN_20261104_v1/Cube_native_generated_high_speed_seed2611042104/result.json",
+          "fields": {
+            "complete": true,
+            "attempt_complete": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "Cube_native_generated_high_speed_seed2611042105",
+      "output": "/home/ubuntu/桌面/our-mani/runtime/framework/cube_motion_TRAIN_20261104_v1/Cube_native_generated_high_speed_seed2611042105",
+      "native": true,
+      "cpu": false,
+      "argv": [
+        "scripts/launch_cube_motion_TRAIN_20261104_v1.py",
+        "--plan",
+        "/home/ubuntu/桌面/our-mani/config/framework/cube_trueclock_motion_TRAIN16_20261104_v1/plan.json",
+        "--parent-id",
+        "Cube_native_generated_high_speed_seed2611042105",
+        "--output",
+        "/home/ubuntu/桌面/our-mani/runtime/framework/cube_motion_TRAIN_20261104_v1/Cube_native_generated_high_speed_seed2611042105",
+        "--source-freeze",
+        "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/cube_trueclock_motion_capture_preparation_v1/execution_source_freeze.json",
+        "--source-freeze-sha256",
+        "b82db78c67d85e3d5ec54758ec593707882f42ae63b0ddf84c05d56d3751e8ac",
+        "--collect"
+      ],
+      "json_checks": [
+        {
+          "path": "/home/ubuntu/桌面/our-mani/runtime/framework/cube_motion_TRAIN_20261104_v1/Cube_native_generated_high_speed_seed2611042105/worker_exit.json",
+          "fields": {
+            "actual_worker_returncode": 0,
+            "native_closed": true,
+            "result_recorded": true
+          }
+        },
+        {
+          "path": "/home/ubuntu/桌面/our-mani/runtime/framework/cube_motion_TRAIN_20261104_v1/Cube_native_generated_high_speed_seed2611042105/result.json",
+          "fields": {
+            "complete": true,
+            "attempt_complete": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "Cube_native_generated_high_speed_seed2611042106",
+      "output": "/home/ubuntu/桌面/our-mani/runtime/framework/cube_motion_TRAIN_20261104_v1/Cube_native_generated_high_speed_seed2611042106",
+      "native": true,
+      "cpu": false,
+      "argv": [
+        "scripts/launch_cube_motion_TRAIN_20261104_v1.py",
+        "--plan",
+        "/home/ubuntu/桌面/our-mani/config/framework/cube_trueclock_motion_TRAIN16_20261104_v1/plan.json",
+        "--parent-id",
+        "Cube_native_generated_high_speed_seed2611042106",
+        "--output",
+        "/home/ubuntu/桌面/our-mani/runtime/framework/cube_motion_TRAIN_20261104_v1/Cube_native_generated_high_speed_seed2611042106",
+        "--source-freeze",
+        "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/cube_trueclock_motion_capture_preparation_v1/execution_source_freeze.json",
+        "--source-freeze-sha256",
+        "b82db78c67d85e3d5ec54758ec593707882f42ae63b0ddf84c05d56d3751e8ac",
+        "--collect"
+      ],
+      "json_checks": [
+        {
+          "path": "/home/ubuntu/桌面/our-mani/runtime/framework/cube_motion_TRAIN_20261104_v1/Cube_native_generated_high_speed_seed2611042106/worker_exit.json",
+          "fields": {
+            "actual_worker_returncode": 0,
+            "native_closed": true,
+            "result_recorded": true
+          }
+        },
+        {
+          "path": "/home/ubuntu/桌面/our-mani/runtime/framework/cube_motion_TRAIN_20261104_v1/Cube_native_generated_high_speed_seed2611042106/result.json",
+          "fields": {
+            "complete": true,
+            "attempt_complete": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "Cube_native_generated_high_speed_seed2611042107",
+      "output": "/home/ubuntu/桌面/our-mani/runtime/framework/cube_motion_TRAIN_20261104_v1/Cube_native_generated_high_speed_seed2611042107",
+      "native": true,
+      "cpu": false,
+      "argv": [
+        "scripts/launch_cube_motion_TRAIN_20261104_v1.py",
+        "--plan",
+        "/home/ubuntu/桌面/our-mani/config/framework/cube_trueclock_motion_TRAIN16_20261104_v1/plan.json",
+        "--parent-id",
+        "Cube_native_generated_high_speed_seed2611042107",
+        "--output",
+        "/home/ubuntu/桌面/our-mani/runtime/framework/cube_motion_TRAIN_20261104_v1/Cube_native_generated_high_speed_seed2611042107",
+        "--source-freeze",
+        "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/cube_trueclock_motion_capture_preparation_v1/execution_source_freeze.json",
+        "--source-freeze-sha256",
+        "b82db78c67d85e3d5ec54758ec593707882f42ae63b0ddf84c05d56d3751e8ac",
+        "--collect"
+      ],
+      "json_checks": [
+        {
+          "path": "/home/ubuntu/桌面/our-mani/runtime/framework/cube_motion_TRAIN_20261104_v1/Cube_native_generated_high_speed_seed2611042107/worker_exit.json",
+          "fields": {
+            "actual_worker_returncode": 0,
+            "native_closed": true,
+            "result_recorded": true
+          }
+        },
+        {
+          "path": "/home/ubuntu/桌面/our-mani/runtime/framework/cube_motion_TRAIN_20261104_v1/Cube_native_generated_high_speed_seed2611042107/result.json",
+          "fields": {
+            "complete": true,
+            "attempt_complete": true
+          }
+        }
+      ]
+    }
+  ],
+  "python": "/home/ubuntu/桌面/our-mani/.conda-env/bin/python",
+  "stage_timeout_seconds": {
+    "Cube_native_generated_ordinary_seed2611042000": 600,
+    "Cube_native_generated_ordinary_seed2611042001": 600,
+    "Cube_native_generated_ordinary_seed2611042002": 600,
+    "Cube_native_generated_ordinary_seed2611042003": 600,
+    "Cube_native_generated_ordinary_seed2611042004": 600,
+    "Cube_native_generated_ordinary_seed2611042005": 600,
+    "Cube_native_generated_ordinary_seed2611042006": 600,
+    "Cube_native_generated_ordinary_seed2611042007": 600,
+    "Cube_native_generated_high_speed_seed2611042100": 600,
+    "Cube_native_generated_high_speed_seed2611042101": 600,
+    "Cube_native_generated_high_speed_seed2611042102": 600,
+    "Cube_native_generated_high_speed_seed2611042103": 600,
+    "Cube_native_generated_high_speed_seed2611042104": 600,
+    "Cube_native_generated_high_speed_seed2611042105": 600,
+    "Cube_native_generated_high_speed_seed2611042106": 600,
+    "Cube_native_generated_high_speed_seed2611042107": 600
+  },
+  "stop_grace_seconds": 30,
+  "poll_seconds": 0.5,
+  "wait_timeout_seconds": 600,
+  "CF_output_root": "/home/ubuntu/桌面/our-mani/runtime/framework/cube_motion_TRAIN_20261104_v1"
+}

@@ -1,0 +1,12 @@
+{
+  "task": "push_moving_button",
+  "seed": 2611138000,
+  "variation": 0,
+  "calibration_episode": "/home/ubuntu/\u684c\u9762/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/push_moving_button/all_variations/episodes/episode179/data.h5",
+  "role": "TRAIN_executor_replay_diagnostic",
+  "references_path": "/home/ubuntu/\u684c\u9762/our-mani/artifacts/framework/executor_contract_repair_20261112_v2/continuous_reference_button_60s/00_push_moving_button/worker/execution.jsonl",
+  "references_sha256": "76d98a5dcbc6bdea1728b49517103017cc2a3a86ee52d350dce5ec8470bc801f",
+  "decisions_path": "/home/ubuntu/\u684c\u9762/our-mani/artifacts/framework/executor_contract_repair_20261112_v2/continuous_reference_button_60s/00_push_moving_button/worker/decisions.jsonl",
+  "decisions_sha256": "f5be9d03e55c096826a2853f830806456ae025719197f8e7125b508b09d26296",
+  "query_mode": "noop_restore"
+}

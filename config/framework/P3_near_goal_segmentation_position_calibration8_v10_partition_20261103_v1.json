@@ -1,0 +1,1624 @@
+{
+  "schema": "P3_near_goal_segmentation_position_calibration8_v10_partition_20261103_v1",
+  "scope": "position_calibration8_v10",
+  "split": "train",
+  "pilot": false,
+  "parents": [
+    {
+      "parent_id": "near_goal_perception_position_v10_seed261103656",
+      "seed": 261103656,
+      "role": "calibration",
+      "fold": "calibration",
+      "pilot": false,
+      "near_direction_ordinal": 0,
+      "near_direction_unit_world": [
+        0.5773502691896258,
+        0.5773502691896258,
+        0.5773502691896258
+      ],
+      "shot_ids": [
+        "shot00",
+        "shot01",
+        "shot02",
+        "shot03",
+        "shot04",
+        "shot05",
+        "shot06",
+        "shot07",
+        "shot08",
+        "shot09"
+      ],
+      "shots": [
+        {
+          "shot_id": "shot00",
+          "condition": "sphere_only",
+          "condition_detail": "parked_dir00_ppp",
+          "position_band": "negative_outside_0_12",
+          "near_direction_ordinal": 0,
+          "near_direction_unit_world": [
+            0.5773502691896258,
+            0.5773502691896258,
+            0.5773502691896258
+          ],
+          "independent_scene": true,
+          "static_layout_not_attached_or_grasp": true
+        },
+        {
+          "shot_id": "shot01",
+          "condition": "cube_far",
+          "condition_detail": "nearhand_dir00_ppp",
+          "position_band": "negative_outside_0_12",
+          "near_direction_ordinal": 0,
+          "near_direction_unit_world": [
+            0.5773502691896258,
+            0.5773502691896258,
+            0.5773502691896258
+          ],
+          "independent_scene": true,
+          "static_layout_not_attached_or_grasp": true
+        },
+        {
+          "shot_id": "shot02",
+          "condition": "near_goal",
+          "condition_detail": "parked_dir00_ppp",
+          "position_band": "near_0_08",
+          "near_direction_ordinal": 0,
+          "near_direction_unit_world": [
+            0.5773502691896258,
+            0.5773502691896258,
+            0.5773502691896258
+          ],
+          "independent_scene": true,
+          "static_layout_not_attached_or_grasp": true
+        },
+        {
+          "shot_id": "shot03",
+          "condition": "near_goal",
+          "condition_detail": "static_inhand_full_open_asset_max_dir00_ppp",
+          "position_band": "near_0_08",
+          "near_direction_ordinal": 0,
+          "near_direction_unit_world": [
+            0.5773502691896258,
+            0.5773502691896258,
+            0.5773502691896258
+          ],
+          "independent_scene": true,
+          "static_layout_not_attached_or_grasp": true
+        },
+        {
+          "shot_id": "shot04",
+          "condition": "near_goal",
+          "condition_detail": "static_inhand_gap060_dir00_ppp",
+          "position_band": "near_0_08",
+          "near_direction_ordinal": 0,
+          "near_direction_unit_world": [
+            0.5773502691896258,
+            0.5773502691896258,
+            0.5773502691896258
+          ],
+          "independent_scene": true,
+          "static_layout_not_attached_or_grasp": true
+        },
+        {
+          "shot_id": "shot05",
+          "condition": "near_goal",
+          "condition_detail": "static_inhand_gap050_dir00_ppp",
+          "position_band": "near_0_08",
+          "near_direction_ordinal": 0,
+          "near_direction_unit_world": [
+            0.5773502691896258,
+            0.5773502691896258,
+            0.5773502691896258
+          ],
+          "independent_scene": true,
+          "static_layout_not_attached_or_grasp": true
+        },
+        {
+          "shot_id": "shot06",
+          "condition": "near_goal",
+          "condition_detail": "palm_Z_occlusion_gap060_dir00_ppp",
+          "position_band": "near_0_08",
+          "near_direction_ordinal": 0,
+          "near_direction_unit_world": [
+            0.5773502691896258,
+            0.5773502691896258,
+            0.5773502691896258
+          ],
+          "independent_scene": true,
+          "static_layout_not_attached_or_grasp": true
+        },
+        {
+          "shot_id": "shot07",
+          "condition": "near_goal",
+          "condition_detail": "annulus090_open_dir00_ppp",
+          "position_band": "annulus_08_10",
+          "near_direction_ordinal": 0,
+          "near_direction_unit_world": [
+            0.5773502691896258,
+            0.5773502691896258,
+            0.5773502691896258
+          ],
+          "independent_scene": true,
+          "static_layout_not_attached_or_grasp": true
+        },
+        {
+          "shot_id": "shot08",
+          "condition": "near_goal",
+          "condition_detail": "annulus110_nearhand_dir00_ppp",
+          "position_band": "annulus_10_12",
+          "near_direction_ordinal": 0,
+          "near_direction_unit_world": [
+            0.5773502691896258,
+            0.5773502691896258,
+            0.5773502691896258
+          ],
+          "independent_scene": true,
+          "static_layout_not_attached_or_grasp": true
+        },
+        {
+          "shot_id": "shot09",
+          "condition": "sphere_only",
+          "condition_detail": "same_palm_occlusion_nearhand_dir00_ppp",
+          "position_band": "negative_outside_0_12",
+          "near_direction_ordinal": 0,
+          "near_direction_unit_world": [
+            0.5773502691896258,
+            0.5773502691896258,
+            0.5773502691896258
+          ],
+          "independent_scene": true,
+          "static_layout_not_attached_or_grasp": true
+        }
+      ],
+      "TRAIN_q_source": {
+        "parent_seed": 261103656,
+        "parent_id": "near_goal_perception_position_v10_seed261103656",
+        "parent_role": "calibration",
+        "calibration_scope": "position_calibration8_v10",
+        "near_direction_ordinal": 0,
+        "source_parent_id": "TRAIN_pick_normal_episode399",
+        "task": "pick_moving_target_on_the_table",
+        "raw_episode_id": "episode399",
+        "dataset": "low_dim_obs/joint_positions",
+        "index": 0,
+        "file_stat_metadata": {
+          "size_bytes": 31840198,
+          "mtime_ns": 1776474538000000000
+        },
+        "file": {
+          "path": "/home/ubuntu/\u684c\u9762/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/pick_moving_target_on_the_table/all_variations/episodes/episode399/data.h5",
+          "sha256": "d0468c5a4a9351eca3b50537a7664758fa84fbccde6020b0c331c5c451f044e9"
+        },
+        "joint_positions": [
+          0.0334477461874485,
+          0.08113864064216614,
+          0.04791191592812538,
+          -1.0041298866271973,
+          -0.034518830478191376,
+          1.2816283702850342,
+          0.8721126317977905
+        ],
+        "source_dtype": "float32",
+        "seven_joints_finite": true,
+        "within_frozen_native_lower_upper": true,
+        "joint_values_clipped_or_replaced": false
+      }
+    },
+    {
+      "parent_id": "near_goal_perception_position_v10_seed261103657",
+      "seed": 261103657,
+      "role": "calibration",
+      "fold": "calibration",
+      "pilot": false,
+      "near_direction_ordinal": 1,
+      "near_direction_unit_world": [
+        -0.5773502691896258,
+        -0.5773502691896258,
+        -0.5773502691896258
+      ],
+      "shot_ids": [
+        "shot00",
+        "shot01",
+        "shot02",
+        "shot03",
+        "shot04",
+        "shot05",
+        "shot06",
+        "shot07",
+        "shot08",
+        "shot09"
+      ],
+      "shots": [
+        {
+          "shot_id": "shot00",
+          "condition": "sphere_only",
+          "condition_detail": "parked_dir01_mmm",
+          "position_band": "negative_outside_0_12",
+          "near_direction_ordinal": 1,
+          "near_direction_unit_world": [
+            -0.5773502691896258,
+            -0.5773502691896258,
+            -0.5773502691896258
+          ],
+          "independent_scene": true,
+          "static_layout_not_attached_or_grasp": true
+        },
+        {
+          "shot_id": "shot01",
+          "condition": "cube_far",
+          "condition_detail": "nearhand_dir01_mmm",
+          "position_band": "negative_outside_0_12",
+          "near_direction_ordinal": 1,
+          "near_direction_unit_world": [
+            -0.5773502691896258,
+            -0.5773502691896258,
+            -0.5773502691896258
+          ],
+          "independent_scene": true,
+          "static_layout_not_attached_or_grasp": true
+        },
+        {
+          "shot_id": "shot02",
+          "condition": "near_goal",
+          "condition_detail": "parked_dir01_mmm",
+          "position_band": "near_0_08",
+          "near_direction_ordinal": 1,
+          "near_direction_unit_world": [
+            -0.5773502691896258,
+            -0.5773502691896258,
+            -0.5773502691896258
+          ],
+          "independent_scene": true,
+          "static_layout_not_attached_or_grasp": true
+        },
+        {
+          "shot_id": "shot03",
+          "condition": "near_goal",
+          "condition_detail": "static_inhand_full_open_asset_max_dir01_mmm",
+          "position_band": "near_0_08",
+          "near_direction_ordinal": 1,
+          "near_direction_unit_world": [
+            -0.5773502691896258,
+            -0.5773502691896258,
+            -0.5773502691896258
+          ],
+          "independent_scene": true,
+          "static_layout_not_attached_or_grasp": true
+        },
+        {
+          "shot_id": "shot04",
+          "condition": "near_goal",
+          "condition_detail": "static_inhand_gap060_dir01_mmm",
+          "position_band": "near_0_08",
+          "near_direction_ordinal": 1,
+          "near_direction_unit_world": [
+            -0.5773502691896258,
+            -0.5773502691896258,
+            -0.5773502691896258
+          ],
+          "independent_scene": true,
+          "static_layout_not_attached_or_grasp": true
+        },
+        {
+          "shot_id": "shot05",
+          "condition": "near_goal",
+          "condition_detail": "static_inhand_gap050_dir01_mmm",
+          "position_band": "near_0_08",
+          "near_direction_ordinal": 1,
+          "near_direction_unit_world": [
+            -0.5773502691896258,
+            -0.5773502691896258,
+            -0.5773502691896258
+          ],
+          "independent_scene": true,
+          "static_layout_not_attached_or_grasp": true
+        },
+        {
+          "shot_id": "shot06",
+          "condition": "near_goal",
+          "condition_detail": "palm_Z_occlusion_gap060_dir01_mmm",
+          "position_band": "near_0_08",
+          "near_direction_ordinal": 1,
+          "near_direction_unit_world": [
+            -0.5773502691896258,
+            -0.5773502691896258,
+            -0.5773502691896258
+          ],
+          "independent_scene": true,
+          "static_layout_not_attached_or_grasp": true
+        },
+        {
+          "shot_id": "shot07",
+          "condition": "near_goal",
+          "condition_detail": "annulus090_open_dir01_mmm",
+          "position_band": "annulus_08_10",
+          "near_direction_ordinal": 1,
+          "near_direction_unit_world": [
+            -0.5773502691896258,
+            -0.5773502691896258,
+            -0.5773502691896258
+          ],
+          "independent_scene": true,
+          "static_layout_not_attached_or_grasp": true
+        },
+        {
+          "shot_id": "shot08",
+          "condition": "near_goal",
+          "condition_detail": "annulus110_nearhand_dir01_mmm",
+          "position_band": "annulus_10_12",
+          "near_direction_ordinal": 1,
+          "near_direction_unit_world": [
+            -0.5773502691896258,
+            -0.5773502691896258,
+            -0.5773502691896258
+          ],
+          "independent_scene": true,
+          "static_layout_not_attached_or_grasp": true
+        },
+        {
+          "shot_id": "shot09",
+          "condition": "sphere_only",
+          "condition_detail": "same_palm_occlusion_nearhand_dir01_mmm",
+          "position_band": "negative_outside_0_12",
+          "near_direction_ordinal": 1,
+          "near_direction_unit_world": [
+            -0.5773502691896258,
+            -0.5773502691896258,
+            -0.5773502691896258
+          ],
+          "independent_scene": true,
+          "static_layout_not_attached_or_grasp": true
+        }
+      ],
+      "TRAIN_q_source": {
+        "parent_seed": 261103657,
+        "parent_id": "near_goal_perception_position_v10_seed261103657",
+        "parent_role": "calibration",
+        "calibration_scope": "position_calibration8_v10",
+        "near_direction_ordinal": 1,
+        "source_parent_id": "TRAIN_pick_normal_episode405",
+        "task": "pick_moving_target_on_the_table",
+        "raw_episode_id": "episode405",
+        "dataset": "low_dim_obs/joint_positions",
+        "index": 0,
+        "file_stat_metadata": {
+          "size_bytes": 30580359,
+          "mtime_ns": 1776474541000000000
+        },
+        "file": {
+          "path": "/home/ubuntu/\u684c\u9762/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/pick_moving_target_on_the_table/all_variations/episodes/episode405/data.h5",
+          "sha256": "20686d0496dbf71d6e3c1eca73023917cf81ee79c3aee65ef7f45bcac715e936"
+        },
+        "joint_positions": [
+          -0.029923196882009506,
+          0.08032086491584778,
+          -0.05176803097128868,
+          -1.0040338039398193,
+          0.03386128693819046,
+          1.280881643295288,
+          0.6998773813247681
+        ],
+        "source_dtype": "float32",
+        "seven_joints_finite": true,
+        "within_frozen_native_lower_upper": true,
+        "joint_values_clipped_or_replaced": false
+      }
+    },
+    {
+      "parent_id": "near_goal_perception_position_v10_seed261103658",
+      "seed": 261103658,
+      "role": "calibration",
+      "fold": "calibration",
+      "pilot": false,
+      "near_direction_ordinal": 2,
+      "near_direction_unit_world": [
+        0.5773502691896258,
+        0.5773502691896258,
+        -0.5773502691896258
+      ],
+      "shot_ids": [
+        "shot00",
+        "shot01",
+        "shot02",
+        "shot03",
+        "shot04",
+        "shot05",
+        "shot06",
+        "shot07",
+        "shot08",
+        "shot09"
+      ],
+      "shots": [
+        {
+          "shot_id": "shot00",
+          "condition": "sphere_only",
+          "condition_detail": "parked_dir02_ppm",
+          "position_band": "negative_outside_0_12",
+          "near_direction_ordinal": 2,
+          "near_direction_unit_world": [
+            0.5773502691896258,
+            0.5773502691896258,
+            -0.5773502691896258
+          ],
+          "independent_scene": true,
+          "static_layout_not_attached_or_grasp": true
+        },
+        {
+          "shot_id": "shot01",
+          "condition": "cube_far",
+          "condition_detail": "nearhand_dir02_ppm",
+          "position_band": "negative_outside_0_12",
+          "near_direction_ordinal": 2,
+          "near_direction_unit_world": [
+            0.5773502691896258,
+            0.5773502691896258,
+            -0.5773502691896258
+          ],
+          "independent_scene": true,
+          "static_layout_not_attached_or_grasp": true
+        },
+        {
+          "shot_id": "shot02",
+          "condition": "near_goal",
+          "condition_detail": "parked_dir02_ppm",
+          "position_band": "near_0_08",
+          "near_direction_ordinal": 2,
+          "near_direction_unit_world": [
+            0.5773502691896258,
+            0.5773502691896258,
+            -0.5773502691896258
+          ],
+          "independent_scene": true,
+          "static_layout_not_attached_or_grasp": true
+        },
+        {
+          "shot_id": "shot03",
+          "condition": "near_goal",
+          "condition_detail": "static_inhand_full_open_asset_max_dir02_ppm",
+          "position_band": "near_0_08",
+          "near_direction_ordinal": 2,
+          "near_direction_unit_world": [
+            0.5773502691896258,
+            0.5773502691896258,
+            -0.5773502691896258
+          ],
+          "independent_scene": true,
+          "static_layout_not_attached_or_grasp": true
+        },
+        {
+          "shot_id": "shot04",
+          "condition": "near_goal",
+          "condition_detail": "static_inhand_gap060_dir02_ppm",
+          "position_band": "near_0_08",
+          "near_direction_ordinal": 2,
+          "near_direction_unit_world": [
+            0.5773502691896258,
+            0.5773502691896258,
+            -0.5773502691896258
+          ],
+          "independent_scene": true,
+          "static_layout_not_attached_or_grasp": true
+        },
+        {
+          "shot_id": "shot05",
+          "condition": "near_goal",
+          "condition_detail": "static_inhand_gap050_dir02_ppm",
+          "position_band": "near_0_08",
+          "near_direction_ordinal": 2,
+          "near_direction_unit_world": [
+            0.5773502691896258,
+            0.5773502691896258,
+            -0.5773502691896258
+          ],
+          "independent_scene": true,
+          "static_layout_not_attached_or_grasp": true
+        },
+        {
+          "shot_id": "shot06",
+          "condition": "near_goal",
+          "condition_detail": "palm_Z_occlusion_gap060_dir02_ppm",
+          "position_band": "near_0_08",
+          "near_direction_ordinal": 2,
+          "near_direction_unit_world": [
+            0.5773502691896258,
+            0.5773502691896258,
+            -0.5773502691896258
+          ],
+          "independent_scene": true,
+          "static_layout_not_attached_or_grasp": true
+        },
+        {
+          "shot_id": "shot07",
+          "condition": "near_goal",
+          "condition_detail": "annulus090_open_dir02_ppm",
+          "position_band": "annulus_08_10",
+          "near_direction_ordinal": 2,
+          "near_direction_unit_world": [
+            0.5773502691896258,
+            0.5773502691896258,
+            -0.5773502691896258
+          ],
+          "independent_scene": true,
+          "static_layout_not_attached_or_grasp": true
+        },
+        {
+          "shot_id": "shot08",
+          "condition": "near_goal",
+          "condition_detail": "annulus110_nearhand_dir02_ppm",
+          "position_band": "annulus_10_12",
+          "near_direction_ordinal": 2,
+          "near_direction_unit_world": [
+            0.5773502691896258,
+            0.5773502691896258,
+            -0.5773502691896258
+          ],
+          "independent_scene": true,
+          "static_layout_not_attached_or_grasp": true
+        },
+        {
+          "shot_id": "shot09",
+          "condition": "sphere_only",
+          "condition_detail": "same_palm_occlusion_nearhand_dir02_ppm",
+          "position_band": "negative_outside_0_12",
+          "near_direction_ordinal": 2,
+          "near_direction_unit_world": [
+            0.5773502691896258,
+            0.5773502691896258,
+            -0.5773502691896258
+          ],
+          "independent_scene": true,
+          "static_layout_not_attached_or_grasp": true
+        }
+      ],
+      "TRAIN_q_source": {
+        "parent_seed": 261103658,
+        "parent_id": "near_goal_perception_position_v10_seed261103658",
+        "parent_role": "calibration",
+        "calibration_scope": "position_calibration8_v10",
+        "near_direction_ordinal": 2,
+        "source_parent_id": "TRAIN_pick_normal_episode416",
+        "task": "pick_moving_target_on_the_table",
+        "raw_episode_id": "episode416",
+        "dataset": "low_dim_obs/joint_positions",
+        "index": 0,
+        "file_stat_metadata": {
+          "size_bytes": 25292096,
+          "mtime_ns": 1776474544000000000
+        },
+        "file": {
+          "path": "/home/ubuntu/\u684c\u9762/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/pick_moving_target_on_the_table/all_variations/episodes/episode416/data.h5",
+          "sha256": "9dad12b9756503a4a085186b940c2b4031ab467a836a5fe21d11c6b1a2606aa9"
+        },
+        "joint_positions": [
+          -0.022568698972463608,
+          0.07967045903205872,
+          -0.02786656841635704,
+          -1.0039148330688477,
+          0.014017706736922264,
+          1.2810680866241455,
+          0.7349125146865845
+        ],
+        "source_dtype": "float32",
+        "seven_joints_finite": true,
+        "within_frozen_native_lower_upper": true,
+        "joint_values_clipped_or_replaced": false
+      }
+    },
+    {
+      "parent_id": "near_goal_perception_position_v10_seed261103659",
+      "seed": 261103659,
+      "role": "calibration",
+      "fold": "calibration",
+      "pilot": false,
+      "near_direction_ordinal": 3,
+      "near_direction_unit_world": [
+        -0.5773502691896258,
+        -0.5773502691896258,
+        0.5773502691896258
+      ],
+      "shot_ids": [
+        "shot00",
+        "shot01",
+        "shot02",
+        "shot03",
+        "shot04",
+        "shot05",
+        "shot06",
+        "shot07",
+        "shot08",
+        "shot09"
+      ],
+      "shots": [
+        {
+          "shot_id": "shot00",
+          "condition": "sphere_only",
+          "condition_detail": "parked_dir03_mmp",
+          "position_band": "negative_outside_0_12",
+          "near_direction_ordinal": 3,
+          "near_direction_unit_world": [
+            -0.5773502691896258,
+            -0.5773502691896258,
+            0.5773502691896258
+          ],
+          "independent_scene": true,
+          "static_layout_not_attached_or_grasp": true
+        },
+        {
+          "shot_id": "shot01",
+          "condition": "cube_far",
+          "condition_detail": "nearhand_dir03_mmp",
+          "position_band": "negative_outside_0_12",
+          "near_direction_ordinal": 3,
+          "near_direction_unit_world": [
+            -0.5773502691896258,
+            -0.5773502691896258,
+            0.5773502691896258
+          ],
+          "independent_scene": true,
+          "static_layout_not_attached_or_grasp": true
+        },
+        {
+          "shot_id": "shot02",
+          "condition": "near_goal",
+          "condition_detail": "parked_dir03_mmp",
+          "position_band": "near_0_08",
+          "near_direction_ordinal": 3,
+          "near_direction_unit_world": [
+            -0.5773502691896258,
+            -0.5773502691896258,
+            0.5773502691896258
+          ],
+          "independent_scene": true,
+          "static_layout_not_attached_or_grasp": true
+        },
+        {
+          "shot_id": "shot03",
+          "condition": "near_goal",
+          "condition_detail": "static_inhand_full_open_asset_max_dir03_mmp",
+          "position_band": "near_0_08",
+          "near_direction_ordinal": 3,
+          "near_direction_unit_world": [
+            -0.5773502691896258,
+            -0.5773502691896258,
+            0.5773502691896258
+          ],
+          "independent_scene": true,
+          "static_layout_not_attached_or_grasp": true
+        },
+        {
+          "shot_id": "shot04",
+          "condition": "near_goal",
+          "condition_detail": "static_inhand_gap060_dir03_mmp",
+          "position_band": "near_0_08",
+          "near_direction_ordinal": 3,
+          "near_direction_unit_world": [
+            -0.5773502691896258,
+            -0.5773502691896258,
+            0.5773502691896258
+          ],
+          "independent_scene": true,
+          "static_layout_not_attached_or_grasp": true
+        },
+        {
+          "shot_id": "shot05",
+          "condition": "near_goal",
+          "condition_detail": "static_inhand_gap050_dir03_mmp",
+          "position_band": "near_0_08",
+          "near_direction_ordinal": 3,
+          "near_direction_unit_world": [
+            -0.5773502691896258,
+            -0.5773502691896258,
+            0.5773502691896258
+          ],
+          "independent_scene": true,
+          "static_layout_not_attached_or_grasp": true
+        },
+        {
+          "shot_id": "shot06",
+          "condition": "near_goal",
+          "condition_detail": "palm_Z_occlusion_gap060_dir03_mmp",
+          "position_band": "near_0_08",
+          "near_direction_ordinal": 3,
+          "near_direction_unit_world": [
+            -0.5773502691896258,
+            -0.5773502691896258,
+            0.5773502691896258
+          ],
+          "independent_scene": true,
+          "static_layout_not_attached_or_grasp": true
+        },
+        {
+          "shot_id": "shot07",
+          "condition": "near_goal",
+          "condition_detail": "annulus090_open_dir03_mmp",
+          "position_band": "annulus_08_10",
+          "near_direction_ordinal": 3,
+          "near_direction_unit_world": [
+            -0.5773502691896258,
+            -0.5773502691896258,
+            0.5773502691896258
+          ],
+          "independent_scene": true,
+          "static_layout_not_attached_or_grasp": true
+        },
+        {
+          "shot_id": "shot08",
+          "condition": "near_goal",
+          "condition_detail": "annulus110_nearhand_dir03_mmp",
+          "position_band": "annulus_10_12",
+          "near_direction_ordinal": 3,
+          "near_direction_unit_world": [
+            -0.5773502691896258,
+            -0.5773502691896258,
+            0.5773502691896258
+          ],
+          "independent_scene": true,
+          "static_layout_not_attached_or_grasp": true
+        },
+        {
+          "shot_id": "shot09",
+          "condition": "sphere_only",
+          "condition_detail": "same_palm_occlusion_nearhand_dir03_mmp",
+          "position_band": "negative_outside_0_12",
+          "near_direction_ordinal": 3,
+          "near_direction_unit_world": [
+            -0.5773502691896258,
+            -0.5773502691896258,
+            0.5773502691896258
+          ],
+          "independent_scene": true,
+          "static_layout_not_attached_or_grasp": true
+        }
+      ],
+      "TRAIN_q_source": {
+        "parent_seed": 261103659,
+        "parent_id": "near_goal_perception_position_v10_seed261103659",
+        "parent_role": "calibration",
+        "calibration_scope": "position_calibration8_v10",
+        "near_direction_ordinal": 3,
+        "source_parent_id": "TRAIN_pick_normal_episode427",
+        "task": "pick_moving_target_on_the_table",
+        "raw_episode_id": "episode427",
+        "dataset": "low_dim_obs/joint_positions",
+        "index": 0,
+        "file_stat_metadata": {
+          "size_bytes": 26770208,
+          "mtime_ns": 1776474549000000000
+        },
+        "file": {
+          "path": "/home/ubuntu/\u684c\u9762/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/pick_moving_target_on_the_table/all_variations/episodes/episode427/data.h5",
+          "sha256": "9df1797097096d85708276823e42a8a86ed26640d335b1c683bf46320a176123"
+        },
+        "joint_positions": [
+          -0.036551233381032944,
+          0.08068040013313293,
+          -0.05695482715964317,
+          -1.003934621810913,
+          0.0431908443570137,
+          1.2807254791259766,
+          0.6849199533462524
+        ],
+        "source_dtype": "float32",
+        "seven_joints_finite": true,
+        "within_frozen_native_lower_upper": true,
+        "joint_values_clipped_or_replaced": false
+      }
+    },
+    {
+      "parent_id": "near_goal_perception_position_v10_seed261103660",
+      "seed": 261103660,
+      "role": "calibration",
+      "fold": "calibration",
+      "pilot": false,
+      "near_direction_ordinal": 4,
+      "near_direction_unit_world": [
+        0.5773502691896258,
+        -0.5773502691896258,
+        0.5773502691896258
+      ],
+      "shot_ids": [
+        "shot00",
+        "shot01",
+        "shot02",
+        "shot03",
+        "shot04",
+        "shot05",
+        "shot06",
+        "shot07",
+        "shot08",
+        "shot09"
+      ],
+      "shots": [
+        {
+          "shot_id": "shot00",
+          "condition": "sphere_only",
+          "condition_detail": "parked_dir04_pmp",
+          "position_band": "negative_outside_0_12",
+          "near_direction_ordinal": 4,
+          "near_direction_unit_world": [
+            0.5773502691896258,
+            -0.5773502691896258,
+            0.5773502691896258
+          ],
+          "independent_scene": true,
+          "static_layout_not_attached_or_grasp": true
+        },
+        {
+          "shot_id": "shot01",
+          "condition": "cube_far",
+          "condition_detail": "nearhand_dir04_pmp",
+          "position_band": "negative_outside_0_12",
+          "near_direction_ordinal": 4,
+          "near_direction_unit_world": [
+            0.5773502691896258,
+            -0.5773502691896258,
+            0.5773502691896258
+          ],
+          "independent_scene": true,
+          "static_layout_not_attached_or_grasp": true
+        },
+        {
+          "shot_id": "shot02",
+          "condition": "near_goal",
+          "condition_detail": "parked_dir04_pmp",
+          "position_band": "near_0_08",
+          "near_direction_ordinal": 4,
+          "near_direction_unit_world": [
+            0.5773502691896258,
+            -0.5773502691896258,
+            0.5773502691896258
+          ],
+          "independent_scene": true,
+          "static_layout_not_attached_or_grasp": true
+        },
+        {
+          "shot_id": "shot03",
+          "condition": "near_goal",
+          "condition_detail": "static_inhand_full_open_asset_max_dir04_pmp",
+          "position_band": "near_0_08",
+          "near_direction_ordinal": 4,
+          "near_direction_unit_world": [
+            0.5773502691896258,
+            -0.5773502691896258,
+            0.5773502691896258
+          ],
+          "independent_scene": true,
+          "static_layout_not_attached_or_grasp": true
+        },
+        {
+          "shot_id": "shot04",
+          "condition": "near_goal",
+          "condition_detail": "static_inhand_gap060_dir04_pmp",
+          "position_band": "near_0_08",
+          "near_direction_ordinal": 4,
+          "near_direction_unit_world": [
+            0.5773502691896258,
+            -0.5773502691896258,
+            0.5773502691896258
+          ],
+          "independent_scene": true,
+          "static_layout_not_attached_or_grasp": true
+        },
+        {
+          "shot_id": "shot05",
+          "condition": "near_goal",
+          "condition_detail": "static_inhand_gap050_dir04_pmp",
+          "position_band": "near_0_08",
+          "near_direction_ordinal": 4,
+          "near_direction_unit_world": [
+            0.5773502691896258,
+            -0.5773502691896258,
+            0.5773502691896258
+          ],
+          "independent_scene": true,
+          "static_layout_not_attached_or_grasp": true
+        },
+        {
+          "shot_id": "shot06",
+          "condition": "near_goal",
+          "condition_detail": "palm_Z_occlusion_gap060_dir04_pmp",
+          "position_band": "near_0_08",
+          "near_direction_ordinal": 4,
+          "near_direction_unit_world": [
+            0.5773502691896258,
+            -0.5773502691896258,
+            0.5773502691896258
+          ],
+          "independent_scene": true,
+          "static_layout_not_attached_or_grasp": true
+        },
+        {
+          "shot_id": "shot07",
+          "condition": "near_goal",
+          "condition_detail": "annulus090_open_dir04_pmp",
+          "position_band": "annulus_08_10",
+          "near_direction_ordinal": 4,
+          "near_direction_unit_world": [
+            0.5773502691896258,
+            -0.5773502691896258,
+            0.5773502691896258
+          ],
+          "independent_scene": true,
+          "static_layout_not_attached_or_grasp": true
+        },
+        {
+          "shot_id": "shot08",
+          "condition": "near_goal",
+          "condition_detail": "annulus110_nearhand_dir04_pmp",
+          "position_band": "annulus_10_12",
+          "near_direction_ordinal": 4,
+          "near_direction_unit_world": [
+            0.5773502691896258,
+            -0.5773502691896258,
+            0.5773502691896258
+          ],
+          "independent_scene": true,
+          "static_layout_not_attached_or_grasp": true
+        },
+        {
+          "shot_id": "shot09",
+          "condition": "sphere_only",
+          "condition_detail": "same_palm_occlusion_nearhand_dir04_pmp",
+          "position_band": "negative_outside_0_12",
+          "near_direction_ordinal": 4,
+          "near_direction_unit_world": [
+            0.5773502691896258,
+            -0.5773502691896258,
+            0.5773502691896258
+          ],
+          "independent_scene": true,
+          "static_layout_not_attached_or_grasp": true
+        }
+      ],
+      "TRAIN_q_source": {
+        "parent_seed": 261103660,
+        "parent_id": "near_goal_perception_position_v10_seed261103660",
+        "parent_role": "calibration",
+        "calibration_scope": "position_calibration8_v10",
+        "near_direction_ordinal": 4,
+        "source_parent_id": "TRAIN_pick_normal_episode430",
+        "task": "pick_moving_target_on_the_table",
+        "raw_episode_id": "episode430",
+        "dataset": "low_dim_obs/joint_positions",
+        "index": 0,
+        "file_stat_metadata": {
+          "size_bytes": 27432820,
+          "mtime_ns": 1776474551000000000
+        },
+        "file": {
+          "path": "/home/ubuntu/\u684c\u9762/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/pick_moving_target_on_the_table/all_variations/episodes/episode430/data.h5",
+          "sha256": "d9ba399d2af30910b7f8e57f2f9cc07be7ed2cafa183bc82253f216bcd150488"
+        },
+        "joint_positions": [
+          -0.030127283185720444,
+          0.08011320233345032,
+          -0.040660347789525986,
+          -1.0040991306304932,
+          0.02637374959886074,
+          1.2810699939727783,
+          0.7112315893173218
+        ],
+        "source_dtype": "float32",
+        "seven_joints_finite": true,
+        "within_frozen_native_lower_upper": true,
+        "joint_values_clipped_or_replaced": false
+      }
+    },
+    {
+      "parent_id": "near_goal_perception_position_v10_seed261103661",
+      "seed": 261103661,
+      "role": "calibration",
+      "fold": "calibration",
+      "pilot": false,
+      "near_direction_ordinal": 5,
+      "near_direction_unit_world": [
+        -0.5773502691896258,
+        0.5773502691896258,
+        -0.5773502691896258
+      ],
+      "shot_ids": [
+        "shot00",
+        "shot01",
+        "shot02",
+        "shot03",
+        "shot04",
+        "shot05",
+        "shot06",
+        "shot07",
+        "shot08",
+        "shot09"
+      ],
+      "shots": [
+        {
+          "shot_id": "shot00",
+          "condition": "sphere_only",
+          "condition_detail": "parked_dir05_mpm",
+          "position_band": "negative_outside_0_12",
+          "near_direction_ordinal": 5,
+          "near_direction_unit_world": [
+            -0.5773502691896258,
+            0.5773502691896258,
+            -0.5773502691896258
+          ],
+          "independent_scene": true,
+          "static_layout_not_attached_or_grasp": true
+        },
+        {
+          "shot_id": "shot01",
+          "condition": "cube_far",
+          "condition_detail": "nearhand_dir05_mpm",
+          "position_band": "negative_outside_0_12",
+          "near_direction_ordinal": 5,
+          "near_direction_unit_world": [
+            -0.5773502691896258,
+            0.5773502691896258,
+            -0.5773502691896258
+          ],
+          "independent_scene": true,
+          "static_layout_not_attached_or_grasp": true
+        },
+        {
+          "shot_id": "shot02",
+          "condition": "near_goal",
+          "condition_detail": "parked_dir05_mpm",
+          "position_band": "near_0_08",
+          "near_direction_ordinal": 5,
+          "near_direction_unit_world": [
+            -0.5773502691896258,
+            0.5773502691896258,
+            -0.5773502691896258
+          ],
+          "independent_scene": true,
+          "static_layout_not_attached_or_grasp": true
+        },
+        {
+          "shot_id": "shot03",
+          "condition": "near_goal",
+          "condition_detail": "static_inhand_full_open_asset_max_dir05_mpm",
+          "position_band": "near_0_08",
+          "near_direction_ordinal": 5,
+          "near_direction_unit_world": [
+            -0.5773502691896258,
+            0.5773502691896258,
+            -0.5773502691896258
+          ],
+          "independent_scene": true,
+          "static_layout_not_attached_or_grasp": true
+        },
+        {
+          "shot_id": "shot04",
+          "condition": "near_goal",
+          "condition_detail": "static_inhand_gap060_dir05_mpm",
+          "position_band": "near_0_08",
+          "near_direction_ordinal": 5,
+          "near_direction_unit_world": [
+            -0.5773502691896258,
+            0.5773502691896258,
+            -0.5773502691896258
+          ],
+          "independent_scene": true,
+          "static_layout_not_attached_or_grasp": true
+        },
+        {
+          "shot_id": "shot05",
+          "condition": "near_goal",
+          "condition_detail": "static_inhand_gap050_dir05_mpm",
+          "position_band": "near_0_08",
+          "near_direction_ordinal": 5,
+          "near_direction_unit_world": [
+            -0.5773502691896258,
+            0.5773502691896258,
+            -0.5773502691896258
+          ],
+          "independent_scene": true,
+          "static_layout_not_attached_or_grasp": true
+        },
+        {
+          "shot_id": "shot06",
+          "condition": "near_goal",
+          "condition_detail": "palm_Z_occlusion_gap060_dir05_mpm",
+          "position_band": "near_0_08",
+          "near_direction_ordinal": 5,
+          "near_direction_unit_world": [
+            -0.5773502691896258,
+            0.5773502691896258,
+            -0.5773502691896258
+          ],
+          "independent_scene": true,
+          "static_layout_not_attached_or_grasp": true
+        },
+        {
+          "shot_id": "shot07",
+          "condition": "near_goal",
+          "condition_detail": "annulus090_open_dir05_mpm",
+          "position_band": "annulus_08_10",
+          "near_direction_ordinal": 5,
+          "near_direction_unit_world": [
+            -0.5773502691896258,
+            0.5773502691896258,
+            -0.5773502691896258
+          ],
+          "independent_scene": true,
+          "static_layout_not_attached_or_grasp": true
+        },
+        {
+          "shot_id": "shot08",
+          "condition": "near_goal",
+          "condition_detail": "annulus110_nearhand_dir05_mpm",
+          "position_band": "annulus_10_12",
+          "near_direction_ordinal": 5,
+          "near_direction_unit_world": [
+            -0.5773502691896258,
+            0.5773502691896258,
+            -0.5773502691896258
+          ],
+          "independent_scene": true,
+          "static_layout_not_attached_or_grasp": true
+        },
+        {
+          "shot_id": "shot09",
+          "condition": "sphere_only",
+          "condition_detail": "same_palm_occlusion_nearhand_dir05_mpm",
+          "position_band": "negative_outside_0_12",
+          "near_direction_ordinal": 5,
+          "near_direction_unit_world": [
+            -0.5773502691896258,
+            0.5773502691896258,
+            -0.5773502691896258
+          ],
+          "independent_scene": true,
+          "static_layout_not_attached_or_grasp": true
+        }
+      ],
+      "TRAIN_q_source": {
+        "parent_seed": 261103661,
+        "parent_id": "near_goal_perception_position_v10_seed261103661",
+        "parent_role": "calibration",
+        "calibration_scope": "position_calibration8_v10",
+        "near_direction_ordinal": 5,
+        "source_parent_id": "TRAIN_pick_normal_episode431",
+        "task": "pick_moving_target_on_the_table",
+        "raw_episode_id": "episode431",
+        "dataset": "low_dim_obs/joint_positions",
+        "index": 0,
+        "file_stat_metadata": {
+          "size_bytes": 25779612,
+          "mtime_ns": 1776474553000000000
+        },
+        "file": {
+          "path": "/home/ubuntu/\u684c\u9762/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/pick_moving_target_on_the_table/all_variations/episodes/episode431/data.h5",
+          "sha256": "c66e64cac033d6464b8d308f40b006b63aea52be05e31da44cea3c8575074ebc"
+        },
+        "joint_positions": [
+          0.03085637465119362,
+          0.08054712414741516,
+          0.04270390048623085,
+          -1.0040011405944824,
+          -0.030013198032975197,
+          1.2814750671386719,
+          0.8606065511703491
+        ],
+        "source_dtype": "float32",
+        "seven_joints_finite": true,
+        "within_frozen_native_lower_upper": true,
+        "joint_values_clipped_or_replaced": false
+      }
+    },
+    {
+      "parent_id": "near_goal_perception_position_v10_seed261103662",
+      "seed": 261103662,
+      "role": "calibration",
+      "fold": "calibration",
+      "pilot": false,
+      "near_direction_ordinal": 6,
+      "near_direction_unit_world": [
+        -0.5773502691896258,
+        0.5773502691896258,
+        0.5773502691896258
+      ],
+      "shot_ids": [
+        "shot00",
+        "shot01",
+        "shot02",
+        "shot03",
+        "shot04",
+        "shot05",
+        "shot06",
+        "shot07",
+        "shot08",
+        "shot09"
+      ],
+      "shots": [
+        {
+          "shot_id": "shot00",
+          "condition": "sphere_only",
+          "condition_detail": "parked_dir06_mpp",
+          "position_band": "negative_outside_0_12",
+          "near_direction_ordinal": 6,
+          "near_direction_unit_world": [
+            -0.5773502691896258,
+            0.5773502691896258,
+            0.5773502691896258
+          ],
+          "independent_scene": true,
+          "static_layout_not_attached_or_grasp": true
+        },
+        {
+          "shot_id": "shot01",
+          "condition": "cube_far",
+          "condition_detail": "nearhand_dir06_mpp",
+          "position_band": "negative_outside_0_12",
+          "near_direction_ordinal": 6,
+          "near_direction_unit_world": [
+            -0.5773502691896258,
+            0.5773502691896258,
+            0.5773502691896258
+          ],
+          "independent_scene": true,
+          "static_layout_not_attached_or_grasp": true
+        },
+        {
+          "shot_id": "shot02",
+          "condition": "near_goal",
+          "condition_detail": "parked_dir06_mpp",
+          "position_band": "near_0_08",
+          "near_direction_ordinal": 6,
+          "near_direction_unit_world": [
+            -0.5773502691896258,
+            0.5773502691896258,
+            0.5773502691896258
+          ],
+          "independent_scene": true,
+          "static_layout_not_attached_or_grasp": true
+        },
+        {
+          "shot_id": "shot03",
+          "condition": "near_goal",
+          "condition_detail": "static_inhand_full_open_asset_max_dir06_mpp",
+          "position_band": "near_0_08",
+          "near_direction_ordinal": 6,
+          "near_direction_unit_world": [
+            -0.5773502691896258,
+            0.5773502691896258,
+            0.5773502691896258
+          ],
+          "independent_scene": true,
+          "static_layout_not_attached_or_grasp": true
+        },
+        {
+          "shot_id": "shot04",
+          "condition": "near_goal",
+          "condition_detail": "static_inhand_gap060_dir06_mpp",
+          "position_band": "near_0_08",
+          "near_direction_ordinal": 6,
+          "near_direction_unit_world": [
+            -0.5773502691896258,
+            0.5773502691896258,
+            0.5773502691896258
+          ],
+          "independent_scene": true,
+          "static_layout_not_attached_or_grasp": true
+        },
+        {
+          "shot_id": "shot05",
+          "condition": "near_goal",
+          "condition_detail": "static_inhand_gap050_dir06_mpp",
+          "position_band": "near_0_08",
+          "near_direction_ordinal": 6,
+          "near_direction_unit_world": [
+            -0.5773502691896258,
+            0.5773502691896258,
+            0.5773502691896258
+          ],
+          "independent_scene": true,
+          "static_layout_not_attached_or_grasp": true
+        },
+        {
+          "shot_id": "shot06",
+          "condition": "near_goal",
+          "condition_detail": "palm_Z_occlusion_gap060_dir06_mpp",
+          "position_band": "near_0_08",
+          "near_direction_ordinal": 6,
+          "near_direction_unit_world": [
+            -0.5773502691896258,
+            0.5773502691896258,
+            0.5773502691896258
+          ],
+          "independent_scene": true,
+          "static_layout_not_attached_or_grasp": true
+        },
+        {
+          "shot_id": "shot07",
+          "condition": "near_goal",
+          "condition_detail": "annulus090_open_dir06_mpp",
+          "position_band": "annulus_08_10",
+          "near_direction_ordinal": 6,
+          "near_direction_unit_world": [
+            -0.5773502691896258,
+            0.5773502691896258,
+            0.5773502691896258
+          ],
+          "independent_scene": true,
+          "static_layout_not_attached_or_grasp": true
+        },
+        {
+          "shot_id": "shot08",
+          "condition": "near_goal",
+          "condition_detail": "annulus110_nearhand_dir06_mpp",
+          "position_band": "annulus_10_12",
+          "near_direction_ordinal": 6,
+          "near_direction_unit_world": [
+            -0.5773502691896258,
+            0.5773502691896258,
+            0.5773502691896258
+          ],
+          "independent_scene": true,
+          "static_layout_not_attached_or_grasp": true
+        },
+        {
+          "shot_id": "shot09",
+          "condition": "sphere_only",
+          "condition_detail": "same_palm_occlusion_nearhand_dir06_mpp",
+          "position_band": "negative_outside_0_12",
+          "near_direction_ordinal": 6,
+          "near_direction_unit_world": [
+            -0.5773502691896258,
+            0.5773502691896258,
+            0.5773502691896258
+          ],
+          "independent_scene": true,
+          "static_layout_not_attached_or_grasp": true
+        }
+      ],
+      "TRAIN_q_source": {
+        "parent_seed": 261103662,
+        "parent_id": "near_goal_perception_position_v10_seed261103662",
+        "parent_role": "calibration",
+        "calibration_scope": "position_calibration8_v10",
+        "near_direction_ordinal": 6,
+        "source_parent_id": "TRAIN_pick_normal_episode439",
+        "task": "pick_moving_target_on_the_table",
+        "raw_episode_id": "episode439",
+        "dataset": "low_dim_obs/joint_positions",
+        "index": 0,
+        "file_stat_metadata": {
+          "size_bytes": 25628608,
+          "mtime_ns": 1776474556000000000
+        },
+        "file": {
+          "path": "/home/ubuntu/\u684c\u9762/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/pick_moving_target_on_the_table/all_variations/episodes/episode439/data.h5",
+          "sha256": "ca67d72403a86166758be79526b0fc26820cdaf07dea686b2c2a78d80b1aa478"
+        },
+        "joint_positions": [
+          0.008062366396188736,
+          0.07922151684761047,
+          0.008374962955713272,
+          -1.0040264129638672,
+          -0.002256984356790781,
+          1.281118631362915,
+          0.8018308877944946
+        ],
+        "source_dtype": "float32",
+        "seven_joints_finite": true,
+        "within_frozen_native_lower_upper": true,
+        "joint_values_clipped_or_replaced": false
+      }
+    },
+    {
+      "parent_id": "near_goal_perception_position_v10_seed261103663",
+      "seed": 261103663,
+      "role": "calibration",
+      "fold": "calibration",
+      "pilot": false,
+      "near_direction_ordinal": 7,
+      "near_direction_unit_world": [
+        0.5773502691896258,
+        -0.5773502691896258,
+        -0.5773502691896258
+      ],
+      "shot_ids": [
+        "shot00",
+        "shot01",
+        "shot02",
+        "shot03",
+        "shot04",
+        "shot05",
+        "shot06",
+        "shot07",
+        "shot08",
+        "shot09"
+      ],
+      "shots": [
+        {
+          "shot_id": "shot00",
+          "condition": "sphere_only",
+          "condition_detail": "parked_dir07_pmm",
+          "position_band": "negative_outside_0_12",
+          "near_direction_ordinal": 7,
+          "near_direction_unit_world": [
+            0.5773502691896258,
+            -0.5773502691896258,
+            -0.5773502691896258
+          ],
+          "independent_scene": true,
+          "static_layout_not_attached_or_grasp": true
+        },
+        {
+          "shot_id": "shot01",
+          "condition": "cube_far",
+          "condition_detail": "nearhand_dir07_pmm",
+          "position_band": "negative_outside_0_12",
+          "near_direction_ordinal": 7,
+          "near_direction_unit_world": [
+            0.5773502691896258,
+            -0.5773502691896258,
+            -0.5773502691896258
+          ],
+          "independent_scene": true,
+          "static_layout_not_attached_or_grasp": true
+        },
+        {
+          "shot_id": "shot02",
+          "condition": "near_goal",
+          "condition_detail": "parked_dir07_pmm",
+          "position_band": "near_0_08",
+          "near_direction_ordinal": 7,
+          "near_direction_unit_world": [
+            0.5773502691896258,
+            -0.5773502691896258,
+            -0.5773502691896258
+          ],
+          "independent_scene": true,
+          "static_layout_not_attached_or_grasp": true
+        },
+        {
+          "shot_id": "shot03",
+          "condition": "near_goal",
+          "condition_detail": "static_inhand_full_open_asset_max_dir07_pmm",
+          "position_band": "near_0_08",
+          "near_direction_ordinal": 7,
+          "near_direction_unit_world": [
+            0.5773502691896258,
+            -0.5773502691896258,
+            -0.5773502691896258
+          ],
+          "independent_scene": true,
+          "static_layout_not_attached_or_grasp": true
+        },
+        {
+          "shot_id": "shot04",
+          "condition": "near_goal",
+          "condition_detail": "static_inhand_gap060_dir07_pmm",
+          "position_band": "near_0_08",
+          "near_direction_ordinal": 7,
+          "near_direction_unit_world": [
+            0.5773502691896258,
+            -0.5773502691896258,
+            -0.5773502691896258
+          ],
+          "independent_scene": true,
+          "static_layout_not_attached_or_grasp": true
+        },
+        {
+          "shot_id": "shot05",
+          "condition": "near_goal",
+          "condition_detail": "static_inhand_gap050_dir07_pmm",
+          "position_band": "near_0_08",
+          "near_direction_ordinal": 7,
+          "near_direction_unit_world": [
+            0.5773502691896258,
+            -0.5773502691896258,
+            -0.5773502691896258
+          ],
+          "independent_scene": true,
+          "static_layout_not_attached_or_grasp": true
+        },
+        {
+          "shot_id": "shot06",
+          "condition": "near_goal",
+          "condition_detail": "palm_Z_occlusion_gap060_dir07_pmm",
+          "position_band": "near_0_08",
+          "near_direction_ordinal": 7,
+          "near_direction_unit_world": [
+            0.5773502691896258,
+            -0.5773502691896258,
+            -0.5773502691896258
+          ],
+          "independent_scene": true,
+          "static_layout_not_attached_or_grasp": true
+        },
+        {
+          "shot_id": "shot07",
+          "condition": "near_goal",
+          "condition_detail": "annulus090_open_dir07_pmm",
+          "position_band": "annulus_08_10",
+          "near_direction_ordinal": 7,
+          "near_direction_unit_world": [
+            0.5773502691896258,
+            -0.5773502691896258,
+            -0.5773502691896258
+          ],
+          "independent_scene": true,
+          "static_layout_not_attached_or_grasp": true
+        },
+        {
+          "shot_id": "shot08",
+          "condition": "near_goal",
+          "condition_detail": "annulus110_nearhand_dir07_pmm",
+          "position_band": "annulus_10_12",
+          "near_direction_ordinal": 7,
+          "near_direction_unit_world": [
+            0.5773502691896258,
+            -0.5773502691896258,
+            -0.5773502691896258
+          ],
+          "independent_scene": true,
+          "static_layout_not_attached_or_grasp": true
+        },
+        {
+          "shot_id": "shot09",
+          "condition": "sphere_only",
+          "condition_detail": "same_palm_occlusion_nearhand_dir07_pmm",
+          "position_band": "negative_outside_0_12",
+          "near_direction_ordinal": 7,
+          "near_direction_unit_world": [
+            0.5773502691896258,
+            -0.5773502691896258,
+            -0.5773502691896258
+          ],
+          "independent_scene": true,
+          "static_layout_not_attached_or_grasp": true
+        }
+      ],
+      "TRAIN_q_source": {
+        "parent_seed": 261103663,
+        "parent_id": "near_goal_perception_position_v10_seed261103663",
+        "parent_role": "calibration",
+        "calibration_scope": "position_calibration8_v10",
+        "near_direction_ordinal": 7,
+        "source_parent_id": "TRAIN_pick_normal_episode442",
+        "task": "pick_moving_target_on_the_table",
+        "raw_episode_id": "episode442",
+        "dataset": "low_dim_obs/joint_positions",
+        "index": 0,
+        "file_stat_metadata": {
+          "size_bytes": 25101709,
+          "mtime_ns": 1776474558000000000
+        },
+        "file": {
+          "path": "/home/ubuntu/\u684c\u9762/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/pick_moving_target_on_the_table/all_variations/episodes/episode442/data.h5",
+          "sha256": "049af59cca79239b2dd9f26ef736e0184c17f42240e28e801d2094d08981fe5b"
+        },
+        "joint_positions": [
+          0.008591178804636002,
+          0.0794854462146759,
+          0.008261952549219131,
+          -1.0040693283081055,
+          -0.002673978451639414,
+          1.2810702323913574,
+          0.7949031591415405
+        ],
+        "source_dtype": "float32",
+        "seven_joints_finite": true,
+        "within_frozen_native_lower_upper": true,
+        "joint_values_clipped_or_replaced": false
+      }
+    }
+  ],
+  "preassigned_before_capture": true,
+  "calibration_only": true,
+  "excluded_from_fit_and_selection": true,
+  "official_VAL_TEST_used": false,
+  "no_parent_or_shot_replacement_after_results": true,
+  "assignment": {
+    "path": "/home/ubuntu/\u684c\u9762/our-mani/artifacts/framework/local_mpc_20261102/P3_position_v10_calibration8_TRAIN_q_registry_v1/assignment.json",
+    "sha256": "5616bf50aa245fa7b5ceaa9318be69aec7e847e90e4055f5ad34bf6e75a99e6d"
+  },
+  "TRAIN_q_registry": {
+    "path": "artifacts/framework/local_mpc_20261102/P3_position_v10_calibration8_TRAIN_q_registry_v1/q_sources.json",
+    "sha256": "f93a9e0878bb34df1dbf300c74d288763359c1253c162460da980afa2c6c6f86"
+  },
+  "source_groups_disjoint_from_old56": true,
+  "selection_basis": "metadata numeric first-unused TRAIN rawIDs before q/image/IK/results",
+  "Native_started": false
+}

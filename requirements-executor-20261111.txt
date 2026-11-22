@@ -1,0 +1,3 @@
+# Additional dependency for the repaired executor control loop.
+# Install in both the project Python and the PhysMani Native runtime Python.
+osqp==1.1.3

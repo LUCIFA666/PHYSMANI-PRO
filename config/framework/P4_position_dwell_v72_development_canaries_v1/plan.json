@@ -1,0 +1,219 @@
+{
+  "schema": "P4_position_dwell_v72_fixed6_development_preparation_v1",
+  "complete_preparation": true,
+  "execution_ready": true,
+  "execution_authorized": true,
+  "preparation_only": false,
+  "pending": [],
+  "jobs": [
+    {
+      "id": "00_val_static",
+      "scene": "static",
+      "config": "config/framework/P4_position_dwell_v72_development_canaries_v1/00_val_static.json",
+      "path": "runtime/framework/local_mpc_20261102/public_candidate_stable_dwell_v72_development_v1/00_val_static",
+      "evaluation": "artifacts/framework/local_mpc_20261102/V72_development_originaljudge_v1/00_val_static",
+      "reference_config": {
+        "path": "config/framework/P4_position_lazy_v71_development_canaries_v1/00_val_static.json",
+        "sha256": "c2c567e33b7b5ec03fbe57052d59e3fd9f6e754c99d69791636a99562dfca1bc"
+      },
+      "reference_plan": {
+        "path": "config/framework/P4_position_lazy_v71_development_canaries_v1/plan.json",
+        "sha256": "ab1982cb6c54cda0d6e2eabd34304415cec65b591ff621339d12440008325d84"
+      },
+      "expected_role": "positive_development"
+    },
+    {
+      "id": "01_val_static",
+      "scene": "static",
+      "config": "config/framework/P4_position_dwell_v72_development_canaries_v1/01_val_static.json",
+      "path": "runtime/framework/local_mpc_20261102/public_candidate_stable_dwell_v72_development_v1/01_val_static",
+      "evaluation": "artifacts/framework/local_mpc_20261102/V72_development_originaljudge_v1/01_val_static",
+      "reference_config": {
+        "path": "config/framework/P4_position_lazy_v71_development_canaries_v1/01_val_static.json",
+        "sha256": "7ea71bd7f989ed3893dc8040f9fc184a033105e0bf9f8a68bb1a9a09268f90ff"
+      },
+      "reference_plan": {
+        "path": "config/framework/P4_position_lazy_v71_development_canaries_v1/plan.json",
+        "sha256": "ab1982cb6c54cda0d6e2eabd34304415cec65b591ff621339d12440008325d84"
+      },
+      "expected_role": "positive_development"
+    },
+    {
+      "id": "03_val_uniform",
+      "scene": "uniform",
+      "config": "config/framework/P4_position_dwell_v72_development_canaries_v1/03_val_uniform.json",
+      "path": "runtime/framework/local_mpc_20261102/public_candidate_stable_dwell_v72_development_v1/03_val_uniform",
+      "evaluation": "artifacts/framework/local_mpc_20261102/V72_development_originaljudge_v1/03_val_uniform",
+      "reference_config": {
+        "path": "config/framework/P4_position_lazy_v71_development_canaries_v1/03_val_uniform.json",
+        "sha256": "a5f8195bbb6d21b2c0b85af3959fb0200c5367f5f460c4ebc4d8063b4aefceb7"
+      },
+      "reference_plan": {
+        "path": "config/framework/P4_position_lazy_v71_development_canaries_v1/plan.json",
+        "sha256": "ab1982cb6c54cda0d6e2eabd34304415cec65b591ff621339d12440008325d84"
+      },
+      "expected_role": "positive_development"
+    },
+    {
+      "id": "04_val_uniform",
+      "scene": "uniform",
+      "config": "config/framework/P4_position_dwell_v72_development_canaries_v1/04_val_uniform.json",
+      "path": "runtime/framework/local_mpc_20261102/public_candidate_stable_dwell_v72_development_v1/04_val_uniform",
+      "evaluation": "artifacts/framework/local_mpc_20261102/V72_development_originaljudge_v1/04_val_uniform",
+      "reference_config": {
+        "path": "config/framework/P4_position_lazy_v71_development_canaries_v1/04_val_uniform.json",
+        "sha256": "12ae7d6301b9e9267721e765b1a3cde8759d7d10bcddb1d60f620c829945afa8"
+      },
+      "reference_plan": {
+        "path": "config/framework/P4_position_lazy_v71_development_canaries_v1/plan.json",
+        "sha256": "ab1982cb6c54cda0d6e2eabd34304415cec65b591ff621339d12440008325d84"
+      },
+      "expected_role": "positive_development"
+    },
+    {
+      "id": "uniform_002",
+      "scene": "uniform",
+      "config": "config/framework/P4_position_dwell_v72_development_canaries_v1/uniform_002.json",
+      "path": "runtime/framework/local_mpc_20261102/public_candidate_stable_dwell_v72_development_v1/uniform_002",
+      "evaluation": "artifacts/framework/local_mpc_20261102/V72_development_originaljudge_v1/uniform_002",
+      "reference_config": {
+        "path": "config/framework/P4_position_lazy_v71_development_canaries_v1/uniform_002.json",
+        "sha256": "e753c304e2e850d4df0560a763533a814ed3c461b5819bf8f98a660a50d7ce07"
+      },
+      "reference_plan": {
+        "path": "config/framework/P4_position_lazy_v71_development_canaries_v1/plan.json",
+        "sha256": "ab1982cb6c54cda0d6e2eabd34304415cec65b591ff621339d12440008325d84"
+      },
+      "expected_role": "positive_development"
+    },
+    {
+      "id": "static_no_proxy",
+      "scene": "static",
+      "config": "config/framework/P4_position_dwell_v72_development_canaries_v1/static_no_proxy.json",
+      "path": "runtime/framework/local_mpc_20261102/public_candidate_stable_dwell_v72_development_v1/static_no_proxy",
+      "evaluation": "artifacts/framework/local_mpc_20261102/V72_development_originaljudge_v1/static_no_proxy",
+      "reference_config": {
+        "path": "config/framework/P4_position_lazy_v71_development_canaries_v1/static_no_proxy.json",
+        "sha256": "d09f2fef50b974c49639da39548a14d5bb34f7e2708af562343c65f252eab4c0"
+      },
+      "reference_plan": {
+        "path": "config/framework/P4_position_lazy_v71_development_canaries_v1/plan.json",
+        "sha256": "ab1982cb6c54cda0d6e2eabd34304415cec65b591ff621339d12440008325d84"
+      },
+      "expected_role": "counterfactual_negative_no_proxy"
+    }
+  ],
+  "fixed_order": [
+    "00_val_static",
+    "01_val_static",
+    "03_val_uniform",
+    "04_val_uniform",
+    "uniform_002",
+    "static_no_proxy"
+  ],
+  "all_six_run_regardless_of_task_outcome": true,
+  "retry_or_case_replacement_based_on_outcome": false,
+  "reference_selection": "All six exact already-closed V71fixed6 with unchanged per-case budgets; no TEST or outcome selection",
+  "Native_started": false,
+  "fit_started": false,
+  "formal_TEST_read": false,
+  "physics_dt": 0.05,
+  "control_dt": 0.1,
+  "decision_ticks": 2,
+  "simulation_seconds_by_case": {
+    "00_val_static": 8.0,
+    "01_val_static": 8.0,
+    "03_val_uniform": 8.0,
+    "04_val_uniform": 8.0,
+    "uniform_002": 10.0,
+    "static_no_proxy": 10.0
+  },
+  "model_rollout_budget": {
+    "total": 256,
+    "H": 8,
+    "iterations": [
+      88,
+      88,
+      80
+    ]
+  },
+  "sole_controller_change": "FREE align dwell>=100ms comparison numerical stability only (absolute1e-9 tolerance), never accept99ms; no timestamp rounding or fabricated elapsed time",
+  "all_original_globalgoal_cost_and_success_criteria_unchanged": true,
+  "unchanged": [
+    "V71lazy_top8",
+    "V69response_seed",
+    "V66hold12mm_orientation04_cold",
+    "V65natural_reverify",
+    "V70vision_V10scope12_and_private_farray",
+    "teacher_GRU",
+    "candidate_Transformer",
+    "arm_ridge43to7_FK_and_two_fingerNN",
+    "physics50ms_control100ms_two_ticks",
+    "original_judge_and_publichold_and_deadline_rules"
+  ],
+  "weights_unchanged": true,
+  "position_checkpoint_sha256": "ee079d1f0ea302f65ed4123c5137328005f582f5347e282497dc2d2e07dc0884",
+  "natural_witness_only": true,
+  "active_new_probe_execution": false,
+  "lazy_pool_maximum_static_queries": 64,
+  "final_selected_requalification_maximum_static_queries": 8,
+  "maximum_queries_for_pool_plus_final_requalification": 72,
+  "other_existing_candidate_or_protocol_queries_not_included_in_this_bound": true,
+  "total_compute_unchanged_claimed": false,
+  "real_time_guaranteed": false,
+  "original_selected_action_endpoint_plus7_path_checks_preserved": true,
+  "public_goal_and_finalNativegoal_plus_currenthold_reported_separately": true,
+  "far_consistency_is_development_hypothesis": true,
+  "far_physical_semantic_ownership_or_statistical_certificate": false,
+  "known_prior_counterexamples": 73,
+  "raw_mask_qualified": false,
+  "contact_qualified": false,
+  "new_pose_qualification_claimed": false,
+  "public_task_gate_passed": false,
+  "producer": {
+    "path": "our_mani/local_mpc_control_20261103/public_candidate_stable_dwell_v72.py",
+    "sha256": "cd97a232674e00194a59091052af4ed7754480d40ed2e98eca60b82d96f20461"
+  },
+  "CF40_520_preparation_unchanged_and_paused": true,
+  "exploratory_legacy_quantile_fallback_not_connected": true,
+  "control_sources_sha256": {
+    "our_mani/local_mpc_control_20261103/free_phase_dwell_v72.py": "7903ae5ced0822ac18a35a107e9d1bab8848a71889071fa0efdd0f94d0cb5985",
+    "our_mani/local_mpc_control_20261103/lazy_free_joint_goal_cem_v72.py": "721d91ba0facb45c461ca2ca31edddd10fde9c0ef9fb01867c4faac4dfe645f4",
+    "our_mani/local_mpc_control_20261103/public_candidate_stable_dwell_v72.py": "cd97a232674e00194a59091052af4ed7754480d40ed2e98eca60b82d96f20461"
+  },
+  "producer_source_map": {
+    "items": 117,
+    "current_bytes_all_match": true,
+    "sha256": "c7ee0cce56ff613bcb00534061126d3fd642e0d5301a5602864a2719e5c75165"
+  },
+  "code_evidence": {
+    "control_delivery": {
+      "path": "artifacts/framework/local_mpc_20261102/V72_stable_FREE_dwell_control_code_delivery_v1/receipt.json",
+      "sha256": "67487597e12c9705ae1ba79297947805ba93fe085e47f61a91fd812083d4fedc"
+    },
+    "actual_0570_public_full_plan_CPU_smoke": {
+      "path": "artifacts/framework/local_mpc_20261102/V72_real_public_0570_FREE_full_plan_CPU_smoke_v1/receipt.json",
+      "sha256": "04624d8ac0d23c4f7fb005f0b9e28bc59b37fef7dc6e51db5f52c5bda58af312"
+    },
+    "independent_CPU_review": {
+      "path": "artifacts/framework/local_mpc_20261102/V72_stable_FREE_dwell_independent_CPU_review_v1/receipt.json",
+      "sha256": "46760568cf273181a276c529cb00ca65d8f1e1a2acb6e204f32faa1f9e416c5c"
+    }
+  },
+  "code_finalized_utc": "2026-11-03T15:53:56.128096+00:00",
+  "Root_finalization": {
+    "created_utc": "2026-11-03T15:54:33.193897+00:00",
+    "authorization_basis": "User explicit continue; single numerical time comparison correction supported by public closed-case evidence",
+    "actual_case_budgets_seconds": {
+      "00_val_static": 8.0,
+      "01_val_static": 8.0,
+      "03_val_uniform": 8.0,
+      "04_val_uniform": 8.0,
+      "uniform_002": 10.0,
+      "static_no_proxy": 10.0
+    },
+    "one_Native_at_a_time": true,
+    "training_concurrent": false,
+    "no_retry_or_outcome_replacement": true
+  }
+}

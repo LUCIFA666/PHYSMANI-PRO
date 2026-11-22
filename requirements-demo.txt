@@ -1,0 +1,2 @@
+-r requirements-quality-smoke.txt
+imageio-ffmpeg==0.6.0

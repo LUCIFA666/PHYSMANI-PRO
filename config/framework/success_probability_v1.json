@@ -1,0 +1,28 @@
+{
+  "version": "success_probability_v1",
+  "training_scope": "local_handover_development_rollouts",
+  "primary_outcome": "stable_lift_and_official_task_success",
+  "full_task_failure_requires_full_task_rollout": true,
+  "controller": "frozen_learned_local_servo_v1",
+  "baseline_local_feature_dim": 18,
+  "context_conditioned_interface": {
+    "context_dim": 16,
+    "source": "past_observations",
+    "requires_frozen_encoder_sha256": true,
+    "requires_observed_until_lte_decision_timestamp": true,
+    "encoder_trained_in_this_stage": false
+  },
+  "data": {
+    "train": "artifacts/framework/local_policy/success_train_smoke_v1",
+    "validation": "artifacts/framework/local_policy/servo_validation_v1",
+    "output": "artifacts/framework/local_policy/success_models_smoke_v1"
+  },
+  "partition_unit": ["task", "raw_episode"],
+  "partitions": ["TRAIN_fit", "TRAIN_selection", "TRAIN_temperature_calibration", "independent_VAL"],
+  "calibration": "temperature_scaling_on_TRAIN_calibration_only",
+  "metrics": ["brier", "log_loss", "auroc", "ece_5_bins", "input_support_coverage"],
+  "planning": "opt_in_checkpoint_via_smoke_full_workflow_--value-checkpoint",
+  "estimates_preceding_FASTER_approach_success": false,
+  "formal_test": "locked",
+  "default_checkpoint_replaced": false
+}

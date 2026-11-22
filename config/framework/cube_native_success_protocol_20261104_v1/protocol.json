@@ -1,0 +1,15 @@
+{
+  "schema": "Cube_Native_task_success_only_protocol_20261104_v1",
+  "user_instruction": "我说了不要用视觉方案判断是否成功",
+  "episode_success": "Original PhysMani task.success returns success=True at any actual committed physics tick; latch and stop",
+  "held_signal": "target membership in original simulated gripper.get_grasped_objects; execution feedback and contact diagnostic, not by itself task success",
+  "visual_role": "RGB-D current localization, task/goal perception and motion prediction only",
+  "visual_hold_probe_or_lift_metric_is_success_gate": false,
+  "visual_proof_failure_may_override_actual_Native_held": false,
+  "visual_proof_failure_may_reopen_gripper": false,
+  "Native_contact_feedback_is_explicit_policy_input": true,
+  "Native_target_pose_or_future_must_not_enter_public_NN_inputs": true,
+  "task_physics_and_original_success_conditions_unchanged": true,
+  "historical_public_visual_runs": "Retained as historical diagnostics, not new success acceptance protocol",
+  "training_contact_labels": "An actual held segment containing original Native success is a strong contact positive without extra hold-duration or visual proof gate; local grasp-only demonstrations are separately labelled and are not full task successes"
+}

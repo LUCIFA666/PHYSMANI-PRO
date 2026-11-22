@@ -1,0 +1,11 @@
+{
+  "task": "push_moving_button_high_speed",
+  "seed": 2611139001,
+  "variation": 0,
+  "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/push_moving_button_high_speed/all_variations/episodes/episode330/data.h5",
+  "role": "TRAIN_online_expert_executor_diagnostic",
+  "profile": "refresh_new_seed",
+  "control_ticks": 2,
+  "barrier_rate": 5.0,
+  "reference_frequency": 6.0
+}

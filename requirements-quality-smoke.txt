@@ -1,0 +1,4 @@
+-r requirements-dynamics.txt
+h5py==3.13.0
+requests==2.32.5
+matplotlib==3.10.8

@@ -1,0 +1,23 @@
+{
+  "task": "remove_cups_from_rotating_frame",
+  "seed": 2611146000,
+  "variation": 0,
+  "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/remove_cups_from_rotating_frame/all_variations/episodes/episode570/data.h5",
+  "role": "TRAIN_online_expert_executor_diagnostic",
+  "profile": "weighted_taskspace_control_and_event_capture_with_rigid_grasp_frame",
+  "capture_lookahead_seconds": 0.5,
+  "reference_frequency": 6.0,
+  "refine_ik": false,
+  "control_ticks": 2,
+  "barrier_rate": 5.0,
+  "commit_release": true,
+  "release_position_tolerance": 0.005,
+  "release_angle_tolerance": 0.03,
+  "feedback_mode": "actual",
+  "native_reference_speed": false,
+  "joint_margin": 0.0,
+  "joint_avoidance": "centre",
+  "compensate_grasp_frame": true,
+  "taskspace_objective": true,
+  "event_driven_gripper": true
+}

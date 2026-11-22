@@ -1,0 +1,58 @@
+{
+  "version": "r10_full_TRAIN_interaction_colour_layout_fit_configuration_v1",
+  "fit_split": "train",
+  "VAL_used": false,
+  "TEST_used": false,
+  "configuration_status": "Fixed current TRAIN-only engineering choices before this full-data fit; no earliest-preregistration claim",
+  "earliest_preregistered_configuration_claimed": false,
+  "thresholds_selected_from_VAL_or_TEST": false,
+  "source_grouping": "split:task:original_parent_raw_episode_id; all teacher/hold replicas retain one parent identity",
+  "original_TRAIN_action_phase_prior_sources": 1400,
+  "expected_native_TRAIN_parent_sources": 1400,
+  "expected_native_TRAIN_acquisitions": 2800,
+  "completed_skill_support_unit": "distinct original TRAIN parents per exact phase/anchor/reference-kind/manipulated-role/mode partition",
+  "failed_or_incomplete_attempt_policy": "Preserve raw rows and right-censored durations; do not use incomplete attempts as completed skill curves or substitute original HDF5 priors for native body SE3",
+  "required_release_contract": {
+    "source": "our_mani/multitask/release_preflight.py:_library",
+    "minimum_completed_parent_sources": 8,
+    "maximum_position_tolerance_m": 0.03,
+    "maximum_orientation_tolerance_rad": 0.15,
+    "development_only": false,
+    "origin": "Existing release/fitter hard requirements, retained without weakening"
+  },
+  "interaction": {
+    "progress_knots": 21,
+    "lag_grid_seconds": [0.0, 0.05, 0.1, 0.15, 0.2],
+    "duration_quantile": 0.95,
+    "tolerance_quantile": 0.95,
+    "minimum_sources": 8,
+    "minimum_position_tolerance_m": 0.005,
+    "minimum_orientation_tolerance_rad": 0.03,
+    "minimum_lag_sample_fraction": 0.9,
+    "minimum_completed_parent_sources": 8,
+    "maximum_position_tolerance_m": 0.03,
+    "maximum_orientation_tolerance_rad": 0.15,
+    "development_only": false
+  },
+  "colour": {
+    "minimum_sources_per_colour": 8,
+    "within_colour_quantile": 0.95,
+    "minimum_acceptance_radius": 0.05,
+    "minimum_margin": 0.02,
+    "minimum_visible_pixels": 20,
+    "maximum_observation_age": 0.1
+  },
+  "colour_parent_cv_minimum_accuracy": 0.95,
+  "rigid_layout": {
+    "minimum_parent_sources": 8,
+    "minimum_samples_per_rollout": 5,
+    "position_tolerance_m": 0.005,
+    "orientation_tolerance_rad": 0.03
+  },
+  "engineering_choice_notes": {
+    "interaction": "21 uniform progress knots; five fixed 50ms lag candidates up to 200ms selected only by grouped TRAIN crossfit; 95th parent duration/terminal-residual quantiles; 5mm/0.03rad positive numerical floors; 90% lag sample coverage while every completed attempt must remain represented. Existing 8-parent and 3cm/0.15rad caps remain hard gates; residuals are never clipped to pass.",
+    "colour": "Normalized CIELAB units, not RGB255 or metres. Eight fit parents per class are required in each of two disjoint TRAIN folds, so 16 total parents per colour is a necessary lower bound. Current pixel support is at least20, prototype radius floor0.05, nearest-class margin0.02, maximum observation age0.1s, macro-parent correct-and-supported CV fraction0.95. These are current TRAIN-only fixed choices, not a paper-reported or earliest-preregistered setting.",
+    "rigid_layout": "Validate only the existing declared frame/peg-or-spoke and button/wrap pairs. At least8 distinct parents and5 valid native pose samples in every declared rollout, with5mm/0.03rad maximum residuals. Every declared parent/rollout remains audited; a short or invalid case is reported, not silently removed.",
+    "selection_scope": "No grid search over this configuration, no VAL/TEST labels or outcomes, no automatic threshold relaxation. Any later TRAIN development revision must receive a new version and new frozen fit provenance. Passing this configuration does not itself release a formal comparison."
+  }
+}

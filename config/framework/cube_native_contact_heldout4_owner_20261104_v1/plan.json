@@ -1,0 +1,150 @@
+{
+  "schema": "cube_revision_serial_phase_20261104_v2",
+  "phase_id": "cube_native_contact_heldout4_20261104_v1",
+  "method_sources": {
+    "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/cube_native_contact_heldout4_preparation_v1/method_sources.json",
+    "sha256": "c16644926432e4371217a90d66a8dc6d4b591d29c98347960ad1e8bc7a60a63f"
+  },
+  "output_root": "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/cube_native_contact_heldout4_run_v1",
+  "jobs": [
+    {
+      "id": "Cube_native_generated_ordinary_seed2611042006",
+      "output": "/home/ubuntu/桌面/our-mani/runtime/framework/cube_native_contact_heldout_worker_20261104_v1/native_contact_matched/Cube_native_generated_ordinary_seed2611042006",
+      "native": true,
+      "cpu": false,
+      "argv": [
+        "scripts/launch_cube_native_contact_heldout_worker_20261104_v1.py",
+        "--plan",
+        "/home/ubuntu/桌面/our-mani/config/framework/cube_native_contact_heldout_worker_20261104_v1/plan.json",
+        "--case-id",
+        "Cube_native_generated_ordinary_seed2611042006",
+        "--profile",
+        "native_contact_matched",
+        "--source-freeze",
+        "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/cube_native_contact_heldout4_preparation_v1/execution_source_freeze.json",
+        "--source-freeze-sha256",
+        "be2a1acca2c0807b53641c761449bd70626bcc97232f5b9d88298af830dd2afb",
+        "--output",
+        "/home/ubuntu/桌面/our-mani/runtime/framework/cube_native_contact_heldout_worker_20261104_v1/native_contact_matched/Cube_native_generated_ordinary_seed2611042006",
+        "--execute"
+      ],
+      "json_checks": [
+        {
+          "path": "/home/ubuntu/桌面/our-mani/runtime/framework/cube_native_contact_heldout_worker_20261104_v1/native_contact_matched/Cube_native_generated_ordinary_seed2611042006/worker_exit.json",
+          "fields": {
+            "exit_code": 0,
+            "native_closed": true,
+            "result_recorded": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "Cube_native_generated_ordinary_seed2611042007",
+      "output": "/home/ubuntu/桌面/our-mani/runtime/framework/cube_native_contact_heldout_worker_20261104_v1/native_contact_matched/Cube_native_generated_ordinary_seed2611042007",
+      "native": true,
+      "cpu": false,
+      "argv": [
+        "scripts/launch_cube_native_contact_heldout_worker_20261104_v1.py",
+        "--plan",
+        "/home/ubuntu/桌面/our-mani/config/framework/cube_native_contact_heldout_worker_20261104_v1/plan.json",
+        "--case-id",
+        "Cube_native_generated_ordinary_seed2611042007",
+        "--profile",
+        "native_contact_matched",
+        "--source-freeze",
+        "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/cube_native_contact_heldout4_preparation_v1/execution_source_freeze.json",
+        "--source-freeze-sha256",
+        "be2a1acca2c0807b53641c761449bd70626bcc97232f5b9d88298af830dd2afb",
+        "--output",
+        "/home/ubuntu/桌面/our-mani/runtime/framework/cube_native_contact_heldout_worker_20261104_v1/native_contact_matched/Cube_native_generated_ordinary_seed2611042007",
+        "--execute"
+      ],
+      "json_checks": [
+        {
+          "path": "/home/ubuntu/桌面/our-mani/runtime/framework/cube_native_contact_heldout_worker_20261104_v1/native_contact_matched/Cube_native_generated_ordinary_seed2611042007/worker_exit.json",
+          "fields": {
+            "exit_code": 0,
+            "native_closed": true,
+            "result_recorded": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "Cube_native_generated_high_speed_seed2611042106",
+      "output": "/home/ubuntu/桌面/our-mani/runtime/framework/cube_native_contact_heldout_worker_20261104_v1/native_contact_matched/Cube_native_generated_high_speed_seed2611042106",
+      "native": true,
+      "cpu": false,
+      "argv": [
+        "scripts/launch_cube_native_contact_heldout_worker_20261104_v1.py",
+        "--plan",
+        "/home/ubuntu/桌面/our-mani/config/framework/cube_native_contact_heldout_worker_20261104_v1/plan.json",
+        "--case-id",
+        "Cube_native_generated_high_speed_seed2611042106",
+        "--profile",
+        "native_contact_matched",
+        "--source-freeze",
+        "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/cube_native_contact_heldout4_preparation_v1/execution_source_freeze.json",
+        "--source-freeze-sha256",
+        "be2a1acca2c0807b53641c761449bd70626bcc97232f5b9d88298af830dd2afb",
+        "--output",
+        "/home/ubuntu/桌面/our-mani/runtime/framework/cube_native_contact_heldout_worker_20261104_v1/native_contact_matched/Cube_native_generated_high_speed_seed2611042106",
+        "--execute"
+      ],
+      "json_checks": [
+        {
+          "path": "/home/ubuntu/桌面/our-mani/runtime/framework/cube_native_contact_heldout_worker_20261104_v1/native_contact_matched/Cube_native_generated_high_speed_seed2611042106/worker_exit.json",
+          "fields": {
+            "exit_code": 0,
+            "native_closed": true,
+            "result_recorded": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "Cube_native_generated_high_speed_seed2611042107",
+      "output": "/home/ubuntu/桌面/our-mani/runtime/framework/cube_native_contact_heldout_worker_20261104_v1/native_contact_matched/Cube_native_generated_high_speed_seed2611042107",
+      "native": true,
+      "cpu": false,
+      "argv": [
+        "scripts/launch_cube_native_contact_heldout_worker_20261104_v1.py",
+        "--plan",
+        "/home/ubuntu/桌面/our-mani/config/framework/cube_native_contact_heldout_worker_20261104_v1/plan.json",
+        "--case-id",
+        "Cube_native_generated_high_speed_seed2611042107",
+        "--profile",
+        "native_contact_matched",
+        "--source-freeze",
+        "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/cube_native_contact_heldout4_preparation_v1/execution_source_freeze.json",
+        "--source-freeze-sha256",
+        "be2a1acca2c0807b53641c761449bd70626bcc97232f5b9d88298af830dd2afb",
+        "--output",
+        "/home/ubuntu/桌面/our-mani/runtime/framework/cube_native_contact_heldout_worker_20261104_v1/native_contact_matched/Cube_native_generated_high_speed_seed2611042107",
+        "--execute"
+      ],
+      "json_checks": [
+        {
+          "path": "/home/ubuntu/桌面/our-mani/runtime/framework/cube_native_contact_heldout_worker_20261104_v1/native_contact_matched/Cube_native_generated_high_speed_seed2611042107/worker_exit.json",
+          "fields": {
+            "exit_code": 0,
+            "native_closed": true,
+            "result_recorded": true
+          }
+        }
+      ]
+    }
+  ],
+  "python": "/home/ubuntu/桌面/our-mani/.conda-env/bin/python",
+  "stage_timeout_seconds": {
+    "Cube_native_generated_ordinary_seed2611042006": 900,
+    "Cube_native_generated_ordinary_seed2611042007": 900,
+    "Cube_native_generated_high_speed_seed2611042106": 900,
+    "Cube_native_generated_high_speed_seed2611042107": 900
+  },
+  "stop_grace_seconds": 30,
+  "poll_seconds": 0.5,
+  "wait_timeout_seconds": 900,
+  "CF_output_root": "/home/ubuntu/桌面/our-mani/runtime/framework/cube_native_contact_heldout_worker_20261104_v1"
+}

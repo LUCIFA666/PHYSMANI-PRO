@@ -1,0 +1,25 @@
+{
+  "schema": "scene_task_e16_firstframe_TRAIN_internal_grouped_exclude_front_v1",
+  "seed": 20261103,
+  "epochs": 40,
+  "batch_size": 32,
+  "learning_rate": 0.001,
+  "weight_decay": 0.0001,
+  "cpu_threads": 2,
+  "device": "cpu",
+  "train_cameras": [
+    "8",
+    "16",
+    "36"
+  ],
+  "camera_warmstart": null,
+  "camera_warmstart_prefix": "camera_encoder.",
+  "fit_authorization": "user authorized continued implementation/training; independent front-excluded diagnostic scheduled by root",
+  "speed_is_semantic_class": false,
+  "task_ID_or_robot_forward_input": false,
+  "official_VAL_or_TEST_allowed": false,
+  "direct_replace_frozen_uniform_e_P4": false,
+  "camera_protocol": "front excluded from all fitting and checkpoint selection; evaluate held-out front only after training completes",
+  "predeclared_epochs": 40,
+  "baseline_four_view_checkpoint_unchanged": true
+}

@@ -1,0 +1,57 @@
+{
+  "version": "r10_fixed_five_method_remaining14_experiment_plan_v1",
+  "user_scope": "Remaining fourteen PhysMani tasks: adapt and train our pipeline, evaluate released PhysMani, complete TRAIN VAL TEST until next instruction",
+  "remaining_tasks": 14,
+  "methods": ["cv_geometry", "cv_value", "context_geometry", "context_value", "physmani"],
+  "original_sources": {"train": 1400, "validation": 275, "official_test": 560},
+  "missing_validation_sources_fabricated": false,
+  "collection_design": {
+    "preregistered_behaviors_per_TRAIN_parent": ["teacher", "hold"],
+    "replicas_per_behavior": 1,
+    "teacher_maximum_ticks": 200,
+    "hold_maximum_ticks": 60,
+    "maximum_native_TRAIN_cases": 2800,
+    "VAL_behavior": "hold",
+    "VAL_maximum_native_cases": 275,
+    "context_primary_behavior": "hold",
+    "interaction_behavior": "teacher",
+    "source_group": "split:task:original_parent_raw_episode_id",
+    "original_HDF5_motion_replay": false,
+    "original_TRAIN_action_phase_priors_separately_used": 1400,
+    "automatic_success_selected_retries_or_resampling": false,
+    "short_native_terminal_cases": "Preserve every declared attempt; retain explicit zero-weight acquisition entries; missing parent coverage blocks a completed fit"
+  },
+  "stages": [
+    {"id": "native_integration", "scope": "Fixed TRAIN smokes, recorded reset repeat, motion/pose/contact/path/label diagnostics before full acquisition"},
+    {"id": "full_body_tracks", "TRAIN_cases": 2800, "VAL_hold_cases": 275, "models_fitted": false},
+    {"id": "context_fit", "TRAIN_parent_sources": 1400, "VAL_parent_sources": 275, "architecture": "Context + SimNorm, causal multibody SE3 state v2", "TEST_used": false},
+    {"id": "interaction_fit", "input": "All original TRAIN action-phase priors and valid completed native TRAIN skill attempts", "failed_attempts_preserved": true, "completed_parent_support_reported_per_skill": true, "TEST_used": false},
+    {"id": "executed_candidate_TRAIN", "methods": ["cv_geometry", "context_geometry"], "expected_native_cases": 2800, "first_actionable_selection": "Preregistered TRAIN exploration once; frozen geometry continuation", "unexecuted_candidates_labelled": false},
+    {"id": "critic_CAL", "methods": ["cv_geometry", "context_geometry"], "expected_native_cases": 550, "expected_VAL_parent_sources": 275, "classifier_fit_on_VAL": false},
+    {"id": "critic_fit", "expected_task_predictor_heads": 28, "normalization_classifier_selection_split": "train", "calibration_selection_split": "validation", "ranking_disabled_if_probability_or_support_gate_fails": true, "TEST_used": false},
+    {"id": "frozen_five_method_VAL", "expected_native_cases": 1375, "expected_parent_sources": 275, "fresh_process_each_case": true, "geometry_CAL_not_silently_substituted_for_final_config_VAL": true},
+    {"id": "frozen_official_TEST", "expected_native_cases": 2800, "expected_parent_sources": 560, "fresh_process_each_case": true, "all_five_methods_same_official_reset_source": true, "TEST_tuning": false}
+  ],
+  "stopping_rule": {
+    "preregistered_before_remaining14_VAL_and_TEST": true,
+    "hard_protocol_failures": "Stop affected execution for source/model/data/initial-condition/clock/cleanup/infrastructure violations; preserve attempts and do not assign policy negatives",
+    "performance_screen_failure": "Report failed development performance or probability screens explicitly; freeze candidates and complete the requested five-method comparison without tuning on TEST",
+    "formal_comparison_release_requires": ["Complete declared TRAIN and VAL acquisition", "Actual source coverage and finite fitted models", "Frozen model/config/source locks", "Complete five-method VAL with recorded-condition and clock acceptance", "Actual TRAIN reset tolerance evidence"],
+    "deployment_or_success_module_benefit_assumed": false
+  },
+  "baseline": {
+    "checkpoint": "Author released epoch99999",
+    "new_offline_baseline_training": false,
+    "online_world_model": "Current and past observations in each evaluated case; no offline TEST labels, future trajectories or TEST model selection",
+    "comparison_interpretation": "Adapted common-external-condition simulation comparison; not original paper Table 1 reproduction"
+  },
+  "demos": {
+    "per_method_per_task": 1,
+    "remaining_expected": 70,
+    "all_sixteen_tasks_expected": 80,
+    "selection": "Fixed first official TEST case, independent of outcome",
+    "extra_demo_replays_replace_formal_statistics": false
+  },
+  "excluded": ["FASTER", "NGFF training restart"],
+  "formal_comparison_ready": false
+}

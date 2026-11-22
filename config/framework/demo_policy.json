@@ -1,0 +1,18 @@
+{
+  "created_utc": "2026-10-17T19:14:12.864903+00:00",
+  "user_instruction": "每组每个任务保存一个demo就够了",
+  "methods": [
+    "cv_geometry",
+    "cv_value",
+    "context_geometry",
+    "context_value",
+    "physmani"
+  ],
+  "tasks": 16,
+  "videos_per_method_per_task": 1,
+  "total_expected": 80,
+  "selection": "fixed first official TEST manifest case per task",
+  "current_two_tasks_expected": 10,
+  "remaining_fourteen_tasks_expected": 70,
+  "formal_metrics": "unchanged; any additional demo-only reruns kept separate from formal TEST records"
+}

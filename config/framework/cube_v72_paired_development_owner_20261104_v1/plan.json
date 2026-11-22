@@ -1,0 +1,85 @@
+{
+  "schema": "cube_v72_paired_development_owner_20261104_v1",
+  "method_sources": {
+    "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/cube_v72_paired_development_preparation_v1/method_sources.json",
+    "sha256": "16865c370556d6289e18e43fe39e1db3e402b0caef7050791bf77877d11ae077"
+  },
+  "execution_plan": {
+    "path": "/home/ubuntu/桌面/our-mani/config/framework/cube_v72_live_20261104_v1/plan.json",
+    "sha256": "7d6bd9f31282995f64e418994b720405de1e98a7c8a50928320760e7914a0f3b"
+  },
+  "execution_source_freeze": {
+    "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/cube_v72_paired_development_preparation_v1/execution_source_freeze.json",
+    "sha256": "6ae962cf6be0b3173333095545876c4816a1389eb2ccb7b6689786e762c7e088"
+  },
+  "output_root": "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/cube_v72_paired_development_run_v1",
+  "jobs": [
+    {
+      "id": "legacy_pilot__ordinary_00",
+      "case_id": "ordinary_00",
+      "profile": "legacy_pilot",
+      "output": "/home/ubuntu/桌面/our-mani/runtime/framework/cube_v72_live_20261104_v1/legacy_pilot/ordinary_00"
+    },
+    {
+      "id": "legacy_pilot__ordinary_01",
+      "case_id": "ordinary_01",
+      "profile": "legacy_pilot",
+      "output": "/home/ubuntu/桌面/our-mani/runtime/framework/cube_v72_live_20261104_v1/legacy_pilot/ordinary_01"
+    },
+    {
+      "id": "legacy_pilot__highspeed_00",
+      "case_id": "highspeed_00",
+      "profile": "legacy_pilot",
+      "output": "/home/ubuntu/桌面/our-mani/runtime/framework/cube_v72_live_20261104_v1/legacy_pilot/highspeed_00"
+    },
+    {
+      "id": "legacy_pilot__highspeed_01",
+      "case_id": "highspeed_01",
+      "profile": "legacy_pilot",
+      "output": "/home/ubuntu/桌面/our-mani/runtime/framework/cube_v72_live_20261104_v1/legacy_pilot/highspeed_01"
+    },
+    {
+      "id": "cube_candidate_v1__ordinary_00",
+      "case_id": "ordinary_00",
+      "profile": "cube_candidate_v1",
+      "output": "/home/ubuntu/桌面/our-mani/runtime/framework/cube_v72_live_20261104_v1/cube_candidate_v1/ordinary_00"
+    },
+    {
+      "id": "cube_candidate_v1__ordinary_01",
+      "case_id": "ordinary_01",
+      "profile": "cube_candidate_v1",
+      "output": "/home/ubuntu/桌面/our-mani/runtime/framework/cube_v72_live_20261104_v1/cube_candidate_v1/ordinary_01"
+    },
+    {
+      "id": "cube_candidate_v1__highspeed_00",
+      "case_id": "highspeed_00",
+      "profile": "cube_candidate_v1",
+      "output": "/home/ubuntu/桌面/our-mani/runtime/framework/cube_v72_live_20261104_v1/cube_candidate_v1/highspeed_00"
+    },
+    {
+      "id": "cube_candidate_v1__highspeed_01",
+      "case_id": "highspeed_01",
+      "profile": "cube_candidate_v1",
+      "output": "/home/ubuntu/桌面/our-mani/runtime/framework/cube_v72_live_20261104_v1/cube_candidate_v1/highspeed_01"
+    }
+  ],
+  "python": "/home/ubuntu/桌面/our-mani/.conda-env/bin/python",
+  "stage_timeout_seconds": {
+    "legacy_pilot__ordinary_00": 900,
+    "legacy_pilot__ordinary_01": 900,
+    "legacy_pilot__highspeed_00": 900,
+    "legacy_pilot__highspeed_01": 900,
+    "cube_candidate_v1__ordinary_00": 900,
+    "cube_candidate_v1__ordinary_01": 900,
+    "cube_candidate_v1__highspeed_00": 900,
+    "cube_candidate_v1__highspeed_01": 900
+  },
+  "stop_grace_seconds": 30,
+  "poll_seconds": 0.5,
+  "wait_timeout_seconds": 900,
+  "CF_output_root": "/home/ubuntu/桌面/our-mani/runtime/framework/cube_v72_live_20261104_v1",
+  "GPU_training_complete": {
+    "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/cube_future_candidate_training_run_20261104_v1/Root_actual_exit.json",
+    "sha256": "c4640e6f7fc78685b000be7340df5a936c05f2de6a11e0b707640063f2f55120"
+  }
+}

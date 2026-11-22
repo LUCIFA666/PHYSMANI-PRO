@@ -1,0 +1,109 @@
+{
+  "snapshot_date": "2026-11-23",
+  "export_created_utc": "2026-11-22T18:06:55.287685+00:00",
+  "completed_full_cycle_task_types": 2,
+  "new_other_task_types_fully_accepted": 0,
+  "cube": {
+    "TRAIN_sources": 200,
+    "actual_clock_finetune_parents": 19,
+    "VAL": {
+      "ordinary": "20/20",
+      "high_speed": "13/20",
+      "archived_scene_replay": false
+    },
+    "TEST": {
+      "ordinary": "39/40",
+      "high_speed": "27/40",
+      "all_80_archived_resets": true
+    },
+    "task_time_limit_seconds": 60,
+    "paper_benchmark_comparable": false
+  },
+  "ordinary_cup_independent_stability": [
+    {
+      "version": 1,
+      "successes": 7,
+      "total": 10,
+      "passed": false,
+      "all_mechanical_checks_passed": true
+    },
+    {
+      "version": 2,
+      "successes": 2,
+      "total": 10,
+      "passed": false,
+      "all_mechanical_checks_passed": true
+    },
+    {
+      "version": 3,
+      "successes": 8,
+      "total": 10,
+      "passed": false,
+      "all_mechanical_checks_passed": false
+    }
+  ],
+  "high_speed_peg_v23_TRAIN_oracle_regression": {
+    "successes": 2,
+    "total": 4
+  },
+  "cup_v22_strict_5mm_release_regression": {
+    "successes": 0,
+    "total": 4
+  },
+  "cup_v24_live_pose_refresh": {
+    "batch_complete": false,
+    "rows": [
+      {
+        "case": "00_cup_seed2611164201",
+        "seed": 2611164201,
+        "worker_complete": true,
+        "original_native_success": false,
+        "actual_seconds": 60.00000077486038,
+        "stop_reason": "budget_exhausted",
+        "owner_lifecycle_evidence_complete": true,
+        "owner_receipt_missing": false
+      },
+      {
+        "case": "01_cup_seed2611164203",
+        "seed": 2611164203,
+        "worker_complete": true,
+        "original_native_success": false,
+        "actual_seconds": 60.00000077486038,
+        "stop_reason": "budget_exhausted",
+        "owner_lifecycle_evidence_complete": true,
+        "owner_receipt_missing": false
+      },
+      {
+        "case": "02_cup_seed2611164200",
+        "seed": 2611164200,
+        "worker_complete": true,
+        "original_native_success": false,
+        "actual_seconds": 60.00000077486038,
+        "stop_reason": "budget_exhausted",
+        "owner_lifecycle_evidence_complete": false,
+        "owner_receipt_missing": true
+      }
+    ],
+    "planned_cases": 4,
+    "complete_owner_qualified_cases": 2,
+    "not_started_cases": 1,
+    "model_success_rate_claimed": false
+  },
+  "original_unit_report": {
+    "tests_run": 178,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "passed": true,
+    "wall_seconds": 1.352611780166626
+  },
+  "NN_forward_calls_in_executor_repair": 0,
+  "optimizer_steps_in_executor_repair": 0,
+  "new_other_task_formal_VAL_TEST_started": false,
+  "default_runtime_changed": false,
+  "model_weights_included": false,
+  "datasets_included": false,
+  "simulation_binaries_included": false,
+  "current_native_worker_detected": false,
+  "original_reports_are_historical_and_not_rewritten": true
+}

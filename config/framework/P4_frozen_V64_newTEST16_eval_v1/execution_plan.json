@@ -1,0 +1,322 @@
+{
+  "schema": "V64_reserved_TEST16_evaluation_only_execution_plan_v1",
+  "partition": {
+    "path": "config/framework/P4_new_heldout_TEST_partition_v59_20261103_v1.json",
+    "sha256": "c917d28f7889258b8961a3e462bf511dd9819d1ee01df9f63951998b15c59234"
+  },
+  "source_freeze": {
+    "path": "artifacts/framework/local_mpc_20261102/V64_frozen_TEST16_preparation_v1/execution_source_freeze.json",
+    "sha256": "8c6dc29ced46eeddc6fe0469d218ebc1a903eccde1746636f057042aaba1c4e1"
+  },
+  "protocol": {
+    "path": "artifacts/framework/local_mpc_20261102/V64_reserved_TEST16_evaluation_only_protocol_v1/protocol.json",
+    "sha256": "17ed236d7da53c7b04a552e237e452d0415fd0a7adfd0d3f5ede6bc9a9962136"
+  },
+  "materialization_receipt": {
+    "path": "config/framework/P4_frozen_V64_newTEST16_eval_v1/materialization_receipt.json",
+    "sha256": "2244af771d29b1f865dbe2b8eb75eb06ad5927c7fd2d05a01d5d86d623d3aa04"
+  },
+  "jobs": [
+    {
+      "id": "00_test_static",
+      "parent_id": "p4_new_heldout_TEST_v59_20261103_00_seed261103500",
+      "seed": 261103500,
+      "split": "test",
+      "scene": "static",
+      "config": "config/framework/P4_frozen_V64_newTEST16_eval_v1/00_test_static.json",
+      "path": "runtime/framework/local_mpc_20261102/P4_frozen_V64_newTEST16_eval_v1/00_test_static",
+      "evaluation": "artifacts/framework/local_mpc_20261102/P4_frozen_V64_newTEST16_eval_v1/00_test_static",
+      "canonical_motion_sha256": "d0683c9bd653e6740c3e95b7441e83611b324d5d5cd8f2986b5a82e36623e5a6",
+      "behavior_annotations": {
+        "initial_speed_m_s": 0.0,
+        "changed_speed_m_s": 0.0,
+        "initial_direction_kind": "static",
+        "initial_speed_seen_in_training_assignments": true,
+        "speed_change_sign_relation": "none"
+      }
+    },
+    {
+      "id": "01_test_static",
+      "parent_id": "p4_new_heldout_TEST_v59_20261103_01_seed261103501",
+      "seed": 261103501,
+      "split": "test",
+      "scene": "static",
+      "config": "config/framework/P4_frozen_V64_newTEST16_eval_v1/01_test_static.json",
+      "path": "runtime/framework/local_mpc_20261102/P4_frozen_V64_newTEST16_eval_v1/01_test_static",
+      "evaluation": "artifacts/framework/local_mpc_20261102/P4_frozen_V64_newTEST16_eval_v1/01_test_static",
+      "canonical_motion_sha256": "1a524eac430e2d05f90bfdb46f8b513375477e2148fecc68d91354e631526a1c",
+      "behavior_annotations": {
+        "initial_speed_m_s": 0.0,
+        "changed_speed_m_s": 0.0,
+        "initial_direction_kind": "static",
+        "initial_speed_seen_in_training_assignments": true,
+        "speed_change_sign_relation": "none"
+      }
+    },
+    {
+      "id": "02_test_uniform",
+      "parent_id": "p4_new_heldout_TEST_v59_20261103_02_seed261103502",
+      "seed": 261103502,
+      "split": "test",
+      "scene": "uniform",
+      "config": "config/framework/P4_frozen_V64_newTEST16_eval_v1/02_test_uniform.json",
+      "path": "runtime/framework/local_mpc_20261102/P4_frozen_V64_newTEST16_eval_v1/02_test_uniform",
+      "evaluation": "artifacts/framework/local_mpc_20261102/P4_frozen_V64_newTEST16_eval_v1/02_test_uniform",
+      "canonical_motion_sha256": "178a925c52a6a3405c4beea2190595af3859d6300d76a1e6654985ca72807b52",
+      "behavior_annotations": {
+        "initial_speed_m_s": 0.02,
+        "changed_speed_m_s": 0.02,
+        "initial_direction_kind": "axis_aligned",
+        "initial_speed_seen_in_training_assignments": true,
+        "speed_change_sign_relation": "none"
+      }
+    },
+    {
+      "id": "03_test_uniform",
+      "parent_id": "p4_new_heldout_TEST_v59_20261103_03_seed261103503",
+      "seed": 261103503,
+      "split": "test",
+      "scene": "uniform",
+      "config": "config/framework/P4_frozen_V64_newTEST16_eval_v1/03_test_uniform.json",
+      "path": "runtime/framework/local_mpc_20261102/P4_frozen_V64_newTEST16_eval_v1/03_test_uniform",
+      "evaluation": "artifacts/framework/local_mpc_20261102/P4_frozen_V64_newTEST16_eval_v1/03_test_uniform",
+      "canonical_motion_sha256": "8c2335cfc81bd3e909745520a95554053c3f3d587730c6f8d665871c58ca6a9a",
+      "behavior_annotations": {
+        "initial_speed_m_s": 0.04,
+        "changed_speed_m_s": 0.04,
+        "initial_direction_kind": "axis_aligned",
+        "initial_speed_seen_in_training_assignments": true,
+        "speed_change_sign_relation": "none"
+      }
+    },
+    {
+      "id": "04_test_uniform",
+      "parent_id": "p4_new_heldout_TEST_v59_20261103_04_seed261103504",
+      "seed": 261103504,
+      "split": "test",
+      "scene": "uniform",
+      "config": "config/framework/P4_frozen_V64_newTEST16_eval_v1/04_test_uniform.json",
+      "path": "runtime/framework/local_mpc_20261102/P4_frozen_V64_newTEST16_eval_v1/04_test_uniform",
+      "evaluation": "artifacts/framework/local_mpc_20261102/P4_frozen_V64_newTEST16_eval_v1/04_test_uniform",
+      "canonical_motion_sha256": "ad9081ae1d4972a6a0d8c53ecdc84f610d7fcc6a87dc187988f21a7ea40d3411",
+      "behavior_annotations": {
+        "initial_speed_m_s": 0.08,
+        "changed_speed_m_s": 0.08,
+        "initial_direction_kind": "axis_aligned",
+        "initial_speed_seen_in_training_assignments": true,
+        "speed_change_sign_relation": "none"
+      }
+    },
+    {
+      "id": "05_test_uniform",
+      "parent_id": "p4_new_heldout_TEST_v59_20261103_05_seed261103505",
+      "seed": 261103505,
+      "split": "test",
+      "scene": "uniform",
+      "config": "config/framework/P4_frozen_V64_newTEST16_eval_v1/05_test_uniform.json",
+      "path": "runtime/framework/local_mpc_20261102/P4_frozen_V64_newTEST16_eval_v1/05_test_uniform",
+      "evaluation": "artifacts/framework/local_mpc_20261102/P4_frozen_V64_newTEST16_eval_v1/05_test_uniform",
+      "canonical_motion_sha256": "171500957d15b5ed974cc99775bb9af88ace99b1a118ba76ab24c8cdd61b6142",
+      "behavior_annotations": {
+        "initial_speed_m_s": 0.12,
+        "changed_speed_m_s": 0.12,
+        "initial_direction_kind": "axis_aligned",
+        "initial_speed_seen_in_training_assignments": true,
+        "speed_change_sign_relation": "none"
+      }
+    },
+    {
+      "id": "06_test_uniform",
+      "parent_id": "p4_new_heldout_TEST_v59_20261103_06_seed261103506",
+      "seed": 261103506,
+      "split": "test",
+      "scene": "uniform",
+      "config": "config/framework/P4_frozen_V64_newTEST16_eval_v1/06_test_uniform.json",
+      "path": "runtime/framework/local_mpc_20261102/P4_frozen_V64_newTEST16_eval_v1/06_test_uniform",
+      "evaluation": "artifacts/framework/local_mpc_20261102/P4_frozen_V64_newTEST16_eval_v1/06_test_uniform",
+      "canonical_motion_sha256": "0fb0382e4bfbcd1ee4d90b9d1c041c267d1345a0ce4066151617493136fb4c59",
+      "behavior_annotations": {
+        "initial_speed_m_s": 0.03,
+        "changed_speed_m_s": 0.03,
+        "initial_direction_kind": "axis_aligned",
+        "initial_speed_seen_in_training_assignments": false,
+        "speed_change_sign_relation": "none"
+      }
+    },
+    {
+      "id": "07_test_uniform",
+      "parent_id": "p4_new_heldout_TEST_v59_20261103_07_seed261103507",
+      "seed": 261103507,
+      "split": "test",
+      "scene": "uniform",
+      "config": "config/framework/P4_frozen_V64_newTEST16_eval_v1/07_test_uniform.json",
+      "path": "runtime/framework/local_mpc_20261102/P4_frozen_V64_newTEST16_eval_v1/07_test_uniform",
+      "evaluation": "artifacts/framework/local_mpc_20261102/P4_frozen_V64_newTEST16_eval_v1/07_test_uniform",
+      "canonical_motion_sha256": "d0e85ccc7aba95ddf810b8a7abc0b1f11d9deb681f1b08ace0efd7a313e4137f",
+      "behavior_annotations": {
+        "initial_speed_m_s": 0.05999999999999999,
+        "changed_speed_m_s": 0.05999999999999999,
+        "initial_direction_kind": "diagonal",
+        "initial_speed_seen_in_training_assignments": false,
+        "speed_change_sign_relation": "none"
+      }
+    },
+    {
+      "id": "08_test_uniform",
+      "parent_id": "p4_new_heldout_TEST_v59_20261103_08_seed261103508",
+      "seed": 261103508,
+      "split": "test",
+      "scene": "uniform",
+      "config": "config/framework/P4_frozen_V64_newTEST16_eval_v1/08_test_uniform.json",
+      "path": "runtime/framework/local_mpc_20261102/P4_frozen_V64_newTEST16_eval_v1/08_test_uniform",
+      "evaluation": "artifacts/framework/local_mpc_20261102/P4_frozen_V64_newTEST16_eval_v1/08_test_uniform",
+      "canonical_motion_sha256": "c2603c6a1c4bb12b4cf77a3837f1c52fcbde1382b45fbc35ff8201dabc32a547",
+      "behavior_annotations": {
+        "initial_speed_m_s": 0.1,
+        "changed_speed_m_s": 0.1,
+        "initial_direction_kind": "axis_aligned",
+        "initial_speed_seen_in_training_assignments": false,
+        "speed_change_sign_relation": "none"
+      }
+    },
+    {
+      "id": "09_test_uniform",
+      "parent_id": "p4_new_heldout_TEST_v59_20261103_09_seed261103509",
+      "seed": 261103509,
+      "split": "test",
+      "scene": "uniform",
+      "config": "config/framework/P4_frozen_V64_newTEST16_eval_v1/09_test_uniform.json",
+      "path": "runtime/framework/local_mpc_20261102/P4_frozen_V64_newTEST16_eval_v1/09_test_uniform",
+      "evaluation": "artifacts/framework/local_mpc_20261102/P4_frozen_V64_newTEST16_eval_v1/09_test_uniform",
+      "canonical_motion_sha256": "543aae80863ce0167941646457b8991f99b6b5ebd9781b77592db0f4424e8ebf",
+      "behavior_annotations": {
+        "initial_speed_m_s": 0.11999999999999998,
+        "changed_speed_m_s": 0.11999999999999998,
+        "initial_direction_kind": "diagonal",
+        "initial_speed_seen_in_training_assignments": true,
+        "speed_change_sign_relation": "none"
+      }
+    },
+    {
+      "id": "10_test_speed_change",
+      "parent_id": "p4_new_heldout_TEST_v59_20261103_10_seed261103510",
+      "seed": 261103510,
+      "split": "test",
+      "scene": "speed_change",
+      "config": "config/framework/P4_frozen_V64_newTEST16_eval_v1/10_test_speed_change.json",
+      "path": "runtime/framework/local_mpc_20261102/P4_frozen_V64_newTEST16_eval_v1/10_test_speed_change",
+      "evaluation": "artifacts/framework/local_mpc_20261102/P4_frozen_V64_newTEST16_eval_v1/10_test_speed_change",
+      "canonical_motion_sha256": "ee8c11cc45a37eee8985bf8960ec9c6c7d88f50de199e3329addd45b6b8cd381",
+      "behavior_annotations": {
+        "initial_speed_m_s": 0.02,
+        "changed_speed_m_s": 0.08,
+        "initial_direction_kind": "axis_aligned",
+        "initial_speed_seen_in_training_assignments": true,
+        "speed_change_sign_relation": "acceleration"
+      }
+    },
+    {
+      "id": "11_test_speed_change",
+      "parent_id": "p4_new_heldout_TEST_v59_20261103_11_seed261103511",
+      "seed": 261103511,
+      "split": "test",
+      "scene": "speed_change",
+      "config": "config/framework/P4_frozen_V64_newTEST16_eval_v1/11_test_speed_change.json",
+      "path": "runtime/framework/local_mpc_20261102/P4_frozen_V64_newTEST16_eval_v1/11_test_speed_change",
+      "evaluation": "artifacts/framework/local_mpc_20261102/P4_frozen_V64_newTEST16_eval_v1/11_test_speed_change",
+      "canonical_motion_sha256": "2084837544b3d02ac2c017d3d2f4809a4e5388c51b858d7b71203797ea5f49f4",
+      "behavior_annotations": {
+        "initial_speed_m_s": 0.12,
+        "changed_speed_m_s": 0.03,
+        "initial_direction_kind": "axis_aligned",
+        "initial_speed_seen_in_training_assignments": true,
+        "speed_change_sign_relation": "deceleration"
+      }
+    },
+    {
+      "id": "12_test_speed_change",
+      "parent_id": "p4_new_heldout_TEST_v59_20261103_12_seed261103512",
+      "seed": 261103512,
+      "split": "test",
+      "scene": "speed_change",
+      "config": "config/framework/P4_frozen_V64_newTEST16_eval_v1/12_test_speed_change.json",
+      "path": "runtime/framework/local_mpc_20261102/P4_frozen_V64_newTEST16_eval_v1/12_test_speed_change",
+      "evaluation": "artifacts/framework/local_mpc_20261102/P4_frozen_V64_newTEST16_eval_v1/12_test_speed_change",
+      "canonical_motion_sha256": "646aa93e234c2027f4e81801d55ebbb8a27f0e338cc1b971ab997a561b40a29b",
+      "behavior_annotations": {
+        "initial_speed_m_s": 0.04,
+        "changed_speed_m_s": 0.06,
+        "initial_direction_kind": "axis_aligned",
+        "initial_speed_seen_in_training_assignments": true,
+        "speed_change_sign_relation": "reversal"
+      }
+    },
+    {
+      "id": "13_test_speed_change",
+      "parent_id": "p4_new_heldout_TEST_v59_20261103_13_seed261103513",
+      "seed": 261103513,
+      "split": "test",
+      "scene": "speed_change",
+      "config": "config/framework/P4_frozen_V64_newTEST16_eval_v1/13_test_speed_change.json",
+      "path": "runtime/framework/local_mpc_20261102/P4_frozen_V64_newTEST16_eval_v1/13_test_speed_change",
+      "evaluation": "artifacts/framework/local_mpc_20261102/P4_frozen_V64_newTEST16_eval_v1/13_test_speed_change",
+      "canonical_motion_sha256": "5da0804c5a11efc1c50f54a5e8d902a87a4059331397b3c246e70da6494fff37",
+      "behavior_annotations": {
+        "initial_speed_m_s": 0.1,
+        "changed_speed_m_s": 0.02,
+        "initial_direction_kind": "axis_aligned",
+        "initial_speed_seen_in_training_assignments": false,
+        "speed_change_sign_relation": "deceleration"
+      }
+    },
+    {
+      "id": "14_test_speed_change",
+      "parent_id": "p4_new_heldout_TEST_v59_20261103_14_seed261103514",
+      "seed": 261103514,
+      "split": "test",
+      "scene": "speed_change",
+      "config": "config/framework/P4_frozen_V64_newTEST16_eval_v1/14_test_speed_change.json",
+      "path": "runtime/framework/local_mpc_20261102/P4_frozen_V64_newTEST16_eval_v1/14_test_speed_change",
+      "evaluation": "artifacts/framework/local_mpc_20261102/P4_frozen_V64_newTEST16_eval_v1/14_test_speed_change",
+      "canonical_motion_sha256": "d4bb38fb4575a875a058335a08f78b50ef9eb06c572d7f7686dee70b1043958d",
+      "behavior_annotations": {
+        "initial_speed_m_s": 0.029999999999999995,
+        "changed_speed_m_s": 0.07999999999999999,
+        "initial_direction_kind": "diagonal",
+        "initial_speed_seen_in_training_assignments": false,
+        "speed_change_sign_relation": "reversal"
+      }
+    },
+    {
+      "id": "15_test_speed_change",
+      "parent_id": "p4_new_heldout_TEST_v59_20261103_15_seed261103515",
+      "seed": 261103515,
+      "split": "test",
+      "scene": "speed_change",
+      "config": "config/framework/P4_frozen_V64_newTEST16_eval_v1/15_test_speed_change.json",
+      "path": "runtime/framework/local_mpc_20261102/P4_frozen_V64_newTEST16_eval_v1/15_test_speed_change",
+      "evaluation": "artifacts/framework/local_mpc_20261102/P4_frozen_V64_newTEST16_eval_v1/15_test_speed_change",
+      "canonical_motion_sha256": "1dfa4b193ae4551c0cb240e7d29a51be80abed305b8879cc231a0ce321e06ba3",
+      "behavior_annotations": {
+        "initial_speed_m_s": 0.06,
+        "changed_speed_m_s": 0.12,
+        "initial_direction_kind": "axis_aligned",
+        "initial_speed_seen_in_training_assignments": false,
+        "speed_change_sign_relation": "acceleration"
+      }
+    }
+  ],
+  "evaluation_only": true,
+  "public_hold_canary_gate": {
+    "passed": false,
+    "status": "FAIL_preserved",
+    "original_V59_partition_gate_satisfied": false,
+    "old_gate_not_relabelled_or_waived": true
+  },
+  "raw_model_qualified": false,
+  "formal_pose_real_time_force_qualified": false,
+  "all16_regardless_of_task_outcomes": true,
+  "no_task_retries_or_case_replacement": true,
+  "Native_started": false,
+  "TEST_data_or_labels_read": false
+}

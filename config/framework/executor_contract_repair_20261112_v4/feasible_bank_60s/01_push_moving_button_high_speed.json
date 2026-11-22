@@ -1,0 +1,11 @@
+{
+  "task": "push_moving_button_high_speed",
+  "seed": 2611139000,
+  "variation": 0,
+  "calibration_episode": "/home/ubuntu/\u684c\u9762/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/push_moving_button_high_speed/all_variations/episodes/episode330/data.h5",
+  "role": "TRAIN_executor_diagnostic",
+  "checkpoint": "/home/ubuntu/\u684c\u9762/our-mani/artifacts/framework/multitask_executor_cycle_20261112_v1/head_fit/selected.pt",
+  "checkpoint_sha256": "65a906fc96ffe8d7b453fa22b47199bf153d91ff712235f001c368682e1c36af",
+  "max_chunks": 120,
+  "proposal_selection": "feasible_bank"
+}

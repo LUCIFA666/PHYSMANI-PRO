@@ -1,0 +1,864 @@
+{
+  "schema": "V64_reserved_TEST16_evaluation_only_preparation_plan_v1",
+  "protocol": {
+    "path": "artifacts/framework/local_mpc_20261102/V64_reserved_TEST16_evaluation_only_protocol_v1/protocol.json",
+    "sha256": "17ed236d7da53c7b04a552e237e452d0415fd0a7adfd0d3f5ede6bc9a9962136"
+  },
+  "partition": {
+    "path": "config/framework/P4_new_heldout_TEST_partition_v59_20261103_v1.json",
+    "sha256": "c917d28f7889258b8961a3e462bf511dd9819d1ee01df9f63951998b15c59234"
+  },
+  "jobs": [
+    {
+      "id": "00_test_static",
+      "parent_id": "p4_new_heldout_TEST_v59_20261103_00_seed261103500",
+      "seed": 261103500,
+      "split": "test",
+      "scene": "static",
+      "config": "config/framework/P4_frozen_V64_newTEST16_eval_v1/00_test_static.json",
+      "path": "runtime/framework/local_mpc_20261102/P4_frozen_V64_newTEST16_eval_v1/00_test_static",
+      "evaluation": "artifacts/framework/local_mpc_20261102/P4_frozen_V64_newTEST16_eval_v1/00_test_static",
+      "canonical_motion_sha256": "d0683c9bd653e6740c3e95b7441e83611b324d5d5cd8f2986b5a82e36623e5a6",
+      "behavior_annotations": {
+        "initial_speed_m_s": 0.0,
+        "changed_speed_m_s": 0.0,
+        "initial_direction_kind": "static",
+        "initial_speed_seen_in_training_assignments": true,
+        "speed_change_sign_relation": "none"
+      },
+      "assignment": {
+        "id": "00_test_static",
+        "parent_id": "p4_new_heldout_TEST_v59_20261103_00_seed261103500",
+        "split": "test",
+        "seed": 261103500,
+        "scene": "static",
+        "motion_kind": "static",
+        "initial_xy": [
+          0.165,
+          -0.155
+        ],
+        "initial_velocity_m_s": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "speed_change_at_tick": 24,
+        "changed_velocity_m_s": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "boundary_bounce_preserved": true,
+        "initial_uniform_is_not_a_no_bounce_guarantee": true,
+        "behavior_annotations": {
+          "initial_speed_m_s": 0.0,
+          "changed_speed_m_s": 0.0,
+          "initial_direction_kind": "static",
+          "initial_speed_seen_in_training_assignments": true,
+          "speed_change_sign_relation": "none"
+        },
+        "behavior_annotations_are_not_policy_inputs": true,
+        "canonical_motion_sha256": "d0683c9bd653e6740c3e95b7441e83611b324d5d5cd8f2986b5a82e36623e5a6"
+      }
+    },
+    {
+      "id": "01_test_static",
+      "parent_id": "p4_new_heldout_TEST_v59_20261103_01_seed261103501",
+      "seed": 261103501,
+      "split": "test",
+      "scene": "static",
+      "config": "config/framework/P4_frozen_V64_newTEST16_eval_v1/01_test_static.json",
+      "path": "runtime/framework/local_mpc_20261102/P4_frozen_V64_newTEST16_eval_v1/01_test_static",
+      "evaluation": "artifacts/framework/local_mpc_20261102/P4_frozen_V64_newTEST16_eval_v1/01_test_static",
+      "canonical_motion_sha256": "1a524eac430e2d05f90bfdb46f8b513375477e2148fecc68d91354e631526a1c",
+      "behavior_annotations": {
+        "initial_speed_m_s": 0.0,
+        "changed_speed_m_s": 0.0,
+        "initial_direction_kind": "static",
+        "initial_speed_seen_in_training_assignments": true,
+        "speed_change_sign_relation": "none"
+      },
+      "assignment": {
+        "id": "01_test_static",
+        "parent_id": "p4_new_heldout_TEST_v59_20261103_01_seed261103501",
+        "split": "test",
+        "seed": 261103501,
+        "scene": "static",
+        "motion_kind": "static",
+        "initial_xy": [
+          0.285,
+          0.125
+        ],
+        "initial_velocity_m_s": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "speed_change_at_tick": 24,
+        "changed_velocity_m_s": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "boundary_bounce_preserved": true,
+        "initial_uniform_is_not_a_no_bounce_guarantee": true,
+        "behavior_annotations": {
+          "initial_speed_m_s": 0.0,
+          "changed_speed_m_s": 0.0,
+          "initial_direction_kind": "static",
+          "initial_speed_seen_in_training_assignments": true,
+          "speed_change_sign_relation": "none"
+        },
+        "behavior_annotations_are_not_policy_inputs": true,
+        "canonical_motion_sha256": "1a524eac430e2d05f90bfdb46f8b513375477e2148fecc68d91354e631526a1c"
+      }
+    },
+    {
+      "id": "02_test_uniform",
+      "parent_id": "p4_new_heldout_TEST_v59_20261103_02_seed261103502",
+      "seed": 261103502,
+      "split": "test",
+      "scene": "uniform",
+      "config": "config/framework/P4_frozen_V64_newTEST16_eval_v1/02_test_uniform.json",
+      "path": "runtime/framework/local_mpc_20261102/P4_frozen_V64_newTEST16_eval_v1/02_test_uniform",
+      "evaluation": "artifacts/framework/local_mpc_20261102/P4_frozen_V64_newTEST16_eval_v1/02_test_uniform",
+      "canonical_motion_sha256": "178a925c52a6a3405c4beea2190595af3859d6300d76a1e6654985ca72807b52",
+      "behavior_annotations": {
+        "initial_speed_m_s": 0.02,
+        "changed_speed_m_s": 0.02,
+        "initial_direction_kind": "axis_aligned",
+        "initial_speed_seen_in_training_assignments": true,
+        "speed_change_sign_relation": "none"
+      },
+      "assignment": {
+        "id": "02_test_uniform",
+        "parent_id": "p4_new_heldout_TEST_v59_20261103_02_seed261103502",
+        "split": "test",
+        "seed": 261103502,
+        "scene": "uniform",
+        "motion_kind": "initial_uniform",
+        "initial_xy": [
+          0.115,
+          -0.205
+        ],
+        "initial_velocity_m_s": [
+          0.02,
+          0.0,
+          0.0
+        ],
+        "speed_change_at_tick": 24,
+        "changed_velocity_m_s": [
+          0.02,
+          0.0,
+          0.0
+        ],
+        "boundary_bounce_preserved": true,
+        "initial_uniform_is_not_a_no_bounce_guarantee": true,
+        "behavior_annotations": {
+          "initial_speed_m_s": 0.02,
+          "changed_speed_m_s": 0.02,
+          "initial_direction_kind": "axis_aligned",
+          "initial_speed_seen_in_training_assignments": true,
+          "speed_change_sign_relation": "none"
+        },
+        "behavior_annotations_are_not_policy_inputs": true,
+        "canonical_motion_sha256": "178a925c52a6a3405c4beea2190595af3859d6300d76a1e6654985ca72807b52"
+      }
+    },
+    {
+      "id": "03_test_uniform",
+      "parent_id": "p4_new_heldout_TEST_v59_20261103_03_seed261103503",
+      "seed": 261103503,
+      "split": "test",
+      "scene": "uniform",
+      "config": "config/framework/P4_frozen_V64_newTEST16_eval_v1/03_test_uniform.json",
+      "path": "runtime/framework/local_mpc_20261102/P4_frozen_V64_newTEST16_eval_v1/03_test_uniform",
+      "evaluation": "artifacts/framework/local_mpc_20261102/P4_frozen_V64_newTEST16_eval_v1/03_test_uniform",
+      "canonical_motion_sha256": "8c2335cfc81bd3e909745520a95554053c3f3d587730c6f8d665871c58ca6a9a",
+      "behavior_annotations": {
+        "initial_speed_m_s": 0.04,
+        "changed_speed_m_s": 0.04,
+        "initial_direction_kind": "axis_aligned",
+        "initial_speed_seen_in_training_assignments": true,
+        "speed_change_sign_relation": "none"
+      },
+      "assignment": {
+        "id": "03_test_uniform",
+        "parent_id": "p4_new_heldout_TEST_v59_20261103_03_seed261103503",
+        "split": "test",
+        "seed": 261103503,
+        "scene": "uniform",
+        "motion_kind": "initial_uniform",
+        "initial_xy": [
+          0.285,
+          0.205
+        ],
+        "initial_velocity_m_s": [
+          -0.04,
+          0.0,
+          0.0
+        ],
+        "speed_change_at_tick": 24,
+        "changed_velocity_m_s": [
+          -0.04,
+          0.0,
+          0.0
+        ],
+        "boundary_bounce_preserved": true,
+        "initial_uniform_is_not_a_no_bounce_guarantee": true,
+        "behavior_annotations": {
+          "initial_speed_m_s": 0.04,
+          "changed_speed_m_s": 0.04,
+          "initial_direction_kind": "axis_aligned",
+          "initial_speed_seen_in_training_assignments": true,
+          "speed_change_sign_relation": "none"
+        },
+        "behavior_annotations_are_not_policy_inputs": true,
+        "canonical_motion_sha256": "8c2335cfc81bd3e909745520a95554053c3f3d587730c6f8d665871c58ca6a9a"
+      }
+    },
+    {
+      "id": "04_test_uniform",
+      "parent_id": "p4_new_heldout_TEST_v59_20261103_04_seed261103504",
+      "seed": 261103504,
+      "split": "test",
+      "scene": "uniform",
+      "config": "config/framework/P4_frozen_V64_newTEST16_eval_v1/04_test_uniform.json",
+      "path": "runtime/framework/local_mpc_20261102/P4_frozen_V64_newTEST16_eval_v1/04_test_uniform",
+      "evaluation": "artifacts/framework/local_mpc_20261102/P4_frozen_V64_newTEST16_eval_v1/04_test_uniform",
+      "canonical_motion_sha256": "ad9081ae1d4972a6a0d8c53ecdc84f610d7fcc6a87dc187988f21a7ea40d3411",
+      "behavior_annotations": {
+        "initial_speed_m_s": 0.08,
+        "changed_speed_m_s": 0.08,
+        "initial_direction_kind": "axis_aligned",
+        "initial_speed_seen_in_training_assignments": true,
+        "speed_change_sign_relation": "none"
+      },
+      "assignment": {
+        "id": "04_test_uniform",
+        "parent_id": "p4_new_heldout_TEST_v59_20261103_04_seed261103504",
+        "split": "test",
+        "seed": 261103504,
+        "scene": "uniform",
+        "motion_kind": "initial_uniform",
+        "initial_xy": [
+          0.185,
+          -0.345
+        ],
+        "initial_velocity_m_s": [
+          0.0,
+          0.08,
+          0.0
+        ],
+        "speed_change_at_tick": 24,
+        "changed_velocity_m_s": [
+          0.0,
+          0.08,
+          0.0
+        ],
+        "boundary_bounce_preserved": true,
+        "initial_uniform_is_not_a_no_bounce_guarantee": true,
+        "behavior_annotations": {
+          "initial_speed_m_s": 0.08,
+          "changed_speed_m_s": 0.08,
+          "initial_direction_kind": "axis_aligned",
+          "initial_speed_seen_in_training_assignments": true,
+          "speed_change_sign_relation": "none"
+        },
+        "behavior_annotations_are_not_policy_inputs": true,
+        "canonical_motion_sha256": "ad9081ae1d4972a6a0d8c53ecdc84f610d7fcc6a87dc187988f21a7ea40d3411"
+      }
+    },
+    {
+      "id": "05_test_uniform",
+      "parent_id": "p4_new_heldout_TEST_v59_20261103_05_seed261103505",
+      "seed": 261103505,
+      "split": "test",
+      "scene": "uniform",
+      "config": "config/framework/P4_frozen_V64_newTEST16_eval_v1/05_test_uniform.json",
+      "path": "runtime/framework/local_mpc_20261102/P4_frozen_V64_newTEST16_eval_v1/05_test_uniform",
+      "evaluation": "artifacts/framework/local_mpc_20261102/P4_frozen_V64_newTEST16_eval_v1/05_test_uniform",
+      "canonical_motion_sha256": "171500957d15b5ed974cc99775bb9af88ace99b1a118ba76ab24c8cdd61b6142",
+      "behavior_annotations": {
+        "initial_speed_m_s": 0.12,
+        "changed_speed_m_s": 0.12,
+        "initial_direction_kind": "axis_aligned",
+        "initial_speed_seen_in_training_assignments": true,
+        "speed_change_sign_relation": "none"
+      },
+      "assignment": {
+        "id": "05_test_uniform",
+        "parent_id": "p4_new_heldout_TEST_v59_20261103_05_seed261103505",
+        "split": "test",
+        "seed": 261103505,
+        "scene": "uniform",
+        "motion_kind": "initial_uniform",
+        "initial_xy": [
+          0.245,
+          0.345
+        ],
+        "initial_velocity_m_s": [
+          0.0,
+          -0.12,
+          0.0
+        ],
+        "speed_change_at_tick": 24,
+        "changed_velocity_m_s": [
+          0.0,
+          -0.12,
+          0.0
+        ],
+        "boundary_bounce_preserved": true,
+        "initial_uniform_is_not_a_no_bounce_guarantee": true,
+        "behavior_annotations": {
+          "initial_speed_m_s": 0.12,
+          "changed_speed_m_s": 0.12,
+          "initial_direction_kind": "axis_aligned",
+          "initial_speed_seen_in_training_assignments": true,
+          "speed_change_sign_relation": "none"
+        },
+        "behavior_annotations_are_not_policy_inputs": true,
+        "canonical_motion_sha256": "171500957d15b5ed974cc99775bb9af88ace99b1a118ba76ab24c8cdd61b6142"
+      }
+    },
+    {
+      "id": "06_test_uniform",
+      "parent_id": "p4_new_heldout_TEST_v59_20261103_06_seed261103506",
+      "seed": 261103506,
+      "split": "test",
+      "scene": "uniform",
+      "config": "config/framework/P4_frozen_V64_newTEST16_eval_v1/06_test_uniform.json",
+      "path": "runtime/framework/local_mpc_20261102/P4_frozen_V64_newTEST16_eval_v1/06_test_uniform",
+      "evaluation": "artifacts/framework/local_mpc_20261102/P4_frozen_V64_newTEST16_eval_v1/06_test_uniform",
+      "canonical_motion_sha256": "0fb0382e4bfbcd1ee4d90b9d1c041c267d1345a0ce4066151617493136fb4c59",
+      "behavior_annotations": {
+        "initial_speed_m_s": 0.03,
+        "changed_speed_m_s": 0.03,
+        "initial_direction_kind": "axis_aligned",
+        "initial_speed_seen_in_training_assignments": false,
+        "speed_change_sign_relation": "none"
+      },
+      "assignment": {
+        "id": "06_test_uniform",
+        "parent_id": "p4_new_heldout_TEST_v59_20261103_06_seed261103506",
+        "split": "test",
+        "seed": 261103506,
+        "scene": "uniform",
+        "motion_kind": "initial_uniform_novel_training_speed",
+        "initial_xy": [
+          0.125,
+          -0.105
+        ],
+        "initial_velocity_m_s": [
+          0.03,
+          0.0,
+          0.0
+        ],
+        "speed_change_at_tick": 24,
+        "changed_velocity_m_s": [
+          0.03,
+          0.0,
+          0.0
+        ],
+        "boundary_bounce_preserved": true,
+        "initial_uniform_is_not_a_no_bounce_guarantee": true,
+        "behavior_annotations": {
+          "initial_speed_m_s": 0.03,
+          "changed_speed_m_s": 0.03,
+          "initial_direction_kind": "axis_aligned",
+          "initial_speed_seen_in_training_assignments": false,
+          "speed_change_sign_relation": "none"
+        },
+        "behavior_annotations_are_not_policy_inputs": true,
+        "canonical_motion_sha256": "0fb0382e4bfbcd1ee4d90b9d1c041c267d1345a0ce4066151617493136fb4c59"
+      }
+    },
+    {
+      "id": "07_test_uniform",
+      "parent_id": "p4_new_heldout_TEST_v59_20261103_07_seed261103507",
+      "seed": 261103507,
+      "split": "test",
+      "scene": "uniform",
+      "config": "config/framework/P4_frozen_V64_newTEST16_eval_v1/07_test_uniform.json",
+      "path": "runtime/framework/local_mpc_20261102/P4_frozen_V64_newTEST16_eval_v1/07_test_uniform",
+      "evaluation": "artifacts/framework/local_mpc_20261102/P4_frozen_V64_newTEST16_eval_v1/07_test_uniform",
+      "canonical_motion_sha256": "d0e85ccc7aba95ddf810b8a7abc0b1f11d9deb681f1b08ace0efd7a313e4137f",
+      "behavior_annotations": {
+        "initial_speed_m_s": 0.05999999999999999,
+        "changed_speed_m_s": 0.05999999999999999,
+        "initial_direction_kind": "diagonal",
+        "initial_speed_seen_in_training_assignments": false,
+        "speed_change_sign_relation": "none"
+      },
+      "assignment": {
+        "id": "07_test_uniform",
+        "parent_id": "p4_new_heldout_TEST_v59_20261103_07_seed261103507",
+        "split": "test",
+        "seed": 261103507,
+        "scene": "uniform",
+        "motion_kind": "initial_uniform_novel_training_speed",
+        "initial_xy": [
+          0.275,
+          0.275
+        ],
+        "initial_velocity_m_s": [
+          -0.04242640687119285,
+          -0.04242640687119285,
+          0.0
+        ],
+        "speed_change_at_tick": 24,
+        "changed_velocity_m_s": [
+          -0.04242640687119285,
+          -0.04242640687119285,
+          0.0
+        ],
+        "boundary_bounce_preserved": true,
+        "initial_uniform_is_not_a_no_bounce_guarantee": true,
+        "behavior_annotations": {
+          "initial_speed_m_s": 0.05999999999999999,
+          "changed_speed_m_s": 0.05999999999999999,
+          "initial_direction_kind": "diagonal",
+          "initial_speed_seen_in_training_assignments": false,
+          "speed_change_sign_relation": "none"
+        },
+        "behavior_annotations_are_not_policy_inputs": true,
+        "canonical_motion_sha256": "d0e85ccc7aba95ddf810b8a7abc0b1f11d9deb681f1b08ace0efd7a313e4137f"
+      }
+    },
+    {
+      "id": "08_test_uniform",
+      "parent_id": "p4_new_heldout_TEST_v59_20261103_08_seed261103508",
+      "seed": 261103508,
+      "split": "test",
+      "scene": "uniform",
+      "config": "config/framework/P4_frozen_V64_newTEST16_eval_v1/08_test_uniform.json",
+      "path": "runtime/framework/local_mpc_20261102/P4_frozen_V64_newTEST16_eval_v1/08_test_uniform",
+      "evaluation": "artifacts/framework/local_mpc_20261102/P4_frozen_V64_newTEST16_eval_v1/08_test_uniform",
+      "canonical_motion_sha256": "c2603c6a1c4bb12b4cf77a3837f1c52fcbde1382b45fbc35ff8201dabc32a547",
+      "behavior_annotations": {
+        "initial_speed_m_s": 0.1,
+        "changed_speed_m_s": 0.1,
+        "initial_direction_kind": "axis_aligned",
+        "initial_speed_seen_in_training_assignments": false,
+        "speed_change_sign_relation": "none"
+      },
+      "assignment": {
+        "id": "08_test_uniform",
+        "parent_id": "p4_new_heldout_TEST_v59_20261103_08_seed261103508",
+        "split": "test",
+        "seed": 261103508,
+        "scene": "uniform",
+        "motion_kind": "initial_uniform_novel_training_speed",
+        "initial_xy": [
+          0.155,
+          0.355
+        ],
+        "initial_velocity_m_s": [
+          0.0,
+          -0.1,
+          0.0
+        ],
+        "speed_change_at_tick": 24,
+        "changed_velocity_m_s": [
+          0.0,
+          -0.1,
+          0.0
+        ],
+        "boundary_bounce_preserved": true,
+        "initial_uniform_is_not_a_no_bounce_guarantee": true,
+        "behavior_annotations": {
+          "initial_speed_m_s": 0.1,
+          "changed_speed_m_s": 0.1,
+          "initial_direction_kind": "axis_aligned",
+          "initial_speed_seen_in_training_assignments": false,
+          "speed_change_sign_relation": "none"
+        },
+        "behavior_annotations_are_not_policy_inputs": true,
+        "canonical_motion_sha256": "c2603c6a1c4bb12b4cf77a3837f1c52fcbde1382b45fbc35ff8201dabc32a547"
+      }
+    },
+    {
+      "id": "09_test_uniform",
+      "parent_id": "p4_new_heldout_TEST_v59_20261103_09_seed261103509",
+      "seed": 261103509,
+      "split": "test",
+      "scene": "uniform",
+      "config": "config/framework/P4_frozen_V64_newTEST16_eval_v1/09_test_uniform.json",
+      "path": "runtime/framework/local_mpc_20261102/P4_frozen_V64_newTEST16_eval_v1/09_test_uniform",
+      "evaluation": "artifacts/framework/local_mpc_20261102/P4_frozen_V64_newTEST16_eval_v1/09_test_uniform",
+      "canonical_motion_sha256": "543aae80863ce0167941646457b8991f99b6b5ebd9781b77592db0f4424e8ebf",
+      "behavior_annotations": {
+        "initial_speed_m_s": 0.11999999999999998,
+        "changed_speed_m_s": 0.11999999999999998,
+        "initial_direction_kind": "diagonal",
+        "initial_speed_seen_in_training_assignments": true,
+        "speed_change_sign_relation": "none"
+      },
+      "assignment": {
+        "id": "09_test_uniform",
+        "parent_id": "p4_new_heldout_TEST_v59_20261103_09_seed261103509",
+        "split": "test",
+        "seed": 261103509,
+        "scene": "uniform",
+        "motion_kind": "initial_uniform",
+        "initial_xy": [
+          0.205,
+          -0.185
+        ],
+        "initial_velocity_m_s": [
+          0.0848528137423857,
+          0.0848528137423857,
+          0.0
+        ],
+        "speed_change_at_tick": 24,
+        "changed_velocity_m_s": [
+          0.0848528137423857,
+          0.0848528137423857,
+          0.0
+        ],
+        "boundary_bounce_preserved": true,
+        "initial_uniform_is_not_a_no_bounce_guarantee": true,
+        "behavior_annotations": {
+          "initial_speed_m_s": 0.11999999999999998,
+          "changed_speed_m_s": 0.11999999999999998,
+          "initial_direction_kind": "diagonal",
+          "initial_speed_seen_in_training_assignments": true,
+          "speed_change_sign_relation": "none"
+        },
+        "behavior_annotations_are_not_policy_inputs": true,
+        "canonical_motion_sha256": "543aae80863ce0167941646457b8991f99b6b5ebd9781b77592db0f4424e8ebf"
+      }
+    },
+    {
+      "id": "10_test_speed_change",
+      "parent_id": "p4_new_heldout_TEST_v59_20261103_10_seed261103510",
+      "seed": 261103510,
+      "split": "test",
+      "scene": "speed_change",
+      "config": "config/framework/P4_frozen_V64_newTEST16_eval_v1/10_test_speed_change.json",
+      "path": "runtime/framework/local_mpc_20261102/P4_frozen_V64_newTEST16_eval_v1/10_test_speed_change",
+      "evaluation": "artifacts/framework/local_mpc_20261102/P4_frozen_V64_newTEST16_eval_v1/10_test_speed_change",
+      "canonical_motion_sha256": "ee8c11cc45a37eee8985bf8960ec9c6c7d88f50de199e3329addd45b6b8cd381",
+      "behavior_annotations": {
+        "initial_speed_m_s": 0.02,
+        "changed_speed_m_s": 0.08,
+        "initial_direction_kind": "axis_aligned",
+        "initial_speed_seen_in_training_assignments": true,
+        "speed_change_sign_relation": "acceleration"
+      },
+      "assignment": {
+        "id": "10_test_speed_change",
+        "parent_id": "p4_new_heldout_TEST_v59_20261103_10_seed261103510",
+        "split": "test",
+        "seed": 261103510,
+        "scene": "speed_change",
+        "motion_kind": "acceleration",
+        "initial_xy": [
+          0.115,
+          -0.355
+        ],
+        "initial_velocity_m_s": [
+          0.0,
+          0.02,
+          0.0
+        ],
+        "speed_change_at_tick": 24,
+        "changed_velocity_m_s": [
+          0.0,
+          0.08,
+          0.0
+        ],
+        "boundary_bounce_preserved": true,
+        "initial_uniform_is_not_a_no_bounce_guarantee": true,
+        "behavior_annotations": {
+          "initial_speed_m_s": 0.02,
+          "changed_speed_m_s": 0.08,
+          "initial_direction_kind": "axis_aligned",
+          "initial_speed_seen_in_training_assignments": true,
+          "speed_change_sign_relation": "acceleration"
+        },
+        "behavior_annotations_are_not_policy_inputs": true,
+        "canonical_motion_sha256": "ee8c11cc45a37eee8985bf8960ec9c6c7d88f50de199e3329addd45b6b8cd381"
+      }
+    },
+    {
+      "id": "11_test_speed_change",
+      "parent_id": "p4_new_heldout_TEST_v59_20261103_11_seed261103511",
+      "seed": 261103511,
+      "split": "test",
+      "scene": "speed_change",
+      "config": "config/framework/P4_frozen_V64_newTEST16_eval_v1/11_test_speed_change.json",
+      "path": "runtime/framework/local_mpc_20261102/P4_frozen_V64_newTEST16_eval_v1/11_test_speed_change",
+      "evaluation": "artifacts/framework/local_mpc_20261102/P4_frozen_V64_newTEST16_eval_v1/11_test_speed_change",
+      "canonical_motion_sha256": "2084837544b3d02ac2c017d3d2f4809a4e5388c51b858d7b71203797ea5f49f4",
+      "behavior_annotations": {
+        "initial_speed_m_s": 0.12,
+        "changed_speed_m_s": 0.03,
+        "initial_direction_kind": "axis_aligned",
+        "initial_speed_seen_in_training_assignments": true,
+        "speed_change_sign_relation": "deceleration"
+      },
+      "assignment": {
+        "id": "11_test_speed_change",
+        "parent_id": "p4_new_heldout_TEST_v59_20261103_11_seed261103511",
+        "split": "test",
+        "seed": 261103511,
+        "scene": "speed_change",
+        "motion_kind": "deceleration",
+        "initial_xy": [
+          0.285,
+          0.355
+        ],
+        "initial_velocity_m_s": [
+          -0.12,
+          0.0,
+          0.0
+        ],
+        "speed_change_at_tick": 20,
+        "changed_velocity_m_s": [
+          -0.03,
+          0.0,
+          0.0
+        ],
+        "boundary_bounce_preserved": true,
+        "initial_uniform_is_not_a_no_bounce_guarantee": true,
+        "behavior_annotations": {
+          "initial_speed_m_s": 0.12,
+          "changed_speed_m_s": 0.03,
+          "initial_direction_kind": "axis_aligned",
+          "initial_speed_seen_in_training_assignments": true,
+          "speed_change_sign_relation": "deceleration"
+        },
+        "behavior_annotations_are_not_policy_inputs": true,
+        "canonical_motion_sha256": "2084837544b3d02ac2c017d3d2f4809a4e5388c51b858d7b71203797ea5f49f4"
+      }
+    },
+    {
+      "id": "12_test_speed_change",
+      "parent_id": "p4_new_heldout_TEST_v59_20261103_12_seed261103512",
+      "seed": 261103512,
+      "split": "test",
+      "scene": "speed_change",
+      "config": "config/framework/P4_frozen_V64_newTEST16_eval_v1/12_test_speed_change.json",
+      "path": "runtime/framework/local_mpc_20261102/P4_frozen_V64_newTEST16_eval_v1/12_test_speed_change",
+      "evaluation": "artifacts/framework/local_mpc_20261102/P4_frozen_V64_newTEST16_eval_v1/12_test_speed_change",
+      "canonical_motion_sha256": "646aa93e234c2027f4e81801d55ebbb8a27f0e338cc1b971ab997a561b40a29b",
+      "behavior_annotations": {
+        "initial_speed_m_s": 0.04,
+        "changed_speed_m_s": 0.06,
+        "initial_direction_kind": "axis_aligned",
+        "initial_speed_seen_in_training_assignments": true,
+        "speed_change_sign_relation": "reversal"
+      },
+      "assignment": {
+        "id": "12_test_speed_change",
+        "parent_id": "p4_new_heldout_TEST_v59_20261103_12_seed261103512",
+        "split": "test",
+        "seed": 261103512,
+        "scene": "speed_change",
+        "motion_kind": "reversal",
+        "initial_xy": [
+          0.125,
+          0.185
+        ],
+        "initial_velocity_m_s": [
+          0.04,
+          0.0,
+          0.0
+        ],
+        "speed_change_at_tick": 28,
+        "changed_velocity_m_s": [
+          -0.06,
+          0.0,
+          0.0
+        ],
+        "boundary_bounce_preserved": true,
+        "initial_uniform_is_not_a_no_bounce_guarantee": true,
+        "behavior_annotations": {
+          "initial_speed_m_s": 0.04,
+          "changed_speed_m_s": 0.06,
+          "initial_direction_kind": "axis_aligned",
+          "initial_speed_seen_in_training_assignments": true,
+          "speed_change_sign_relation": "reversal"
+        },
+        "behavior_annotations_are_not_policy_inputs": true,
+        "canonical_motion_sha256": "646aa93e234c2027f4e81801d55ebbb8a27f0e338cc1b971ab997a561b40a29b"
+      }
+    },
+    {
+      "id": "13_test_speed_change",
+      "parent_id": "p4_new_heldout_TEST_v59_20261103_13_seed261103513",
+      "seed": 261103513,
+      "split": "test",
+      "scene": "speed_change",
+      "config": "config/framework/P4_frozen_V64_newTEST16_eval_v1/13_test_speed_change.json",
+      "path": "runtime/framework/local_mpc_20261102/P4_frozen_V64_newTEST16_eval_v1/13_test_speed_change",
+      "evaluation": "artifacts/framework/local_mpc_20261102/P4_frozen_V64_newTEST16_eval_v1/13_test_speed_change",
+      "canonical_motion_sha256": "5da0804c5a11efc1c50f54a5e8d902a87a4059331397b3c246e70da6494fff37",
+      "behavior_annotations": {
+        "initial_speed_m_s": 0.1,
+        "changed_speed_m_s": 0.02,
+        "initial_direction_kind": "axis_aligned",
+        "initial_speed_seen_in_training_assignments": false,
+        "speed_change_sign_relation": "deceleration"
+      },
+      "assignment": {
+        "id": "13_test_speed_change",
+        "parent_id": "p4_new_heldout_TEST_v59_20261103_13_seed261103513",
+        "split": "test",
+        "seed": 261103513,
+        "scene": "speed_change",
+        "motion_kind": "deceleration",
+        "initial_xy": [
+          0.275,
+          -0.265
+        ],
+        "initial_velocity_m_s": [
+          0.0,
+          0.1,
+          0.0
+        ],
+        "speed_change_at_tick": 30,
+        "changed_velocity_m_s": [
+          0.0,
+          0.02,
+          0.0
+        ],
+        "boundary_bounce_preserved": true,
+        "initial_uniform_is_not_a_no_bounce_guarantee": true,
+        "behavior_annotations": {
+          "initial_speed_m_s": 0.1,
+          "changed_speed_m_s": 0.02,
+          "initial_direction_kind": "axis_aligned",
+          "initial_speed_seen_in_training_assignments": false,
+          "speed_change_sign_relation": "deceleration"
+        },
+        "behavior_annotations_are_not_policy_inputs": true,
+        "canonical_motion_sha256": "5da0804c5a11efc1c50f54a5e8d902a87a4059331397b3c246e70da6494fff37"
+      }
+    },
+    {
+      "id": "14_test_speed_change",
+      "parent_id": "p4_new_heldout_TEST_v59_20261103_14_seed261103514",
+      "seed": 261103514,
+      "split": "test",
+      "scene": "speed_change",
+      "config": "config/framework/P4_frozen_V64_newTEST16_eval_v1/14_test_speed_change.json",
+      "path": "runtime/framework/local_mpc_20261102/P4_frozen_V64_newTEST16_eval_v1/14_test_speed_change",
+      "evaluation": "artifacts/framework/local_mpc_20261102/P4_frozen_V64_newTEST16_eval_v1/14_test_speed_change",
+      "canonical_motion_sha256": "d4bb38fb4575a875a058335a08f78b50ef9eb06c572d7f7686dee70b1043958d",
+      "behavior_annotations": {
+        "initial_speed_m_s": 0.029999999999999995,
+        "changed_speed_m_s": 0.07999999999999999,
+        "initial_direction_kind": "diagonal",
+        "initial_speed_seen_in_training_assignments": false,
+        "speed_change_sign_relation": "reversal"
+      },
+      "assignment": {
+        "id": "14_test_speed_change",
+        "parent_id": "p4_new_heldout_TEST_v59_20261103_14_seed261103514",
+        "split": "test",
+        "seed": 261103514,
+        "scene": "speed_change",
+        "motion_kind": "diagonal_reversal",
+        "initial_xy": [
+          0.195,
+          0.265
+        ],
+        "initial_velocity_m_s": [
+          0.021213203435596423,
+          -0.021213203435596423,
+          0.0
+        ],
+        "speed_change_at_tick": 32,
+        "changed_velocity_m_s": [
+          -0.056568542494923796,
+          0.056568542494923796,
+          0.0
+        ],
+        "boundary_bounce_preserved": true,
+        "initial_uniform_is_not_a_no_bounce_guarantee": true,
+        "behavior_annotations": {
+          "initial_speed_m_s": 0.029999999999999995,
+          "changed_speed_m_s": 0.07999999999999999,
+          "initial_direction_kind": "diagonal",
+          "initial_speed_seen_in_training_assignments": false,
+          "speed_change_sign_relation": "reversal"
+        },
+        "behavior_annotations_are_not_policy_inputs": true,
+        "canonical_motion_sha256": "d4bb38fb4575a875a058335a08f78b50ef9eb06c572d7f7686dee70b1043958d"
+      }
+    },
+    {
+      "id": "15_test_speed_change",
+      "parent_id": "p4_new_heldout_TEST_v59_20261103_15_seed261103515",
+      "seed": 261103515,
+      "split": "test",
+      "scene": "speed_change",
+      "config": "config/framework/P4_frozen_V64_newTEST16_eval_v1/15_test_speed_change.json",
+      "path": "runtime/framework/local_mpc_20261102/P4_frozen_V64_newTEST16_eval_v1/15_test_speed_change",
+      "evaluation": "artifacts/framework/local_mpc_20261102/P4_frozen_V64_newTEST16_eval_v1/15_test_speed_change",
+      "canonical_motion_sha256": "1dfa4b193ae4551c0cb240e7d29a51be80abed305b8879cc231a0ce321e06ba3",
+      "behavior_annotations": {
+        "initial_speed_m_s": 0.06,
+        "changed_speed_m_s": 0.12,
+        "initial_direction_kind": "axis_aligned",
+        "initial_speed_seen_in_training_assignments": false,
+        "speed_change_sign_relation": "acceleration"
+      },
+      "assignment": {
+        "id": "15_test_speed_change",
+        "parent_id": "p4_new_heldout_TEST_v59_20261103_15_seed261103515",
+        "split": "test",
+        "seed": 261103515,
+        "scene": "speed_change",
+        "motion_kind": "acceleration",
+        "initial_xy": [
+          0.235,
+          -0.345
+        ],
+        "initial_velocity_m_s": [
+          0.06,
+          0.0,
+          0.0
+        ],
+        "speed_change_at_tick": 26,
+        "changed_velocity_m_s": [
+          0.12,
+          0.0,
+          0.0
+        ],
+        "boundary_bounce_preserved": true,
+        "initial_uniform_is_not_a_no_bounce_guarantee": true,
+        "behavior_annotations": {
+          "initial_speed_m_s": 0.06,
+          "changed_speed_m_s": 0.12,
+          "initial_direction_kind": "axis_aligned",
+          "initial_speed_seen_in_training_assignments": false,
+          "speed_change_sign_relation": "acceleration"
+        },
+        "behavior_annotations_are_not_policy_inputs": true,
+        "canonical_motion_sha256": "1dfa4b193ae4551c0cb240e7d29a51be80abed305b8879cc231a0ce321e06ba3"
+      }
+    }
+  ],
+  "evaluation_only": true,
+  "public_hold_canary_gate": {
+    "passed": false,
+    "status": "FAIL_preserved",
+    "original_V59_partition_gate_satisfied": false,
+    "old_gate_not_relabelled_or_waived": true
+  },
+  "formal_pose_real_time_force_qualified": false,
+  "model_qualified": false,
+  "raw_mask_model_qualified": false,
+  "all16_regardless_of_task_outcomes": true,
+  "execution_status": "not_materialized_not_executed",
+  "Native_started": false,
+  "TEST_data_or_labels_read": false,
+  "case_configs_materialized": false,
+  "materialization_requires_new_Root_authorization_after_complete_devVAL8": true,
+  "future_materialization_receipt": "config/framework/P4_frozen_V64_newTEST16_eval_v1/materialization_receipt.json",
+  "future_execution_plan": "config/framework/P4_frozen_V64_newTEST16_eval_v1/execution_plan.json",
+  "source_freeze": null
+}

@@ -1,0 +1,8 @@
+{
+  "task": "insert_onto_rotating_peg_high_speed",
+  "seed": 2611133000,
+  "variation": 0,
+  "calibration_episode": "/home/ubuntu/\u684c\u9762/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/insert_onto_rotating_peg_high_speed/all_variations/episodes/episode144/data.h5",
+  "role": "TRAIN_executor_diagnostic",
+  "probe_pattern": "rapid_retargets"
+}

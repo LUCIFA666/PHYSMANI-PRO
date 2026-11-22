@@ -1,0 +1,7 @@
+{
+  "task": "push_moving_button",
+  "seed": 2611138000,
+  "variation": 0,
+  "calibration_episode": "/home/ubuntu/\u684c\u9762/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/push_moving_button/all_variations/episodes/episode179/data.h5",
+  "role": "TRAIN_executor_diagnostic"
+}

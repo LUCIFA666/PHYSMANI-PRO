@@ -1,0 +1,881 @@
+{
+  "schema": "near_goal_cube_segmentation_perception_only_TRAIN_predeclared_v2_20261103",
+  "status": "protocol_prepared_NOT_materialized_NOT_capture_authorized",
+  "native_started": false,
+  "optimizer_started": false,
+  "benchmark_TEST_read": false,
+  "purpose": "Current RGBD instance separation of the known 5cm cube and static red visual goal sphere near the public goal crop; not task-success, execution-model, GRU-history or transition data.",
+  "source_scene": {
+    "task_id": "pick_moving_target_on_the_table",
+    "task_python_or_TTM_modified": false,
+    "native_cube_shape": "pick_and_lift_target",
+    "native_visual_goal_shape_candidate": "success_visual",
+    "native_success_sensor_not_visual_label": "pick_and_lift_success",
+    "visible_goal_binding_status": "static asset name located; current runtime handle, renderability, parent chain and rendered ID require future zero-physical-step canary"
+  },
+  "parent_split": {
+    "unit": "entire parent, all 8 shots, 4 cameras, crops and all derivatives",
+    "fit": 24,
+    "selection": 4,
+    "calibration": 4,
+    "selection_use": "fit early/checkpoint selection only; never optimizer or normalization fitting",
+    "calibration_use": "predeclared threshold calibration only; not checkpoint selection, benchmark TEST or reported unbiased heldout success",
+    "official_PhysMani_VAL_TEST_opened": false,
+    "new_benchmark16_used": false,
+    "source_q_grouping": "If an episode-derived TRAIN q is reused, q_source_parent_id+frame+SHA must be recorded and all derived parents union-grouped before allocation; new seeds alone cannot establish independence. Canonical home is a declared shared constant, not an episode sample."
+  },
+  "parents": [
+    {
+      "parent_id": "near_goal_perception_train_seed261103600",
+      "seed": 261103600,
+      "role": "fit",
+      "pilot": true,
+      "shot_ids": [
+        "shot00",
+        "shot01",
+        "shot02",
+        "shot03",
+        "shot04",
+        "shot05",
+        "shot06",
+        "shot07"
+      ]
+    },
+    {
+      "parent_id": "near_goal_perception_train_seed261103601",
+      "seed": 261103601,
+      "role": "fit",
+      "pilot": true,
+      "shot_ids": [
+        "shot00",
+        "shot01",
+        "shot02",
+        "shot03",
+        "shot04",
+        "shot05",
+        "shot06",
+        "shot07"
+      ]
+    },
+    {
+      "parent_id": "near_goal_perception_train_seed261103602",
+      "seed": 261103602,
+      "role": "fit",
+      "pilot": true,
+      "shot_ids": [
+        "shot00",
+        "shot01",
+        "shot02",
+        "shot03",
+        "shot04",
+        "shot05",
+        "shot06",
+        "shot07"
+      ]
+    },
+    {
+      "parent_id": "near_goal_perception_train_seed261103603",
+      "seed": 261103603,
+      "role": "fit",
+      "pilot": true,
+      "shot_ids": [
+        "shot00",
+        "shot01",
+        "shot02",
+        "shot03",
+        "shot04",
+        "shot05",
+        "shot06",
+        "shot07"
+      ]
+    },
+    {
+      "parent_id": "near_goal_perception_train_seed261103604",
+      "seed": 261103604,
+      "role": "fit",
+      "pilot": true,
+      "shot_ids": [
+        "shot00",
+        "shot01",
+        "shot02",
+        "shot03",
+        "shot04",
+        "shot05",
+        "shot06",
+        "shot07"
+      ]
+    },
+    {
+      "parent_id": "near_goal_perception_train_seed261103605",
+      "seed": 261103605,
+      "role": "fit",
+      "pilot": true,
+      "shot_ids": [
+        "shot00",
+        "shot01",
+        "shot02",
+        "shot03",
+        "shot04",
+        "shot05",
+        "shot06",
+        "shot07"
+      ]
+    },
+    {
+      "parent_id": "near_goal_perception_train_seed261103606",
+      "seed": 261103606,
+      "role": "fit",
+      "pilot": false,
+      "shot_ids": [
+        "shot00",
+        "shot01",
+        "shot02",
+        "shot03",
+        "shot04",
+        "shot05",
+        "shot06",
+        "shot07"
+      ]
+    },
+    {
+      "parent_id": "near_goal_perception_train_seed261103607",
+      "seed": 261103607,
+      "role": "fit",
+      "pilot": false,
+      "shot_ids": [
+        "shot00",
+        "shot01",
+        "shot02",
+        "shot03",
+        "shot04",
+        "shot05",
+        "shot06",
+        "shot07"
+      ]
+    },
+    {
+      "parent_id": "near_goal_perception_train_seed261103608",
+      "seed": 261103608,
+      "role": "fit",
+      "pilot": false,
+      "shot_ids": [
+        "shot00",
+        "shot01",
+        "shot02",
+        "shot03",
+        "shot04",
+        "shot05",
+        "shot06",
+        "shot07"
+      ]
+    },
+    {
+      "parent_id": "near_goal_perception_train_seed261103609",
+      "seed": 261103609,
+      "role": "fit",
+      "pilot": false,
+      "shot_ids": [
+        "shot00",
+        "shot01",
+        "shot02",
+        "shot03",
+        "shot04",
+        "shot05",
+        "shot06",
+        "shot07"
+      ]
+    },
+    {
+      "parent_id": "near_goal_perception_train_seed261103610",
+      "seed": 261103610,
+      "role": "fit",
+      "pilot": false,
+      "shot_ids": [
+        "shot00",
+        "shot01",
+        "shot02",
+        "shot03",
+        "shot04",
+        "shot05",
+        "shot06",
+        "shot07"
+      ]
+    },
+    {
+      "parent_id": "near_goal_perception_train_seed261103611",
+      "seed": 261103611,
+      "role": "fit",
+      "pilot": false,
+      "shot_ids": [
+        "shot00",
+        "shot01",
+        "shot02",
+        "shot03",
+        "shot04",
+        "shot05",
+        "shot06",
+        "shot07"
+      ]
+    },
+    {
+      "parent_id": "near_goal_perception_train_seed261103612",
+      "seed": 261103612,
+      "role": "fit",
+      "pilot": false,
+      "shot_ids": [
+        "shot00",
+        "shot01",
+        "shot02",
+        "shot03",
+        "shot04",
+        "shot05",
+        "shot06",
+        "shot07"
+      ]
+    },
+    {
+      "parent_id": "near_goal_perception_train_seed261103613",
+      "seed": 261103613,
+      "role": "fit",
+      "pilot": false,
+      "shot_ids": [
+        "shot00",
+        "shot01",
+        "shot02",
+        "shot03",
+        "shot04",
+        "shot05",
+        "shot06",
+        "shot07"
+      ]
+    },
+    {
+      "parent_id": "near_goal_perception_train_seed261103614",
+      "seed": 261103614,
+      "role": "fit",
+      "pilot": false,
+      "shot_ids": [
+        "shot00",
+        "shot01",
+        "shot02",
+        "shot03",
+        "shot04",
+        "shot05",
+        "shot06",
+        "shot07"
+      ]
+    },
+    {
+      "parent_id": "near_goal_perception_train_seed261103615",
+      "seed": 261103615,
+      "role": "fit",
+      "pilot": false,
+      "shot_ids": [
+        "shot00",
+        "shot01",
+        "shot02",
+        "shot03",
+        "shot04",
+        "shot05",
+        "shot06",
+        "shot07"
+      ]
+    },
+    {
+      "parent_id": "near_goal_perception_train_seed261103616",
+      "seed": 261103616,
+      "role": "fit",
+      "pilot": false,
+      "shot_ids": [
+        "shot00",
+        "shot01",
+        "shot02",
+        "shot03",
+        "shot04",
+        "shot05",
+        "shot06",
+        "shot07"
+      ]
+    },
+    {
+      "parent_id": "near_goal_perception_train_seed261103617",
+      "seed": 261103617,
+      "role": "fit",
+      "pilot": false,
+      "shot_ids": [
+        "shot00",
+        "shot01",
+        "shot02",
+        "shot03",
+        "shot04",
+        "shot05",
+        "shot06",
+        "shot07"
+      ]
+    },
+    {
+      "parent_id": "near_goal_perception_train_seed261103618",
+      "seed": 261103618,
+      "role": "fit",
+      "pilot": false,
+      "shot_ids": [
+        "shot00",
+        "shot01",
+        "shot02",
+        "shot03",
+        "shot04",
+        "shot05",
+        "shot06",
+        "shot07"
+      ]
+    },
+    {
+      "parent_id": "near_goal_perception_train_seed261103619",
+      "seed": 261103619,
+      "role": "fit",
+      "pilot": false,
+      "shot_ids": [
+        "shot00",
+        "shot01",
+        "shot02",
+        "shot03",
+        "shot04",
+        "shot05",
+        "shot06",
+        "shot07"
+      ]
+    },
+    {
+      "parent_id": "near_goal_perception_train_seed261103620",
+      "seed": 261103620,
+      "role": "fit",
+      "pilot": false,
+      "shot_ids": [
+        "shot00",
+        "shot01",
+        "shot02",
+        "shot03",
+        "shot04",
+        "shot05",
+        "shot06",
+        "shot07"
+      ]
+    },
+    {
+      "parent_id": "near_goal_perception_train_seed261103621",
+      "seed": 261103621,
+      "role": "fit",
+      "pilot": false,
+      "shot_ids": [
+        "shot00",
+        "shot01",
+        "shot02",
+        "shot03",
+        "shot04",
+        "shot05",
+        "shot06",
+        "shot07"
+      ]
+    },
+    {
+      "parent_id": "near_goal_perception_train_seed261103622",
+      "seed": 261103622,
+      "role": "fit",
+      "pilot": false,
+      "shot_ids": [
+        "shot00",
+        "shot01",
+        "shot02",
+        "shot03",
+        "shot04",
+        "shot05",
+        "shot06",
+        "shot07"
+      ]
+    },
+    {
+      "parent_id": "near_goal_perception_train_seed261103623",
+      "seed": 261103623,
+      "role": "fit",
+      "pilot": false,
+      "shot_ids": [
+        "shot00",
+        "shot01",
+        "shot02",
+        "shot03",
+        "shot04",
+        "shot05",
+        "shot06",
+        "shot07"
+      ]
+    },
+    {
+      "parent_id": "near_goal_perception_train_seed261103624",
+      "seed": 261103624,
+      "role": "selection",
+      "pilot": true,
+      "shot_ids": [
+        "shot00",
+        "shot01",
+        "shot02",
+        "shot03",
+        "shot04",
+        "shot05",
+        "shot06",
+        "shot07"
+      ]
+    },
+    {
+      "parent_id": "near_goal_perception_train_seed261103625",
+      "seed": 261103625,
+      "role": "selection",
+      "pilot": false,
+      "shot_ids": [
+        "shot00",
+        "shot01",
+        "shot02",
+        "shot03",
+        "shot04",
+        "shot05",
+        "shot06",
+        "shot07"
+      ]
+    },
+    {
+      "parent_id": "near_goal_perception_train_seed261103626",
+      "seed": 261103626,
+      "role": "selection",
+      "pilot": false,
+      "shot_ids": [
+        "shot00",
+        "shot01",
+        "shot02",
+        "shot03",
+        "shot04",
+        "shot05",
+        "shot06",
+        "shot07"
+      ]
+    },
+    {
+      "parent_id": "near_goal_perception_train_seed261103627",
+      "seed": 261103627,
+      "role": "selection",
+      "pilot": false,
+      "shot_ids": [
+        "shot00",
+        "shot01",
+        "shot02",
+        "shot03",
+        "shot04",
+        "shot05",
+        "shot06",
+        "shot07"
+      ]
+    },
+    {
+      "parent_id": "near_goal_perception_train_seed261103628",
+      "seed": 261103628,
+      "role": "calibration",
+      "pilot": true,
+      "shot_ids": [
+        "shot00",
+        "shot01",
+        "shot02",
+        "shot03",
+        "shot04",
+        "shot05",
+        "shot06",
+        "shot07"
+      ]
+    },
+    {
+      "parent_id": "near_goal_perception_train_seed261103629",
+      "seed": 261103629,
+      "role": "calibration",
+      "pilot": false,
+      "shot_ids": [
+        "shot00",
+        "shot01",
+        "shot02",
+        "shot03",
+        "shot04",
+        "shot05",
+        "shot06",
+        "shot07"
+      ]
+    },
+    {
+      "parent_id": "near_goal_perception_train_seed261103630",
+      "seed": 261103630,
+      "role": "calibration",
+      "pilot": false,
+      "shot_ids": [
+        "shot00",
+        "shot01",
+        "shot02",
+        "shot03",
+        "shot04",
+        "shot05",
+        "shot06",
+        "shot07"
+      ]
+    },
+    {
+      "parent_id": "near_goal_perception_train_seed261103631",
+      "seed": 261103631,
+      "role": "calibration",
+      "pilot": false,
+      "shot_ids": [
+        "shot00",
+        "shot01",
+        "shot02",
+        "shot03",
+        "shot04",
+        "shot05",
+        "shot06",
+        "shot07"
+      ]
+    }
+  ],
+  "pilot": {
+    "parent_count": 8,
+    "fit": 6,
+    "selection": 1,
+    "calibration": 1,
+    "shots_per_parent": 8,
+    "total_shots": 64,
+    "total_view_images": 256,
+    "parent_ids": [
+      "near_goal_perception_train_seed261103600",
+      "near_goal_perception_train_seed261103601",
+      "near_goal_perception_train_seed261103602",
+      "near_goal_perception_train_seed261103603",
+      "near_goal_perception_train_seed261103604",
+      "near_goal_perception_train_seed261103605",
+      "near_goal_perception_train_seed261103624",
+      "near_goal_perception_train_seed261103628"
+    ],
+    "purpose": "capture-contract and data coverage pilot, not model qualification"
+  },
+  "full": {
+    "parents": 32,
+    "shots_per_parent": 8,
+    "total_shots": 256,
+    "total_view_images": 1024
+  },
+  "snapshot_protocol": {
+    "independent_static_kinematic_snapshots": true,
+    "synthetic_continuous_50ms_trajectory": false,
+    "physical_timestamp_may_repeat_across_shots": true,
+    "identity_keys": [
+      "parent_id",
+      "shot_id"
+    ],
+    "do_not_use_shot_order_as_time": true,
+    "initialization_staging": "record every setup physical step separately; do not relabel setup as controlled ticks or conceal it in reset",
+    "sphere_order": "reset original scenario; capture first original public RGBD; fit RedGoalMarker once and recover visual sphere center by subtracting its own marker_to_goal_m; lock first frame/calibration/fit hashes; only then augment cube and real arm/finger joint positions",
+    "sphere_or_camera_pose_changed_after_lock": false,
+    "root_must_materialize_numeric_poses_before_capture": "This protocol fixes categories/split, not a runnable pose list. Exact cube transforms, hand joint arrays, source provenance, collision/visibility audit and seed-deterministic sampling rules must be frozen in a new collector plan before any Native shot. No per-case replacement based on model performance.",
+    "shots": [
+      {
+        "shot_id": "shot00",
+        "kind": "sphere_only_cube_out_of_view",
+        "cube_condition": "same native cube parked outside all four frusta; do not delete or resize",
+        "hand_condition": "canonical home/open",
+        "crop_target": "goal plus background; cube absent from current views"
+      },
+      {
+        "shot_id": "shot01",
+        "kind": "far_cube_visible",
+        "cube_condition": "cube visible away from initial public sphere crop",
+        "hand_condition": "canonical home/open",
+        "crop_target": "hard negative if no visible cube pixel enters the public crop"
+      },
+      {
+        "shot_id": "shot02",
+        "kind": "near_sphere_separated",
+        "cube_condition": "same-frame cube near sphere without projected overlap in at least two views",
+        "hand_condition": "canonical home/open",
+        "crop_target": "current visible cube/goal/background"
+      },
+      {
+        "shot_id": "shot03",
+        "kind": "near_sphere_partial_overlap",
+        "cube_condition": "cube and sphere overlap in at least one view",
+        "hand_condition": "canonical home/open",
+        "crop_target": "visible instances only; no amodal labels"
+      },
+      {
+        "shot_id": "shot04",
+        "kind": "near_sphere_strong_overlap",
+        "cube_condition": "independent closer depth-order/overlap snapshot",
+        "hand_condition": "canonical home/open",
+        "crop_target": "visible instances only; no shell subtraction labels"
+      },
+      {
+        "shot_id": "shot05",
+        "kind": "near_sphere_gripper_adjacent",
+        "cube_condition": "near sphere",
+        "hand_condition": "actual arm and finger joint positions place real gripper near cube with mild occlusion",
+        "crop_target": "visible cube/goal; robot is background"
+      },
+      {
+        "shot_id": "shot06",
+        "kind": "near_sphere_gripper_occlusion",
+        "cube_condition": "near sphere",
+        "hand_condition": "actual arm and finger joints give severe partial or complete cube occlusion",
+        "crop_target": "fully occluded cube has no positive visible pixels; unknown cannot become predicted cube"
+      },
+      {
+        "shot_id": "shot07",
+        "kind": "sphere_only_gripper_near_sphere",
+        "cube_condition": "same native cube parked outside all four camera frusta; verify no visible current cube ID, do not delete/resize",
+        "hand_condition": "actual nearby arm/finger joint positions occlude the visual sphere; original sphere pose and initial public crop unchanged",
+        "crop_target": "sphere/background/real gripper only; Cube must not be hallucinated when the goal is partly hidden by the hand"
+      }
+    ],
+    "no_asset_mutation": [
+      "no task source edits",
+      "no TTM edits",
+      "no mesh resize",
+      "no recolor",
+      "no camera/light/render-asset changes",
+      "no virtual cube attachment or fake lift"
+    ],
+    "no_return_to_benchmark_loop": "fresh native parent process captures its snapshots then closes; setter restoration does not claim full dynamic momentum restoration or task-loop equivalence"
+  },
+  "public_crop": {
+    "camera_order": [
+      "front",
+      "8",
+      "16",
+      "36"
+    ],
+    "full_RGBD_resolution": [
+      256,
+      256
+    ],
+    "crop_resolution": [
+      64,
+      64
+    ],
+    "resize": false,
+    "center_source": "fixed initial public visual sphere center projected by the public signed K and camera_to_world; never Native goal/instance bbox/current GT/GRU/TCP",
+    "visual_center_not_offset_lift_goal": true,
+    "first_fit_unavailable": "reject crop/model proposal and retain failed parent ledger; no GT fallback or automatic replacement",
+    "crop_bounds": "origin=floor(projected_initial_public_sphere_pixel)-32 per axis; preserve original native pixels; pad out-of-frame with zero input and crop_valid=False, label ignore255; retain original origin and K-adjusted cx/cy",
+    "raw_RGBD_immutable": true,
+    "feature_channels": [
+      "RGB_R/255",
+      "RGB_G/255",
+      "RGB_B/255",
+      "log_depth_m",
+      "P_camera_x_minus_initial_sphere_camera_x",
+      "P_camera_y_minus_initial_sphere_camera_y",
+      "P_camera_z_minus_initial_sphere_camera_z",
+      "depth_valid",
+      "crop_valid"
+    ],
+    "feature_shape": [
+      4,
+      9,
+      64,
+      64
+    ],
+    "feature_geometry": "use integer native pixel coordinates and signed K; metric depth is local camera Z, not Euclidean range; current depth only",
+    "forbidden_inputs": [
+      "Native instance IDs or masks",
+      "Native object or goal pose",
+      "held/success/contact ground truth",
+      "handles",
+      "robot q/dq/TCP",
+      "taskID",
+      "seed/parent/shot/split IDs",
+      "previous augmentation shots",
+      "GRU predictions",
+      "label crop bounding boxes"
+    ]
+  },
+  "files": {
+    "manifest": "one parent/shot manifest binds inputs/labels/public metadata/privileged metadata independently by SHA256",
+    "inputs_NPZ": {
+      "rgb": {
+        "dtype": "uint8",
+        "shape": [
+          4,
+          256,
+          256,
+          3
+        ]
+      },
+      "depth_m": {
+        "dtype": "float32",
+        "shape": [
+          4,
+          256,
+          256
+        ],
+        "units": "metric local camera Z m"
+      },
+      "K": {
+        "dtype": "float64",
+        "shape": [
+          4,
+          3,
+          3
+        ],
+        "signed": true
+      },
+      "T": {
+        "dtype": "float64",
+        "shape": [
+          4,
+          4,
+          4
+        ],
+        "convention": "camera_to_world"
+      },
+      "public_sphere_center": {
+        "dtype": "float64",
+        "shape": [
+          3
+        ],
+        "source": "initial public RGBD fit only"
+      },
+      "camera_names": [
+        "front",
+        "8",
+        "16",
+        "36"
+      ],
+      "timestamp": {
+        "dtype": "float scalar",
+        "source": "actual parent-relative physics clock from a frozen recorded origin; repeated zero-step snapshots may all be0; absolute physics clock and origin recorded separately in audit"
+      }
+    },
+    "public_metadata_JSON": [
+      "initial public sphere radius/residual and marker offset",
+      "first public frame path+SHA",
+      "first fit metadata+SHA",
+      "calibration SHA",
+      "crop origin and visible validity",
+      "source flags all Native/future/fabricated false"
+    ],
+    "labels_NPZ": {
+      "semantic_role_ids": {
+        "dtype": "uint8",
+        "shape": [
+          4,
+          256,
+          256
+        ],
+        "classes": {
+          "0": "background",
+          "1": "visible cube",
+          "2": "visible goal sphere",
+          "255": "ignore invalid or unverifiable pixels"
+        }
+      },
+      "rendered_instance_ids": "optional uint32[4,256,256], label-side only",
+      "cube_center_world": "float64[3], labels/evaluation only",
+      "cube_present": "bool scalar, labels/evaluation only"
+    },
+    "privileged_labels_metadata_JSON": [
+      "current component names/types/handles and role binding",
+      "same-frame Native cube SE3 and visible success_visual mesh SE3, labels/evaluation only; success proximity sensor pose is a separate identifier",
+      "kinematic augmentation transform and actual q/finger configuration",
+      "label physics timestamp and source scene hash"
+    ],
+    "directory_boundary": "inputs/ and labels/ siblings with no label fields in the input NPZ; training input loader must whitelist all input keys and inference loader never opens labels/"
+  },
+  "label_contract": {
+    "kind": "visible current instance rasterization, not CAD amodal target or nearest-center rule",
+    "rgb24_decode": "round(mask_rgb*255).uint32; ID=R+256*G+65536*B; bind current process handles, never cached IDs",
+    "current_role_ownership": "one renderable handle may map to at most one semantic class; all cube/goal renderable component handles must be inventory-verified; sensor handle is not a visible sphere shortcut",
+    "occlusion": "frontmost visible surface only; foreground gripper/table/distractors are background; class ambiguity/invalid depth/unverifiable rendered identity must be ignore, not heuristic positive",
+    "sphere_only_negative": "cube parked outside all camera frusta and verified invisible, not merely outside crop; far-visible cube remains positive in the full label and is only a crop-negative where absent"
+  },
+  "zero_step_capture_gate": {
+    "status": "NOT_RUN; source audit is not Native qualification",
+    "must_pass_before_sampling": [
+      "single serial Native owner and existing shared locks; no active Native owner; fresh namespace and STOP honored",
+      "source/task/TTM/camera asset SHA frozen before setup and checked after",
+      "initialization staging physical steps logged separately",
+      "independent RGB OPENGL and label OPENGL_COLOR_CODED sensors; same matrix/perspective/256 resolution/near/far and explicit handling",
+      "after every kinematic pose/joint change, explicitly handle each RGB camera and each independent mask camera, then capture RGB+metric depth/mask; physics_time/task.t/task.step_id/raw.ledger.ticks four-tuple AND public backend.clock stay exactly unchanged through rendering, reading, and flag restoration",
+      "public RGB sensor render mode and sensor properties unchanged; original RGB not brightness-modified",
+      "actual current cube and success_visual handles/type/parent/renderability verified; label foreground ID alignment zero-step checked",
+      "inputs serialization accepts only public whitelist and cannot receive Native pose/held/success/handles",
+      "arm/gripper.set_joint_positions(disable_dynamics=False) only; True is forbidden because PyRep hides physics steps",
+      "Object.set_pose(reset_dynamics=False) only; no dynamic reset or env.step/scene.step/task.step/actuate-driven step in snapshot loop",
+      "same actual physics timestamp in RGBD and label receipt; original public Sphere fit and calibration stay locked",
+      "all failed/partial shots retained in ledger; no threshold or source substitution by output quality",
+      "close parent process after its shots; do not claim full dynamics restored merely because positions match",
+      "freshness canary verifies real visible pose A→B changes current RGB/depth and aligned current instance mask with zero clock change, then restores pose A and sensor flags; capture-only/read-buffer equality is not proof of current rendering"
+    ],
+    "not_proven_by_reading_source": [
+      "GPU/OpenGL mask vs RGB edge/depth alignment",
+      "actual scene renderable goal handle and sensor parent chain",
+      "zero-step setter/readback full simulator side effects",
+      "exact pose-list collision/visibility feasibility"
+    ],
+    "render_refresh": "VisionSensor.handle_explicitly→simHandleVisionSensor→CVisionSensor.handleSensor→detectEntity renders current world without physics; capture_rgb/capture_depth only read existing buffers. No need to change RGB render_mode. If explicit_handling flag must be temporarily enabled, restore its exact original integer in finally and clock-check restoration even after capture failure."
+  },
+  "fallback_if_capture_gate_fails": {
+    "action": "do not start/resume the Native dataset; report exact failed contract",
+    "alternative": "separate offline CAD/z-buffer renderer may create explicitly synthetic labels using immutable TRAIN meshes, calibrated cameras and label-side scene poses, including real robot/static occluder meshes",
+    "scope": "synthetic domain-gap supervision only; never replace current public observations, fabricated Native masks, physical transitions or task-success evidence"
+  },
+  "evaluation_scope": {
+    "parent_balanced": true,
+    "report": [
+      "Cube/goal visible precision and recall per view/parent",
+      "sphere-only and far-cube false-positive rates",
+      "current visible cube-center availability and error (Native GT labels for posthoc only)",
+      "height/occlusion/overlap coverage",
+      "latency and all rejected/UNKNOWN shots"
+    ],
+    "center_measurement": "after current visible-Cube segmentation, apply the declared original bbox/quantile center measurement; model predicts labels not Native pose. Its axis-aligned/cube-prior bias must remain a reported limitation, especially after rotation.",
+    "no_success_claim": "No control-loop, task-success, force/attachment or unseen-task generalization is established by snapshot segmentation.",
+    "pre_fit_oracle_gate": {
+      "method": "truth-visible-Cube-instance mask + same-frame real metric depth + unchanged declared quantile/bbox center estimator; compare to labels-only actual cube center",
+      "before_optimizer": true,
+      "report": [
+        "all shots including unavailable/occluded/negative",
+        "positive support availability by camera/parent",
+        "position mean/P50/P95/max on available positives",
+        "oracle rejection/UNKNOWN counts and support coverage"
+      ],
+      "no_cheat": "No GT pose replaces a current measurement or fills invisible/under-supported mask pixels; no oracle crop; no dropping failed positives to advertise lower P95",
+      "P95_target_m": 0.005,
+      "target_scope": "qualified-visible samples, necessary not sufficient; same fixed 5mm target as calibration, declare coverage/all groups/max/negative/full-invisible UNKNOWN explicitly",
+      "if_oracle_fails": "diagnose current depth geometry and observability before fitting segmentation; GT center cannot replace the measured output"
+    }
+  },
+  "preserved_frozen_models": [
+    "external GRU/context/SE3",
+    "P2 execution residual and reference models",
+    "P4 candidate Transformer and fixed e uniform weights"
+  ],
+  "launch_status": "No capture command authorized or run. Root will own a later explicit single-process collector after zero-step canary and exact pose-plan freeze.",
+  "required_unfrozen_fields_before_any_capture": [
+    "exact numeric cube SE3 and actual 7arm+finger joint positions per parent/shot",
+    "deterministic generator rules and bounds plus staged startup/reset details",
+    "q_source_parent/frame/SHA or explicit non-episode canonical pose source and any split union regrouping",
+    "original camera/source calibration file pointers and SHA",
+    "first original-scenario public sphere-fit success/frame/calibration identities",
+    "runtime renderable role inventory and zero-step label ownership proof",
+    "all Native/shared lock/STOP/source-freeze/actual_exit collector ownership records",
+    "physics/task/backend/ledger clock readback and setter/camera restoration receipts",
+    "zero-step canary pass and future explicit root authorization"
+  ],
+  "supersedes": {
+    "path": "config/framework/P3_near_goal_segmentation_TRAIN_partition_20261103_v1.json",
+    "sha256": "1c182b7efd82838d0b5e79372fdeb0a64e35818cda3573f61063e3117a5e054e"
+  },
+  "version_delta": [
+    "shot07 is CubeAbsent+gripperNearSphere hard negative; parent allocation, total8shots, all original shot00..06 unchanged",
+    "explicit refreshed RGBD/render clock contract, no old source changes"
+  ]
+}

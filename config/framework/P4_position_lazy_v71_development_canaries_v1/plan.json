@@ -1,0 +1,187 @@
+{
+  "schema": "P4_position_lazy_v71_fixed6_development_preparation_v1",
+  "complete_preparation": true,
+  "execution_ready": true,
+  "execution_authorized": true,
+  "preparation_only": false,
+  "pending": [],
+  "jobs": [
+    {
+      "id": "00_val_static",
+      "scene": "static",
+      "config": "config/framework/P4_position_lazy_v71_development_canaries_v1/00_val_static.json",
+      "path": "runtime/framework/local_mpc_20261102/public_candidate_lazy_free_v71_development_v1/00_val_static",
+      "evaluation": "artifacts/framework/local_mpc_20261102/V71_development_originaljudge_v1/00_val_static",
+      "reference_config": {
+        "path": "config/framework/P4_position_response_v70_development_canaries_v1/00_val_static.json",
+        "sha256": "98c9e07ab4c300d57824b6c09df937f8eb77307840da8b5e9ae98141a88c0964"
+      },
+      "reference_plan": {
+        "path": "config/framework/P4_position_response_v70_development_canaries_v1/plan.json",
+        "sha256": "1cafd9cfe55ec0ca30f957190d40d3b78d5ffd6512be0c32f2c78b72b6abb2eb"
+      },
+      "expected_role": "positive_development"
+    },
+    {
+      "id": "01_val_static",
+      "scene": "static",
+      "config": "config/framework/P4_position_lazy_v71_development_canaries_v1/01_val_static.json",
+      "path": "runtime/framework/local_mpc_20261102/public_candidate_lazy_free_v71_development_v1/01_val_static",
+      "evaluation": "artifacts/framework/local_mpc_20261102/V71_development_originaljudge_v1/01_val_static",
+      "reference_config": {
+        "path": "config/framework/P4_position_response_v70_development_canaries_v1/01_val_static.json",
+        "sha256": "6b0a4d3cb6bf4dac5341495e0e579589e9767cc56c3dc08ace873bf1e22ffd62"
+      },
+      "reference_plan": {
+        "path": "config/framework/P4_position_response_v70_development_canaries_v1/plan.json",
+        "sha256": "1cafd9cfe55ec0ca30f957190d40d3b78d5ffd6512be0c32f2c78b72b6abb2eb"
+      },
+      "expected_role": "positive_development"
+    },
+    {
+      "id": "03_val_uniform",
+      "scene": "uniform",
+      "config": "config/framework/P4_position_lazy_v71_development_canaries_v1/03_val_uniform.json",
+      "path": "runtime/framework/local_mpc_20261102/public_candidate_lazy_free_v71_development_v1/03_val_uniform",
+      "evaluation": "artifacts/framework/local_mpc_20261102/V71_development_originaljudge_v1/03_val_uniform",
+      "reference_config": {
+        "path": "config/framework/P4_position_response_v70_development_canaries_v1/03_val_uniform.json",
+        "sha256": "4cb576de0e498a5b12776b50981279c4b9b493e03f17445d0a29ebba717be184"
+      },
+      "reference_plan": {
+        "path": "config/framework/P4_position_response_v70_development_canaries_v1/plan.json",
+        "sha256": "1cafd9cfe55ec0ca30f957190d40d3b78d5ffd6512be0c32f2c78b72b6abb2eb"
+      },
+      "expected_role": "positive_development"
+    },
+    {
+      "id": "04_val_uniform",
+      "scene": "uniform",
+      "config": "config/framework/P4_position_lazy_v71_development_canaries_v1/04_val_uniform.json",
+      "path": "runtime/framework/local_mpc_20261102/public_candidate_lazy_free_v71_development_v1/04_val_uniform",
+      "evaluation": "artifacts/framework/local_mpc_20261102/V71_development_originaljudge_v1/04_val_uniform",
+      "reference_config": {
+        "path": "config/framework/P4_position_response_v70_development_canaries_v1/04_val_uniform.json",
+        "sha256": "571360e8b96116543cbf6f38ec1dc6b93e2a0055b76a57557a8d20bf399c5558"
+      },
+      "reference_plan": {
+        "path": "config/framework/P4_position_response_v70_development_canaries_v1/plan.json",
+        "sha256": "1cafd9cfe55ec0ca30f957190d40d3b78d5ffd6512be0c32f2c78b72b6abb2eb"
+      },
+      "expected_role": "positive_development"
+    },
+    {
+      "id": "uniform_002",
+      "scene": "uniform",
+      "config": "config/framework/P4_position_lazy_v71_development_canaries_v1/uniform_002.json",
+      "path": "runtime/framework/local_mpc_20261102/public_candidate_lazy_free_v71_development_v1/uniform_002",
+      "evaluation": "artifacts/framework/local_mpc_20261102/V71_development_originaljudge_v1/uniform_002",
+      "reference_config": {
+        "path": "config/framework/P4_position_response_v70_development_canaries_v1/uniform_002.json",
+        "sha256": "cfd0e3029830245ca4e1f153a8ec773ed39ee69a5393e438189bde36c7011834"
+      },
+      "reference_plan": {
+        "path": "config/framework/P4_position_response_v70_development_canaries_v1/plan.json",
+        "sha256": "1cafd9cfe55ec0ca30f957190d40d3b78d5ffd6512be0c32f2c78b72b6abb2eb"
+      },
+      "expected_role": "positive_development"
+    },
+    {
+      "id": "static_no_proxy",
+      "scene": "static",
+      "config": "config/framework/P4_position_lazy_v71_development_canaries_v1/static_no_proxy.json",
+      "path": "runtime/framework/local_mpc_20261102/public_candidate_lazy_free_v71_development_v1/static_no_proxy",
+      "evaluation": "artifacts/framework/local_mpc_20261102/V71_development_originaljudge_v1/static_no_proxy",
+      "reference_config": {
+        "path": "config/framework/P4_position_response_v70_development_canaries_v1/static_no_proxy.json",
+        "sha256": "93be643a920e691390d1ff41d9ce4fe440f5ea9247646c92117df1108b5d834d"
+      },
+      "reference_plan": {
+        "path": "config/framework/P4_position_response_v70_development_canaries_v1/plan.json",
+        "sha256": "1cafd9cfe55ec0ca30f957190d40d3b78d5ffd6512be0c32f2c78b72b6abb2eb"
+      },
+      "expected_role": "counterfactual_negative_no_proxy"
+    }
+  ],
+  "fixed_order": [
+    "00_val_static",
+    "01_val_static",
+    "03_val_uniform",
+    "04_val_uniform",
+    "uniform_002",
+    "static_no_proxy"
+  ],
+  "all_six_run_regardless_of_task_outcome": true,
+  "retry_or_case_replacement_based_on_outcome": false,
+  "reference_selection": "All six exact already-closed V70 fixed6, no TEST or outcome selection",
+  "Native_started": false,
+  "fit_started": false,
+  "formal_TEST_read": false,
+  "physics_dt": 0.05,
+  "control_dt": 0.1,
+  "decision_ticks": 2,
+  "simulation_seconds": 8.0,
+  "model_rollout_budget": {
+    "total": 256,
+    "H": 8,
+    "iterations": [
+      88,
+      88,
+      80
+    ]
+  },
+  "extra_static_queries": true,
+  "maximum_lazy_candidates": 8,
+  "final_runner_original_qualification_repeated": true,
+  "total_compute_unchanged_claimed": false,
+  "real_time_guaranteed": false,
+  "sole_controller_change": "FREE_GRU plans retain full top8 unchanged scored trajectories and lazily call original static endpoint+7path qualifier before building phase/warm; hold/activeprobe/reopen and response seed remain unchanged",
+  "weights_unchanged": true,
+  "position_checkpoint_sha256": "ee079d1f0ea302f65ed4123c5137328005f582f5347e282497dc2d2e07dc0884",
+  "all_original_globalgoal_cost_and_success_criteria_unchanged": true,
+  "natural_witness_only": true,
+  "active_new_probe_execution": false,
+  "original_selected_action_endpoint_plus7_path_checks_preserved": true,
+  "public_goal_and_finalNativegoal_plus_currenthold_reported_separately": true,
+  "far_consistency_is_development_hypothesis": true,
+  "far_physical_semantic_ownership_or_statistical_certificate": false,
+  "known_prior_counterexamples": 73,
+  "raw_mask_qualified": false,
+  "contact_qualified": false,
+  "new_pose_qualification_claimed": false,
+  "public_task_gate_passed": false,
+  "producer": {
+    "path": "our_mani/local_mpc_control_20261103/public_candidate_lazy_free_v71.py",
+    "sha256": "4b38a96a4818f820910d210d04519d10d465ba2430cc42553fd02e9c61a177e7"
+  },
+  "candidate_order": "00/01/03/04/uniform002/NoProxy fixed before results",
+  "CF40_520_preparation_unchanged_and_paused": true,
+  "lazy_pool_maximum_static_queries": 64,
+  "final_selected_requalification_maximum_static_queries": 8,
+  "maximum_queries_for_pool_plus_final_requalification": 72,
+  "other_existing_candidate_or_protocol_queries_not_included_in_this_bound": true,
+  "planner": {
+    "path": "our_mani/local_mpc_control_20261103/lazy_free_joint_goal_cem_v71.py",
+    "sha256": "385303abc2e89da899c200cb54d1ec883f4f1e63d5994d2e9659bb0cfd0a3828"
+  },
+  "producer_source_map": {
+    "items": 114,
+    "static_current_byte_check_passed": true,
+    "sha256": "7888e824e5f395bfcaab5f9ba8a0f105ac925c5990c4562f0a57024521f5f9ec"
+  },
+  "real_public_FREE_CPU_smoke": {
+    "path": "artifacts/framework/local_mpc_20261102/V71_real_public_FREE_full_plan_CPU_smoke_v1/receipt.json",
+    "sha256": "e1d0e1d45a0ebde3d7a68cf0bd4f9317b22c1a447c255ee1883d0adddd6ff80f",
+    "collision_callback_test_stub_not_Native_qualification": true,
+    "old_preferred_pass_action_H8_phase_warm_cost_predstates_budget_exact": true
+  },
+  "final_code_prepared_utc": "2026-11-03T10:31:41.451632+00:00",
+  "Root_finalization": {
+    "created_utc": "2026-11-03T15:33:23.523244+00:00",
+    "authorization_basis": "User explicit continue; previous train/VAL/TEST autonomy remains active",
+    "only_config_change": "v71_preparation_only true to false",
+    "fixed_outcomes_not_used_for_retry_or_selection": true,
+    "exclusive_Native_only": true,
+    "training_concurrent": false
+  }
+}

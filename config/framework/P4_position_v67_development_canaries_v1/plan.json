@@ -1,0 +1,88 @@
+{
+  "schema": "P4_position_v67_fixed_V66_development_canary4_frozen_v1",
+  "complete_preparation": true,
+  "execution_ready": true,
+  "execution_authorized": true,
+  "pending": [],
+  "reference_plan": {
+    "path": "config/framework/P4_position_v66_development_canaries_v1/plan.json",
+    "sha256": "5608a0fd14f918692a741529e0eb0fe20f5ebd6927eaa8a78ef0f79952de49cf"
+  },
+  "selection_basis": "same four closed V66 development assignments; no TEST outcomes used",
+  "jobs": [
+    {
+      "id": "00_val_static",
+      "scene": "static",
+      "config": "config/framework/P4_position_v67_development_canaries_v1/00_val_static.json",
+      "path": "runtime/framework/local_mpc_20261102/public_candidate_scope12_v67_development_v1/00_val_static",
+      "evaluation": "artifacts/framework/local_mpc_20261102/V67_development_originaljudge_v1/00_val_static",
+      "reference_config": {
+        "path": "config/framework/P4_position_v66_development_canaries_v1/00_val_static.json",
+        "sha256": "beba6ad26a249c978daba5086ae10942ede49e415c0781fee277597a5b883a10"
+      },
+      "expected_role": "positive_development"
+    },
+    {
+      "id": "03_val_uniform",
+      "scene": "uniform",
+      "config": "config/framework/P4_position_v67_development_canaries_v1/03_val_uniform.json",
+      "path": "runtime/framework/local_mpc_20261102/public_candidate_scope12_v67_development_v1/03_val_uniform",
+      "evaluation": "artifacts/framework/local_mpc_20261102/V67_development_originaljudge_v1/03_val_uniform",
+      "reference_config": {
+        "path": "config/framework/P4_position_v66_development_canaries_v1/03_val_uniform.json",
+        "sha256": "58275202199ae2e43f7d9ea068330c291f053354af371f3c0019a1cd13320022"
+      },
+      "expected_role": "positive_development"
+    },
+    {
+      "id": "uniform_002",
+      "scene": "uniform",
+      "config": "config/framework/P4_position_v67_development_canaries_v1/uniform_002.json",
+      "path": "runtime/framework/local_mpc_20261102/public_candidate_scope12_v67_development_v1/uniform_002",
+      "evaluation": "artifacts/framework/local_mpc_20261102/V67_development_originaljudge_v1/uniform_002",
+      "reference_config": {
+        "path": "config/framework/P4_position_v66_development_canaries_v1/uniform_002.json",
+        "sha256": "bdb19d9b95623e88534a0eb67b13f7a26ea790eed9cb8f2095adc82381816ac2"
+      },
+      "expected_role": "positive_development"
+    },
+    {
+      "id": "static_no_proxy",
+      "scene": "static",
+      "config": "config/framework/P4_position_v67_development_canaries_v1/static_no_proxy.json",
+      "path": "runtime/framework/local_mpc_20261102/public_candidate_scope12_v67_development_v1/static_no_proxy",
+      "evaluation": "artifacts/framework/local_mpc_20261102/V67_development_originaljudge_v1/static_no_proxy",
+      "reference_config": {
+        "path": "config/framework/P4_position_v66_development_canaries_v1/static_no_proxy.json",
+        "sha256": "c409e553c9ec8ec64f34f755c945f4baa42b2439e9d108b55bc32d99d7a099d9"
+      },
+      "expected_role": "counterfactual_negative_no_proxy"
+    }
+  ],
+  "all_four_run_regardless_of_task_outcome": true,
+  "retry_or_case_replacement_based_on_outcome": false,
+  "Native_started": false,
+  "formal_TEST_read": false,
+  "physics_dt": 0.05,
+  "control_dt": 0.1,
+  "decision_ticks": 2,
+  "model_budget": "unchanged256/H8/88,88,80",
+  "natural_witness_only": true,
+  "active_new_probe_execution": false,
+  "new_scope_radius_m": 0.12,
+  "scope_certificate_pending": false,
+  "axis_general_runtime_enabled": false,
+  "raw_model_qualified": false,
+  "composite_global_coverage_qualification_not_required_for_scope_only_component": true,
+  "all_original_globalgoal_cost_controller_success_criteria_unchanged": true,
+  "scope_certificate": {
+    "path": "artifacts/framework/near_goal_segmentation_20261103/position_measurement_scope12_fresh8_v10/calibrated.pt",
+    "sha256": "ee079d1f0ea302f65ed4123c5137328005f582f5347e282497dc2d2e07dc0884"
+  },
+  "public_pack_smoke": {
+    "path": "artifacts/framework/local_mpc_20261102/V67_genuine_V10_closed_V66_scope_gap_publicpack_smoke_v1/receipt.json",
+    "sha256": "a734101af98afe4bff3678c8fd54525d93636e2e99e37189a6fd48791ebbad09"
+  },
+  "authorization_scope": "Root executes same fixed four development cases once after final source freeze and all-ready admission; no TEST",
+  "finalized_utc": "2026-11-03T06:29:42.037025+00:00"
+}

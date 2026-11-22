@@ -1,0 +1,20 @@
+{
+  "task": "put_rubbish_in_moving_bin_high_speed",
+  "seed": 2611141000,
+  "variation": 0,
+  "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/put_rubbish_in_moving_bin_high_speed/all_variations/episodes/episode334/data.h5",
+  "role": "TRAIN_online_expert_executor_diagnostic",
+  "profile": "timed_source_labels_shadow_scene_and_current_tick_capture",
+  "capture_lookahead_seconds": 0.5,
+  "reference_frequency": 6.0,
+  "refine_ik": false,
+  "control_ticks": 2,
+  "barrier_rate": 5.0,
+  "commit_release": true,
+  "release_position_tolerance": 0.02,
+  "release_angle_tolerance": 0.05,
+  "feedback_mode": "actual",
+  "native_reference_speed": false,
+  "joint_margin": 0.0,
+  "joint_avoidance": "centre"
+}

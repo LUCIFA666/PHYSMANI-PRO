@@ -1,0 +1,473 @@
+{
+  "complete": true,
+  "rows": [
+    {
+      "case": "/home/ubuntu/桌面/our-mani/config/framework/executor_release_continuous_ik_20261113_v23/00_peg_seed2611133000.json",
+      "result": {
+        "complete": true,
+        "task": "insert_onto_rotating_peg_high_speed",
+        "seed": 2611133000,
+        "profile": "continuous_IK_open_fingers_then_release_TRAIN",
+        "stop_reason": "original_Native_task_success",
+        "original_native_success": true,
+        "native_task_judge": {
+          "native_task_success_latched": true,
+          "first_success_time": 18.949999630451202,
+          "original_native_metric": {
+            "native_success_source": "task.success()",
+            "native_current": {
+              "success": true,
+              "terminate": true,
+              "terminal_failure": false,
+              "physical_timestamp": 18.949999630451202,
+              "metric_only": true,
+              "policy_use_allowed": false
+            },
+            "native_first_terminal": {
+              "success": true,
+              "terminate": true,
+              "terminal_failure": false,
+              "physical_timestamp": 18.949999630451202,
+              "metric_only": true,
+              "policy_use_allowed": false
+            },
+            "native_ever_success": true,
+            "metric_only": true,
+            "policy_use_allowed": false
+          },
+          "episode_success_source": "original_PhysMani_Task.success_only",
+          "visual_success_gate": false
+        },
+        "actual_ticks": 379,
+        "actual_seconds": 18.949999630451202,
+        "issued_reference_audit": {
+          "complete": true,
+          "executed_ticks": 379,
+          "max_velocity_acceleration_jerk_ratio": [
+            0.9682200344628633,
+            0.9754082477544243,
+            0.4068079867673297
+          ],
+          "velocity_acceleration_jerk_violating_ticks": [
+            0,
+            0,
+            0
+          ],
+          "all_reference_differences_within_limits": true,
+          "all_position_commands_within_native_bounds": true,
+          "unexpected_physics_ticks": 0,
+          "tracking_error_p50_p95_max_rad": [
+            0.03600941266704716,
+            0.09129788313293274,
+            0.2723806927030085
+          ],
+          "seconds_tracking_error_over_05rad": 0.0
+        },
+        "hardware_contact_audit": {
+          "actual_frames_checked": 379,
+          "prohibited_robot_table_contact_frames": 0,
+          "prohibited_contact_records": 0,
+          "first_contact_time": null,
+          "finger_contacts_permitted": true,
+          "contacts_not_used_by_NN": true,
+          "original_success_predicate_unchanged": true
+        },
+        "source_unchanged": true,
+        "NN_forward_calls": 0,
+        "optimizer_steps": 0,
+        "learned_policy_task_success_claimed": false,
+        "oracle_dynamic_state_used": true,
+        "formal_VAL_TEST": false,
+        "rejected_pose_chunks": 0,
+        "ever_held": true,
+        "first_held_time": 2.2000001072883606,
+        "source_expert_branch_logic_preserved": true,
+        "source_stage_committed_after_explicit_segment_ACK": true,
+        "execution_protocol_version": 2,
+        "pose8_payload_not_extended_in_place": true,
+        "gripper_release_order": "open_fingers_then_native_release",
+        "release_order_events": [
+          {
+            "order": "open_fingers_then_native_release",
+            "clock": 18.699999630451202,
+            "requested_opening": 1.0,
+            "native_actuate_done": true,
+            "physical_finger_open_amounts": [
+              0.9775139609913668,
+              0.9755525956053867
+            ],
+            "physical_opening_completed": true,
+            "Native_held_before": true,
+            "Native_held_after": false,
+            "Native_release_called": true,
+            "reversal_rearmed_without_physics": false,
+            "physics_steps": 0,
+            "task_success_claimed": false
+          }
+        ],
+        "Native_author_release_order_preserved": false,
+        "stage_and_timing_metadata_from_neural_network": false,
+        "protocol_opening_ACK": true,
+        "future_rotation_computed_without_native_setters": true,
+        "native_closed": true
+      },
+      "process_lifecycle": {
+        "complete": true,
+        "actual_process_returncode": 0,
+        "actual_wait_completed": true,
+        "unreaped_descendants": {},
+        "adopted_reaped": [
+          {
+            "pid": 654074,
+            "wait_status": 0
+          }
+        ],
+        "stop_reason": null,
+        "elapsed_seconds": 38.94984137301799
+      }
+    },
+    {
+      "case": "/home/ubuntu/桌面/our-mani/config/framework/executor_release_continuous_ik_20261113_v23/01_peg_seed2611133001.json",
+      "result": {
+        "complete": true,
+        "task": "insert_onto_rotating_peg_high_speed",
+        "seed": 2611133001,
+        "profile": "continuous_IK_open_fingers_then_release_TRAIN",
+        "stop_reason": "budget_exhausted",
+        "original_native_success": false,
+        "native_task_judge": {
+          "native_task_success_latched": false,
+          "first_success_time": null,
+          "original_native_metric": {
+            "native_success_source": "task.success()",
+            "native_current": {
+              "success": false,
+              "terminate": false,
+              "terminal_failure": false,
+              "physical_timestamp": 60.00000077486038,
+              "metric_only": true,
+              "policy_use_allowed": false
+            },
+            "native_first_terminal": null,
+            "native_ever_success": false,
+            "metric_only": true,
+            "policy_use_allowed": false
+          },
+          "episode_success_source": "original_PhysMani_Task.success_only",
+          "visual_success_gate": false
+        },
+        "actual_ticks": 1200,
+        "actual_seconds": 60.00000077486038,
+        "issued_reference_audit": {
+          "complete": true,
+          "executed_ticks": 1200,
+          "max_velocity_acceleration_jerk_ratio": [
+            0.9154692558689548,
+            0.9707955108914609,
+            0.40850717160603794
+          ],
+          "velocity_acceleration_jerk_violating_ticks": [
+            0,
+            0,
+            0
+          ],
+          "all_reference_differences_within_limits": true,
+          "all_position_commands_within_native_bounds": true,
+          "unexpected_physics_ticks": 0,
+          "tracking_error_p50_p95_max_rad": [
+            0.0005520973586288225,
+            0.0348135375005146,
+            0.09092256298471157
+          ],
+          "seconds_tracking_error_over_05rad": 0.0
+        },
+        "hardware_contact_audit": {
+          "actual_frames_checked": 1200,
+          "prohibited_robot_table_contact_frames": 0,
+          "prohibited_contact_records": 0,
+          "first_contact_time": null,
+          "finger_contacts_permitted": true,
+          "contacts_not_used_by_NN": true,
+          "original_success_predicate_unchanged": true
+        },
+        "source_unchanged": true,
+        "NN_forward_calls": 0,
+        "optimizer_steps": 0,
+        "learned_policy_task_success_claimed": false,
+        "oracle_dynamic_state_used": true,
+        "formal_VAL_TEST": false,
+        "rejected_pose_chunks": 504,
+        "ever_held": true,
+        "first_held_time": 2.1499999165534973,
+        "source_expert_branch_logic_preserved": true,
+        "source_stage_committed_after_explicit_segment_ACK": true,
+        "execution_protocol_version": 2,
+        "pose8_payload_not_extended_in_place": true,
+        "gripper_release_order": "open_fingers_then_native_release",
+        "release_order_events": [
+          {
+            "order": "open_fingers_then_native_release",
+            "clock": 9.100000202655792,
+            "requested_opening": 1.0,
+            "native_actuate_done": true,
+            "physical_finger_open_amounts": [
+              0.9961389227838573,
+              0.9778082589315233
+            ],
+            "physical_opening_completed": true,
+            "Native_held_before": true,
+            "Native_held_after": false,
+            "Native_release_called": true,
+            "reversal_rearmed_without_physics": false,
+            "physics_steps": 0,
+            "task_success_claimed": false
+          }
+        ],
+        "Native_author_release_order_preserved": false,
+        "stage_and_timing_metadata_from_neural_network": false,
+        "protocol_opening_ACK": true,
+        "future_rotation_computed_without_native_setters": true,
+        "native_closed": true
+      },
+      "process_lifecycle": {
+        "complete": true,
+        "actual_process_returncode": 0,
+        "actual_wait_completed": true,
+        "unreaped_descendants": {},
+        "adopted_reaped": [
+          {
+            "pid": 654486,
+            "wait_status": 0
+          }
+        ],
+        "stop_reason": null,
+        "elapsed_seconds": 43.20474924007431
+      }
+    },
+    {
+      "case": "/home/ubuntu/桌面/our-mani/config/framework/executor_release_continuous_ik_20261113_v23/02_peg_seed2611133002.json",
+      "result": {
+        "complete": true,
+        "task": "insert_onto_rotating_peg_high_speed",
+        "seed": 2611133002,
+        "profile": "continuous_IK_open_fingers_then_release_TRAIN",
+        "stop_reason": "budget_exhausted",
+        "original_native_success": false,
+        "native_task_judge": {
+          "native_task_success_latched": false,
+          "first_success_time": null,
+          "original_native_metric": {
+            "native_success_source": "task.success()",
+            "native_current": {
+              "success": false,
+              "terminate": false,
+              "terminal_failure": false,
+              "physical_timestamp": 60.00000077486038,
+              "metric_only": true,
+              "policy_use_allowed": false
+            },
+            "native_first_terminal": null,
+            "native_ever_success": false,
+            "metric_only": true,
+            "policy_use_allowed": false
+          },
+          "episode_success_source": "original_PhysMani_Task.success_only",
+          "visual_success_gate": false
+        },
+        "actual_ticks": 1200,
+        "actual_seconds": 60.00000077486038,
+        "issued_reference_audit": {
+          "complete": true,
+          "executed_ticks": 1200,
+          "max_velocity_acceleration_jerk_ratio": [
+            0.9943848951389725,
+            0.9896275787526276,
+            0.43622706327726307
+          ],
+          "velocity_acceleration_jerk_violating_ticks": [
+            0,
+            0,
+            0
+          ],
+          "all_reference_differences_within_limits": true,
+          "all_position_commands_within_native_bounds": true,
+          "unexpected_physics_ticks": 0,
+          "tracking_error_p50_p95_max_rad": [
+            0.03768208285727878,
+            0.08926902222161727,
+            0.10913962407217936
+          ],
+          "seconds_tracking_error_over_05rad": 0.0
+        },
+        "hardware_contact_audit": {
+          "actual_frames_checked": 1200,
+          "prohibited_robot_table_contact_frames": 0,
+          "prohibited_contact_records": 0,
+          "first_contact_time": null,
+          "finger_contacts_permitted": true,
+          "contacts_not_used_by_NN": true,
+          "original_success_predicate_unchanged": true
+        },
+        "source_unchanged": true,
+        "NN_forward_calls": 0,
+        "optimizer_steps": 0,
+        "learned_policy_task_success_claimed": false,
+        "oracle_dynamic_state_used": true,
+        "formal_VAL_TEST": false,
+        "rejected_pose_chunks": 0,
+        "ever_held": true,
+        "first_held_time": 2.099999964237213,
+        "source_expert_branch_logic_preserved": true,
+        "source_stage_committed_after_explicit_segment_ACK": true,
+        "execution_protocol_version": 2,
+        "pose8_payload_not_extended_in_place": true,
+        "gripper_release_order": "open_fingers_then_native_release",
+        "release_order_events": [],
+        "Native_author_release_order_preserved": false,
+        "stage_and_timing_metadata_from_neural_network": false,
+        "protocol_opening_ACK": true,
+        "future_rotation_computed_without_native_setters": true,
+        "native_closed": true
+      },
+      "process_lifecycle": {
+        "complete": true,
+        "actual_process_returncode": 0,
+        "actual_wait_completed": true,
+        "unreaped_descendants": {},
+        "adopted_reaped": [
+          {
+            "pid": 654904,
+            "wait_status": 0
+          }
+        ],
+        "stop_reason": null,
+        "elapsed_seconds": 104.23247530299705
+      }
+    },
+    {
+      "case": "/home/ubuntu/桌面/our-mani/config/framework/executor_release_continuous_ik_20261113_v23/03_peg_seed2611133003.json",
+      "result": {
+        "complete": true,
+        "task": "insert_onto_rotating_peg_high_speed",
+        "seed": 2611133003,
+        "profile": "continuous_IK_open_fingers_then_release_TRAIN",
+        "stop_reason": "original_Native_task_success",
+        "original_native_success": true,
+        "native_task_judge": {
+          "native_task_success_latched": true,
+          "first_success_time": 14.350000202655792,
+          "original_native_metric": {
+            "native_success_source": "task.success()",
+            "native_current": {
+              "success": true,
+              "terminate": true,
+              "terminal_failure": false,
+              "physical_timestamp": 14.350000202655792,
+              "metric_only": true,
+              "policy_use_allowed": false
+            },
+            "native_first_terminal": {
+              "success": true,
+              "terminate": true,
+              "terminal_failure": false,
+              "physical_timestamp": 14.350000202655792,
+              "metric_only": true,
+              "policy_use_allowed": false
+            },
+            "native_ever_success": true,
+            "metric_only": true,
+            "policy_use_allowed": false
+          },
+          "episode_success_source": "original_PhysMani_Task.success_only",
+          "visual_success_gate": false
+        },
+        "actual_ticks": 287,
+        "actual_seconds": 14.350000202655792,
+        "issued_reference_audit": {
+          "complete": true,
+          "executed_ticks": 287,
+          "max_velocity_acceleration_jerk_ratio": [
+            0.9555941054286343,
+            0.9787765031248156,
+            0.43032809212555007
+          ],
+          "velocity_acceleration_jerk_violating_ticks": [
+            0,
+            0,
+            0
+          ],
+          "all_reference_differences_within_limits": true,
+          "all_position_commands_within_native_bounds": true,
+          "unexpected_physics_ticks": 0,
+          "tracking_error_p50_p95_max_rad": [
+            0.030428755848446953,
+            0.08788279079018657,
+            0.13805855767688802
+          ],
+          "seconds_tracking_error_over_05rad": 0.0
+        },
+        "hardware_contact_audit": {
+          "actual_frames_checked": 287,
+          "prohibited_robot_table_contact_frames": 0,
+          "prohibited_contact_records": 0,
+          "first_contact_time": null,
+          "finger_contacts_permitted": true,
+          "contacts_not_used_by_NN": true,
+          "original_success_predicate_unchanged": true
+        },
+        "source_unchanged": true,
+        "NN_forward_calls": 0,
+        "optimizer_steps": 0,
+        "learned_policy_task_success_claimed": false,
+        "oracle_dynamic_state_used": true,
+        "formal_VAL_TEST": false,
+        "rejected_pose_chunks": 0,
+        "ever_held": true,
+        "first_held_time": 2.1499999165534973,
+        "source_expert_branch_logic_preserved": true,
+        "source_stage_committed_after_explicit_segment_ACK": true,
+        "execution_protocol_version": 2,
+        "pose8_payload_not_extended_in_place": true,
+        "gripper_release_order": "open_fingers_then_native_release",
+        "release_order_events": [
+          {
+            "order": "open_fingers_then_native_release",
+            "clock": 14.150000393390656,
+            "requested_opening": 1.0,
+            "native_actuate_done": true,
+            "physical_finger_open_amounts": [
+              0.9955272301031775,
+              0.9776443461547273
+            ],
+            "physical_opening_completed": true,
+            "Native_held_before": true,
+            "Native_held_after": false,
+            "Native_release_called": true,
+            "reversal_rearmed_without_physics": false,
+            "physics_steps": 0,
+            "task_success_claimed": false
+          }
+        ],
+        "Native_author_release_order_preserved": false,
+        "stage_and_timing_metadata_from_neural_network": false,
+        "protocol_opening_ACK": true,
+        "future_rotation_computed_without_native_setters": true,
+        "native_closed": true
+      },
+      "process_lifecycle": {
+        "complete": true,
+        "actual_process_returncode": 0,
+        "actual_wait_completed": true,
+        "unreaped_descendants": {},
+        "adopted_reaped": [
+          {
+            "pid": 655672,
+            "wait_status": 0
+          }
+        ],
+        "stop_reason": null,
+        "elapsed_seconds": 30.905027727014385
+      }
+    }
+  ]
+}

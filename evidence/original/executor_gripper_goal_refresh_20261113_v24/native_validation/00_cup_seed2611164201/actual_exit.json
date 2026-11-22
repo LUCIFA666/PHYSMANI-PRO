@@ -1,0 +1,14 @@
+{
+  "complete": true,
+  "actual_process_returncode": 0,
+  "actual_wait_completed": true,
+  "unreaped_descendants": {},
+  "adopted_reaped": [
+    {
+      "pid": 1651100,
+      "wait_status": 0
+    }
+  ],
+  "stop_reason": null,
+  "elapsed_seconds": 138.8130009130109
+}

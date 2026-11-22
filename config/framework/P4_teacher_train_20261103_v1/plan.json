@@ -1,0 +1,664 @@
+{
+  "schema": "P4_preassigned_TRAIN_truthB_shadow50_teacher_20261103_v1",
+  "prepared_only": true,
+  "Native_started": false,
+  "formal_TEST_read": false,
+  "training_started": false,
+  "single_task": "pick_moving_target_on_the_table",
+  "parent_partition_assigned_before_generation": true,
+  "independent_new_TRAIN_parents": 16,
+  "original_eight_parents_not_counted_as_new": [
+    "generated_seed_20261130_static",
+    "generated_seed_20261131_static",
+    "generated_seed_20261132_uniform",
+    "generated_seed_20261133_uniform",
+    "generated_seed_20261134_uniform",
+    "generated_seed_20261135_uniform",
+    "generated_seed_20261136_speed_change",
+    "generated_seed_20261137_speed_change"
+  ],
+  "original_parent_variants_in_this_batch": [],
+  "batch_output_parent": "runtime/framework/local_mpc_20261102/P4_teacher_train_20261103_v1",
+  "suggested_owner": "runtime/framework/local_mpc_20261102/P4_teacher_train_20261103_v1_owner",
+  "teacher": "current truth-state B joint controller; original Native task; explicit grasp cost; no learned value",
+  "public_input": "passive causal shadow only; actualinitial plus every50ms RGBD/robot; frozen v671 GRU/context",
+  "controller_uses_public_forecast": false,
+  "current_finger_NN_completion_protocol_qualified": false,
+  "candidate_Transformer_used_or_trained": false,
+  "automatic_task_classification_claimed": false,
+  "pilot_gate": {
+    "pilot_jobs": 4,
+    "fixed_continuation_jobs": 12,
+    "all_actual_50ms_public_capture_required": true,
+    "all_source_Native_receipts_required": true,
+    "minimum_independent_positive_contact_parents": 2,
+    "minimum_positive_causal_macro_anchors": 1,
+    "positive_contact_definition": "firstNativeheld in one uninterrupted held segment, with originalNativeGoal and .5s/.04m/.02m hold evidence in that same segment; never borrow across drops",
+    "task_failures_retained": true,
+    "no_gate_threshold_tuning_on_new_results": true,
+    "gate_failed": "stop continuation and preserve all pilot records; no silent repeat/resplit"
+  },
+  "supported_worker_fields": [
+    "static/uniform/speed_change",
+    "fixed initial_target_position XY",
+    "arbitrary planar uniform_velocity vector",
+    "one speed_change_at_tick/changed_velocity",
+    "preserve_native_height",
+    "public_motion_shadow/public_shadow_save_frames"
+  ],
+  "unsupported_not_claimed": [
+    "random initialization distributions",
+    "forced alternative grasp yaw",
+    "rotation/angular-velocity scenarios",
+    "changed object geometry",
+    "occlusion/camera/latency perturbations",
+    "multiple semantic tasks"
+  ],
+  "STOP_contract": "original worker checks case-parent STOP each100ms; owner propagates its STOP to the new batch and waits actual launcher/child exit; not an immediate midtick kill",
+  "Native_serial_contract": "existing run_local_mpc_20261102.sh acquires both unchanged shared exclusion locks",
+  "preparation_base_config": {
+    "path": "config/framework/local_mpc_coupled_fixed_regression_20261103_v1/04_train_uniform.json",
+    "sha256": "7681db0d475105a302d0273fbb212eef094c5a4c3065a08c6788cb601d0776fd"
+  },
+  "source_sha256": {
+    "our_mani/local_mpc_20261102/__init__.py": "e12ae51653ebd006e98a42bb020361d20f76af038e4f60f7eee84bb7ab9e6038",
+    "our_mani/local_mpc_20261102/batch_mpc.py": "00ab6428d256c6175dfaf3d668413a1c43aeb112eb680de151f93b4afe57fe8b",
+    "our_mani/local_mpc_20261102/candidates.py": "cdc61fa365241090735455365871886d3eed927ac22fca83a84a2c43ab7f193d",
+    "our_mani/local_mpc_20261102/collection_audit.py": "be1eed8c7bbccc9253248ee0780efa756a19db062f2f18af46996b475c63b556",
+    "our_mani/local_mpc_20261102/constraints.py": "a1bb979c1420faab23bfa3d572151debff0c1667de26b175aac6fca01f39234b",
+    "our_mani/local_mpc_20261102/executor.py": "aec73bb40ccc836f4a34a36e925fe87c8edf5f817507bb1ec5362c88847b6712",
+    "our_mani/local_mpc_20261102/mpc.py": "fa5d4f1c6d50a5fa5957c4517ae4a6d4ad2f98b925fc20639bb1168a55cb2280",
+    "our_mani/local_mpc_20261102/native.py": "6b88dcd880c93592728545826b184912097705b7414d89d9bf50b6baf6b417de",
+    "our_mani/local_mpc_20261102/recording.py": "0350ba7bd01082c9566add23bf300bcfad65a70caddb39da2c64cf6b347487d1",
+    "our_mani/local_mpc_20261102/records.py": "9896436db6b2dbdcef1783f7a43ddab5f66f4002a83a7ba859ed9e8b0887d40f",
+    "our_mani/local_mpc_20261102/static_collision.py": "f00a5d02b8e46db83b03e4518b3cf0bf0efad7951d0bff406781b15a7e18286c",
+    "our_mani/local_mpc_20261102/terminal_mpc.py": "8520e5178336b6f7fa31661f101f0d98ee4b3ec332acf7752e5bc5434a6b94e6",
+    "our_mani/local_mpc_20261102/worker.py": "b3879956fb80d28c47353fda4f7e7254840bed288034cb05606cad215ea40cd7",
+    "our_mani/local_mpc_p2_20261103/__init__.py": "84409f0fb8ff2b06d8e64b7ca615e8623e6df938a66074b6621052f383275278",
+    "our_mani/local_mpc_p2_20261103/action_adapter.py": "e32b8324ecbeaa9df980e429da6d4e44065b1017d0be6bfa4322f44470eac63c",
+    "our_mani/local_mpc_p2_20261103/batch_mpc_pluggable.py": "82d78ec6b975dc20d22fada5af29d91aa0f24dd13febf3e4e797da821aa2b349",
+    "our_mani/local_mpc_p2_20261103/dataset.py": "af663afa5d2356373973e3ebd8db0203f5a9550b03f8e3f1765497145e56134a",
+    "our_mani/local_mpc_p2_20261103/execution_models.py": "ae95f742a5cc8aaea854dc08d9c05e5e52248d2a94fea648044d2691383695ac",
+    "our_mani/local_mpc_p2_20261103/kinematics.py": "8b5c48422b7eb794b551818e32f1ab4de1893126eeb194e34d9008b1f16f3219",
+    "our_mani/local_mpc_p2_20261103/losses.py": "dbb1691fe59ad139e275cf74e057aa4d4d3f47002b9bdf66aff28fedabbdf5c8",
+    "our_mani/local_mpc_p2_20261103/reference.py": "ce9fe334807f981dd7295962f2148a99aa2905404996ad42fcf4b701f18147dd",
+    "our_mani/local_mpc_p2_20261103/servo.py": "ff9a8f1f3bc3e04f87e85cd0aa0a84ece3cdefcab9a1c230aa6873dd7195e363",
+    "our_mani/local_mpc_p2_20261103/servo_adapter.py": "c2de76d82263624a0da84fad1e8d66c2aa509a2ae83ee3477794f965655b8411",
+    "our_mani/local_mpc_p2_20261103/torch_fk.py": "3277bd5d354821708c78b85ab74dfd0b4681e930b0ac13c275efbeda35f144f0",
+    "our_mani/local_mpc_p2_20261103/train_servo.py": "79c2b4f6bdc90b68d1b45df6f24a068a6232a5d085e5dbd39179f30647e95f92",
+    "our_mani/local_mpc_p2_20261103_v2/__init__.py": "84409f0fb8ff2b06d8e64b7ca615e8623e6df938a66074b6621052f383275278",
+    "our_mani/local_mpc_p2_20261103_v2/action_adapter.py": "e32b8324ecbeaa9df980e429da6d4e44065b1017d0be6bfa4322f44470eac63c",
+    "our_mani/local_mpc_p2_20261103_v2/batch_mpc_pluggable.py": "82d78ec6b975dc20d22fada5af29d91aa0f24dd13febf3e4e797da821aa2b349",
+    "our_mani/local_mpc_p2_20261103_v2/dataset.py": "f13a089b52479287b855d8f1f1347d8b9f23f74265ca81de7f4a1b1a6cec7a47",
+    "our_mani/local_mpc_p2_20261103_v2/execution_models.py": "ae95f742a5cc8aaea854dc08d9c05e5e52248d2a94fea648044d2691383695ac",
+    "our_mani/local_mpc_p2_20261103_v2/kinematics.py": "8b5c48422b7eb794b551818e32f1ab4de1893126eeb194e34d9008b1f16f3219",
+    "our_mani/local_mpc_p2_20261103_v2/losses.py": "8ecee40b6bd95721b7cecca4b427270f21eedb721632e839f5bce95ea960652c",
+    "our_mani/local_mpc_p2_20261103_v2/reference.py": "ce9fe334807f981dd7295962f2148a99aa2905404996ad42fcf4b701f18147dd",
+    "our_mani/local_mpc_p2_20261103_v2/reference_torch.py": "4e3cf590b3da0be103e2884b5642319e3cbb6c303e24a9dc226e5e7a555c03fe",
+    "our_mani/local_mpc_p2_20261103_v2/servo.py": "5a53b6a76970167872af98ce44675cffb677ce393ee43e8a48e930cfcda1ebdb",
+    "our_mani/local_mpc_p2_20261103_v2/servo_adapter.py": "96562534082d0db65fe5a6e4f6d3483199e2a7c128437884454bd8610242780d",
+    "our_mani/local_mpc_p2_20261103_v2/torch_fk.py": "3277bd5d354821708c78b85ab74dfd0b4681e930b0ac13c275efbeda35f144f0",
+    "our_mani/local_mpc_p2_20261103_v2/train_servo.py": "5e209a0ee6b1dbd1897c839120cf89074f802a60bc66cd747889de1e03368fe1",
+    "our_mani/local_mpc_control_20261103/__init__.py": "b3bd767a746bed9264291db8472321ee240c0f397b5e41d5965098fd9ab448cb",
+    "our_mani/local_mpc_control_20261103/joint_goals.py": "7444236dcadf0fe2ca95b1ad9ba5f3fbd168ee4e8f2a518eb25590f8ab8511ad",
+    "our_mani/local_mpc_control_20261103/planner_factory.py": "195045d0abf961c42d1f6b9be831f788c1fcd36ad4bab77b711b12350bff0f63",
+    "our_mani/local_mpc_control_20261103/response_factory.py": "7625538faa2a6e91d237a82f6d16653c64ecb3e1e2282d65e4de47bf1b47f59e",
+    "our_mani/local_mpc_control_20261103/coupled_response.py": "628f41deebeac36a610ac906f582553ccf61a5f0a7d3e40d920e1c96e733329c",
+    "our_mani/local_mpc_control_20261103/joint_goal_cem.py": "680960070ec76ea54bed34b1608142eab8b420e83aae44b93567a5052bde1a49",
+    "artifacts/framework/local_mpc_20261102/P2_coupled_response_v1/B_parameters_frozen_20261103.json": "d7c7fac5f8de7a1bf3d37c10b94a20585728a7c03c7d1a05920799e69a501f92",
+    "our_mani/local_mpc_control_20261103/public_motion_bridge.py": "e00868f68cbfcae2facb4b5b215202e7986b19c57b7b50ed185f97a6df89b6de",
+    "our_mani/local_mpc_control_20261103/public_shadow.py": "35020114c440f6b409f1241ea80b8b12ea418d0c19a85d1702c676ce787b4da0",
+    "our_mani/benchmark_perception.py": "e1eb4cff08f96117df50f22672362eb7b4bbf8274eb7b25a8bb2b2b1a863adf2",
+    "our_mani/goal_perception.py": "f542fe8671e60bae2d41bb2bc64b85e2ac2147ec1b54879ad8eea8f43b37c1ed",
+    "our_mani/context_dynamics.py": "5d469c8f20e70bcd561d469194d81c6b45ee82f129899d803aa87c573cca3dcb",
+    "our_mani/multitask/context_se3.py": "8f882d93b63c9cd5bb7112f9c89bda0ec10fce8d07224364032e57529be33023",
+    "artifacts/framework/multitask_r10/context_joint16_after_executor_v671/dynamics.pt": "ebec3d1b3a83ceb0d4fb3bc889f8b62376cb4581071f53de29e0b6bd71c162ef",
+    "artifacts/framework/local_policy/goal_marker_calibration.json": "3973330d5de75f25d049fdcebc433d3f826926f37d4db1e790195b35c55bbc00",
+    "our_mani/aligned/simulation.py": "1a4c4e742475c83aaa2434b03ef17448458ed08a6a23a38adddb82be95b04a5f",
+    "our_mani/aligned/protocol.py": "393f5156084c971c0124453401ddb02b5bf00a3507a8e1d24626905819f4e8b5",
+    "our_mani/pyrep_env.py": "16af4376aa389b522eedf2fe7acaebcd0c642603a4d4990932f4997e9d7bb0e3",
+    "our_mani/reachability.py": "030c3d64e6c18ac8fdc2744af5984b4c60b6709f87cc45c650e681bb59aac647",
+    "our_mani/contracts.py": "27153dc08ef0ba5080de7f132ff6237b1f693260c529d60ad5344d376d26eb3e",
+    "our_mani/perception.py": "5085a64f24ec2a56ad0099c2406016ce43ebeaacd1d6dee465ddb9ba7fb1dc06",
+    "our_mani/multitask/specs.py": "758f3e49e6cbe25d2e9b9cbbc2400ec0bc7a28309c759d2ccd0fb5580497965a",
+    "our_mani/local_mpc_control_20261103/completed_gripper.py": "545499eabb6cc9930ef91103e1d60f5b02f9fc25b0bac55c185f8cd8f0c9b77a",
+    "scripts/run_local_mpc_20261102.py": "494d6b5a89ab746948cb6472bf747b218b1dd3ff5eaca40a0d9987a683ca8d17",
+    "scripts/launch_local_mpc_20261102.py": "1337199ad950a48f4d30aac5700901fc4de723947d9d214a2973a244c677e1a9",
+    "scripts/run_local_mpc_20261102.sh": "e5a7dcb31802db7ae78b5af1d5f09665b9f15482269a46201dfbcf8ec485b30f",
+    "scripts/prepare_p4_teacher_train_20261103.py": "2c06bd562d8a15f58d923ef00525e9507d82b1d7fb5ea34f68c1a2cc402f5c58",
+    "scripts/collect_p4_teacher_train_20261103.py": "14765e9f8517951c29e6d821634b13d1278dc486d681ad5fc7348c3df90eacd2",
+    "our_mani/local_mpc_control_20261103/native_task_evaluation.py": "bab252e89d9ee3490f7a631e5893fb5181b9f1a731c88f8bd9df8d41d19bd848",
+    "artifacts/framework/local_mpc_20261102/P2_servo_training_v2/best.pt": "25a0e0cbd49e0e0c9e8a4671649f96a1bb565013011d728e88b2c2f3eaca0073"
+  },
+  "jobs": [
+    {
+      "episode_id": "00_train_static",
+      "parent_id": "p4_new_TRAIN_20261103_00_seed261103000",
+      "split": "train",
+      "scene": "static",
+      "seed": 261103000,
+      "tranche": "pilot",
+      "variant_id": "truthB_completion_latched_public50_shadow_v1",
+      "config": "config/framework/P4_teacher_train_20261103_v1/00_train_static.json",
+      "config_sha256": "9a87ed2aa127e224a4352d06c9b577575bd807041be2222c6af417e7303b11e2",
+      "path": "runtime/framework/local_mpc_20261102/P4_teacher_train_20261103_v1/00_train_static",
+      "evaluation": "artifacts/framework/local_mpc_20261102/P4_teacher_train_20261103_v1/00_train_static",
+      "frozen_GRU_checkpoint_sha256": "ebec3d1b3a83ceb0d4fb3bc889f8b62376cb4581071f53de29e0b6bd71c162ef",
+      "independent_new_parent": true,
+      "original_parent_variant_of": null,
+      "supported_scenario": {
+        "initial_position": [
+          0.17,
+          -0.23,
+          0.775
+        ],
+        "initial_velocity": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "single_switch_tick": null,
+        "changed_velocity": null,
+        "no_random_initialization": true
+      },
+      "Native_boundary_note": "original Native table boundary handling retained; uniform is an initial motion segment, not a no-bounce guarantee"
+    },
+    {
+      "episode_id": "01_train_uniform",
+      "parent_id": "p4_new_TRAIN_20261103_01_seed261103001",
+      "split": "train",
+      "scene": "uniform",
+      "seed": 261103001,
+      "tranche": "pilot",
+      "variant_id": "truthB_completion_latched_public50_shadow_v1",
+      "config": "config/framework/P4_teacher_train_20261103_v1/01_train_uniform.json",
+      "config_sha256": "a1fa9be111e86d7e129f196903a298793249d348b3e9d6873d8210689dd1228a",
+      "path": "runtime/framework/local_mpc_20261102/P4_teacher_train_20261103_v1/01_train_uniform",
+      "evaluation": "artifacts/framework/local_mpc_20261102/P4_teacher_train_20261103_v1/01_train_uniform",
+      "frozen_GRU_checkpoint_sha256": "ebec3d1b3a83ceb0d4fb3bc889f8b62376cb4581071f53de29e0b6bd71c162ef",
+      "independent_new_parent": true,
+      "original_parent_variant_of": null,
+      "supported_scenario": {
+        "initial_position": [
+          0.27,
+          -0.28,
+          0.775
+        ],
+        "initial_velocity": [
+          0.0,
+          0.02,
+          0.0
+        ],
+        "single_switch_tick": null,
+        "changed_velocity": null,
+        "no_random_initialization": true
+      },
+      "Native_boundary_note": "original Native table boundary handling retained; uniform is an initial motion segment, not a no-bounce guarantee"
+    },
+    {
+      "episode_id": "02_train_uniform",
+      "parent_id": "p4_new_TRAIN_20261103_02_seed261103002",
+      "split": "train",
+      "scene": "uniform",
+      "seed": 261103002,
+      "tranche": "pilot",
+      "variant_id": "truthB_completion_latched_public50_shadow_v1",
+      "config": "config/framework/P4_teacher_train_20261103_v1/02_train_uniform.json",
+      "config_sha256": "f72181c59c2ad349823e0b2d57ab14fb48c4bd229cb3080ca133f3ce2ace41bf",
+      "path": "runtime/framework/local_mpc_20261102/P4_teacher_train_20261103_v1/02_train_uniform",
+      "evaluation": "artifacts/framework/local_mpc_20261102/P4_teacher_train_20261103_v1/02_train_uniform",
+      "frozen_GRU_checkpoint_sha256": "ebec3d1b3a83ceb0d4fb3bc889f8b62376cb4581071f53de29e0b6bd71c162ef",
+      "independent_new_parent": true,
+      "original_parent_variant_of": null,
+      "supported_scenario": {
+        "initial_position": [
+          0.21,
+          0.28,
+          0.775
+        ],
+        "initial_velocity": [
+          0.0,
+          -0.04,
+          0.0
+        ],
+        "single_switch_tick": null,
+        "changed_velocity": null,
+        "no_random_initialization": true
+      },
+      "Native_boundary_note": "original Native table boundary handling retained; uniform is an initial motion segment, not a no-bounce guarantee"
+    },
+    {
+      "episode_id": "03_train_speed_change",
+      "parent_id": "p4_new_TRAIN_20261103_03_seed261103003",
+      "split": "train",
+      "scene": "speed_change",
+      "seed": 261103003,
+      "tranche": "pilot",
+      "variant_id": "truthB_completion_latched_public50_shadow_v1",
+      "config": "config/framework/P4_teacher_train_20261103_v1/03_train_speed_change.json",
+      "config_sha256": "c23f777a5f0e6fb3c55034db57d37b8807f9a68596d2ef59c4960b5ae1bfd708",
+      "path": "runtime/framework/local_mpc_20261102/P4_teacher_train_20261103_v1/03_train_speed_change",
+      "evaluation": "artifacts/framework/local_mpc_20261102/P4_teacher_train_20261103_v1/03_train_speed_change",
+      "frozen_GRU_checkpoint_sha256": "ebec3d1b3a83ceb0d4fb3bc889f8b62376cb4581071f53de29e0b6bd71c162ef",
+      "independent_new_parent": true,
+      "original_parent_variant_of": null,
+      "supported_scenario": {
+        "initial_position": [
+          0.24,
+          -0.3,
+          0.775
+        ],
+        "initial_velocity": [
+          0.0,
+          0.02,
+          0.0
+        ],
+        "single_switch_tick": 24,
+        "changed_velocity": [
+          0.0,
+          0.08,
+          0.0
+        ],
+        "no_random_initialization": true
+      },
+      "Native_boundary_note": "original Native table boundary handling retained; uniform is an initial motion segment, not a no-bounce guarantee"
+    },
+    {
+      "episode_id": "04_train_static",
+      "parent_id": "p4_new_TRAIN_20261103_04_seed261103004",
+      "split": "train",
+      "scene": "static",
+      "seed": 261103004,
+      "tranche": "continuation",
+      "variant_id": "truthB_completion_latched_public50_shadow_v1",
+      "config": "config/framework/P4_teacher_train_20261103_v1/04_train_static.json",
+      "config_sha256": "83aaebb9505dccc1c3a7f4ba1c8ba41e376d6da694a336bb34b560ed2897f861",
+      "path": "runtime/framework/local_mpc_20261102/P4_teacher_train_20261103_v1/04_train_static",
+      "evaluation": "artifacts/framework/local_mpc_20261102/P4_teacher_train_20261103_v1/04_train_static",
+      "frozen_GRU_checkpoint_sha256": "ebec3d1b3a83ceb0d4fb3bc889f8b62376cb4581071f53de29e0b6bd71c162ef",
+      "independent_new_parent": true,
+      "original_parent_variant_of": null,
+      "supported_scenario": {
+        "initial_position": [
+          0.29,
+          0.2,
+          0.775
+        ],
+        "initial_velocity": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "single_switch_tick": null,
+        "changed_velocity": null,
+        "no_random_initialization": true
+      },
+      "Native_boundary_note": "original Native table boundary handling retained; uniform is an initial motion segment, not a no-bounce guarantee"
+    },
+    {
+      "episode_id": "05_train_uniform",
+      "parent_id": "p4_new_TRAIN_20261103_05_seed261103005",
+      "split": "train",
+      "scene": "uniform",
+      "seed": 261103005,
+      "tranche": "continuation",
+      "variant_id": "truthB_completion_latched_public50_shadow_v1",
+      "config": "config/framework/P4_teacher_train_20261103_v1/05_train_uniform.json",
+      "config_sha256": "50b61ad915b988083a5fd4d0682fbc00f52a530c0b1c88d0ad02441b620d2a74",
+      "path": "runtime/framework/local_mpc_20261102/P4_teacher_train_20261103_v1/05_train_uniform",
+      "evaluation": "artifacts/framework/local_mpc_20261102/P4_teacher_train_20261103_v1/05_train_uniform",
+      "frozen_GRU_checkpoint_sha256": "ebec3d1b3a83ceb0d4fb3bc889f8b62376cb4581071f53de29e0b6bd71c162ef",
+      "independent_new_parent": true,
+      "original_parent_variant_of": null,
+      "supported_scenario": {
+        "initial_position": [
+          0.1,
+          -0.16,
+          0.775
+        ],
+        "initial_velocity": [
+          0.04,
+          0.0,
+          0.0
+        ],
+        "single_switch_tick": null,
+        "changed_velocity": null,
+        "no_random_initialization": true
+      },
+      "Native_boundary_note": "original Native table boundary handling retained; uniform is an initial motion segment, not a no-bounce guarantee"
+    },
+    {
+      "episode_id": "06_train_uniform",
+      "parent_id": "p4_new_TRAIN_20261103_06_seed261103006",
+      "split": "train",
+      "scene": "uniform",
+      "seed": 261103006,
+      "tranche": "continuation",
+      "variant_id": "truthB_completion_latched_public50_shadow_v1",
+      "config": "config/framework/P4_teacher_train_20261103_v1/06_train_uniform.json",
+      "config_sha256": "b13c97625612c8ca124bbc6b444a326c3fb4e09fe549b13ff5e2f34da51e770b",
+      "path": "runtime/framework/local_mpc_20261102/P4_teacher_train_20261103_v1/06_train_uniform",
+      "evaluation": "artifacts/framework/local_mpc_20261102/P4_teacher_train_20261103_v1/06_train_uniform",
+      "frozen_GRU_checkpoint_sha256": "ebec3d1b3a83ceb0d4fb3bc889f8b62376cb4581071f53de29e0b6bd71c162ef",
+      "independent_new_parent": true,
+      "original_parent_variant_of": null,
+      "supported_scenario": {
+        "initial_position": [
+          0.3,
+          0.16,
+          0.775
+        ],
+        "initial_velocity": [
+          -0.08,
+          0.0,
+          0.0
+        ],
+        "single_switch_tick": null,
+        "changed_velocity": null,
+        "no_random_initialization": true
+      },
+      "Native_boundary_note": "negativeX faster motion; finite table boundary"
+    },
+    {
+      "episode_id": "07_train_uniform",
+      "parent_id": "p4_new_TRAIN_20261103_07_seed261103007",
+      "split": "train",
+      "scene": "uniform",
+      "seed": 261103007,
+      "tranche": "continuation",
+      "variant_id": "truthB_completion_latched_public50_shadow_v1",
+      "config": "config/framework/P4_teacher_train_20261103_v1/07_train_uniform.json",
+      "config_sha256": "5c3a7a2adad5b4a0122e18efa93df49d2bb989f210886f049a760fed92b2e4a3",
+      "path": "runtime/framework/local_mpc_20261102/P4_teacher_train_20261103_v1/07_train_uniform",
+      "evaluation": "artifacts/framework/local_mpc_20261102/P4_teacher_train_20261103_v1/07_train_uniform",
+      "frozen_GRU_checkpoint_sha256": "ebec3d1b3a83ceb0d4fb3bc889f8b62376cb4581071f53de29e0b6bd71c162ef",
+      "independent_new_parent": true,
+      "original_parent_variant_of": null,
+      "supported_scenario": {
+        "initial_position": [
+          0.18,
+          -0.32,
+          0.775
+        ],
+        "initial_velocity": [
+          0.0,
+          0.08,
+          0.0
+        ],
+        "single_switch_tick": null,
+        "changed_velocity": null,
+        "no_random_initialization": true
+      },
+      "Native_boundary_note": "original Native table boundary handling retained; uniform is an initial motion segment, not a no-bounce guarantee"
+    },
+    {
+      "episode_id": "08_train_uniform",
+      "parent_id": "p4_new_TRAIN_20261103_08_seed261103008",
+      "split": "train",
+      "scene": "uniform",
+      "seed": 261103008,
+      "tranche": "continuation",
+      "variant_id": "truthB_completion_latched_public50_shadow_v1",
+      "config": "config/framework/P4_teacher_train_20261103_v1/08_train_uniform.json",
+      "config_sha256": "3bdd944fe2a4448e20ad45aaeebd1cb571c7c209b6c23eb2381cb387066917c4",
+      "path": "runtime/framework/local_mpc_20261102/P4_teacher_train_20261103_v1/08_train_uniform",
+      "evaluation": "artifacts/framework/local_mpc_20261102/P4_teacher_train_20261103_v1/08_train_uniform",
+      "frozen_GRU_checkpoint_sha256": "ebec3d1b3a83ceb0d4fb3bc889f8b62376cb4581071f53de29e0b6bd71c162ef",
+      "independent_new_parent": true,
+      "original_parent_variant_of": null,
+      "supported_scenario": {
+        "initial_position": [
+          0.28,
+          0.32,
+          0.775
+        ],
+        "initial_velocity": [
+          0.0,
+          -0.12,
+          0.0
+        ],
+        "single_switch_tick": null,
+        "changed_velocity": null,
+        "no_random_initialization": true
+      },
+      "Native_boundary_note": "original Native table boundary handling retained; uniform is an initial motion segment, not a no-bounce guarantee"
+    },
+    {
+      "episode_id": "09_train_uniform",
+      "parent_id": "p4_new_TRAIN_20261103_09_seed261103009",
+      "split": "train",
+      "scene": "uniform",
+      "seed": 261103009,
+      "tranche": "continuation",
+      "variant_id": "truthB_completion_latched_public50_shadow_v1",
+      "config": "config/framework/P4_teacher_train_20261103_v1/09_train_uniform.json",
+      "config_sha256": "1c72cf1acdbbbcae54b98a107295cc92f4ac579e8c9ca5a79cc81bbf08b3439e",
+      "path": "runtime/framework/local_mpc_20261102/P4_teacher_train_20261103_v1/09_train_uniform",
+      "evaluation": "artifacts/framework/local_mpc_20261102/P4_teacher_train_20261103_v1/09_train_uniform",
+      "frozen_GRU_checkpoint_sha256": "ebec3d1b3a83ceb0d4fb3bc889f8b62376cb4581071f53de29e0b6bd71c162ef",
+      "independent_new_parent": true,
+      "original_parent_variant_of": null,
+      "supported_scenario": {
+        "initial_position": [
+          0.075,
+          -0.08,
+          0.775
+        ],
+        "initial_velocity": [
+          0.12,
+          0.0,
+          0.0
+        ],
+        "single_switch_tick": null,
+        "changed_velocity": null,
+        "no_random_initialization": true
+      },
+      "Native_boundary_note": "positiveX high speed; unheld straight path reachesXedge near2.29s"
+    },
+    {
+      "episode_id": "10_train_uniform",
+      "parent_id": "p4_new_TRAIN_20261103_10_seed261103010",
+      "split": "train",
+      "scene": "uniform",
+      "seed": 261103010,
+      "tranche": "continuation",
+      "variant_id": "truthB_completion_latched_public50_shadow_v1",
+      "config": "config/framework/P4_teacher_train_20261103_v1/10_train_uniform.json",
+      "config_sha256": "9f873a898020a472f7949b198f3a0e26907f1da71297e369421c56f9f85d9be8",
+      "path": "runtime/framework/local_mpc_20261102/P4_teacher_train_20261103_v1/10_train_uniform",
+      "evaluation": "artifacts/framework/local_mpc_20261102/P4_teacher_train_20261103_v1/10_train_uniform",
+      "frozen_GRU_checkpoint_sha256": "ebec3d1b3a83ceb0d4fb3bc889f8b62376cb4581071f53de29e0b6bd71c162ef",
+      "independent_new_parent": true,
+      "original_parent_variant_of": null,
+      "supported_scenario": {
+        "initial_position": [
+          0.25,
+          -0.32,
+          0.775
+        ],
+        "initial_velocity": [
+          0.0,
+          0.12,
+          0.0
+        ],
+        "single_switch_tick": null,
+        "changed_velocity": null,
+        "no_random_initialization": true
+      },
+      "Native_boundary_note": "original Native table boundary handling retained; uniform is an initial motion segment, not a no-bounce guarantee"
+    },
+    {
+      "episode_id": "11_train_uniform",
+      "parent_id": "p4_new_TRAIN_20261103_11_seed261103011",
+      "split": "train",
+      "scene": "uniform",
+      "seed": 261103011,
+      "tranche": "continuation",
+      "variant_id": "truthB_completion_latched_public50_shadow_v1",
+      "config": "config/framework/P4_teacher_train_20261103_v1/11_train_uniform.json",
+      "config_sha256": "8aa50d44a6ad0ac9e4f133b66385be0c6f745fecb1f031d8ff66b9e675321f5b",
+      "path": "runtime/framework/local_mpc_20261102/P4_teacher_train_20261103_v1/11_train_uniform",
+      "evaluation": "artifacts/framework/local_mpc_20261102/P4_teacher_train_20261103_v1/11_train_uniform",
+      "frozen_GRU_checkpoint_sha256": "ebec3d1b3a83ceb0d4fb3bc889f8b62376cb4581071f53de29e0b6bd71c162ef",
+      "independent_new_parent": true,
+      "original_parent_variant_of": null,
+      "supported_scenario": {
+        "initial_position": [
+          0.29,
+          0.24,
+          0.775
+        ],
+        "initial_velocity": [
+          -0.014142135623730949,
+          -0.014142135623730949,
+          0.0
+        ],
+        "single_switch_tick": null,
+        "changed_velocity": null,
+        "no_random_initialization": true
+      },
+      "Native_boundary_note": "original Native table boundary handling retained; uniform is an initial motion segment, not a no-bounce guarantee"
+    },
+    {
+      "episode_id": "12_train_uniform",
+      "parent_id": "p4_new_TRAIN_20261103_12_seed261103012",
+      "split": "train",
+      "scene": "uniform",
+      "seed": 261103012,
+      "tranche": "continuation",
+      "variant_id": "truthB_completion_latched_public50_shadow_v1",
+      "config": "config/framework/P4_teacher_train_20261103_v1/12_train_uniform.json",
+      "config_sha256": "91180ddeff9ededbfeb4714be44abac52328089cdadfeb2bbb78c5c1e0bc5f9e",
+      "path": "runtime/framework/local_mpc_20261102/P4_teacher_train_20261103_v1/12_train_uniform",
+      "evaluation": "artifacts/framework/local_mpc_20261102/P4_teacher_train_20261103_v1/12_train_uniform",
+      "frozen_GRU_checkpoint_sha256": "ebec3d1b3a83ceb0d4fb3bc889f8b62376cb4581071f53de29e0b6bd71c162ef",
+      "independent_new_parent": true,
+      "original_parent_variant_of": null,
+      "supported_scenario": {
+        "initial_position": [
+          0.11,
+          -0.24,
+          0.775
+        ],
+        "initial_velocity": [
+          0.028284271247461898,
+          0.028284271247461898,
+          0.0
+        ],
+        "single_switch_tick": null,
+        "changed_velocity": null,
+        "no_random_initialization": true
+      },
+      "Native_boundary_note": "original Native table boundary handling retained; uniform is an initial motion segment, not a no-bounce guarantee"
+    },
+    {
+      "episode_id": "13_train_speed_change",
+      "parent_id": "p4_new_TRAIN_20261103_13_seed261103013",
+      "split": "train",
+      "scene": "speed_change",
+      "seed": 261103013,
+      "tranche": "continuation",
+      "variant_id": "truthB_completion_latched_public50_shadow_v1",
+      "config": "config/framework/P4_teacher_train_20261103_v1/13_train_speed_change.json",
+      "config_sha256": "983dd55405bccc9593ee8ab99abf54929794572623cf0dcc9074d3b3f1caa606",
+      "path": "runtime/framework/local_mpc_20261102/P4_teacher_train_20261103_v1/13_train_speed_change",
+      "evaluation": "artifacts/framework/local_mpc_20261102/P4_teacher_train_20261103_v1/13_train_speed_change",
+      "frozen_GRU_checkpoint_sha256": "ebec3d1b3a83ceb0d4fb3bc889f8b62376cb4581071f53de29e0b6bd71c162ef",
+      "independent_new_parent": true,
+      "original_parent_variant_of": null,
+      "supported_scenario": {
+        "initial_position": [
+          0.22,
+          0.32,
+          0.775
+        ],
+        "initial_velocity": [
+          0.0,
+          -0.04,
+          0.0
+        ],
+        "single_switch_tick": 24,
+        "changed_velocity": [
+          0.0,
+          -0.12,
+          0.0
+        ],
+        "no_random_initialization": true
+      },
+      "Native_boundary_note": "original Native table boundary handling retained; uniform is an initial motion segment, not a no-bounce guarantee"
+    },
+    {
+      "episode_id": "14_train_speed_change",
+      "parent_id": "p4_new_TRAIN_20261103_14_seed261103014",
+      "split": "train",
+      "scene": "speed_change",
+      "seed": 261103014,
+      "tranche": "continuation",
+      "variant_id": "truthB_completion_latched_public50_shadow_v1",
+      "config": "config/framework/P4_teacher_train_20261103_v1/14_train_speed_change.json",
+      "config_sha256": "25760314de5c05012c9a7d212d1a91306b94cde860c7c9aa4c392eae6d68bab9",
+      "path": "runtime/framework/local_mpc_20261102/P4_teacher_train_20261103_v1/14_train_speed_change",
+      "evaluation": "artifacts/framework/local_mpc_20261102/P4_teacher_train_20261103_v1/14_train_speed_change",
+      "frozen_GRU_checkpoint_sha256": "ebec3d1b3a83ceb0d4fb3bc889f8b62376cb4581071f53de29e0b6bd71c162ef",
+      "independent_new_parent": true,
+      "original_parent_variant_of": null,
+      "supported_scenario": {
+        "initial_position": [
+          0.18,
+          -0.2,
+          0.775
+        ],
+        "initial_velocity": [
+          0.02,
+          0.0,
+          0.0
+        ],
+        "single_switch_tick": 28,
+        "changed_velocity": [
+          -0.04,
+          0.0,
+          0.0
+        ],
+        "no_random_initialization": true
+      },
+      "Native_boundary_note": "original Native table boundary handling retained; uniform is an initial motion segment, not a no-bounce guarantee"
+    },
+    {
+      "episode_id": "15_train_speed_change",
+      "parent_id": "p4_new_TRAIN_20261103_15_seed261103015",
+      "split": "train",
+      "scene": "speed_change",
+      "seed": 261103015,
+      "tranche": "continuation",
+      "variant_id": "truthB_completion_latched_public50_shadow_v1",
+      "config": "config/framework/P4_teacher_train_20261103_v1/15_train_speed_change.json",
+      "config_sha256": "6fb1477f09a76d92c5970d9c31c4e2871028ed2b8d2e8f7f32d20fb471e163f5",
+      "path": "runtime/framework/local_mpc_20261102/P4_teacher_train_20261103_v1/15_train_speed_change",
+      "evaluation": "artifacts/framework/local_mpc_20261102/P4_teacher_train_20261103_v1/15_train_speed_change",
+      "frozen_GRU_checkpoint_sha256": "ebec3d1b3a83ceb0d4fb3bc889f8b62376cb4581071f53de29e0b6bd71c162ef",
+      "independent_new_parent": true,
+      "original_parent_variant_of": null,
+      "supported_scenario": {
+        "initial_position": [
+          0.12,
+          0.24,
+          0.775
+        ],
+        "initial_velocity": [
+          0.014142135623730949,
+          -0.014142135623730949,
+          0.0
+        ],
+        "single_switch_tick": 30,
+        "changed_velocity": [
+          0.056568542494923796,
+          -0.056568542494923796,
+          0.0
+        ],
+        "no_random_initialization": true
+      },
+      "Native_boundary_note": "original Native table boundary handling retained; uniform is an initial motion segment, not a no-bounce guarantee"
+    }
+  ],
+  "pre_execution_source_revision": "core v42 integration complete before any teacher launch; original draft preserved in P4_teacher_collection_preflight_v1"
+}

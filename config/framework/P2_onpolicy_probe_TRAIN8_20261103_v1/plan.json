@@ -1,0 +1,103 @@
+{
+  "schema": "P2_onpolicy_probe_response_TRAIN8_preassigned_20261103_v1",
+  "split": "train",
+  "all_parents_assigned_before_generation": true,
+  "disjoint_from_P4_TRAIN16_devVAL8_fixed_TEST16_by_parent_seed_XY": true,
+  "candidate_checkpoint_sha256": "61e5827b4838649b8e477048bea56fcace18697f906fb610a3f963bba2437f60",
+  "fit_not_started": true,
+  "Native_not_started": true,
+  "no_source_VAL_or_TEST_used": true,
+  "controller": "v54 frozen public observation policy; no expert/object labels as policy input",
+  "jobs": [
+    {
+      "id": "00_train_static",
+      "parent_id": "p2_onpolicy_probe_train_20261103_00_seed261103400",
+      "seed": 261103400,
+      "scene": "static",
+      "split": "train",
+      "config": "config/framework/P2_onpolicy_probe_TRAIN8_20261103_v1/00_train_static.json",
+      "config_sha256": "5863a76d16213041403c908acdc86e34693d7635d60e9a787792ce677913d47f",
+      "path": "runtime/framework/local_mpc_20261102/P2_onpolicy_probe_TRAIN8_20261103_v1/00_train_static",
+      "evaluation": "artifacts/framework/local_mpc_20261102/P2_onpolicy_probe_TRAIN8_20261103_v1/00_train_static"
+    },
+    {
+      "id": "01_train_static",
+      "parent_id": "p2_onpolicy_probe_train_20261103_01_seed261103401",
+      "seed": 261103401,
+      "scene": "static",
+      "split": "train",
+      "config": "config/framework/P2_onpolicy_probe_TRAIN8_20261103_v1/01_train_static.json",
+      "config_sha256": "c4deb948579bdff6f9262ca25efd954caee51ec4c7ef08727e776ffa7b235dec",
+      "path": "runtime/framework/local_mpc_20261102/P2_onpolicy_probe_TRAIN8_20261103_v1/01_train_static",
+      "evaluation": "artifacts/framework/local_mpc_20261102/P2_onpolicy_probe_TRAIN8_20261103_v1/01_train_static"
+    },
+    {
+      "id": "02_train_uniform",
+      "parent_id": "p2_onpolicy_probe_train_20261103_02_seed261103402",
+      "seed": 261103402,
+      "scene": "uniform",
+      "split": "train",
+      "config": "config/framework/P2_onpolicy_probe_TRAIN8_20261103_v1/02_train_uniform.json",
+      "config_sha256": "450b9bb5140733e1fad8667ef553d01f7030c214e802e1a794ec7847f80f1ad1",
+      "path": "runtime/framework/local_mpc_20261102/P2_onpolicy_probe_TRAIN8_20261103_v1/02_train_uniform",
+      "evaluation": "artifacts/framework/local_mpc_20261102/P2_onpolicy_probe_TRAIN8_20261103_v1/02_train_uniform"
+    },
+    {
+      "id": "03_train_uniform",
+      "parent_id": "p2_onpolicy_probe_train_20261103_03_seed261103403",
+      "seed": 261103403,
+      "scene": "uniform",
+      "split": "train",
+      "config": "config/framework/P2_onpolicy_probe_TRAIN8_20261103_v1/03_train_uniform.json",
+      "config_sha256": "1be74f73a37c6db6f5ce1c6d79da7b36142753c637a6c61f3cdc94ef48072087",
+      "path": "runtime/framework/local_mpc_20261102/P2_onpolicy_probe_TRAIN8_20261103_v1/03_train_uniform",
+      "evaluation": "artifacts/framework/local_mpc_20261102/P2_onpolicy_probe_TRAIN8_20261103_v1/03_train_uniform"
+    },
+    {
+      "id": "04_train_uniform",
+      "parent_id": "p2_onpolicy_probe_train_20261103_04_seed261103404",
+      "seed": 261103404,
+      "scene": "uniform",
+      "split": "train",
+      "config": "config/framework/P2_onpolicy_probe_TRAIN8_20261103_v1/04_train_uniform.json",
+      "config_sha256": "3bc21a906b41ff00d53fefd7844a9237f67caebee02a4a78d644904949cd225f",
+      "path": "runtime/framework/local_mpc_20261102/P2_onpolicy_probe_TRAIN8_20261103_v1/04_train_uniform",
+      "evaluation": "artifacts/framework/local_mpc_20261102/P2_onpolicy_probe_TRAIN8_20261103_v1/04_train_uniform"
+    },
+    {
+      "id": "05_train_uniform",
+      "parent_id": "p2_onpolicy_probe_train_20261103_05_seed261103405",
+      "seed": 261103405,
+      "scene": "uniform",
+      "split": "train",
+      "config": "config/framework/P2_onpolicy_probe_TRAIN8_20261103_v1/05_train_uniform.json",
+      "config_sha256": "02bfb8347ea3dd61932a7083027df52ec56c447ee529519e4f90ebec61eb4112",
+      "path": "runtime/framework/local_mpc_20261102/P2_onpolicy_probe_TRAIN8_20261103_v1/05_train_uniform",
+      "evaluation": "artifacts/framework/local_mpc_20261102/P2_onpolicy_probe_TRAIN8_20261103_v1/05_train_uniform"
+    },
+    {
+      "id": "06_train_speed_change",
+      "parent_id": "p2_onpolicy_probe_train_20261103_06_seed261103406",
+      "seed": 261103406,
+      "scene": "speed_change",
+      "split": "train",
+      "config": "config/framework/P2_onpolicy_probe_TRAIN8_20261103_v1/06_train_speed_change.json",
+      "config_sha256": "4dcfab8b13450908167d7cad2c81f95fb5c36538622608bc136326543836e57c",
+      "path": "runtime/framework/local_mpc_20261102/P2_onpolicy_probe_TRAIN8_20261103_v1/06_train_speed_change",
+      "evaluation": "artifacts/framework/local_mpc_20261102/P2_onpolicy_probe_TRAIN8_20261103_v1/06_train_speed_change"
+    },
+    {
+      "id": "07_train_speed_change",
+      "parent_id": "p2_onpolicy_probe_train_20261103_07_seed261103407",
+      "seed": 261103407,
+      "scene": "speed_change",
+      "split": "train",
+      "config": "config/framework/P2_onpolicy_probe_TRAIN8_20261103_v1/07_train_speed_change.json",
+      "config_sha256": "cde6a5ec4ebf2a74b22d9adc676770eb29dfba2fc84f06d5b258be095d398eb5",
+      "path": "runtime/framework/local_mpc_20261102/P2_onpolicy_probe_TRAIN8_20261103_v1/07_train_speed_change",
+      "evaluation": "artifacts/framework/local_mpc_20261102/P2_onpolicy_probe_TRAIN8_20261103_v1/07_train_speed_change"
+    }
+  ],
+  "no_source_VAL_or_TEST_used_scope": "No VAL/TEST trajectories or labels will be used to fit this response model. Controller protocol v54 was selected using prior development validation diagnostics.",
+  "uniform_definition": "initial velocity only; original Native boundary reflections are preserved throughout the episode"
+}

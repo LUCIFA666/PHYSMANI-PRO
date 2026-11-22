@@ -1,0 +1,24 @@
+{
+  "schema": "near_goal_current_rgbd_quality_addendum_v2",
+  "extends": "our_mani/near_goal_segmentation_20261103/data_contract.json",
+  "extends_sha256": "50eed1dbf275608c4d2e5bcf70c53d3e8bbf58ee34a1a88c5c8c7aeebe4ec961",
+  "predeclared_before_capture_or_NN_fit": true,
+  "quality_protocol": "near_goal_calibration_with_oracle_eligible_coverage_v2",
+  "oracle_geometry_eligible": "calibration truthVISIBLE Cube mask with actual public depth passes same12points/2views/originalconfidence/.08scope/cropboundary gates; no GTcentre or predictedposition in availability",
+  "eligibility_is_offline_labels_only": true,
+  "minimum_oracle_eligible_refiner_coverage": 0.9,
+  "zero_eligible_unqualified": true,
+  "other_unchanged_requirements": [
+    "aggregateCubePixelPrecision>=.995",
+    "Sphere-only andCube-far both present withframefalseavailable0",
+    "qualified-visible centreP95<=.005m",
+    "fully invisible falseavailable0"
+  ],
+  "selection": "lowest [.5,.7,.9,.95,.99] jointly passing all conditions; none=>unqualified; noothergrid/network/hyperparameter sweep",
+  "fit24_selection4_calibration4_roles_unchanged": true,
+  "pilot6_1_1_smoke_not_qualification": true,
+  "old_contract_and_capture_protocol_not_rewritten": true,
+  "Native_started": false,
+  "NN_fit_started": false,
+  "TEST_read": false
+}

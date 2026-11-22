@@ -1,0 +1,13 @@
+{
+  "task": "insert_onto_rotating_peg_high_speed",
+  "seed": 2611133000,
+  "variation": 0,
+  "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/insert_onto_rotating_peg_high_speed/all_variations/episodes/episode144/data.h5",
+  "role": "TRAIN_online_expert_executor_diagnostic",
+  "profile": "motion_compensated_capture_and_matched_response",
+  "control_ticks": 2,
+  "barrier_rate": 5.0,
+  "reference_frequency": 10.0,
+  "capture_lookahead_seconds": 0.25,
+  "refine_ik": false
+}

@@ -1,0 +1,14 @@
+{
+  "schema": "v5_selected_fit_only_contract",
+  "protocol_sha256": "472c14d9b10ecbd06a67f9bdd545543ec235f906ea571e322c5c660775b94710",
+  "change": "Only real-crop UNKNOWN Uniform2 KL lambda1 per-view term. Known CE+Dice unchanged, no background relabel, no > versus >= change.",
+  "training": "FIT24/192 and selection4/32 only. Fresh seed261103700,160epochs,1920actualAdamWsteps,lr3e-4,wd1e-4. Earliest minimum new selection loss; no old-model warmstart.",
+  "cache": "Only original float32features anduint8semantic, byte-identical v4 cache class. No calibration samples extracted to cache or forwarded.",
+  "access_ledger": "Frozen full32 loader validates all32 initial public RGBDs, including4 consumed-calibration initial frames, for source/sphere provenance only. FitSelectionAccessView records exactly224 FIT192+selection32 raw shot extractions and rejects old calibration32shot __getitem__ before decode. No old calibration forward/loss/new quality evaluation.",
+  "prior_gate": "Verify exact prior v4 F-oracle SHA and completed source-bound1920step v4 status; do not decode consumed calibration/oracle JSON or recompute old model calibration metrics.",
+  "sources": "Explicit four training package files andCLI plus frozenv4 dependencies/protocol. Future qualify/runtime files do not change this training map.",
+  "output": "selected.pt immutable, unqualified pending fresh4 calibration. identity/source_snapshot/cache before-after/history/actualsteps. Qualified artifact must be separate; never overwrite selected or v4.",
+  "Native_started": false,
+  "model_qualified": false,
+  "calibration_forward_calls": 0
+}

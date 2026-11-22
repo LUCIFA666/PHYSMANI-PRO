@@ -1,0 +1,16 @@
+{
+  "deadline_utc": "2026-10-17T02:00:00+00:00",
+  "deadline_local": "2026-10-17 10:00:00 Asia/Shanghai",
+  "work_root": "/home/ubuntu/桌面/our-mani",
+  "installer_pid": 336053,
+  "owned_services": [
+    "our-mani-framework-bootstrap.service",
+    "our-mani-domain-study.service",
+    "our-mani-local-collect.service",
+    "our-mani-local-train.service",
+    "our-mani-faster-train.service"
+  ],
+  "ngff_original_training": "remain_stopped",
+  "formal_test_split": "locked_until_validation_gates_pass",
+  "progress_interval_minutes": 10
+}

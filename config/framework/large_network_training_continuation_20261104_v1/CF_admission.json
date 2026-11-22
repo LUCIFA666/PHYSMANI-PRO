@@ -1,0 +1,19 @@
+{
+  "schema": "large_network_training_continuation_20261104_v1_CF_admission",
+  "execution_authorized": true,
+  "capture_plan": {
+    "path": "/home/ubuntu/桌面/our-mani/config/framework/current_cube_dual_crop_CF_pilot40_cap12_20261104_v3/plan.json",
+    "sha256": "b62ffa6fe4e827d492bda4bbc7a668669be98ca59cdaf42e9b0b4cf8102a8d12"
+  },
+  "prepared_plan": {
+    "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/current_cube_dual_crop_CF_cap12_v3_capture_preparation_v1/source_snapshot/config/framework/current_cube_dual_crop_CF_pilot40_cap12_20261104_v3/plan.json",
+    "sha256": "c2acef4daeb533623ba300044c8387f45b0d19c21e5035c999ea110ab9ae67d7"
+  },
+  "output_root": "/home/ubuntu/桌面/our-mani/runtime/framework/near_goal_perception_20261103/current_cube_dual_crop_CF_pilot40_v3",
+  "utc": "2026-11-03T17:14:41.142826+00:00",
+  "Root_previous_GPU_fit_session": 61423,
+  "Root_previous_GPU_fit_actual_exit": 0,
+  "Root_previous_GPU_fit_actual_wait_completed": true,
+  "no_Old_failed_cohort_reuse": true,
+  "new_uniform_cap12_hand_profile": true
+}

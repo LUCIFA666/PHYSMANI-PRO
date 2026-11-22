@@ -1,0 +1,2053 @@
+{
+  "complete": true,
+  "finished_utc": "2026-11-11T18:43:20.338969+00:00",
+  "scope": "PhysMani ordinary/high-speed Cube complete source cycle",
+  "task_time_limit_seconds": 60,
+  "source_interpretation": {
+    "train": "All200 existing official TRAIN RGBD trajectory caches reused for recorded-frame motion / expert desired-pose pretraining; nominal frame clock is not claimed as actual physics time. Existing actual-clock Native TRAIN captures provide separate physical/contact fine-tuning.",
+    "validation": "one original-native generated episode per original HDF VAL source; no model fitting; not full archived VAL scene replay",
+    "test": "all80 released official archived resets, including both variations; model inputs current/past RGBD and robot only"
+  },
+  "source_coverage": {
+    "TRAIN": 200,
+    "VAL": 40,
+    "official_archived_TEST": 80
+  },
+  "training_partition": {
+    "recorded_fit": 160,
+    "recorded_TRAIN_selection": 40,
+    "actual_clock_finetune_parents": 19
+  },
+  "motion_recorded_pretraining": {
+    "complete": true,
+    "actual_optimizer_steps": 1600,
+    "epochs_completed": 200,
+    "selected_epoch": 190,
+    "checkpoint": {
+      "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/motion_weak_fit/selected.pt",
+      "sha256": "06ab680900e5e299ca7bec6e30df5bac7f0a3c9597ad2a5d87ff083f3edaf628"
+    },
+    "TRAIN_source_parents": 200,
+    "gradient_fit_parents": 160,
+    "TRAIN_selection_parents": 40,
+    "initial_selection_loss": 0.34020987153053284,
+    "selected_selection_loss": 0.28003883361816406,
+    "Native_contact_supervision": false,
+    "actual_physics_time_claimed": false,
+    "runtime_admitted": false,
+    "wall_seconds": 38.907054333016276,
+    "resources": {
+      "dual_Native_locks_held": true,
+      "training_lock_held": true,
+      "known_Native_processes": [],
+      "other_GPU_compute_processes": []
+    }
+  },
+  "candidate_desired_pose_pretraining": {
+    "complete": true,
+    "actual_optimizer_steps": 1200,
+    "epochs_completed": 150,
+    "selected_epoch": 145,
+    "checkpoint": {
+      "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/candidate_weak_fit/selected.pt",
+      "sha256": "913fab1ea683ed6384690fe5c8654af3be52c722799f2c7e235ff59a9964568e"
+    },
+    "TRAIN_source_parents": 200,
+    "gradient_fit_parents": 160,
+    "TRAIN_selection_parents": 40,
+    "initial_selection_loss": 83.07339477539062,
+    "selected_selection_loss": 37.099464416503906,
+    "Native_contact_supervision": false,
+    "actual_physics_time_claimed": false,
+    "runtime_admitted": false,
+    "wall_seconds": 15.987110655987635,
+    "resources": {
+      "dual_Native_locks_held": true,
+      "training_lock_held": true,
+      "known_Native_processes": [],
+      "other_GPU_compute_processes": []
+    }
+  },
+  "motion_training": {
+    "complete": true,
+    "model": "motion",
+    "epochs_completed": 200,
+    "actual_optimizer_steps": 1600,
+    "selected_epoch": 40,
+    "initial_selection_loss": 0.15708857774734497,
+    "selected_selection_loss": 0.13673089444637299,
+    "checkpoint": {
+      "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/motion_fit/selected.pt",
+      "sha256": "43a0ae791d96fc1f51316b50f04b9027a3b1eca9c7a39bae3c5352e1fadcb3ee"
+    },
+    "parameters": 78121,
+    "wall_seconds": 37.82336027699057,
+    "GPU": "NVIDIA GeForce RTX 5090",
+    "peak_allocated_bytes": 86473728,
+    "resources": {
+      "dual_Native_locks_held": true,
+      "training_lock_held": true,
+      "known_Native_processes": [],
+      "other_GPU_compute_processes": []
+    },
+    "TEST_read": false,
+    "heldout_payloads_read": false,
+    "source_unchanged": true,
+    "input_unchanged": true
+  },
+  "candidate_training": {
+    "complete": true,
+    "model": "candidate",
+    "epochs_completed": 150,
+    "actual_optimizer_steps": 1200,
+    "selected_epoch": 105,
+    "initial_selection_loss": 8.170051574707031,
+    "selected_selection_loss": 0.07850898802280426,
+    "checkpoint": {
+      "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/candidate_fit/selected.pt",
+      "sha256": "6815a099b9796d532a4bfa3fe44ef2c569b9eb9482533477d5e8d90dc2cdbc20"
+    },
+    "parameters": 3190538,
+    "wall_seconds": 14.245637963002082,
+    "GPU": "NVIDIA GeForce RTX 5090",
+    "peak_allocated_bytes": 158375936,
+    "resources": {
+      "dual_Native_locks_held": true,
+      "training_lock_held": true,
+      "known_Native_processes": [],
+      "other_GPU_compute_processes": []
+    },
+    "TEST_read": false,
+    "heldout_payloads_read": false,
+    "source_unchanged": true,
+    "input_unchanged": true
+  },
+  "TRAIN_source_mode": "all200 recorded caches reused; only existing19 actual-clock Native captures for physical/contact fine-tuning",
+  "TRAIN_whole_grid_recaptured": false,
+  "runtime_check": {
+    "complete": true,
+    "motion": {
+      "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/motion_fit/selected.pt",
+      "sha256": "43a0ae791d96fc1f51316b50f04b9027a3b1eca9c7a39bae3c5352e1fadcb3ee"
+    },
+    "candidate": {
+      "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/candidate_fit/selected.pt",
+      "sha256": "6815a099b9796d532a4bfa3fe44ef2c569b9eb9482533477d5e8d90dc2cdbc20"
+    },
+    "runtime_guards_unchanged": true,
+    "weak_only_checkpoints_not_admitted": true
+  },
+  "tests": {
+    "tests": 99,
+    "passed": true,
+    "failures": 0,
+    "errors": 0,
+    "modules": [
+      "tests.test_execution_interface_20261111_v1",
+      "tests.test_local_mpc_20261102_executor",
+      "tests.test_highspeed_carry_reference_20261111_v1",
+      "tests.test_highspeed_collision_guard_20261111_v1",
+      "tests.test_highspeed_dynamic_reference_20261111_v1",
+      "tests.test_highspeed_early_reflection_20261111_v1",
+      "tests.test_highspeed_nonlinear_qp_20261111_v1",
+      "tests.test_highspeed_planning_view_20261111_v1",
+      "tests.test_highspeed_predictive_tracking_20261111_v1",
+      "tests.test_highspeed_public_motion_20261111_v1",
+      "tests.test_highspeed_public_motion_gaps_20261111_v1",
+      "tests.test_highspeed_qp_tracking_20261111_v1",
+      "tests.test_highspeed_reacquisition_20261111_v1",
+      "tests.test_highspeed_reserved_qp_20261111_v1",
+      "tests.test_highspeed_stopping_20261111_v1",
+      "tests.test_highspeed_tracking_20261111_v1",
+      "tests.test_task_budget_20261111_v1",
+      "tests.test_all16_time_limits_20261111_v1",
+      "tests.test_task_time_limits_60s_20261111_v1",
+      "tests.test_evaluate_multitask_case_r10",
+      "tests.test_multitask_evaluation_r10",
+      "tests.test_perception_pregrasp_consistency_20261111_v1",
+      "tests.test_perception_reacquisition_20261111_v1",
+      "tests.test_perception_tangential_descent_20261111_v1",
+      "tests.test_perception_velocity_descent_20261111_v1",
+      "tests.test_perception_yaw_cube_20261111_v1",
+      "tests.test_cube_training_cycle_20261111_v1",
+      "tests.test_cube_training_cycle_data_20261111_v1",
+      "tests.test_cube_full_reuse_20261112_v1"
+    ],
+    "seconds": 3.709602458984591
+  },
+  "gpu_preflight": {
+    "complete": true,
+    "GPU": "NVIDIA GeForce RTX 5090",
+    "torch": "2.8.0+cu128",
+    "actual_forward_backward": true,
+    "batch": 320,
+    "motion_parameters": 78121,
+    "candidate_parameters": 3190538,
+    "synthetic_only": true,
+    "optimizer_steps": 0,
+    "peak_allocated_bytes": 984764928,
+    "resources": {
+      "dual_Native_locks_held": true,
+      "training_lock_held": true,
+      "known_Native_processes": [],
+      "other_GPU_compute_processes": []
+    },
+    "reused_from": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_cycle_20261111_v1/gpu_preflight.json",
+    "reuse_reason": "same model architectures, same warm checkpoints, same Native Python/Torch/GPU and maximum batch320; no simulator/GPU overlap"
+  },
+  "native": {
+    "TRAIN_reuse": {
+      "recorded_source_parents": 200,
+      "Native_TRAIN_recaptured": false,
+      "prior_actual_clock_captures": 19
+    },
+    "validation": {
+      "episodes": 40,
+      "successes": 33,
+      "per_speed": {
+        "ordinary": {
+          "successes": 20,
+          "episodes": 20,
+          "success_rate": 1.0
+        },
+        "high_speed": {
+          "successes": 13,
+          "episodes": 20,
+          "success_rate": 0.65
+        }
+      },
+      "cases": [
+        {
+          "parent_id": "validation__pick_moving_target_on_the_table__episode52",
+          "task": "pick_moving_target_on_the_table",
+          "raw_episode_id": "episode52",
+          "variation": 1,
+          "seed": 657281465,
+          "success": true,
+          "actual_seconds": 2.75,
+          "first_success_time": 2.75,
+          "stop_reason": "original_Native_task_success",
+          "result": {
+            "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/validation/validation__pick_moving_target_on_the_table__episode52/episode/result.json",
+            "sha256": "7a724b3c4f773c3cfde424d9d5044a436e43d7d739f240b88c99a7a3ab7c7b9b"
+          }
+        },
+        {
+          "parent_id": "validation__pick_moving_target_on_the_table_high_speed__episode22",
+          "task": "pick_moving_target_on_the_table_high_speed",
+          "raw_episode_id": "episode22",
+          "variation": 0,
+          "seed": 34529404,
+          "success": false,
+          "actual_seconds": 60.0,
+          "first_success_time": null,
+          "stop_reason": "budget_exhausted",
+          "result": {
+            "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/validation/validation__pick_moving_target_on_the_table_high_speed__episode22/episode/result.json",
+            "sha256": "e55db0f112d24499f8943adedcef6e816e99b5053aeef9d65e2383ce67ddd7b3"
+          }
+        },
+        {
+          "parent_id": "validation__pick_moving_target_on_the_table__episode90",
+          "task": "pick_moving_target_on_the_table",
+          "raw_episode_id": "episode90",
+          "variation": 1,
+          "seed": 762318929,
+          "success": true,
+          "actual_seconds": 2.4000000000000004,
+          "first_success_time": 2.4000000000000004,
+          "stop_reason": "original_Native_task_success",
+          "result": {
+            "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/validation/validation__pick_moving_target_on_the_table__episode90/episode/result.json",
+            "sha256": "6e4aeb589bfad0eeb6ea11753414bb8377c4c163462bff4a28e2e1c799caf3ea"
+          }
+        },
+        {
+          "parent_id": "validation__pick_moving_target_on_the_table_high_speed__episode130",
+          "task": "pick_moving_target_on_the_table_high_speed",
+          "raw_episode_id": "episode130",
+          "variation": 0,
+          "seed": 391375212,
+          "success": true,
+          "actual_seconds": 18.2,
+          "first_success_time": 18.2,
+          "stop_reason": "original_Native_task_success",
+          "result": {
+            "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/validation/validation__pick_moving_target_on_the_table_high_speed__episode130/episode/result.json",
+            "sha256": "8a404220b0ba789f9f3916de9728d217f75d4b6e2708208eb08f4363a070da95"
+          }
+        },
+        {
+          "parent_id": "validation__pick_moving_target_on_the_table__episode117",
+          "task": "pick_moving_target_on_the_table",
+          "raw_episode_id": "episode117",
+          "variation": 1,
+          "seed": 3385585847,
+          "success": true,
+          "actual_seconds": 2.7,
+          "first_success_time": 2.7,
+          "stop_reason": "original_Native_task_success",
+          "result": {
+            "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/validation/validation__pick_moving_target_on_the_table__episode117/episode/result.json",
+            "sha256": "610816fb8f63350ad6c83795ed7f247edf99d3dc2914728417fefe9e048eb21a"
+          }
+        },
+        {
+          "parent_id": "validation__pick_moving_target_on_the_table_high_speed__episode158",
+          "task": "pick_moving_target_on_the_table_high_speed",
+          "raw_episode_id": "episode158",
+          "variation": 1,
+          "seed": 3523991957,
+          "success": true,
+          "actual_seconds": 3.3000000000000003,
+          "first_success_time": 3.3000000000000003,
+          "stop_reason": "original_Native_task_success",
+          "result": {
+            "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/validation/validation__pick_moving_target_on_the_table_high_speed__episode158/episode/result.json",
+            "sha256": "00d4a7a3971e7a5de2180c0e7c5dd580b9599f1f3461375a6feeb0f8f1462f7b"
+          }
+        },
+        {
+          "parent_id": "validation__pick_moving_target_on_the_table__episode122",
+          "task": "pick_moving_target_on_the_table",
+          "raw_episode_id": "episode122",
+          "variation": 0,
+          "seed": 2035734947,
+          "success": true,
+          "actual_seconds": 3.4000000000000004,
+          "first_success_time": 3.4000000000000004,
+          "stop_reason": "original_Native_task_success",
+          "result": {
+            "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/validation/validation__pick_moving_target_on_the_table__episode122/episode/result.json",
+            "sha256": "adb839b6631f9ce3359fe3de70aaaba986aef89b18d883b1985c4021170ecf55"
+          }
+        },
+        {
+          "parent_id": "validation__pick_moving_target_on_the_table_high_speed__episode191",
+          "task": "pick_moving_target_on_the_table_high_speed",
+          "raw_episode_id": "episode191",
+          "variation": 0,
+          "seed": 3954979213,
+          "success": true,
+          "actual_seconds": 2.2,
+          "first_success_time": 2.2,
+          "stop_reason": "original_Native_task_success",
+          "result": {
+            "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/validation/validation__pick_moving_target_on_the_table_high_speed__episode191/episode/result.json",
+            "sha256": "1e647ff7f38d6bdfa66fb915f60f9adbb3fe052083147de343292e2ed4bf6309"
+          }
+        },
+        {
+          "parent_id": "validation__pick_moving_target_on_the_table__episode150",
+          "task": "pick_moving_target_on_the_table",
+          "raw_episode_id": "episode150",
+          "variation": 1,
+          "seed": 532786956,
+          "success": true,
+          "actual_seconds": 11.75,
+          "first_success_time": 11.75,
+          "stop_reason": "original_Native_task_success",
+          "result": {
+            "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/validation/validation__pick_moving_target_on_the_table__episode150/episode/result.json",
+            "sha256": "fc4367470c38cf8250d5bf39bdb304a163dd42601c16709c3f9d6eabf34067b5"
+          }
+        },
+        {
+          "parent_id": "validation__pick_moving_target_on_the_table_high_speed__episode196",
+          "task": "pick_moving_target_on_the_table_high_speed",
+          "raw_episode_id": "episode196",
+          "variation": 1,
+          "seed": 4028577674,
+          "success": false,
+          "actual_seconds": 60.0,
+          "first_success_time": null,
+          "stop_reason": "budget_exhausted",
+          "result": {
+            "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/validation/validation__pick_moving_target_on_the_table_high_speed__episode196/episode/result.json",
+            "sha256": "77a7749d9d5ae3d810d160bd13217accc17e21158b96c4a7d99b8e564873e7ab"
+          }
+        },
+        {
+          "parent_id": "validation__pick_moving_target_on_the_table__episode171",
+          "task": "pick_moving_target_on_the_table",
+          "raw_episode_id": "episode171",
+          "variation": 1,
+          "seed": 3014448302,
+          "success": true,
+          "actual_seconds": 2.25,
+          "first_success_time": 2.25,
+          "stop_reason": "original_Native_task_success",
+          "result": {
+            "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/validation/validation__pick_moving_target_on_the_table__episode171/episode/result.json",
+            "sha256": "86dc40abb619e84bffaa70e479efdc97431e0440c0ff38594183c62ac13a6323"
+          }
+        },
+        {
+          "parent_id": "validation__pick_moving_target_on_the_table_high_speed__episode213",
+          "task": "pick_moving_target_on_the_table_high_speed",
+          "raw_episode_id": "episode213",
+          "variation": 1,
+          "seed": 3024011643,
+          "success": true,
+          "actual_seconds": 13.4,
+          "first_success_time": 13.4,
+          "stop_reason": "original_Native_task_success",
+          "result": {
+            "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/validation/validation__pick_moving_target_on_the_table_high_speed__episode213/episode/result.json",
+            "sha256": "2411cbc2961f68b18d91817d846609c6767a8948a21efa8281233671f383a61a"
+          }
+        },
+        {
+          "parent_id": "validation__pick_moving_target_on_the_table__episode230",
+          "task": "pick_moving_target_on_the_table",
+          "raw_episode_id": "episode230",
+          "variation": 0,
+          "seed": 2246420406,
+          "success": true,
+          "actual_seconds": 3.75,
+          "first_success_time": 3.75,
+          "stop_reason": "original_Native_task_success",
+          "result": {
+            "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/validation/validation__pick_moving_target_on_the_table__episode230/episode/result.json",
+            "sha256": "7e90ece3f8865bba6895521a2a90a47cc939f7f0aadecc7eaf94bb8f95f1fa3f"
+          }
+        },
+        {
+          "parent_id": "validation__pick_moving_target_on_the_table_high_speed__episode223",
+          "task": "pick_moving_target_on_the_table_high_speed",
+          "raw_episode_id": "episode223",
+          "variation": 0,
+          "seed": 2575826518,
+          "success": true,
+          "actual_seconds": 3.8000000000000003,
+          "first_success_time": 3.8000000000000003,
+          "stop_reason": "original_Native_task_success",
+          "result": {
+            "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/validation/validation__pick_moving_target_on_the_table_high_speed__episode223/episode/result.json",
+            "sha256": "4ea8db1dfeec00488d4ac01348f87443f4051f747c6d8d097b5c3cba2aacf4ee"
+          }
+        },
+        {
+          "parent_id": "validation__pick_moving_target_on_the_table__episode319",
+          "task": "pick_moving_target_on_the_table",
+          "raw_episode_id": "episode319",
+          "variation": 0,
+          "seed": 3700950250,
+          "success": true,
+          "actual_seconds": 2.4000000000000004,
+          "first_success_time": 2.4000000000000004,
+          "stop_reason": "original_Native_task_success",
+          "result": {
+            "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/validation/validation__pick_moving_target_on_the_table__episode319/episode/result.json",
+            "sha256": "e4ded26721d17042c0213fd4f19d9385340f57a8e570f7929ac2983ab9c763f7"
+          }
+        },
+        {
+          "parent_id": "validation__pick_moving_target_on_the_table_high_speed__episode224",
+          "task": "pick_moving_target_on_the_table_high_speed",
+          "raw_episode_id": "episode224",
+          "variation": 0,
+          "seed": 2089254642,
+          "success": true,
+          "actual_seconds": 5.8500000000000005,
+          "first_success_time": 5.8500000000000005,
+          "stop_reason": "original_Native_task_success",
+          "result": {
+            "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/validation/validation__pick_moving_target_on_the_table_high_speed__episode224/episode/result.json",
+            "sha256": "a2fe9308d30e2485640b8c43df1896e7622e60f68349b770b34c395c1b0e8bae"
+          }
+        },
+        {
+          "parent_id": "validation__pick_moving_target_on_the_table__episode337",
+          "task": "pick_moving_target_on_the_table",
+          "raw_episode_id": "episode337",
+          "variation": 1,
+          "seed": 3670107864,
+          "success": true,
+          "actual_seconds": 2.6500000000000004,
+          "first_success_time": 2.6500000000000004,
+          "stop_reason": "original_Native_task_success",
+          "result": {
+            "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/validation/validation__pick_moving_target_on_the_table__episode337/episode/result.json",
+            "sha256": "4b15b2a700240fd69cf75cc07fceb0cf3ba79a63d76393e736d0c381f34bdc84"
+          }
+        },
+        {
+          "parent_id": "validation__pick_moving_target_on_the_table_high_speed__episode238",
+          "task": "pick_moving_target_on_the_table_high_speed",
+          "raw_episode_id": "episode238",
+          "variation": 1,
+          "seed": 372081420,
+          "success": false,
+          "actual_seconds": 60.0,
+          "first_success_time": null,
+          "stop_reason": "budget_exhausted",
+          "result": {
+            "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/validation/validation__pick_moving_target_on_the_table_high_speed__episode238/episode/result.json",
+            "sha256": "751441728ee43a70ed902a7e401f4918dca7fdcc92f314e8f4c02ca032f17d6e"
+          }
+        },
+        {
+          "parent_id": "validation__pick_moving_target_on_the_table__episode380",
+          "task": "pick_moving_target_on_the_table",
+          "raw_episode_id": "episode380",
+          "variation": 1,
+          "seed": 261194935,
+          "success": true,
+          "actual_seconds": 3.1500000000000004,
+          "first_success_time": 3.1500000000000004,
+          "stop_reason": "original_Native_task_success",
+          "result": {
+            "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/validation/validation__pick_moving_target_on_the_table__episode380/episode/result.json",
+            "sha256": "1d8aeba854a8fbf88088e834f89f92a46946d3a1b84f214c4cde9a53f85c26bb"
+          }
+        },
+        {
+          "parent_id": "validation__pick_moving_target_on_the_table_high_speed__episode286",
+          "task": "pick_moving_target_on_the_table_high_speed",
+          "raw_episode_id": "episode286",
+          "variation": 0,
+          "seed": 150609122,
+          "success": true,
+          "actual_seconds": 3.4000000000000004,
+          "first_success_time": 3.4000000000000004,
+          "stop_reason": "original_Native_task_success",
+          "result": {
+            "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/validation/validation__pick_moving_target_on_the_table_high_speed__episode286/episode/result.json",
+            "sha256": "db7f7afe5451597e0e2ef5a1127bef8a5fb5d570fcfb1f44f713f3baa87e4f2d"
+          }
+        },
+        {
+          "parent_id": "validation__pick_moving_target_on_the_table__episode407",
+          "task": "pick_moving_target_on_the_table",
+          "raw_episode_id": "episode407",
+          "variation": 0,
+          "seed": 1049484815,
+          "success": true,
+          "actual_seconds": 9.35,
+          "first_success_time": 9.35,
+          "stop_reason": "original_Native_task_success",
+          "result": {
+            "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/validation/validation__pick_moving_target_on_the_table__episode407/episode/result.json",
+            "sha256": "73755350fc0daa2833cc0b67ff17f4c90e79adee6844c67715ea3cd97064ace1"
+          }
+        },
+        {
+          "parent_id": "validation__pick_moving_target_on_the_table_high_speed__episode297",
+          "task": "pick_moving_target_on_the_table_high_speed",
+          "raw_episode_id": "episode297",
+          "variation": 1,
+          "seed": 3313087405,
+          "success": false,
+          "actual_seconds": 60.0,
+          "first_success_time": null,
+          "stop_reason": "budget_exhausted",
+          "result": {
+            "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/validation/validation__pick_moving_target_on_the_table_high_speed__episode297/episode/result.json",
+            "sha256": "ba31c6b3d19127276aa8b3d55d30a21d422b9314ff12bafa4780fe98a1ee3635"
+          }
+        },
+        {
+          "parent_id": "validation__pick_moving_target_on_the_table__episode477",
+          "task": "pick_moving_target_on_the_table",
+          "raw_episode_id": "episode477",
+          "variation": 1,
+          "seed": 4189558690,
+          "success": true,
+          "actual_seconds": 2.95,
+          "first_success_time": 2.95,
+          "stop_reason": "original_Native_task_success",
+          "result": {
+            "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/validation/validation__pick_moving_target_on_the_table__episode477/episode/result.json",
+            "sha256": "f213b62fa724203c0ebfd8c8ad44f619f845c30f833b089cd33e183a9bdfe40b"
+          }
+        },
+        {
+          "parent_id": "validation__pick_moving_target_on_the_table_high_speed__episode298",
+          "task": "pick_moving_target_on_the_table_high_speed",
+          "raw_episode_id": "episode298",
+          "variation": 1,
+          "seed": 3346322682,
+          "success": false,
+          "actual_seconds": 60.0,
+          "first_success_time": null,
+          "stop_reason": "budget_exhausted",
+          "result": {
+            "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/validation/validation__pick_moving_target_on_the_table_high_speed__episode298/episode/result.json",
+            "sha256": "b1dd35b29330f9ba2d832f833ffc02e77019223cbdfbfcf6c0ee7f444789c8c6"
+          }
+        },
+        {
+          "parent_id": "validation__pick_moving_target_on_the_table__episode487",
+          "task": "pick_moving_target_on_the_table",
+          "raw_episode_id": "episode487",
+          "variation": 0,
+          "seed": 1844949118,
+          "success": true,
+          "actual_seconds": 2.7,
+          "first_success_time": 2.7,
+          "stop_reason": "original_Native_task_success",
+          "result": {
+            "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/validation/validation__pick_moving_target_on_the_table__episode487/episode/result.json",
+            "sha256": "39dc545fd3d4b76ec2f1aaf7b9d3fb65ebbd089f53e236aaa3ba0f19151a128f"
+          }
+        },
+        {
+          "parent_id": "validation__pick_moving_target_on_the_table_high_speed__episode303",
+          "task": "pick_moving_target_on_the_table_high_speed",
+          "raw_episode_id": "episode303",
+          "variation": 0,
+          "seed": 2769222292,
+          "success": true,
+          "actual_seconds": 4.45,
+          "first_success_time": 4.45,
+          "stop_reason": "original_Native_task_success",
+          "result": {
+            "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/validation/validation__pick_moving_target_on_the_table_high_speed__episode303/episode/result.json",
+            "sha256": "eb78db38bb08efaab7a3d39a4d3f87920bcaabc221a70e2e14b5d9570298a906"
+          }
+        },
+        {
+          "parent_id": "validation__pick_moving_target_on_the_table__episode584",
+          "task": "pick_moving_target_on_the_table",
+          "raw_episode_id": "episode584",
+          "variation": 0,
+          "seed": 334284047,
+          "success": true,
+          "actual_seconds": 2.3000000000000003,
+          "first_success_time": 2.3000000000000003,
+          "stop_reason": "original_Native_task_success",
+          "result": {
+            "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/validation/validation__pick_moving_target_on_the_table__episode584/episode/result.json",
+            "sha256": "f08d055aa7e1b27c9f27903ff17976e6577061a87fcf63451a75fee980f94d37"
+          }
+        },
+        {
+          "parent_id": "validation__pick_moving_target_on_the_table_high_speed__episode383",
+          "task": "pick_moving_target_on_the_table_high_speed",
+          "raw_episode_id": "episode383",
+          "variation": 1,
+          "seed": 664191868,
+          "success": false,
+          "actual_seconds": 60.0,
+          "first_success_time": null,
+          "stop_reason": "budget_exhausted",
+          "result": {
+            "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/validation/validation__pick_moving_target_on_the_table_high_speed__episode383/episode/result.json",
+            "sha256": "8ad2307910992ef19990c1af3c4d3693185c05aa5fe91e5559a4894463e61d21"
+          }
+        },
+        {
+          "parent_id": "validation__pick_moving_target_on_the_table__episode591",
+          "task": "pick_moving_target_on_the_table",
+          "raw_episode_id": "episode591",
+          "variation": 1,
+          "seed": 1411356338,
+          "success": true,
+          "actual_seconds": 3.2,
+          "first_success_time": 3.2,
+          "stop_reason": "original_Native_task_success",
+          "result": {
+            "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/validation/validation__pick_moving_target_on_the_table__episode591/episode/result.json",
+            "sha256": "85b676af064f391e570a67679a93b5ab961470e54a296b9324d381a15fccd5e5"
+          }
+        },
+        {
+          "parent_id": "validation__pick_moving_target_on_the_table_high_speed__episode460",
+          "task": "pick_moving_target_on_the_table_high_speed",
+          "raw_episode_id": "episode460",
+          "variation": 0,
+          "seed": 2670349523,
+          "success": true,
+          "actual_seconds": 3.35,
+          "first_success_time": 3.35,
+          "stop_reason": "original_Native_task_success",
+          "result": {
+            "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/validation/validation__pick_moving_target_on_the_table_high_speed__episode460/episode/result.json",
+            "sha256": "fc0b4fc69c25ccaf4f639b885c8192b4181eff60922d658e959a0891b470b301"
+          }
+        },
+        {
+          "parent_id": "validation__pick_moving_target_on_the_table__episode629",
+          "task": "pick_moving_target_on_the_table",
+          "raw_episode_id": "episode629",
+          "variation": 0,
+          "seed": 3469598020,
+          "success": true,
+          "actual_seconds": 4.05,
+          "first_success_time": 4.05,
+          "stop_reason": "original_Native_task_success",
+          "result": {
+            "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/validation/validation__pick_moving_target_on_the_table__episode629/episode/result.json",
+            "sha256": "0a16851a0b439508a9ef046ec65afa29c1965f0443d3b90c117f87dc03d58540"
+          }
+        },
+        {
+          "parent_id": "validation__pick_moving_target_on_the_table_high_speed__episode541",
+          "task": "pick_moving_target_on_the_table_high_speed",
+          "raw_episode_id": "episode541",
+          "variation": 1,
+          "seed": 621489658,
+          "success": true,
+          "actual_seconds": 3.95,
+          "first_success_time": 3.95,
+          "stop_reason": "original_Native_task_success",
+          "result": {
+            "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/validation/validation__pick_moving_target_on_the_table_high_speed__episode541/episode/result.json",
+            "sha256": "9f7ab6307689ec0bb5e3a2f55c8a828f4da2f07562c205162a0ed4cf02255c70"
+          }
+        },
+        {
+          "parent_id": "validation__pick_moving_target_on_the_table__episode641",
+          "task": "pick_moving_target_on_the_table",
+          "raw_episode_id": "episode641",
+          "variation": 0,
+          "seed": 437374769,
+          "success": true,
+          "actual_seconds": 2.5500000000000003,
+          "first_success_time": 2.5500000000000003,
+          "stop_reason": "original_Native_task_success",
+          "result": {
+            "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/validation/validation__pick_moving_target_on_the_table__episode641/episode/result.json",
+            "sha256": "a3d34685cf52b441331d06c8cd7e9264fac49a31521a41b321094f3b467b802e"
+          }
+        },
+        {
+          "parent_id": "validation__pick_moving_target_on_the_table_high_speed__episode568",
+          "task": "pick_moving_target_on_the_table_high_speed",
+          "raw_episode_id": "episode568",
+          "variation": 0,
+          "seed": 3973928782,
+          "success": true,
+          "actual_seconds": 3.1500000000000004,
+          "first_success_time": 3.1500000000000004,
+          "stop_reason": "original_Native_task_success",
+          "result": {
+            "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/validation/validation__pick_moving_target_on_the_table_high_speed__episode568/episode/result.json",
+            "sha256": "c1c450620efa6f1142ffc33eb3467112f390be43030ad1e39a7359612e1ba82c"
+          }
+        },
+        {
+          "parent_id": "validation__pick_moving_target_on_the_table__episode645",
+          "task": "pick_moving_target_on_the_table",
+          "raw_episode_id": "episode645",
+          "variation": 0,
+          "seed": 3323922992,
+          "success": true,
+          "actual_seconds": 5.4,
+          "first_success_time": 5.4,
+          "stop_reason": "original_Native_task_success",
+          "result": {
+            "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/validation/validation__pick_moving_target_on_the_table__episode645/episode/result.json",
+            "sha256": "12d00601c0cfa402f4880bd119200ec42f113701e78382e15f787763b6bee204"
+          }
+        },
+        {
+          "parent_id": "validation__pick_moving_target_on_the_table_high_speed__episode579",
+          "task": "pick_moving_target_on_the_table_high_speed",
+          "raw_episode_id": "episode579",
+          "variation": 1,
+          "seed": 965641149,
+          "success": true,
+          "actual_seconds": 2.75,
+          "first_success_time": 2.75,
+          "stop_reason": "original_Native_task_success",
+          "result": {
+            "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/validation/validation__pick_moving_target_on_the_table_high_speed__episode579/episode/result.json",
+            "sha256": "5ef1454647e1ecc14d63b1b43760cd758bc05d108528886dc79fc850e52b5ee4"
+          }
+        },
+        {
+          "parent_id": "validation__pick_moving_target_on_the_table__episode665",
+          "task": "pick_moving_target_on_the_table",
+          "raw_episode_id": "episode665",
+          "variation": 0,
+          "seed": 1699810622,
+          "success": true,
+          "actual_seconds": 2.4000000000000004,
+          "first_success_time": 2.4000000000000004,
+          "stop_reason": "original_Native_task_success",
+          "result": {
+            "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/validation/validation__pick_moving_target_on_the_table__episode665/episode/result.json",
+            "sha256": "9f0cd6a8e4d17ee9812a987db4a5a66c4c7f3fe64f842b9900bbdd3cc7ccddc1"
+          }
+        },
+        {
+          "parent_id": "validation__pick_moving_target_on_the_table_high_speed__episode586",
+          "task": "pick_moving_target_on_the_table_high_speed",
+          "raw_episode_id": "episode586",
+          "variation": 0,
+          "seed": 1589624583,
+          "success": false,
+          "actual_seconds": 60.0,
+          "first_success_time": null,
+          "stop_reason": "budget_exhausted",
+          "result": {
+            "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/validation/validation__pick_moving_target_on_the_table_high_speed__episode586/episode/result.json",
+            "sha256": "ab16d5d98c358c2415932f6d08de263b55311031719581a4c9c82e8588d71e54"
+          }
+        },
+        {
+          "parent_id": "validation__pick_moving_target_on_the_table__episode679",
+          "task": "pick_moving_target_on_the_table",
+          "raw_episode_id": "episode679",
+          "variation": 1,
+          "seed": 1622091611,
+          "success": true,
+          "actual_seconds": 3.45,
+          "first_success_time": 3.45,
+          "stop_reason": "original_Native_task_success",
+          "result": {
+            "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/validation/validation__pick_moving_target_on_the_table__episode679/episode/result.json",
+            "sha256": "c8306a1b3e2b25db85c279b8af073bdf7e9950018c7e405a7e7de415ffc35f86"
+          }
+        },
+        {
+          "parent_id": "validation__pick_moving_target_on_the_table_high_speed__episode588",
+          "task": "pick_moving_target_on_the_table_high_speed",
+          "raw_episode_id": "episode588",
+          "variation": 1,
+          "seed": 3139545488,
+          "success": true,
+          "actual_seconds": 2.9000000000000004,
+          "first_success_time": 2.9000000000000004,
+          "stop_reason": "original_Native_task_success",
+          "result": {
+            "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/validation/validation__pick_moving_target_on_the_table_high_speed__episode588/episode/result.json",
+            "sha256": "3431de06d37f31cdd0c2b0372ef1319c179acf230f81c27aeded71c1dfcab5e0"
+          }
+        }
+      ]
+    },
+    "test": {
+      "episodes": 80,
+      "successes": 66,
+      "per_speed": {
+        "ordinary": {
+          "successes": 39,
+          "episodes": 40,
+          "success_rate": 0.975
+        },
+        "high_speed": {
+          "successes": 27,
+          "episodes": 40,
+          "success_rate": 0.675
+        }
+      },
+      "cases": [
+        {
+          "parent_id": "test__pick_moving_target_on_the_table__episode2",
+          "task": "pick_moving_target_on_the_table",
+          "raw_episode_id": "episode2",
+          "variation": 0,
+          "seed": 0,
+          "success": true,
+          "actual_seconds": 2.85,
+          "first_success_time": 2.85,
+          "stop_reason": "original_Native_task_success",
+          "result": {
+            "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/test/test__pick_moving_target_on_the_table__episode2/episode/result.json",
+            "sha256": "9aef79a9e130a105947bf597d62c8d5abc48fd87762528981852d3232296630a"
+          }
+        },
+        {
+          "parent_id": "test__pick_moving_target_on_the_table__episode4",
+          "task": "pick_moving_target_on_the_table",
+          "raw_episode_id": "episode4",
+          "variation": 0,
+          "seed": 0,
+          "success": true,
+          "actual_seconds": 2.6,
+          "first_success_time": 2.6,
+          "stop_reason": "original_Native_task_success",
+          "result": {
+            "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/test/test__pick_moving_target_on_the_table__episode4/episode/result.json",
+            "sha256": "d2dfa513035a689ffb0e0ace5e40eab3f1435aad47d5a28936dd2077cd5d9369"
+          }
+        },
+        {
+          "parent_id": "test__pick_moving_target_on_the_table__episode19",
+          "task": "pick_moving_target_on_the_table",
+          "raw_episode_id": "episode19",
+          "variation": 0,
+          "seed": 0,
+          "success": true,
+          "actual_seconds": 2.35,
+          "first_success_time": 2.35,
+          "stop_reason": "original_Native_task_success",
+          "result": {
+            "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/test/test__pick_moving_target_on_the_table__episode19/episode/result.json",
+            "sha256": "1011e914d202ef9ebcf9514c8eea3346803d033f1d784662ebbdd1d5840a81fe"
+          }
+        },
+        {
+          "parent_id": "test__pick_moving_target_on_the_table__episode28",
+          "task": "pick_moving_target_on_the_table",
+          "raw_episode_id": "episode28",
+          "variation": 0,
+          "seed": 0,
+          "success": true,
+          "actual_seconds": 4.55,
+          "first_success_time": 4.55,
+          "stop_reason": "original_Native_task_success",
+          "result": {
+            "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/test/test__pick_moving_target_on_the_table__episode28/episode/result.json",
+            "sha256": "34ca4109a7d156e1afed69c64709df049295e9f1f423aa09b6dd5e5c5b82b48c"
+          }
+        },
+        {
+          "parent_id": "test__pick_moving_target_on_the_table__episode325",
+          "task": "pick_moving_target_on_the_table",
+          "raw_episode_id": "episode325",
+          "variation": 0,
+          "seed": 0,
+          "success": true,
+          "actual_seconds": 30.450000000000003,
+          "first_success_time": 30.450000000000003,
+          "stop_reason": "original_Native_task_success",
+          "result": {
+            "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/test/test__pick_moving_target_on_the_table__episode325/episode/result.json",
+            "sha256": "1d01efa03a9ea77f0c6d269f47857aab6dfc6510998cd863f983b96891bc4f01"
+          }
+        },
+        {
+          "parent_id": "test__pick_moving_target_on_the_table__episode342",
+          "task": "pick_moving_target_on_the_table",
+          "raw_episode_id": "episode342",
+          "variation": 0,
+          "seed": 0,
+          "success": true,
+          "actual_seconds": 3.6500000000000004,
+          "first_success_time": 3.6500000000000004,
+          "stop_reason": "original_Native_task_success",
+          "result": {
+            "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/test/test__pick_moving_target_on_the_table__episode342/episode/result.json",
+            "sha256": "aeec773858a414f6e1a1bbb0409268024722438358ecb173e15fe55ddd3c0d64"
+          }
+        },
+        {
+          "parent_id": "test__pick_moving_target_on_the_table__episode433",
+          "task": "pick_moving_target_on_the_table",
+          "raw_episode_id": "episode433",
+          "variation": 0,
+          "seed": 0,
+          "success": true,
+          "actual_seconds": 3.95,
+          "first_success_time": 3.95,
+          "stop_reason": "original_Native_task_success",
+          "result": {
+            "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/test/test__pick_moving_target_on_the_table__episode433/episode/result.json",
+            "sha256": "4adad23b842a19342ef15f85e05d3127c2e5731c51f91ea3c6de48ad04dbebf8"
+          }
+        },
+        {
+          "parent_id": "test__pick_moving_target_on_the_table__episode440",
+          "task": "pick_moving_target_on_the_table",
+          "raw_episode_id": "episode440",
+          "variation": 0,
+          "seed": 0,
+          "success": true,
+          "actual_seconds": 2.9000000000000004,
+          "first_success_time": 2.9000000000000004,
+          "stop_reason": "original_Native_task_success",
+          "result": {
+            "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/test/test__pick_moving_target_on_the_table__episode440/episode/result.json",
+            "sha256": "e75e00100e88eeb5b1a70d4776de2e8d4a8397f9cb72b0829ce1b431b75b9024"
+          }
+        },
+        {
+          "parent_id": "test__pick_moving_target_on_the_table__episode455",
+          "task": "pick_moving_target_on_the_table",
+          "raw_episode_id": "episode455",
+          "variation": 0,
+          "seed": 0,
+          "success": true,
+          "actual_seconds": 3.1,
+          "first_success_time": 3.1,
+          "stop_reason": "original_Native_task_success",
+          "result": {
+            "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/test/test__pick_moving_target_on_the_table__episode455/episode/result.json",
+            "sha256": "f818e2b4f664a61fc147efa400a55a6820adedbe1101129ccfd1819151e4d273"
+          }
+        },
+        {
+          "parent_id": "test__pick_moving_target_on_the_table__episode469",
+          "task": "pick_moving_target_on_the_table",
+          "raw_episode_id": "episode469",
+          "variation": 0,
+          "seed": 0,
+          "success": false,
+          "actual_seconds": 60.0,
+          "first_success_time": null,
+          "stop_reason": "budget_exhausted",
+          "result": {
+            "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/test/test__pick_moving_target_on_the_table__episode469/episode/result.json",
+            "sha256": "544aa1940d493d6c2334755d747c72ca74792b842e9091f82948ec451128bb34"
+          }
+        },
+        {
+          "parent_id": "test__pick_moving_target_on_the_table__episode484",
+          "task": "pick_moving_target_on_the_table",
+          "raw_episode_id": "episode484",
+          "variation": 0,
+          "seed": 0,
+          "success": true,
+          "actual_seconds": 2.2,
+          "first_success_time": 2.2,
+          "stop_reason": "original_Native_task_success",
+          "result": {
+            "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/test/test__pick_moving_target_on_the_table__episode484/episode/result.json",
+            "sha256": "8766998ae17604617f088faafc76cb94c8446a43cb9833b2fa262330aca876b1"
+          }
+        },
+        {
+          "parent_id": "test__pick_moving_target_on_the_table__episode581",
+          "task": "pick_moving_target_on_the_table",
+          "raw_episode_id": "episode581",
+          "variation": 0,
+          "seed": 0,
+          "success": true,
+          "actual_seconds": 2.35,
+          "first_success_time": 2.35,
+          "stop_reason": "original_Native_task_success",
+          "result": {
+            "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/test/test__pick_moving_target_on_the_table__episode581/episode/result.json",
+            "sha256": "8a31bd6e9aab43ab39ff0deb34d3ac57399f79bef7b30e32352869460869e45e"
+          }
+        },
+        {
+          "parent_id": "test__pick_moving_target_on_the_table__episode620",
+          "task": "pick_moving_target_on_the_table",
+          "raw_episode_id": "episode620",
+          "variation": 0,
+          "seed": 0,
+          "success": true,
+          "actual_seconds": 2.4000000000000004,
+          "first_success_time": 2.4000000000000004,
+          "stop_reason": "original_Native_task_success",
+          "result": {
+            "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/test/test__pick_moving_target_on_the_table__episode620/episode/result.json",
+            "sha256": "f8eb29b0597c45afd444da6f7f23d02bdea09f5dd2afca3d576261ef962f84ab"
+          }
+        },
+        {
+          "parent_id": "test__pick_moving_target_on_the_table__episode623",
+          "task": "pick_moving_target_on_the_table",
+          "raw_episode_id": "episode623",
+          "variation": 0,
+          "seed": 0,
+          "success": true,
+          "actual_seconds": 6.95,
+          "first_success_time": 6.95,
+          "stop_reason": "original_Native_task_success",
+          "result": {
+            "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/test/test__pick_moving_target_on_the_table__episode623/episode/result.json",
+            "sha256": "47d34602b516e7dd32243401610d1dfd147cceea688254e0328528ef04dcba59"
+          }
+        },
+        {
+          "parent_id": "test__pick_moving_target_on_the_table__episode627",
+          "task": "pick_moving_target_on_the_table",
+          "raw_episode_id": "episode627",
+          "variation": 0,
+          "seed": 0,
+          "success": true,
+          "actual_seconds": 12.4,
+          "first_success_time": 12.4,
+          "stop_reason": "original_Native_task_success",
+          "result": {
+            "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/test/test__pick_moving_target_on_the_table__episode627/episode/result.json",
+            "sha256": "055c27e4e3c9c4399c66b648a40f35243b024090e9740cc4035fe22d9c2e58e5"
+          }
+        },
+        {
+          "parent_id": "test__pick_moving_target_on_the_table__episode646",
+          "task": "pick_moving_target_on_the_table",
+          "raw_episode_id": "episode646",
+          "variation": 0,
+          "seed": 0,
+          "success": true,
+          "actual_seconds": 2.75,
+          "first_success_time": 2.75,
+          "stop_reason": "original_Native_task_success",
+          "result": {
+            "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/test/test__pick_moving_target_on_the_table__episode646/episode/result.json",
+            "sha256": "54772048eaceaccccac50920d5194b83120df43a5bc5d052347074feaaf4c269"
+          }
+        },
+        {
+          "parent_id": "test__pick_moving_target_on_the_table__episode662",
+          "task": "pick_moving_target_on_the_table",
+          "raw_episode_id": "episode662",
+          "variation": 0,
+          "seed": 0,
+          "success": true,
+          "actual_seconds": 2.25,
+          "first_success_time": 2.25,
+          "stop_reason": "original_Native_task_success",
+          "result": {
+            "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/test/test__pick_moving_target_on_the_table__episode662/episode/result.json",
+            "sha256": "107d23f5f4f91ff850abb039dd300f62d3d0d4ff6b9764c15a7ab3e6baa646dd"
+          }
+        },
+        {
+          "parent_id": "test__pick_moving_target_on_the_table__episode664",
+          "task": "pick_moving_target_on_the_table",
+          "raw_episode_id": "episode664",
+          "variation": 0,
+          "seed": 0,
+          "success": true,
+          "actual_seconds": 2.85,
+          "first_success_time": 2.85,
+          "stop_reason": "original_Native_task_success",
+          "result": {
+            "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/test/test__pick_moving_target_on_the_table__episode664/episode/result.json",
+            "sha256": "a86c68daf2619b7d8681fbbcbbe185df71aa09ab25d1515fe381a67f8de3a3bc"
+          }
+        },
+        {
+          "parent_id": "test__pick_moving_target_on_the_table__episode669",
+          "task": "pick_moving_target_on_the_table",
+          "raw_episode_id": "episode669",
+          "variation": 0,
+          "seed": 0,
+          "success": true,
+          "actual_seconds": 3.75,
+          "first_success_time": 3.75,
+          "stop_reason": "original_Native_task_success",
+          "result": {
+            "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/test/test__pick_moving_target_on_the_table__episode669/episode/result.json",
+            "sha256": "e1daf5eb0091ee4ebd4a26defc4f9afebc6123b0c10d79fe4a59d01cfba82946"
+          }
+        },
+        {
+          "parent_id": "test__pick_moving_target_on_the_table__episode684",
+          "task": "pick_moving_target_on_the_table",
+          "raw_episode_id": "episode684",
+          "variation": 0,
+          "seed": 0,
+          "success": true,
+          "actual_seconds": 2.45,
+          "first_success_time": 2.45,
+          "stop_reason": "original_Native_task_success",
+          "result": {
+            "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/test/test__pick_moving_target_on_the_table__episode684/episode/result.json",
+            "sha256": "9f5ce3812ee5be8c9a525daf387a7c8b8515bae4ccf7eaebfa2422d6aa8f5002"
+          }
+        },
+        {
+          "parent_id": "test__pick_moving_target_on_the_table__episode109",
+          "task": "pick_moving_target_on_the_table",
+          "raw_episode_id": "episode109",
+          "variation": 1,
+          "seed": 0,
+          "success": true,
+          "actual_seconds": 4.1000000000000005,
+          "first_success_time": 4.1000000000000005,
+          "stop_reason": "original_Native_task_success",
+          "result": {
+            "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/test/test__pick_moving_target_on_the_table__episode109/episode/result.json",
+            "sha256": "5ff44cab56c970b725630e4ece3f1a2ac6dc9e5cda192d427648bc0a6f5f9f77"
+          }
+        },
+        {
+          "parent_id": "test__pick_moving_target_on_the_table__episode115",
+          "task": "pick_moving_target_on_the_table",
+          "raw_episode_id": "episode115",
+          "variation": 1,
+          "seed": 0,
+          "success": true,
+          "actual_seconds": 3.0500000000000003,
+          "first_success_time": 3.0500000000000003,
+          "stop_reason": "original_Native_task_success",
+          "result": {
+            "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/test/test__pick_moving_target_on_the_table__episode115/episode/result.json",
+            "sha256": "8a44f4e48ac67ff3594231752180ec2753d70a0ce6348d0a65171496640e6f84"
+          }
+        },
+        {
+          "parent_id": "test__pick_moving_target_on_the_table__episode191",
+          "task": "pick_moving_target_on_the_table",
+          "raw_episode_id": "episode191",
+          "variation": 1,
+          "seed": 0,
+          "success": true,
+          "actual_seconds": 3.3000000000000003,
+          "first_success_time": 3.3000000000000003,
+          "stop_reason": "original_Native_task_success",
+          "result": {
+            "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/test/test__pick_moving_target_on_the_table__episode191/episode/result.json",
+            "sha256": "165bec89869e811e574db03158be4d0091f0d675e669721473f719d64330ec6a"
+          }
+        },
+        {
+          "parent_id": "test__pick_moving_target_on_the_table__episode216",
+          "task": "pick_moving_target_on_the_table",
+          "raw_episode_id": "episode216",
+          "variation": 1,
+          "seed": 0,
+          "success": true,
+          "actual_seconds": 2.15,
+          "first_success_time": 2.15,
+          "stop_reason": "original_Native_task_success",
+          "result": {
+            "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/test/test__pick_moving_target_on_the_table__episode216/episode/result.json",
+            "sha256": "849727e164867e59944e3d4bd536790bdc37f3db8c53074540b7fbf287c391a6"
+          }
+        },
+        {
+          "parent_id": "test__pick_moving_target_on_the_table__episode312",
+          "task": "pick_moving_target_on_the_table",
+          "raw_episode_id": "episode312",
+          "variation": 1,
+          "seed": 0,
+          "success": true,
+          "actual_seconds": 2.3000000000000003,
+          "first_success_time": 2.3000000000000003,
+          "stop_reason": "original_Native_task_success",
+          "result": {
+            "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/test/test__pick_moving_target_on_the_table__episode312/episode/result.json",
+            "sha256": "da7840bec9d3b082d2fd61edb7b68ae0666ba032a19ecceb1e3c186c0a5b82ac"
+          }
+        },
+        {
+          "parent_id": "test__pick_moving_target_on_the_table__episode393",
+          "task": "pick_moving_target_on_the_table",
+          "raw_episode_id": "episode393",
+          "variation": 1,
+          "seed": 0,
+          "success": true,
+          "actual_seconds": 3.5500000000000003,
+          "first_success_time": 3.5500000000000003,
+          "stop_reason": "original_Native_task_success",
+          "result": {
+            "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/test/test__pick_moving_target_on_the_table__episode393/episode/result.json",
+            "sha256": "b407ced8160e656bffeb8fb538960a1240d7bcf9309b173917c38d08b514a2a2"
+          }
+        },
+        {
+          "parent_id": "test__pick_moving_target_on_the_table__episode394",
+          "task": "pick_moving_target_on_the_table",
+          "raw_episode_id": "episode394",
+          "variation": 1,
+          "seed": 0,
+          "success": true,
+          "actual_seconds": 2.35,
+          "first_success_time": 2.35,
+          "stop_reason": "original_Native_task_success",
+          "result": {
+            "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/test/test__pick_moving_target_on_the_table__episode394/episode/result.json",
+            "sha256": "e8d43f44dc948739ae1e51ace599edfd3b499d3dd8382d4c0cf8eef731717c91"
+          }
+        },
+        {
+          "parent_id": "test__pick_moving_target_on_the_table__episode476",
+          "task": "pick_moving_target_on_the_table",
+          "raw_episode_id": "episode476",
+          "variation": 1,
+          "seed": 0,
+          "success": true,
+          "actual_seconds": 2.75,
+          "first_success_time": 2.75,
+          "stop_reason": "original_Native_task_success",
+          "result": {
+            "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/test/test__pick_moving_target_on_the_table__episode476/episode/result.json",
+            "sha256": "9aed4b00cf1c810b14803679b0803fd46bf82b3758cd97b7e187ae678213e80b"
+          }
+        },
+        {
+          "parent_id": "test__pick_moving_target_on_the_table__episode493",
+          "task": "pick_moving_target_on_the_table",
+          "raw_episode_id": "episode493",
+          "variation": 1,
+          "seed": 0,
+          "success": true,
+          "actual_seconds": 2.5500000000000003,
+          "first_success_time": 2.5500000000000003,
+          "stop_reason": "original_Native_task_success",
+          "result": {
+            "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/test/test__pick_moving_target_on_the_table__episode493/episode/result.json",
+            "sha256": "6cf5cded370755e64e3b3bc4dc495a578a43ab8c8dcac8dff9a6359ab862c86b"
+          }
+        },
+        {
+          "parent_id": "test__pick_moving_target_on_the_table__episode517",
+          "task": "pick_moving_target_on_the_table",
+          "raw_episode_id": "episode517",
+          "variation": 1,
+          "seed": 0,
+          "success": true,
+          "actual_seconds": 2.9000000000000004,
+          "first_success_time": 2.9000000000000004,
+          "stop_reason": "original_Native_task_success",
+          "result": {
+            "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/test/test__pick_moving_target_on_the_table__episode517/episode/result.json",
+            "sha256": "f8370508f355fc7363e48176b693276b46633e95dc98dde33c6429389fe2f273"
+          }
+        },
+        {
+          "parent_id": "test__pick_moving_target_on_the_table__episode544",
+          "task": "pick_moving_target_on_the_table",
+          "raw_episode_id": "episode544",
+          "variation": 1,
+          "seed": 0,
+          "success": true,
+          "actual_seconds": 2.35,
+          "first_success_time": 2.35,
+          "stop_reason": "original_Native_task_success",
+          "result": {
+            "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/test/test__pick_moving_target_on_the_table__episode544/episode/result.json",
+            "sha256": "60ba92cb2b9b33f5ec29880b125676c926885757877b5f483f7fa794872ad7e9"
+          }
+        },
+        {
+          "parent_id": "test__pick_moving_target_on_the_table__episode558",
+          "task": "pick_moving_target_on_the_table",
+          "raw_episode_id": "episode558",
+          "variation": 1,
+          "seed": 0,
+          "success": true,
+          "actual_seconds": 2.9000000000000004,
+          "first_success_time": 2.9000000000000004,
+          "stop_reason": "original_Native_task_success",
+          "result": {
+            "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/test/test__pick_moving_target_on_the_table__episode558/episode/result.json",
+            "sha256": "2c530408ab06cf0fc3d5d4aaa9e49fe443721dff073194f7adbbf6a4999fe6a3"
+          }
+        },
+        {
+          "parent_id": "test__pick_moving_target_on_the_table__episode572",
+          "task": "pick_moving_target_on_the_table",
+          "raw_episode_id": "episode572",
+          "variation": 1,
+          "seed": 0,
+          "success": true,
+          "actual_seconds": 2.8000000000000003,
+          "first_success_time": 2.8000000000000003,
+          "stop_reason": "original_Native_task_success",
+          "result": {
+            "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/test/test__pick_moving_target_on_the_table__episode572/episode/result.json",
+            "sha256": "e8bae27a954a43d08470cc5bac60cba077de1bd3d25bdbda6a08cfa1031cbdd7"
+          }
+        },
+        {
+          "parent_id": "test__pick_moving_target_on_the_table__episode576",
+          "task": "pick_moving_target_on_the_table",
+          "raw_episode_id": "episode576",
+          "variation": 1,
+          "seed": 0,
+          "success": true,
+          "actual_seconds": 2.1,
+          "first_success_time": 2.1,
+          "stop_reason": "original_Native_task_success",
+          "result": {
+            "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/test/test__pick_moving_target_on_the_table__episode576/episode/result.json",
+            "sha256": "58cee1fa49a6803b42b0dba950ce655d11b2472918261a5203b6764c23072dd3"
+          }
+        },
+        {
+          "parent_id": "test__pick_moving_target_on_the_table__episode577",
+          "task": "pick_moving_target_on_the_table",
+          "raw_episode_id": "episode577",
+          "variation": 1,
+          "seed": 0,
+          "success": true,
+          "actual_seconds": 2.35,
+          "first_success_time": 2.35,
+          "stop_reason": "original_Native_task_success",
+          "result": {
+            "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/test/test__pick_moving_target_on_the_table__episode577/episode/result.json",
+            "sha256": "fb24655d65aefed2afe2cdbee52aa84a924a1353f86c51438fa4b5772c5a61c4"
+          }
+        },
+        {
+          "parent_id": "test__pick_moving_target_on_the_table__episode618",
+          "task": "pick_moving_target_on_the_table",
+          "raw_episode_id": "episode618",
+          "variation": 1,
+          "seed": 0,
+          "success": true,
+          "actual_seconds": 2.4000000000000004,
+          "first_success_time": 2.4000000000000004,
+          "stop_reason": "original_Native_task_success",
+          "result": {
+            "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/test/test__pick_moving_target_on_the_table__episode618/episode/result.json",
+            "sha256": "01d57015eea5bb25d7f9fb38b6aaf3cd94921f435eb35e5ce78fc008cdab0500"
+          }
+        },
+        {
+          "parent_id": "test__pick_moving_target_on_the_table__episode621",
+          "task": "pick_moving_target_on_the_table",
+          "raw_episode_id": "episode621",
+          "variation": 1,
+          "seed": 0,
+          "success": true,
+          "actual_seconds": 3.1,
+          "first_success_time": 3.1,
+          "stop_reason": "original_Native_task_success",
+          "result": {
+            "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/test/test__pick_moving_target_on_the_table__episode621/episode/result.json",
+            "sha256": "0be029cb9112951142e6f245dc7fb1749f014e36e6dc8db7004e40672235fe30"
+          }
+        },
+        {
+          "parent_id": "test__pick_moving_target_on_the_table__episode636",
+          "task": "pick_moving_target_on_the_table",
+          "raw_episode_id": "episode636",
+          "variation": 1,
+          "seed": 0,
+          "success": true,
+          "actual_seconds": 2.15,
+          "first_success_time": 2.15,
+          "stop_reason": "original_Native_task_success",
+          "result": {
+            "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/test/test__pick_moving_target_on_the_table__episode636/episode/result.json",
+            "sha256": "ba585eac516fc5d7c45003e24f71cbff8fd5590e553f3c687ca4102696b7fcda"
+          }
+        },
+        {
+          "parent_id": "test__pick_moving_target_on_the_table__episode658",
+          "task": "pick_moving_target_on_the_table",
+          "raw_episode_id": "episode658",
+          "variation": 1,
+          "seed": 0,
+          "success": true,
+          "actual_seconds": 2.6500000000000004,
+          "first_success_time": 2.6500000000000004,
+          "stop_reason": "original_Native_task_success",
+          "result": {
+            "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/test/test__pick_moving_target_on_the_table__episode658/episode/result.json",
+            "sha256": "9c16d5debc59915b3fa9bfec29b061e7904357459dab6fd6e1d4bc99b7a5e787"
+          }
+        },
+        {
+          "parent_id": "test__pick_moving_target_on_the_table__episode700",
+          "task": "pick_moving_target_on_the_table",
+          "raw_episode_id": "episode700",
+          "variation": 1,
+          "seed": 0,
+          "success": true,
+          "actual_seconds": 2.4000000000000004,
+          "first_success_time": 2.4000000000000004,
+          "stop_reason": "original_Native_task_success",
+          "result": {
+            "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/test/test__pick_moving_target_on_the_table__episode700/episode/result.json",
+            "sha256": "86a5178337d15210ae5b2d61133d8255df2ce480f833b02ef4de2027709cb181"
+          }
+        },
+        {
+          "parent_id": "test__pick_moving_target_on_the_table_high_speed__episode0",
+          "task": "pick_moving_target_on_the_table_high_speed",
+          "raw_episode_id": "episode0",
+          "variation": 0,
+          "seed": 0,
+          "success": true,
+          "actual_seconds": 10.200000000000001,
+          "first_success_time": 10.200000000000001,
+          "stop_reason": "original_Native_task_success",
+          "result": {
+            "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/test/test__pick_moving_target_on_the_table_high_speed__episode0/episode/result.json",
+            "sha256": "cb9ffa37ef67df00e0a6c6bb9ec3b257852eb449dfaa9d4c43acfebd735d0e5a"
+          }
+        },
+        {
+          "parent_id": "test__pick_moving_target_on_the_table_high_speed__episode1",
+          "task": "pick_moving_target_on_the_table_high_speed",
+          "raw_episode_id": "episode1",
+          "variation": 0,
+          "seed": 0,
+          "success": true,
+          "actual_seconds": 3.35,
+          "first_success_time": 3.35,
+          "stop_reason": "original_Native_task_success",
+          "result": {
+            "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/test/test__pick_moving_target_on_the_table_high_speed__episode1/episode/result.json",
+            "sha256": "5040d0d8477a770138788ba1531996ad2720b2e5fa0d3071cb6287da94a58005"
+          }
+        },
+        {
+          "parent_id": "test__pick_moving_target_on_the_table_high_speed__episode2",
+          "task": "pick_moving_target_on_the_table_high_speed",
+          "raw_episode_id": "episode2",
+          "variation": 0,
+          "seed": 0,
+          "success": false,
+          "actual_seconds": 60.0,
+          "first_success_time": null,
+          "stop_reason": "budget_exhausted",
+          "result": {
+            "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/test/test__pick_moving_target_on_the_table_high_speed__episode2/episode/result.json",
+            "sha256": "1a64155150e11b0771ee2024e15470e8af99a9a7e5d6fb45c7fdea858f90ebf7"
+          }
+        },
+        {
+          "parent_id": "test__pick_moving_target_on_the_table_high_speed__episode3",
+          "task": "pick_moving_target_on_the_table_high_speed",
+          "raw_episode_id": "episode3",
+          "variation": 0,
+          "seed": 0,
+          "success": false,
+          "actual_seconds": 60.0,
+          "first_success_time": null,
+          "stop_reason": "budget_exhausted",
+          "result": {
+            "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/test/test__pick_moving_target_on_the_table_high_speed__episode3/episode/result.json",
+            "sha256": "d2209b9c88b8c049d8791e1d5efc7aa55cda871b7978633a1310a2e5901226b5"
+          }
+        },
+        {
+          "parent_id": "test__pick_moving_target_on_the_table_high_speed__episode4",
+          "task": "pick_moving_target_on_the_table_high_speed",
+          "raw_episode_id": "episode4",
+          "variation": 0,
+          "seed": 0,
+          "success": true,
+          "actual_seconds": 10.9,
+          "first_success_time": 10.9,
+          "stop_reason": "original_Native_task_success",
+          "result": {
+            "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/test/test__pick_moving_target_on_the_table_high_speed__episode4/episode/result.json",
+            "sha256": "939d73318cb000577fa1cff5f7c2d748a56398f50bd9eece11f18d459dc69a6e"
+          }
+        },
+        {
+          "parent_id": "test__pick_moving_target_on_the_table_high_speed__episode5",
+          "task": "pick_moving_target_on_the_table_high_speed",
+          "raw_episode_id": "episode5",
+          "variation": 0,
+          "seed": 0,
+          "success": false,
+          "actual_seconds": 60.0,
+          "first_success_time": null,
+          "stop_reason": "budget_exhausted",
+          "result": {
+            "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/test/test__pick_moving_target_on_the_table_high_speed__episode5/episode/result.json",
+            "sha256": "999d13088b42f6f4cff5a136751e29a8dff241d873c67421d441556b5bd03c5c"
+          }
+        },
+        {
+          "parent_id": "test__pick_moving_target_on_the_table_high_speed__episode6",
+          "task": "pick_moving_target_on_the_table_high_speed",
+          "raw_episode_id": "episode6",
+          "variation": 0,
+          "seed": 0,
+          "success": false,
+          "actual_seconds": 60.0,
+          "first_success_time": null,
+          "stop_reason": "budget_exhausted",
+          "result": {
+            "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/test/test__pick_moving_target_on_the_table_high_speed__episode6/episode/result.json",
+            "sha256": "b1332f092589155f1bbd91671f3abd03c070f2bfdfacad697d0097039f25d564"
+          }
+        },
+        {
+          "parent_id": "test__pick_moving_target_on_the_table_high_speed__episode7",
+          "task": "pick_moving_target_on_the_table_high_speed",
+          "raw_episode_id": "episode7",
+          "variation": 0,
+          "seed": 0,
+          "success": true,
+          "actual_seconds": 4.95,
+          "first_success_time": 4.95,
+          "stop_reason": "original_Native_task_success",
+          "result": {
+            "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/test/test__pick_moving_target_on_the_table_high_speed__episode7/episode/result.json",
+            "sha256": "45af4297c0ddf44027bafb8561f9a98adb53ebcc43e8db2f5199bf8c5ad3ea8d"
+          }
+        },
+        {
+          "parent_id": "test__pick_moving_target_on_the_table_high_speed__episode8",
+          "task": "pick_moving_target_on_the_table_high_speed",
+          "raw_episode_id": "episode8",
+          "variation": 0,
+          "seed": 0,
+          "success": false,
+          "actual_seconds": 60.0,
+          "first_success_time": null,
+          "stop_reason": "budget_exhausted",
+          "result": {
+            "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/test/test__pick_moving_target_on_the_table_high_speed__episode8/episode/result.json",
+            "sha256": "0a3aec487fd0aee6d39a12a9b0fa6301b30736fd5f659e1cb36b6e627cee5604"
+          }
+        },
+        {
+          "parent_id": "test__pick_moving_target_on_the_table_high_speed__episode9",
+          "task": "pick_moving_target_on_the_table_high_speed",
+          "raw_episode_id": "episode9",
+          "variation": 0,
+          "seed": 0,
+          "success": true,
+          "actual_seconds": 2.5500000000000003,
+          "first_success_time": 2.5500000000000003,
+          "stop_reason": "original_Native_task_success",
+          "result": {
+            "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/test/test__pick_moving_target_on_the_table_high_speed__episode9/episode/result.json",
+            "sha256": "5a5d35a2585607f5bf55d4dd623f2c160b68606a20ab044585714200dd4ddb58"
+          }
+        },
+        {
+          "parent_id": "test__pick_moving_target_on_the_table_high_speed__episode10",
+          "task": "pick_moving_target_on_the_table_high_speed",
+          "raw_episode_id": "episode10",
+          "variation": 0,
+          "seed": 0,
+          "success": false,
+          "actual_seconds": 60.0,
+          "first_success_time": null,
+          "stop_reason": "budget_exhausted",
+          "result": {
+            "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/test/test__pick_moving_target_on_the_table_high_speed__episode10/episode/result.json",
+            "sha256": "a42522f365a5e4abf37ba3c49412e9b330eacc7097b67a8839c0e0188e10e82d"
+          }
+        },
+        {
+          "parent_id": "test__pick_moving_target_on_the_table_high_speed__episode11",
+          "task": "pick_moving_target_on_the_table_high_speed",
+          "raw_episode_id": "episode11",
+          "variation": 0,
+          "seed": 0,
+          "success": true,
+          "actual_seconds": 4.3,
+          "first_success_time": 4.3,
+          "stop_reason": "original_Native_task_success",
+          "result": {
+            "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/test/test__pick_moving_target_on_the_table_high_speed__episode11/episode/result.json",
+            "sha256": "6129360cd5a7a975e62e313cfe52ebeccd83ed971c275290b64f4f27a338256a"
+          }
+        },
+        {
+          "parent_id": "test__pick_moving_target_on_the_table_high_speed__episode12",
+          "task": "pick_moving_target_on_the_table_high_speed",
+          "raw_episode_id": "episode12",
+          "variation": 0,
+          "seed": 0,
+          "success": true,
+          "actual_seconds": 21.1,
+          "first_success_time": 21.1,
+          "stop_reason": "original_Native_task_success",
+          "result": {
+            "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/test/test__pick_moving_target_on_the_table_high_speed__episode12/episode/result.json",
+            "sha256": "70f985e58214c14f144cc930b30dd2843b19855a8e2b941fce0c92fe3ad2dcdd"
+          }
+        },
+        {
+          "parent_id": "test__pick_moving_target_on_the_table_high_speed__episode13",
+          "task": "pick_moving_target_on_the_table_high_speed",
+          "raw_episode_id": "episode13",
+          "variation": 0,
+          "seed": 0,
+          "success": false,
+          "actual_seconds": 60.0,
+          "first_success_time": null,
+          "stop_reason": "budget_exhausted",
+          "result": {
+            "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/test/test__pick_moving_target_on_the_table_high_speed__episode13/episode/result.json",
+            "sha256": "d3f476cf361851cdff8fdbe13fbe7d4b37fef811448bcc1640b88e440ab9337f"
+          }
+        },
+        {
+          "parent_id": "test__pick_moving_target_on_the_table_high_speed__episode14",
+          "task": "pick_moving_target_on_the_table_high_speed",
+          "raw_episode_id": "episode14",
+          "variation": 0,
+          "seed": 0,
+          "success": true,
+          "actual_seconds": 5.550000000000001,
+          "first_success_time": 5.550000000000001,
+          "stop_reason": "original_Native_task_success",
+          "result": {
+            "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/test/test__pick_moving_target_on_the_table_high_speed__episode14/episode/result.json",
+            "sha256": "6e470ec507b68aef78f12e5a1393d91ca045cccc77d4a4ca5f2a8924f2bc6e04"
+          }
+        },
+        {
+          "parent_id": "test__pick_moving_target_on_the_table_high_speed__episode15",
+          "task": "pick_moving_target_on_the_table_high_speed",
+          "raw_episode_id": "episode15",
+          "variation": 0,
+          "seed": 0,
+          "success": false,
+          "actual_seconds": 60.0,
+          "first_success_time": null,
+          "stop_reason": "budget_exhausted",
+          "result": {
+            "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/test/test__pick_moving_target_on_the_table_high_speed__episode15/episode/result.json",
+            "sha256": "7a83af9edaf51aeba03c683de89871c9a7bc200b038b5649bcd97de76823c599"
+          }
+        },
+        {
+          "parent_id": "test__pick_moving_target_on_the_table_high_speed__episode16",
+          "task": "pick_moving_target_on_the_table_high_speed",
+          "raw_episode_id": "episode16",
+          "variation": 0,
+          "seed": 0,
+          "success": false,
+          "actual_seconds": 2.15,
+          "first_success_time": null,
+          "stop_reason": "no_collision_qualified_stopping_action",
+          "result": {
+            "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/test/test__pick_moving_target_on_the_table_high_speed__episode16/episode/result.json",
+            "sha256": "a10363f00471fab36141802f0a586fb342c5ebc3cee65e7ebb79b500b6653ec6"
+          }
+        },
+        {
+          "parent_id": "test__pick_moving_target_on_the_table_high_speed__episode17",
+          "task": "pick_moving_target_on_the_table_high_speed",
+          "raw_episode_id": "episode17",
+          "variation": 0,
+          "seed": 0,
+          "success": true,
+          "actual_seconds": 2.5,
+          "first_success_time": 2.5,
+          "stop_reason": "original_Native_task_success",
+          "result": {
+            "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/test/test__pick_moving_target_on_the_table_high_speed__episode17/episode/result.json",
+            "sha256": "983d4893a8deba8c4bacb11fa76496b17255b82e663c16c50b345772e63205c5"
+          }
+        },
+        {
+          "parent_id": "test__pick_moving_target_on_the_table_high_speed__episode18",
+          "task": "pick_moving_target_on_the_table_high_speed",
+          "raw_episode_id": "episode18",
+          "variation": 0,
+          "seed": 0,
+          "success": true,
+          "actual_seconds": 2.35,
+          "first_success_time": 2.35,
+          "stop_reason": "original_Native_task_success",
+          "result": {
+            "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/test/test__pick_moving_target_on_the_table_high_speed__episode18/episode/result.json",
+            "sha256": "2c89ad7982c991c1f33fea59678b7a25c336e96ba5a3483a199412971013711a"
+          }
+        },
+        {
+          "parent_id": "test__pick_moving_target_on_the_table_high_speed__episode19",
+          "task": "pick_moving_target_on_the_table_high_speed",
+          "raw_episode_id": "episode19",
+          "variation": 0,
+          "seed": 0,
+          "success": true,
+          "actual_seconds": 3.7,
+          "first_success_time": 3.7,
+          "stop_reason": "original_Native_task_success",
+          "result": {
+            "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/test/test__pick_moving_target_on_the_table_high_speed__episode19/episode/result.json",
+            "sha256": "cbf0f7a53cebed13841b224f17a38dcd2168ecc6be05d1c48d389a77fae55d9d"
+          }
+        },
+        {
+          "parent_id": "test__pick_moving_target_on_the_table_high_speed__episode20",
+          "task": "pick_moving_target_on_the_table_high_speed",
+          "raw_episode_id": "episode20",
+          "variation": 1,
+          "seed": 0,
+          "success": true,
+          "actual_seconds": 2.4000000000000004,
+          "first_success_time": 2.4000000000000004,
+          "stop_reason": "original_Native_task_success",
+          "result": {
+            "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/test/test__pick_moving_target_on_the_table_high_speed__episode20/episode/result.json",
+            "sha256": "efb28a76d7d44d9169985b13c7d890cfd07c0351ecbe0c92be92ff489eb2c382"
+          }
+        },
+        {
+          "parent_id": "test__pick_moving_target_on_the_table_high_speed__episode21",
+          "task": "pick_moving_target_on_the_table_high_speed",
+          "raw_episode_id": "episode21",
+          "variation": 1,
+          "seed": 0,
+          "success": true,
+          "actual_seconds": 2.95,
+          "first_success_time": 2.95,
+          "stop_reason": "original_Native_task_success",
+          "result": {
+            "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/test/test__pick_moving_target_on_the_table_high_speed__episode21/episode/result.json",
+            "sha256": "1950b2ce8db3f0b2888f2a90bed65f40f77dc6445e13ed5d52ad212402393042"
+          }
+        },
+        {
+          "parent_id": "test__pick_moving_target_on_the_table_high_speed__episode22",
+          "task": "pick_moving_target_on_the_table_high_speed",
+          "raw_episode_id": "episode22",
+          "variation": 1,
+          "seed": 0,
+          "success": true,
+          "actual_seconds": 28.05,
+          "first_success_time": 28.05,
+          "stop_reason": "original_Native_task_success",
+          "result": {
+            "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/test/test__pick_moving_target_on_the_table_high_speed__episode22/episode/result.json",
+            "sha256": "407887010572ab87a7500ca85ed25cc91f59131ea87829ce171a270ac8579587"
+          }
+        },
+        {
+          "parent_id": "test__pick_moving_target_on_the_table_high_speed__episode23",
+          "task": "pick_moving_target_on_the_table_high_speed",
+          "raw_episode_id": "episode23",
+          "variation": 1,
+          "seed": 0,
+          "success": true,
+          "actual_seconds": 8.1,
+          "first_success_time": 8.1,
+          "stop_reason": "original_Native_task_success",
+          "result": {
+            "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/test/test__pick_moving_target_on_the_table_high_speed__episode23/episode/result.json",
+            "sha256": "9db4e8952358460e0b57ca1e35823deedd0c11f12c32e0695e3bfb661ba357d4"
+          }
+        },
+        {
+          "parent_id": "test__pick_moving_target_on_the_table_high_speed__episode24",
+          "task": "pick_moving_target_on_the_table_high_speed",
+          "raw_episode_id": "episode24",
+          "variation": 1,
+          "seed": 0,
+          "success": false,
+          "actual_seconds": 60.0,
+          "first_success_time": null,
+          "stop_reason": "budget_exhausted",
+          "result": {
+            "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/test/test__pick_moving_target_on_the_table_high_speed__episode24/episode/result.json",
+            "sha256": "276bf9feabeb422ec3b9d1dd927541dbfca8c2537967317e71a72764c1413322"
+          }
+        },
+        {
+          "parent_id": "test__pick_moving_target_on_the_table_high_speed__episode25",
+          "task": "pick_moving_target_on_the_table_high_speed",
+          "raw_episode_id": "episode25",
+          "variation": 1,
+          "seed": 0,
+          "success": true,
+          "actual_seconds": 2.3000000000000003,
+          "first_success_time": 2.3000000000000003,
+          "stop_reason": "original_Native_task_success",
+          "result": {
+            "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/test/test__pick_moving_target_on_the_table_high_speed__episode25/episode/result.json",
+            "sha256": "2f087668328cae7245f6145eebde3486808b4f75d2ad174a4f0ec7b22db4c780"
+          }
+        },
+        {
+          "parent_id": "test__pick_moving_target_on_the_table_high_speed__episode26",
+          "task": "pick_moving_target_on_the_table_high_speed",
+          "raw_episode_id": "episode26",
+          "variation": 1,
+          "seed": 0,
+          "success": true,
+          "actual_seconds": 6.95,
+          "first_success_time": 6.95,
+          "stop_reason": "original_Native_task_success",
+          "result": {
+            "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/test/test__pick_moving_target_on_the_table_high_speed__episode26/episode/result.json",
+            "sha256": "b896130bf205534a193d1d2b6856e75abcbcc78614c26abff89f464aa9453131"
+          }
+        },
+        {
+          "parent_id": "test__pick_moving_target_on_the_table_high_speed__episode27",
+          "task": "pick_moving_target_on_the_table_high_speed",
+          "raw_episode_id": "episode27",
+          "variation": 1,
+          "seed": 0,
+          "success": true,
+          "actual_seconds": 2.6500000000000004,
+          "first_success_time": 2.6500000000000004,
+          "stop_reason": "original_Native_task_success",
+          "result": {
+            "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/test/test__pick_moving_target_on_the_table_high_speed__episode27/episode/result.json",
+            "sha256": "f71fe7289ae4d6a45f6a5c40116e57794d3e27d74178b7d6de100d3e39637908"
+          }
+        },
+        {
+          "parent_id": "test__pick_moving_target_on_the_table_high_speed__episode28",
+          "task": "pick_moving_target_on_the_table_high_speed",
+          "raw_episode_id": "episode28",
+          "variation": 1,
+          "seed": 0,
+          "success": false,
+          "actual_seconds": 60.0,
+          "first_success_time": null,
+          "stop_reason": "budget_exhausted",
+          "result": {
+            "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/test/test__pick_moving_target_on_the_table_high_speed__episode28/episode/result.json",
+            "sha256": "1259710ff5786eb2c4b5294aed016d9eccb29bffbbb00c66c70af887158e06b8"
+          }
+        },
+        {
+          "parent_id": "test__pick_moving_target_on_the_table_high_speed__episode29",
+          "task": "pick_moving_target_on_the_table_high_speed",
+          "raw_episode_id": "episode29",
+          "variation": 1,
+          "seed": 0,
+          "success": true,
+          "actual_seconds": 2.95,
+          "first_success_time": 2.95,
+          "stop_reason": "original_Native_task_success",
+          "result": {
+            "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/test/test__pick_moving_target_on_the_table_high_speed__episode29/episode/result.json",
+            "sha256": "cac6bd8225b8ec2852f332023a04decdac5d4d40b4f3fb1c3a2e1767ea799edc"
+          }
+        },
+        {
+          "parent_id": "test__pick_moving_target_on_the_table_high_speed__episode30",
+          "task": "pick_moving_target_on_the_table_high_speed",
+          "raw_episode_id": "episode30",
+          "variation": 1,
+          "seed": 0,
+          "success": true,
+          "actual_seconds": 2.85,
+          "first_success_time": 2.85,
+          "stop_reason": "original_Native_task_success",
+          "result": {
+            "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/test/test__pick_moving_target_on_the_table_high_speed__episode30/episode/result.json",
+            "sha256": "f6b895436d0e59505a5ceb9719c60e6a7190a1f7b1a859914baa89923565c7be"
+          }
+        },
+        {
+          "parent_id": "test__pick_moving_target_on_the_table_high_speed__episode31",
+          "task": "pick_moving_target_on_the_table_high_speed",
+          "raw_episode_id": "episode31",
+          "variation": 1,
+          "seed": 0,
+          "success": true,
+          "actual_seconds": 2.9000000000000004,
+          "first_success_time": 2.9000000000000004,
+          "stop_reason": "original_Native_task_success",
+          "result": {
+            "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/test/test__pick_moving_target_on_the_table_high_speed__episode31/episode/result.json",
+            "sha256": "a9f52e0bd2a9b8e328568e7d282ec5f0a9ebdcf71493326aa3d1f5d5e8d54f3b"
+          }
+        },
+        {
+          "parent_id": "test__pick_moving_target_on_the_table_high_speed__episode32",
+          "task": "pick_moving_target_on_the_table_high_speed",
+          "raw_episode_id": "episode32",
+          "variation": 1,
+          "seed": 0,
+          "success": true,
+          "actual_seconds": 5.4,
+          "first_success_time": 5.4,
+          "stop_reason": "original_Native_task_success",
+          "result": {
+            "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/test/test__pick_moving_target_on_the_table_high_speed__episode32/episode/result.json",
+            "sha256": "9ae58eedf2a60e4e6ffd29cd3d7d214442f494cf7fe500c01f600e23bb41bfd2"
+          }
+        },
+        {
+          "parent_id": "test__pick_moving_target_on_the_table_high_speed__episode33",
+          "task": "pick_moving_target_on_the_table_high_speed",
+          "raw_episode_id": "episode33",
+          "variation": 1,
+          "seed": 0,
+          "success": true,
+          "actual_seconds": 10.700000000000001,
+          "first_success_time": 10.700000000000001,
+          "stop_reason": "original_Native_task_success",
+          "result": {
+            "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/test/test__pick_moving_target_on_the_table_high_speed__episode33/episode/result.json",
+            "sha256": "098a49ce891a53600dc1f6f28d52626ff273ea9802b4746573a020a1905ac37c"
+          }
+        },
+        {
+          "parent_id": "test__pick_moving_target_on_the_table_high_speed__episode34",
+          "task": "pick_moving_target_on_the_table_high_speed",
+          "raw_episode_id": "episode34",
+          "variation": 1,
+          "seed": 0,
+          "success": true,
+          "actual_seconds": 4.5,
+          "first_success_time": 4.5,
+          "stop_reason": "original_Native_task_success",
+          "result": {
+            "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/test/test__pick_moving_target_on_the_table_high_speed__episode34/episode/result.json",
+            "sha256": "7ad6baa2056b077277f5e2c8c3eaa44bb17e850c1543bef0bfaf82e03c98451a"
+          }
+        },
+        {
+          "parent_id": "test__pick_moving_target_on_the_table_high_speed__episode35",
+          "task": "pick_moving_target_on_the_table_high_speed",
+          "raw_episode_id": "episode35",
+          "variation": 1,
+          "seed": 0,
+          "success": true,
+          "actual_seconds": 2.85,
+          "first_success_time": 2.85,
+          "stop_reason": "original_Native_task_success",
+          "result": {
+            "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/test/test__pick_moving_target_on_the_table_high_speed__episode35/episode/result.json",
+            "sha256": "b641d566799f8d88595bb128a7937c9c51f2e97f6611213b34937971dc85b119"
+          }
+        },
+        {
+          "parent_id": "test__pick_moving_target_on_the_table_high_speed__episode36",
+          "task": "pick_moving_target_on_the_table_high_speed",
+          "raw_episode_id": "episode36",
+          "variation": 1,
+          "seed": 0,
+          "success": true,
+          "actual_seconds": 3.2,
+          "first_success_time": 3.2,
+          "stop_reason": "original_Native_task_success",
+          "result": {
+            "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/test/test__pick_moving_target_on_the_table_high_speed__episode36/episode/result.json",
+            "sha256": "aa7eab53c8fef365731b25f834f484c0a41c8b8732b537d5ac60ba4bd43fb1d1"
+          }
+        },
+        {
+          "parent_id": "test__pick_moving_target_on_the_table_high_speed__episode37",
+          "task": "pick_moving_target_on_the_table_high_speed",
+          "raw_episode_id": "episode37",
+          "variation": 1,
+          "seed": 0,
+          "success": false,
+          "actual_seconds": 7.300000000000001,
+          "first_success_time": null,
+          "stop_reason": "no_collision_qualified_stopping_action",
+          "result": {
+            "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/test/test__pick_moving_target_on_the_table_high_speed__episode37/episode/result.json",
+            "sha256": "9d7dfc415aa3e02a1f4e80b73236fa7b383e899cccb91bca0158b03f7dc4d428"
+          }
+        },
+        {
+          "parent_id": "test__pick_moving_target_on_the_table_high_speed__episode38",
+          "task": "pick_moving_target_on_the_table_high_speed",
+          "raw_episode_id": "episode38",
+          "variation": 1,
+          "seed": 0,
+          "success": true,
+          "actual_seconds": 8.8,
+          "first_success_time": 8.8,
+          "stop_reason": "original_Native_task_success",
+          "result": {
+            "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/test/test__pick_moving_target_on_the_table_high_speed__episode38/episode/result.json",
+            "sha256": "21fddb77a746d3b3958168dd8ee1aad9e6c6ece67b5b807e255ac0bb3e7817cf"
+          }
+        },
+        {
+          "parent_id": "test__pick_moving_target_on_the_table_high_speed__episode39",
+          "task": "pick_moving_target_on_the_table_high_speed",
+          "raw_episode_id": "episode39",
+          "variation": 1,
+          "seed": 0,
+          "success": false,
+          "actual_seconds": 60.0,
+          "first_success_time": null,
+          "stop_reason": "budget_exhausted",
+          "result": {
+            "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/test/test__pick_moving_target_on_the_table_high_speed__episode39/episode/result.json",
+            "sha256": "d5e0e6596dd89e2ac2b35c47da14ed75179243eae8d3c2674411536108aa85cd"
+          }
+        }
+      ]
+    }
+  },
+  "success_authority": "Original PhysMani Task.success first true, checked every actual50ms; stop immediately",
+  "model_pair_frozen_before_validation_and_test": true,
+  "validation_used_for_refitting": false,
+  "test_used_for_selection": false,
+  "official_archived_TEST_reset_coverage_complete": true,
+  "VAL_is_full_archived_scene_replay": false,
+  "original_paper_benchmark_comparable": false,
+  "old_models_preserved": true,
+  "default_deployed_pair_changed": false,
+  "source_unchanged": true,
+  "Native_GPU_overlap": false,
+  "old_queues_resumed": false
+}

@@ -1,0 +1,31 @@
+{
+  "schema": "semantic_task_e207M_training_pilot_20261104_v1",
+  "model": {
+    "width": 1024,
+    "layers": 16,
+    "heads": 16,
+    "feedforward_multiplier": 4,
+    "cnn_base": 64,
+    "spatial_grid": 2,
+    "maximum_history": 5,
+    "dropout": 0.1
+  },
+  "exact_parameters": 207847704,
+  "image_size": 256,
+  "history_frames": 5,
+  "windows_per_parent": 2,
+  "epochs": 5,
+  "microbatch": 4,
+  "gradient_accumulation": 4,
+  "effective_batch_size": 16,
+  "precision": "BF16_autocast_FP32_parameters_AdamW",
+  "learning_rate": 0.0001,
+  "weight_decay": 0.01,
+  "gradient_clip_norm": 1.0,
+  "seed": 20261104,
+  "workers": 0,
+  "selection": "maximum_development_operation_accuracy_then_minimum_CE_then_earliest_epoch",
+  "automatic_Native_evaluation": false,
+  "fitted_component": "semantic_task_e8_only",
+  "current_network_end_to_end_ready": false
+}

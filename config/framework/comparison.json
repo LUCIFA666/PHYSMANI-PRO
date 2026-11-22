@@ -1,0 +1,61 @@
+{
+  "primary_question": "完整区域接管框架与 PhysMani 的闭环动态抓取成功率比较",
+  "baseline": {
+    "paper": "https://arxiv.org/pdf/2607.01938",
+    "repository": "https://github.com/vLAR-group/PhysMani",
+    "source_commit": "b9eb1ef8a40dbb80b1b0383b287a689983c83918",
+    "existing_assets_access": "read_only",
+    "policy": "ForesightDiffuserActorV6",
+    "world_model": "FreeGave"
+  },
+  "ours": {
+    "dynamics_checkpoint": "artifacts/framework/checkpoints/ngff_best.pt",
+    "dynamics_updates": 2751,
+    "dynamics_frozen": true,
+    "approach": "goal_conditioned_FASTER_LoRA",
+    "faster_repository": "https://github.com/hku-sail/FASTER",
+    "faster_source_commit": "17b02d43dd66dc7aff374c55994800882fb5fac0",
+    "faster_conditioning": "our_mani_region_prompt_v1",
+    "local_controller_initial": "kinematic_visual_mpc",
+    "learned_local_policy_and_success_value": "trained on separate TRAIN simulator rollouts; controller-specific independent local VAL available"
+  },
+  "first_stage_tasks": [
+    "pick_moving_target_on_the_table",
+    "pick_moving_target_on_the_table_high_speed"
+  ],
+  "first_stage_test_episodes": 80,
+  "full_paper_task_count": 16,
+  "full_paper_test_episodes": 640,
+  "checkpoint_selection": "validation only; never select ours by test success",
+  "primary_metrics": [
+    "task_success_rate",
+    "paired_success_rate_delta",
+    "wilson_95_CI",
+    "paired_bootstrap_95_CI",
+    "mcnemar_exact_p"
+  ],
+  "secondary_metrics": [
+    "collision_rate",
+    "replans",
+    "handover_failures",
+    "intercept_position_error_m",
+    "intercept_time_error_s",
+    "terminal_relative_speed_m_s",
+    "end_to_end_reaction_latency_ms"
+  ],
+  "ablations": [
+    "same_FASTER_and_local_controller_with_constant_velocity",
+    "same_FASTER_and_local_controller_with_no_prediction",
+    "same_FASTER_and_local_controller_with_FreeGave",
+    "without_learned_success_value",
+    "without_latest_observation_handover_recheck"
+  ],
+  "two_timing_tracks": {
+    "benchmark_timing": "both methods matched to released PhysMani observation and control schedule",
+    "real_time": "same 5090 and measured perception/prediction/TTFA/queue/execution latency for both methods"
+  },
+  "hardware_default": "PhysMani simulator Panda until physical arm model is supplied",
+  "real_camera_track": "D435+D405; run separate matched-two-camera comparisons",
+  "current_status": "full neural development workflow running; handover not yet successful; 80 formal TEST episodes remain locked",
+  "repeat_seed_statistics": "task-stratified raw-episode cluster bootstrap; independent-trial Wilson and McNemar omitted when repeated seeds correlate"
+}

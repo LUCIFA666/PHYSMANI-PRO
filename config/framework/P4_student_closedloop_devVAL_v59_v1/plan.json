@@ -1,0 +1,73 @@
+{
+  "schema": "P4_v59_conditional_full_reused_devVAL8_preassignment",
+  "formal_TEST_used": false,
+  "training_started": false,
+  "new_independent_validation": false,
+  "parents_same_as_prior_devVAL": true,
+  "entry_gate": {
+    "pilot_plan": "runtime/framework/local_mpc_20261102/public_candidate_darkred_v59_development_v1/plan.json",
+    "require_all3_positive_original_goal_and_current_hold": true,
+    "require_all3_positive_public_visual_hold": true,
+    "require_negative_zero_actual_lift_and_no_public_hold": true,
+    "require_actual_exit0_and_frozen_sources": true
+  },
+  "all8_kept_regardless_of_outcome_once_gate_passes": true,
+  "jobs": [
+    {
+      "id": "00_val_static",
+      "scene": "static",
+      "config": "config/framework/P4_student_closedloop_devVAL_v59_v1/00_val_static.json",
+      "path": "runtime/framework/local_mpc_20261102/P4_student_closedloop_devVAL_v59_v1/00_val_static",
+      "evaluation": "artifacts/framework/local_mpc_20261102/P4_student_closedloop_devVAL_v59_v1/00_val_static"
+    },
+    {
+      "id": "01_val_static",
+      "scene": "static",
+      "config": "config/framework/P4_student_closedloop_devVAL_v59_v1/01_val_static.json",
+      "path": "runtime/framework/local_mpc_20261102/P4_student_closedloop_devVAL_v59_v1/01_val_static",
+      "evaluation": "artifacts/framework/local_mpc_20261102/P4_student_closedloop_devVAL_v59_v1/01_val_static"
+    },
+    {
+      "id": "02_val_uniform",
+      "scene": "uniform",
+      "config": "config/framework/P4_student_closedloop_devVAL_v59_v1/02_val_uniform.json",
+      "path": "runtime/framework/local_mpc_20261102/P4_student_closedloop_devVAL_v59_v1/02_val_uniform",
+      "evaluation": "artifacts/framework/local_mpc_20261102/P4_student_closedloop_devVAL_v59_v1/02_val_uniform"
+    },
+    {
+      "id": "03_val_uniform",
+      "scene": "uniform",
+      "config": "config/framework/P4_student_closedloop_devVAL_v59_v1/03_val_uniform.json",
+      "path": "runtime/framework/local_mpc_20261102/P4_student_closedloop_devVAL_v59_v1/03_val_uniform",
+      "evaluation": "artifacts/framework/local_mpc_20261102/P4_student_closedloop_devVAL_v59_v1/03_val_uniform"
+    },
+    {
+      "id": "04_val_uniform",
+      "scene": "uniform",
+      "config": "config/framework/P4_student_closedloop_devVAL_v59_v1/04_val_uniform.json",
+      "path": "runtime/framework/local_mpc_20261102/P4_student_closedloop_devVAL_v59_v1/04_val_uniform",
+      "evaluation": "artifacts/framework/local_mpc_20261102/P4_student_closedloop_devVAL_v59_v1/04_val_uniform"
+    },
+    {
+      "id": "05_val_uniform",
+      "scene": "uniform",
+      "config": "config/framework/P4_student_closedloop_devVAL_v59_v1/05_val_uniform.json",
+      "path": "runtime/framework/local_mpc_20261102/P4_student_closedloop_devVAL_v59_v1/05_val_uniform",
+      "evaluation": "artifacts/framework/local_mpc_20261102/P4_student_closedloop_devVAL_v59_v1/05_val_uniform"
+    },
+    {
+      "id": "06_val_speed_change",
+      "scene": "speed_change",
+      "config": "config/framework/P4_student_closedloop_devVAL_v59_v1/06_val_speed_change.json",
+      "path": "runtime/framework/local_mpc_20261102/P4_student_closedloop_devVAL_v59_v1/06_val_speed_change",
+      "evaluation": "artifacts/framework/local_mpc_20261102/P4_student_closedloop_devVAL_v59_v1/06_val_speed_change"
+    },
+    {
+      "id": "07_val_speed_change",
+      "scene": "speed_change",
+      "config": "config/framework/P4_student_closedloop_devVAL_v59_v1/07_val_speed_change.json",
+      "path": "runtime/framework/local_mpc_20261102/P4_student_closedloop_devVAL_v59_v1/07_val_speed_change",
+      "evaluation": "artifacts/framework/local_mpc_20261102/P4_student_closedloop_devVAL_v59_v1/07_val_speed_change"
+    }
+  ]
+}

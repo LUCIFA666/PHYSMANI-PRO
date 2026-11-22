@@ -1,0 +1,73 @@
+{
+  "schema": "semantic_task_e207M_v2_deferred_owner_20261104_v2",
+  "component_only": true,
+  "all_task_Native_VAL_TEST_authorized": false,
+  "python": "/home/ubuntu/physmani-conda/envs/physmani5090/bin/python",
+  "output_root": "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/semantic_task_e207M_v2_deferred_run_v2",
+  "prior_continuation_root": "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/large_network_training_continuation_run_v1",
+  "prior_config": {
+    "path": "/home/ubuntu/桌面/our-mani/config/framework/large_network_training_continuation_20261104_v1/plan.json",
+    "sha256": "bf667b2dd0173db608ccdc5e06fb1214e9f23e6aa7cd732dc79df946e3729974"
+  },
+  "v2_delivery": {
+    "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/semantic_task_e207M_v2_fit_code_delivery_v1/receipt.json",
+    "sha256": "316bfc52aa7f69b3761dde6065f381976ff2c49a5d09e71c0e07c7fc4bb064a9"
+  },
+  "v2_method_sources": {
+    "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/semantic_task_e207M_v2_fit_code_delivery_v1/method_sources.json",
+    "sha256": "9c08713b4a4de26c220257e38bcbc95775bddc770bbbd3e85e28a0183cbdf9d6"
+  },
+  "v2_config": {
+    "path": "/home/ubuntu/桌面/our-mani/config/framework/semantic_task_e_large_20261104_v2/pilot.json",
+    "sha256": "70fe807233a0ea531391a3508bbd5534a05445ee8d93046c1c90986b6d81dc2f"
+  },
+  "split_manifest": {
+    "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/current_network16_data_manifest_v1/manifest.json",
+    "sha256": "c03a4fb31140a5aab7a49ad5d771955a56e5adfb6facfe31aa6b269769b9559b"
+  },
+  "preprocess_completion": {
+    "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/current_network16_RGBD256_preprocess_v1/completion.json",
+    "sha256": "57988d7190a6e0436abca2fde8630616c690e8fb440e562bbd5668284811ed7a"
+  },
+  "shared_registry": {
+    "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/current_Cube_shared_TRAIN_source_parent_registry_v1/registry.json",
+    "sha256": "76e836b6a872dce703598b18a694953d4ae48be69458bfde7bbde0c214c3cb9c"
+  },
+  "e1_actual_exit": {
+    "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/semantic_task_e207M_Root_execution_v1/fit_actual_exit.json",
+    "sha256": "7c90a240366b6a52a4d3777f7e8a920213839d695c8158ab09e0d3fb27c748f9"
+  },
+  "method_sources": {
+    "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/semantic_task_e207M_v2_deferred_owner_preparation_v2/method_sources.json",
+    "sha256": "97cbe5e1c077e11d04739abbd100a868707ed54061e5e2b6254d1e18c9cc604d"
+  },
+  "CF_output_root": "/home/ubuntu/桌面/our-mani/runtime/framework/near_goal_perception_20261103/current_cube_dual_crop_CF_pilot40_v3",
+  "stages": [
+    "e2_GPU_preflight",
+    "e2_fit10",
+    "e2_selected646_evaluation"
+  ],
+  "stage_timeout_seconds": {
+    "e2_GPU_preflight": 1800,
+    "e2_fit10": 57600,
+    "e2_selected646_evaluation": 7200
+  },
+  "wait_timeout_seconds": 172800,
+  "poll_seconds": 2,
+  "stop_grace_seconds": 60,
+  "resource_lock_policy": {
+    "owner": "this_deferred_v2_parent",
+    "paths": [
+      "/home/ubuntu/桌面/our-mani/runtime/framework/fixed_TRAIN104_geometry_native.lock",
+      "/home/ubuntu/桌面/our-mani/runtime/framework/TRAIN_postcomplete_diagnostics_v1106.lock"
+    ],
+    "order": [
+      "fixed_TRAIN104_geometry_native.lock",
+      "TRAIN_postcomplete_diagnostics_v1106.lock"
+    ],
+    "child_CLI_bypass_argument": "--pipeline-owned-locks",
+    "held_while_waiting_for_prior_chain": false,
+    "held_from_stage_launch_through_actual_wait_and_descendant_cleanup": true
+  },
+  "resource_wait_timeout_seconds": 1800
+}

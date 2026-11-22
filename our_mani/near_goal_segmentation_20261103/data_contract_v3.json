@@ -1,0 +1,25 @@
+{
+  "schema": "near_goal_capture_parent_source_identity_addendum_v3",
+  "extends_v1_sha256": "50eed1dbf275608c4d2e5bcf70c53d3e8bbf58ee34a1a88c5c8c7aeebe4ec961",
+  "extends_quality_v2_sha256": "ee1ecd3de2cb24e212a356cdc44cd97e1d6072831cd8608aeb24bb77adfdab36",
+  "required_manifest_partition": "partition:{path,sha256} names the frozen pre-capture32parent protocol; no historicalVAL/TEST source",
+  "parent_ids": "near_goal_perception_train_seed261103600..261103631",
+  "roles": "600..623fit,624..627selection,628..631calibration; original declared role retained",
+  "pilot": "600..605,624,628; scope6/1/1 smoke only",
+  "shot_ids": [
+    "shot00",
+    "shot01",
+    "shot02",
+    "shot03",
+    "shot04",
+    "shot05",
+    "shot06",
+    "shot07"
+  ],
+  "exact_source_identity_not_role_counts_only": true,
+  "partition_and_all_capture_SHA_bound_by_manifest": true,
+  "labels_and_inputs_immutable_physical_siblings_under_manifest_root": true,
+  "original_contracts_and_capture_protocol_not_rewritten": true,
+  "Native_started": false,
+  "NN_fit_started": false
+}

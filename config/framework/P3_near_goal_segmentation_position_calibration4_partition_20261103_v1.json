@@ -1,0 +1,650 @@
+{
+  "schema": "P3_near_goal_segmentation_position_calibration4_partition_20261103_v1",
+  "scope": "position_calibration4",
+  "split": "train",
+  "role": "calibration",
+  "pilot": false,
+  "position_measurement_calibration_only": true,
+  "excluded_from_fit_and_selection": true,
+  "source_registry": {
+    "path": "artifacts/framework/local_mpc_20261102/P3_position_calibration4_TRAIN_q_registry_v1/q_sources.json",
+    "sha256": "4ad28cef4363f988a5be2ffbdbe6fd4efa41091e15eeb232b64ce581228122f4"
+  },
+  "parents": [
+    {
+      "parent_id": "near_goal_perception_train_seed261103636",
+      "seed": 261103636,
+      "role": "calibration",
+      "fold": "calibration",
+      "pilot": false,
+      "TRAIN_q_source": {
+        "parent_seed": 261103636,
+        "parent_id": "near_goal_perception_train_seed261103636",
+        "parent_role": "calibration",
+        "calibration_scope": "position_measurement_only_new4",
+        "near_direction_ordinal": 4,
+        "source_parent_id": "TRAIN_pick_normal_episode218",
+        "task": "pick_moving_target_on_the_table",
+        "raw_episode_id": "episode218",
+        "dataset": "low_dim_obs/joint_positions",
+        "index": 0,
+        "file": {
+          "path": "/home/ubuntu/\u684c\u9762/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/pick_moving_target_on_the_table/all_variations/episodes/episode218/data.h5",
+          "sha256": "fa98f85ebc381ec69987d89231cff88e53f40dc034d494b9fcdab0f5d426bccf"
+        },
+        "joint_positions": [
+          0.00803399458527565,
+          0.07961156964302063,
+          0.008683476597070694,
+          -1.0039443969726562,
+          -0.0020867534913122654,
+          1.2811284065246582,
+          0.801862359046936
+        ],
+        "source_dtype": "float32",
+        "seven_joints_finite": true,
+        "within_frozen_native_lower_upper": true,
+        "joint_values_clipped_or_replaced": false
+      },
+      "near_direction_ordinal": 4,
+      "near_direction_unit_world": [
+        0.5773502691896258,
+        -0.5773502691896258,
+        0.5773502691896258
+      ],
+      "shots": [
+        {
+          "shot_id": "shot00",
+          "condition": "sphere_only",
+          "condition_detail": "sphere_only_cube_out_all_frusta_dir04_pmp",
+          "cube_recipe": "outside",
+          "q_recipe": "TRAIN_seed",
+          "near_direction_ordinal": 4,
+          "near_direction_unit_world": [
+            0.5773502691896258,
+            -0.5773502691896258,
+            0.5773502691896258
+          ]
+        },
+        {
+          "shot_id": "shot01",
+          "condition": "cube_far",
+          "condition_detail": "table_far_dir04_pmp",
+          "cube_recipe": "native_table",
+          "q_recipe": "TRAIN_seed",
+          "near_direction_ordinal": 4,
+          "near_direction_unit_world": [
+            0.5773502691896258,
+            -0.5773502691896258,
+            0.5773502691896258
+          ]
+        },
+        {
+          "shot_id": "shot02",
+          "condition": "near_goal",
+          "condition_detail": "near_offset_006m_dir04_pmp",
+          "cube_recipe": "near006",
+          "q_recipe": "TRAIN_seed",
+          "near_direction_ordinal": 4,
+          "near_direction_unit_world": [
+            0.5773502691896258,
+            -0.5773502691896258,
+            0.5773502691896258
+          ]
+        },
+        {
+          "shot_id": "shot03",
+          "condition": "near_goal",
+          "condition_detail": "partial_offset_003m_dir04_pmp",
+          "cube_recipe": "near003",
+          "q_recipe": "TRAIN_seed",
+          "near_direction_ordinal": 4,
+          "near_direction_unit_world": [
+            0.5773502691896258,
+            -0.5773502691896258,
+            0.5773502691896258
+          ]
+        },
+        {
+          "shot_id": "shot04",
+          "condition": "near_goal",
+          "condition_detail": "strong_offset_000m_dir04_pmp",
+          "cube_recipe": "near000",
+          "q_recipe": "TRAIN_seed",
+          "near_direction_ordinal": 4,
+          "near_direction_unit_world": [
+            0.5773502691896258,
+            -0.5773502691896258,
+            0.5773502691896258
+          ]
+        },
+        {
+          "shot_id": "shot05",
+          "condition": "near_goal",
+          "condition_detail": "gripper_adjacent_dir04_pmp",
+          "cube_recipe": "near006",
+          "q_recipe": "DLS_adjacent",
+          "near_direction_ordinal": 4,
+          "near_direction_unit_world": [
+            0.5773502691896258,
+            -0.5773502691896258,
+            0.5773502691896258
+          ]
+        },
+        {
+          "shot_id": "shot06",
+          "condition": "near_goal",
+          "condition_detail": "gripper_occlusion_dir04_pmp",
+          "cube_recipe": "near006",
+          "q_recipe": "DLS_occlusion",
+          "near_direction_ordinal": 4,
+          "near_direction_unit_world": [
+            0.5773502691896258,
+            -0.5773502691896258,
+            0.5773502691896258
+          ]
+        },
+        {
+          "shot_id": "shot07",
+          "condition": "sphere_only",
+          "condition_detail": "sphere_only_gripper_near_dir04_pmp",
+          "cube_recipe": "outside",
+          "q_recipe": "DLS_occlusion",
+          "near_direction_ordinal": 4,
+          "near_direction_unit_world": [
+            0.5773502691896258,
+            -0.5773502691896258,
+            0.5773502691896258
+          ]
+        }
+      ],
+      "shot_ids": [
+        "shot00",
+        "shot01",
+        "shot02",
+        "shot03",
+        "shot04",
+        "shot05",
+        "shot06",
+        "shot07"
+      ]
+    },
+    {
+      "parent_id": "near_goal_perception_train_seed261103637",
+      "seed": 261103637,
+      "role": "calibration",
+      "fold": "calibration",
+      "pilot": false,
+      "TRAIN_q_source": {
+        "parent_seed": 261103637,
+        "parent_id": "near_goal_perception_train_seed261103637",
+        "parent_role": "calibration",
+        "calibration_scope": "position_measurement_only_new4",
+        "near_direction_ordinal": 5,
+        "source_parent_id": "TRAIN_pick_normal_episode225",
+        "task": "pick_moving_target_on_the_table",
+        "raw_episode_id": "episode225",
+        "dataset": "low_dim_obs/joint_positions",
+        "index": 0,
+        "file": {
+          "path": "/home/ubuntu/\u684c\u9762/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/pick_moving_target_on_the_table/all_variations/episodes/episode225/data.h5",
+          "sha256": "a5e86bcd1a383c2f250496370abe0fd740adcbd40a60f0714d3a0535947c5302"
+        },
+        "joint_positions": [
+          0.027169708162546158,
+          0.08049705624580383,
+          0.03801682963967323,
+          -1.0039222240447998,
+          -0.024568671360611916,
+          1.2815232276916504,
+          0.8509687185287476
+        ],
+        "source_dtype": "float32",
+        "seven_joints_finite": true,
+        "within_frozen_native_lower_upper": true,
+        "joint_values_clipped_or_replaced": false
+      },
+      "near_direction_ordinal": 5,
+      "near_direction_unit_world": [
+        -0.5773502691896258,
+        0.5773502691896258,
+        -0.5773502691896258
+      ],
+      "shots": [
+        {
+          "shot_id": "shot00",
+          "condition": "sphere_only",
+          "condition_detail": "sphere_only_cube_out_all_frusta_dir05_mpm",
+          "cube_recipe": "outside",
+          "q_recipe": "TRAIN_seed",
+          "near_direction_ordinal": 5,
+          "near_direction_unit_world": [
+            -0.5773502691896258,
+            0.5773502691896258,
+            -0.5773502691896258
+          ]
+        },
+        {
+          "shot_id": "shot01",
+          "condition": "cube_far",
+          "condition_detail": "table_far_dir05_mpm",
+          "cube_recipe": "native_table",
+          "q_recipe": "TRAIN_seed",
+          "near_direction_ordinal": 5,
+          "near_direction_unit_world": [
+            -0.5773502691896258,
+            0.5773502691896258,
+            -0.5773502691896258
+          ]
+        },
+        {
+          "shot_id": "shot02",
+          "condition": "near_goal",
+          "condition_detail": "near_offset_006m_dir05_mpm",
+          "cube_recipe": "near006",
+          "q_recipe": "TRAIN_seed",
+          "near_direction_ordinal": 5,
+          "near_direction_unit_world": [
+            -0.5773502691896258,
+            0.5773502691896258,
+            -0.5773502691896258
+          ]
+        },
+        {
+          "shot_id": "shot03",
+          "condition": "near_goal",
+          "condition_detail": "partial_offset_003m_dir05_mpm",
+          "cube_recipe": "near003",
+          "q_recipe": "TRAIN_seed",
+          "near_direction_ordinal": 5,
+          "near_direction_unit_world": [
+            -0.5773502691896258,
+            0.5773502691896258,
+            -0.5773502691896258
+          ]
+        },
+        {
+          "shot_id": "shot04",
+          "condition": "near_goal",
+          "condition_detail": "strong_offset_000m_dir05_mpm",
+          "cube_recipe": "near000",
+          "q_recipe": "TRAIN_seed",
+          "near_direction_ordinal": 5,
+          "near_direction_unit_world": [
+            -0.5773502691896258,
+            0.5773502691896258,
+            -0.5773502691896258
+          ]
+        },
+        {
+          "shot_id": "shot05",
+          "condition": "near_goal",
+          "condition_detail": "gripper_adjacent_dir05_mpm",
+          "cube_recipe": "near006",
+          "q_recipe": "DLS_adjacent",
+          "near_direction_ordinal": 5,
+          "near_direction_unit_world": [
+            -0.5773502691896258,
+            0.5773502691896258,
+            -0.5773502691896258
+          ]
+        },
+        {
+          "shot_id": "shot06",
+          "condition": "near_goal",
+          "condition_detail": "gripper_occlusion_dir05_mpm",
+          "cube_recipe": "near006",
+          "q_recipe": "DLS_occlusion",
+          "near_direction_ordinal": 5,
+          "near_direction_unit_world": [
+            -0.5773502691896258,
+            0.5773502691896258,
+            -0.5773502691896258
+          ]
+        },
+        {
+          "shot_id": "shot07",
+          "condition": "sphere_only",
+          "condition_detail": "sphere_only_gripper_near_dir05_mpm",
+          "cube_recipe": "outside",
+          "q_recipe": "DLS_occlusion",
+          "near_direction_ordinal": 5,
+          "near_direction_unit_world": [
+            -0.5773502691896258,
+            0.5773502691896258,
+            -0.5773502691896258
+          ]
+        }
+      ],
+      "shot_ids": [
+        "shot00",
+        "shot01",
+        "shot02",
+        "shot03",
+        "shot04",
+        "shot05",
+        "shot06",
+        "shot07"
+      ]
+    },
+    {
+      "parent_id": "near_goal_perception_train_seed261103638",
+      "seed": 261103638,
+      "role": "calibration",
+      "fold": "calibration",
+      "pilot": false,
+      "TRAIN_q_source": {
+        "parent_seed": 261103638,
+        "parent_id": "near_goal_perception_train_seed261103638",
+        "parent_role": "calibration",
+        "calibration_scope": "position_measurement_only_new4",
+        "near_direction_ordinal": 6,
+        "source_parent_id": "TRAIN_pick_normal_episode229",
+        "task": "pick_moving_target_on_the_table",
+        "raw_episode_id": "episode229",
+        "dataset": "low_dim_obs/joint_positions",
+        "index": 0,
+        "file": {
+          "path": "/home/ubuntu/\u684c\u9762/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/pick_moving_target_on_the_table/all_variations/episodes/episode229/data.h5",
+          "sha256": "5f14080baf079d3aa3a747d6640915fc622fd4ce46e35a73bad9b3d22824af4f"
+        },
+        "joint_positions": [
+          -0.005776401609182358,
+          0.0793779194355011,
+          -0.006236758548766375,
+          -1.0040442943572998,
+          0.0011819652281701565,
+          1.280935287475586,
+          0.773462176322937
+        ],
+        "source_dtype": "float32",
+        "seven_joints_finite": true,
+        "within_frozen_native_lower_upper": true,
+        "joint_values_clipped_or_replaced": false
+      },
+      "near_direction_ordinal": 6,
+      "near_direction_unit_world": [
+        -0.5773502691896258,
+        0.5773502691896258,
+        0.5773502691896258
+      ],
+      "shots": [
+        {
+          "shot_id": "shot00",
+          "condition": "sphere_only",
+          "condition_detail": "sphere_only_cube_out_all_frusta_dir06_mpp",
+          "cube_recipe": "outside",
+          "q_recipe": "TRAIN_seed",
+          "near_direction_ordinal": 6,
+          "near_direction_unit_world": [
+            -0.5773502691896258,
+            0.5773502691896258,
+            0.5773502691896258
+          ]
+        },
+        {
+          "shot_id": "shot01",
+          "condition": "cube_far",
+          "condition_detail": "table_far_dir06_mpp",
+          "cube_recipe": "native_table",
+          "q_recipe": "TRAIN_seed",
+          "near_direction_ordinal": 6,
+          "near_direction_unit_world": [
+            -0.5773502691896258,
+            0.5773502691896258,
+            0.5773502691896258
+          ]
+        },
+        {
+          "shot_id": "shot02",
+          "condition": "near_goal",
+          "condition_detail": "near_offset_006m_dir06_mpp",
+          "cube_recipe": "near006",
+          "q_recipe": "TRAIN_seed",
+          "near_direction_ordinal": 6,
+          "near_direction_unit_world": [
+            -0.5773502691896258,
+            0.5773502691896258,
+            0.5773502691896258
+          ]
+        },
+        {
+          "shot_id": "shot03",
+          "condition": "near_goal",
+          "condition_detail": "partial_offset_003m_dir06_mpp",
+          "cube_recipe": "near003",
+          "q_recipe": "TRAIN_seed",
+          "near_direction_ordinal": 6,
+          "near_direction_unit_world": [
+            -0.5773502691896258,
+            0.5773502691896258,
+            0.5773502691896258
+          ]
+        },
+        {
+          "shot_id": "shot04",
+          "condition": "near_goal",
+          "condition_detail": "strong_offset_000m_dir06_mpp",
+          "cube_recipe": "near000",
+          "q_recipe": "TRAIN_seed",
+          "near_direction_ordinal": 6,
+          "near_direction_unit_world": [
+            -0.5773502691896258,
+            0.5773502691896258,
+            0.5773502691896258
+          ]
+        },
+        {
+          "shot_id": "shot05",
+          "condition": "near_goal",
+          "condition_detail": "gripper_adjacent_dir06_mpp",
+          "cube_recipe": "near006",
+          "q_recipe": "DLS_adjacent",
+          "near_direction_ordinal": 6,
+          "near_direction_unit_world": [
+            -0.5773502691896258,
+            0.5773502691896258,
+            0.5773502691896258
+          ]
+        },
+        {
+          "shot_id": "shot06",
+          "condition": "near_goal",
+          "condition_detail": "gripper_occlusion_dir06_mpp",
+          "cube_recipe": "near006",
+          "q_recipe": "DLS_occlusion",
+          "near_direction_ordinal": 6,
+          "near_direction_unit_world": [
+            -0.5773502691896258,
+            0.5773502691896258,
+            0.5773502691896258
+          ]
+        },
+        {
+          "shot_id": "shot07",
+          "condition": "sphere_only",
+          "condition_detail": "sphere_only_gripper_near_dir06_mpp",
+          "cube_recipe": "outside",
+          "q_recipe": "DLS_occlusion",
+          "near_direction_ordinal": 6,
+          "near_direction_unit_world": [
+            -0.5773502691896258,
+            0.5773502691896258,
+            0.5773502691896258
+          ]
+        }
+      ],
+      "shot_ids": [
+        "shot00",
+        "shot01",
+        "shot02",
+        "shot03",
+        "shot04",
+        "shot05",
+        "shot06",
+        "shot07"
+      ]
+    },
+    {
+      "parent_id": "near_goal_perception_train_seed261103639",
+      "seed": 261103639,
+      "role": "calibration",
+      "fold": "calibration",
+      "pilot": false,
+      "TRAIN_q_source": {
+        "parent_seed": 261103639,
+        "parent_id": "near_goal_perception_train_seed261103639",
+        "parent_role": "calibration",
+        "calibration_scope": "position_measurement_only_new4",
+        "near_direction_ordinal": 7,
+        "source_parent_id": "TRAIN_pick_normal_episode236",
+        "task": "pick_moving_target_on_the_table",
+        "raw_episode_id": "episode236",
+        "dataset": "low_dim_obs/joint_positions",
+        "index": 0,
+        "file": {
+          "path": "/home/ubuntu/\u684c\u9762/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/pick_moving_target_on_the_table/all_variations/episodes/episode236/data.h5",
+          "sha256": "ec8f39910fa69da9a3fbc3e6389b5603b41f37ef86e0f2eae35d6382bb6ec131"
+        },
+        "joint_positions": [
+          -0.03402328118681908,
+          0.08077195286750793,
+          -0.0600406788289547,
+          -1.0043423175811768,
+          0.041484005749225616,
+          1.2808129787445068,
+          0.6835569143295288
+        ],
+        "source_dtype": "float32",
+        "seven_joints_finite": true,
+        "within_frozen_native_lower_upper": true,
+        "joint_values_clipped_or_replaced": false
+      },
+      "near_direction_ordinal": 7,
+      "near_direction_unit_world": [
+        0.5773502691896258,
+        -0.5773502691896258,
+        -0.5773502691896258
+      ],
+      "shots": [
+        {
+          "shot_id": "shot00",
+          "condition": "sphere_only",
+          "condition_detail": "sphere_only_cube_out_all_frusta_dir07_pmm",
+          "cube_recipe": "outside",
+          "q_recipe": "TRAIN_seed",
+          "near_direction_ordinal": 7,
+          "near_direction_unit_world": [
+            0.5773502691896258,
+            -0.5773502691896258,
+            -0.5773502691896258
+          ]
+        },
+        {
+          "shot_id": "shot01",
+          "condition": "cube_far",
+          "condition_detail": "table_far_dir07_pmm",
+          "cube_recipe": "native_table",
+          "q_recipe": "TRAIN_seed",
+          "near_direction_ordinal": 7,
+          "near_direction_unit_world": [
+            0.5773502691896258,
+            -0.5773502691896258,
+            -0.5773502691896258
+          ]
+        },
+        {
+          "shot_id": "shot02",
+          "condition": "near_goal",
+          "condition_detail": "near_offset_006m_dir07_pmm",
+          "cube_recipe": "near006",
+          "q_recipe": "TRAIN_seed",
+          "near_direction_ordinal": 7,
+          "near_direction_unit_world": [
+            0.5773502691896258,
+            -0.5773502691896258,
+            -0.5773502691896258
+          ]
+        },
+        {
+          "shot_id": "shot03",
+          "condition": "near_goal",
+          "condition_detail": "partial_offset_003m_dir07_pmm",
+          "cube_recipe": "near003",
+          "q_recipe": "TRAIN_seed",
+          "near_direction_ordinal": 7,
+          "near_direction_unit_world": [
+            0.5773502691896258,
+            -0.5773502691896258,
+            -0.5773502691896258
+          ]
+        },
+        {
+          "shot_id": "shot04",
+          "condition": "near_goal",
+          "condition_detail": "strong_offset_000m_dir07_pmm",
+          "cube_recipe": "near000",
+          "q_recipe": "TRAIN_seed",
+          "near_direction_ordinal": 7,
+          "near_direction_unit_world": [
+            0.5773502691896258,
+            -0.5773502691896258,
+            -0.5773502691896258
+          ]
+        },
+        {
+          "shot_id": "shot05",
+          "condition": "near_goal",
+          "condition_detail": "gripper_adjacent_dir07_pmm",
+          "cube_recipe": "near006",
+          "q_recipe": "DLS_adjacent",
+          "near_direction_ordinal": 7,
+          "near_direction_unit_world": [
+            0.5773502691896258,
+            -0.5773502691896258,
+            -0.5773502691896258
+          ]
+        },
+        {
+          "shot_id": "shot06",
+          "condition": "near_goal",
+          "condition_detail": "gripper_occlusion_dir07_pmm",
+          "cube_recipe": "near006",
+          "q_recipe": "DLS_occlusion",
+          "near_direction_ordinal": 7,
+          "near_direction_unit_world": [
+            0.5773502691896258,
+            -0.5773502691896258,
+            -0.5773502691896258
+          ]
+        },
+        {
+          "shot_id": "shot07",
+          "condition": "sphere_only",
+          "condition_detail": "sphere_only_gripper_near_dir07_pmm",
+          "cube_recipe": "outside",
+          "q_recipe": "DLS_occlusion",
+          "near_direction_ordinal": 7,
+          "near_direction_unit_world": [
+            0.5773502691896258,
+            -0.5773502691896258,
+            -0.5773502691896258
+          ]
+        }
+      ],
+      "shot_ids": [
+        "shot00",
+        "shot01",
+        "shot02",
+        "shot03",
+        "shot04",
+        "shot05",
+        "shot06",
+        "shot07"
+      ]
+    }
+  ],
+  "direction_rule": "636..639 fixed ordinals4..7, matching previous octant order without data-driven replacement",
+  "old_raw_calibration632_635_consumed_not_reused": true,
+  "execution_status": "prepared_not_captured"
+}

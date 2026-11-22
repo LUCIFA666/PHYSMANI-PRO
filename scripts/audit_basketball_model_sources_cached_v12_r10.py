@@ -1,0 +1,27 @@
+"""Same complete model gate as the prior audit, with audit-only SHA deduplication."""
+import json,sys,time,threading
+from pathlib import Path
+ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT))
+from our_mani.multitask import evaluation
+from our_mani.multitask.audit_sha_cache_v12 import AuditSHACache
+from our_mani.multitask.supported_geometry_task_release_v10 import audit_task_model_coverage
+original=evaluation.file_sha;cache=AuditSHACache()
+# Already imported aliases and future local imports use the same guarded cache.
+for name,module in list(sys.modules.items()):
+ if name.startswith(('our_mani','scripts')) and getattr(module,'file_sha',None) is original:setattr(module,'file_sha',cache)
+B=ROOT/'artifacts/framework/multitask_r10/basketball_supported_v10_model_readiness_v1'
+B.mkdir(exist_ok=True)
+if (B/'coverage_initial.json').exists():raise RuntimeError('Preserve existing completed model audit')
+stop=threading.Event()
+def progress():
+ while not stop.wait(10):evaluation.atomic_json(B/'audit_progress.json',cache.receipt(),overwrite=True)
+thread=threading.Thread(target=progress,daemon=True);thread.start()
+try:
+ c=json.loads((ROOT/'artifacts/framework/multitask_r10/geometry_supported_reference_v10_setup/configuration.json').read_text())
+ view=ROOT/'artifacts/framework/multitask_r10/context_training_view_full_v6/manifest.json'
+ result=audit_task_model_coverage(ROOT,'moving_basketball_in_hoop',c,context_training_view=dict(path=str(view.relative_to(ROOT)),sha256=cache(view)))
+ for p in (Path(__file__),ROOT/'our_mani/multitask/audit_sha_cache_v12.py',ROOT/'tests/test_audit_sha_cache_v12.py'):
+  result['input_files_sha256'][str(p.relative_to(ROOT))]=cache(p)
+ result['audit_only_hash_cache']=cache.receipt();evaluation.atomic_json(B/'coverage_initial.json',result)
+ print(json.dumps(dict(passed=result['formal_model_coverage_passed'],errors=result['errors'],frozen_files=len(result['input_files_sha256']),cache=cache.receipt())),flush=True)
+finally:stop.set();thread.join()

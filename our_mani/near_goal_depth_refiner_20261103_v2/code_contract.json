@@ -1,0 +1,25 @@
+{
+  "schema": "independent_full32_schedule160_cache_runtime_contract_cpu2_v3",
+  "status": "code_only_no_fit_or_capture_by_module",
+  "schedule_protocol_sha256": "0b1063e8dc52fee604da35b6358b2d84f6a9656df4c1a74e399159ec97b1dfb6",
+  "version": "near_goal_binary_current_depth_influence_schedule160_cpu2_20261103_v3",
+  "data": "Full32newaggregate511freceipt/newsourceplan/registry5710/32x8 only, fixed24fit/4selection/4calibration. Oldpilotdata andpilot-onlyfit rejected.",
+  "unchanged": "Frozenv1 eight-source exactmap checked. SameTinyDepthInfluenceUNet9in2logitsbase8, _collate/_loss_batch, raw labels/erosion/quality thresholds/5grid, freshseed261103700, no pretrainedcheckpoint arg.",
+  "training": "160epochs,batch16,192fitshots=12actualoptimizersteps/epoch,total1920,AdamW3e-4wd1e-4constant. Selection32samples choosesbestepochonly; calibration4parents32samples doesnotchooseepoch/optimizer. Actualstepcount recorded perhistoryandstatus.",
+  "cache": "fit192 andselection32 ONLY. Exactfloat32features/uint8semantic only, read-only arrays, source identities separatehashledger. Calib andGT/robot/CF/metadata notmodelcachefields. No sampledrop includingallUNKNOWNviews. Sameorder/shuffle/collate/loss.",
+  "cache_memory_MiB": 129.5,
+  "cache_integrity": "Orderedshape/dtype/IDs/contentSHA plusrawdata/sourcebindingshash beforeafter. Revalidatecurrentrawfiles/sourcecode andcachecontents beforepublishingcompletecheckpoint.",
+  "runtime": "NewexactVERSION,full32,completed160+1920actualsteps,sameidentitystatus, exactcurrentimplementationmap, oracle256ledger, cachebeforeafter/sourceproof,160history/selectionargmin,4calibrationparents32orderedrecords\u00d75thresholds evidence andsamegate recomputation. Old40runtime rejectsnewVERSION. Qualifiedpredict additionallychecksCPU/eval/float32/actualTorchthreads2 andsamecalibrationTorch/NumPybeforeanyforward; doesnotgloballychangeP4/P2threads. Unqualifieddiagnosticstillnomeasurement.",
+  "unqualified": "Defaultrefuse; explicitdiagnosticonlyreturnsprobabilities, nevercentre/measurement/thresholdfallback. Native_control_qualified=False evenifcalibrationpassed.",
+  "defaultCLI": "checkonlynoNN/optimizer; --oracle-check nooptimizer; onlyexplicit--train canfit. Thismodulehasnotfit/capturedanything.",
+  "constraints": {
+    "Native_started": false,
+    "fit_started": false,
+    "GPU_used": false,
+    "active_fit_outputs_read": false,
+    "TEST_read": false,
+    "v1source_changed": false
+  },
+  "CPU_calibration_addendum_sha256": "fe6e427276e077465f879ee894afb7c91b6fa63e672d46aa7418854e73fff2ac",
+  "calibration_execution": "Onlyselectedmodel.cpu().eval(),Torchthreads2,exact32separate4viewforwards once,thenoriginal5grid. NoGPU/CPUselection. NativePythonTorch2.8.0+cu128/NumPy1.23.5; metadata/status/evidence bindCPU2."
+}

@@ -1,0 +1,8 @@
+{
+  "task": "moving_basketball_in_hoop",
+  "seed": 2611134000,
+  "variation": 0,
+  "calibration_episode": "/home/ubuntu/\u684c\u9762/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/moving_basketball_in_hoop/all_variations/episodes/episode131/data.h5",
+  "role": "TRAIN_executor_diagnostic",
+  "probe_pattern": "rapid_retargets"
+}

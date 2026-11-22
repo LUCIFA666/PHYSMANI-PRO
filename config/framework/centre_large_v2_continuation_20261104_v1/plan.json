@@ -1,0 +1,54 @@
+{
+  "schema": "centre_large_v2_continuation_20261104_v1",
+  "stages": [
+    "centre_GPU_preflight",
+    "centre_fit40",
+    "centre_selection_predict208",
+    "centre_selection_score208",
+    "centre_reserved_predict104",
+    "centre_reserved_score104"
+  ],
+  "Native_VAL_TEST_authorized": false,
+  "python": "/home/ubuntu/physmani-conda/envs/physmani5090/bin/python",
+  "output_root": "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/centre_large_v2_continuation_run_v1",
+  "CF_output_root": "/home/ubuntu/桌面/our-mani/runtime/framework/near_goal_perception_20261103/current_cube_dual_crop_CF_pilot40_v3",
+  "centre_delivery": {
+    "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/current_cube_centre_large_deterministic_pool_v2_delivery/receipt.json",
+    "sha256": "01690251952cfa5f05dc3fe17f8e36da373ff9a5d726cecd3fee06c1793045e5"
+  },
+  "encoder": {
+    "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/near_goal_segmentation_20261103/full32_geometryF_unknownKL_fit_v5/selected.pt",
+    "sha256": "dbf998242ad13fea26ede9c4b17a0e2bfd0daeb581331d21342af9a6b6d06bfa"
+  },
+  "method_sources": {
+    "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/centre_large_v2_continuation_preparation_v1/method_sources.json",
+    "sha256": "af67f70895994544509ee998a174a4bcfabca83ff50f999af7a6619191ebe271"
+  },
+  "manifest": {
+    "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/large_network_training_continuation_run_v1/artifacts/CF_dataset/manifest.json",
+    "sha256": "71903e1c01d91f5d515d6e444fdb32d9656d46f6251d4180a22de7936b393959"
+  },
+  "compiled_receipt": {
+    "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/large_network_training_continuation_run_v1/artifacts/CF_dataset/receipt.json",
+    "sha256": "b2b07459457ce93402e875f4661a79ab276dfe59e88431d0deabd28528eb082f"
+  },
+  "previous_root_exit": {
+    "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/centre_large_v2_Root_execution_v1/previous_main_actual_exit.json",
+    "sha256": "6014be6bc74a00a1d8718f2db954c7592d4544cfd7973547dcddecd241412d8f"
+  },
+  "previous_config": {
+    "path": "/home/ubuntu/桌面/our-mani/config/framework/large_network_training_continuation_20261104_v1/plan.json",
+    "sha256": "bf667b2dd0173db608ccdc5e06fb1214e9f23e6aa7cd732dc79df946e3729974"
+  },
+  "wait_timeout_seconds": 172800,
+  "poll_seconds": 2,
+  "stop_grace_seconds": 60,
+  "stage_timeout_seconds": {
+    "centre_GPU_preflight": 1800,
+    "centre_fit40": 28800,
+    "centre_selection_predict208": 3600,
+    "centre_selection_score208": 1200,
+    "centre_reserved_predict104": 3600,
+    "centre_reserved_score104": 1200
+  }
+}

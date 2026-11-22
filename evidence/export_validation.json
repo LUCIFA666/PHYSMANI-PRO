@@ -1,0 +1,22 @@
+{
+  "tests_run": 178,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 2,
+  "passed": true,
+  "wall_seconds": 0.5353307140176184,
+  "executed_from": "/home/ubuntu/PHYSMANI-PRO",
+  "Native_started": false,
+  "model_weights_loaded": false,
+  "local_artifact_tests_enabled": false,
+  "explicitly_skipped_artifact_tests": [
+    {
+      "test": "test_executor_pose_contract_repair_20261112_v1.PoseContract.test_existing_policy_reference_reaches_same_typed_executor",
+      "reason": "Requires original STOP / retired revision runtime records."
+    },
+    {
+      "test": "tests.test_task_time_limits_60s_20261111_v1.Active60sContracts.test_both_cube_entry_tasks_prepare_full60s_without_launching_native",
+      "reason": "Requires original model checkpoints and frozen artifact source manifests."
+    }
+  ]
+}

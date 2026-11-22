@@ -1,0 +1,14 @@
+"""Internal solver reserves preserve the original actuator constraints."""
+import unittest
+from unittest.mock import patch
+from tests import test_highspeed_predictive_tracking_20261111_v1 as base
+from our_mani.highspeed_control_20261111_v1.qp_tracking_v2 import ReservedQPTrackingPlanner
+
+
+class ReservedQPContracts(unittest.TestCase):
+    def test_future_preview_still_respects_original_command_limits(self):
+        with patch.object(base,'PredictiveTrackingPlanner',ReservedQPTrackingPlanner):
+            base.PredictiveContracts.test_future_reversal_changes_first_reference_without_changing_current_input(self)
+
+
+if __name__=='__main__':unittest.main()

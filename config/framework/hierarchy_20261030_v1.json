@@ -1,0 +1,67 @@
+{
+  "schema": "learned_hierarchy_four_task_experiment_20261030_v1",
+  "tasks": [
+    "pick_moving_target_on_the_table",
+    "pick_moving_target_on_the_table_high_speed",
+    "insert_onto_rotating_peg",
+    "insert_onto_rotating_peg_high_speed"
+  ],
+  "methods": ["learned_hierarchy"],
+  "train_manifest": "artifacts/framework/protocol/train_manifest.json",
+  "offline_validation_manifest": "artifacts/framework/protocol/validation_manifest.json",
+  "train_parents_per_task": 100,
+  "offline_validation_parents": 77,
+  "seed": 20261030,
+  "scene_history_frames": 5,
+  "scene_image_size": 64,
+  "scene_input": "four current/past RGBD views and measured TCP/gripper/joints",
+  "forbidden_model_inputs": ["task_id", "expert_stage", "expert_target", "future_observations", "native_object_id", "native_success"],
+  "action_classes": 11,
+  "shared_skill_latent_consumers": ["candidate_point_transformer", "pretrained_skill_policy"],
+  "motion_forecaster": {
+    "implementation": "our_mani.multitask.context_se3.SE3ContextNetwork",
+    "checkpoint": "artifacts/framework/multitask_r10/context_joint16_after_executor_v671/dynamics.pt",
+    "checkpoint_sha256": "ebec3d1b3a83ceb0d4fb3bc889f8b62376cb4581071f53de29e0b6bd71c162ef",
+    "history_dim": 21,
+    "state_dim": 19,
+    "dt_seconds": 0.05,
+    "forecast_steps": 22,
+    "public_tracking_required": true,
+    "unavailable_history": "explicit unavailable, never fabricated or replaced by privileged labels"
+  },
+  "skill_pretraining": {
+    "goal_input": "first commanded TCP position of the current contiguous expert skill segment, used only for offline goal-conditioned pretraining",
+    "deployment_goal_input": "candidate selector prediction",
+    "trajectory_input": "optional and explicitly reported; first skill pretraining does not consume trajectories",
+    "goal_time_seconds": 0.5,
+    "encoder_frozen_during_skill_pretraining": "freeze visual/history/classifier; train shared skill embedding table with skill policy",
+    "command_weighting": "each parent has equal mass, each committed expert command run has equal mass within its parent",
+    "classification_epochs": 20,
+    "skill_epochs": 40,
+    "batch_size": 64,
+    "learning_rate": 0.0003,
+    "optimizer": "AdamW",
+    "weight_decay": 0.0001,
+    "selection": "offline validation only, before native VAL and TEST"
+  },
+  "candidate_pretraining": {
+    "grid_resolution": 16,
+    "workspace_bounds": "TRAIN action position min/max plus one fixed 5cm margin",
+    "imitation_score": "expert target choice probability, not task success probability",
+    "success_calibration": "requires fixed-skill TRAIN rollout outcomes before claiming success probabilities"
+  },
+  "native_protocol": {
+    "dt_seconds": 0.05,
+    "budget_ticks": 200,
+    "budget_seconds": 10.0,
+    "decision_ticks": 10,
+    "gripper_velocity": 0.2,
+    "executor": "PhysMani native RRT/RML and gripper through explicit pose adapter",
+    "task_strategy": "learned skill policy, no legacy phase/qualification strategy underneath",
+    "train_gate": "new-version CPU contracts and fixed TRAIN development cases audited before native VAL",
+    "native_VAL": "all 77 original four-task validation parents, each once, no retry",
+    "TEST": "new frozen protocol release only after VAL audit; original official source sets, no fitting or parameter choice",
+    "outcomes": ["NativeTrue", "NativeFalse", "native_terminal_failure", "infrastructure_failure", "administrative_stop"]
+  },
+  "historical_v1219": "preserve STOP and evidence; never resume or overwrite the old namespace"
+}

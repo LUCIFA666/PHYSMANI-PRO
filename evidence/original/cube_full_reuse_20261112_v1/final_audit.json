@@ -1,0 +1,227 @@
+{
+  "complete": true,
+  "actual_service_exit": "ActiveState=active\nSubState=exited\nMainPID=0\nResult=success\nExecMainStatus=0\n",
+  "eval_cases_verified": 120,
+  "checks": {
+    "validation": {
+      "complete": true,
+      "actual_waited_and_closed_cases": 40,
+      "failure_reasons": {
+        "budget_exhausted": 7
+      },
+      "candidate_forward_calls": 306,
+      "maximum_servo_readback_error_rad": 1.191929577259998e-07
+    },
+    "test": {
+      "complete": true,
+      "actual_waited_and_closed_cases": 80,
+      "failure_reasons": {
+        "budget_exhausted": 12,
+        "no_collision_qualified_stopping_action": 2
+      },
+      "candidate_forward_calls": 571,
+      "maximum_servo_readback_error_rad": 1.19184328184474e-07
+    }
+  },
+  "heldout_failures": [
+    {
+      "split": "validation",
+      "task": "pick_moving_target_on_the_table_high_speed",
+      "raw_episode_id": "episode22",
+      "variation": 0,
+      "seconds": 60.0,
+      "reason": "budget_exhausted",
+      "result": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/validation/validation__pick_moving_target_on_the_table_high_speed__episode22/episode/result.json"
+    },
+    {
+      "split": "validation",
+      "task": "pick_moving_target_on_the_table_high_speed",
+      "raw_episode_id": "episode196",
+      "variation": 1,
+      "seconds": 60.0,
+      "reason": "budget_exhausted",
+      "result": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/validation/validation__pick_moving_target_on_the_table_high_speed__episode196/episode/result.json"
+    },
+    {
+      "split": "validation",
+      "task": "pick_moving_target_on_the_table_high_speed",
+      "raw_episode_id": "episode238",
+      "variation": 1,
+      "seconds": 60.0,
+      "reason": "budget_exhausted",
+      "result": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/validation/validation__pick_moving_target_on_the_table_high_speed__episode238/episode/result.json"
+    },
+    {
+      "split": "validation",
+      "task": "pick_moving_target_on_the_table_high_speed",
+      "raw_episode_id": "episode297",
+      "variation": 1,
+      "seconds": 60.0,
+      "reason": "budget_exhausted",
+      "result": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/validation/validation__pick_moving_target_on_the_table_high_speed__episode297/episode/result.json"
+    },
+    {
+      "split": "validation",
+      "task": "pick_moving_target_on_the_table_high_speed",
+      "raw_episode_id": "episode298",
+      "variation": 1,
+      "seconds": 60.0,
+      "reason": "budget_exhausted",
+      "result": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/validation/validation__pick_moving_target_on_the_table_high_speed__episode298/episode/result.json"
+    },
+    {
+      "split": "validation",
+      "task": "pick_moving_target_on_the_table_high_speed",
+      "raw_episode_id": "episode383",
+      "variation": 1,
+      "seconds": 60.0,
+      "reason": "budget_exhausted",
+      "result": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/validation/validation__pick_moving_target_on_the_table_high_speed__episode383/episode/result.json"
+    },
+    {
+      "split": "validation",
+      "task": "pick_moving_target_on_the_table_high_speed",
+      "raw_episode_id": "episode586",
+      "variation": 0,
+      "seconds": 60.0,
+      "reason": "budget_exhausted",
+      "result": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/validation/validation__pick_moving_target_on_the_table_high_speed__episode586/episode/result.json"
+    },
+    {
+      "split": "test",
+      "task": "pick_moving_target_on_the_table",
+      "raw_episode_id": "episode469",
+      "variation": 0,
+      "seconds": 60.0,
+      "reason": "budget_exhausted",
+      "result": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/test/test__pick_moving_target_on_the_table__episode469/episode/result.json"
+    },
+    {
+      "split": "test",
+      "task": "pick_moving_target_on_the_table_high_speed",
+      "raw_episode_id": "episode2",
+      "variation": 0,
+      "seconds": 60.0,
+      "reason": "budget_exhausted",
+      "result": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/test/test__pick_moving_target_on_the_table_high_speed__episode2/episode/result.json"
+    },
+    {
+      "split": "test",
+      "task": "pick_moving_target_on_the_table_high_speed",
+      "raw_episode_id": "episode3",
+      "variation": 0,
+      "seconds": 60.0,
+      "reason": "budget_exhausted",
+      "result": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/test/test__pick_moving_target_on_the_table_high_speed__episode3/episode/result.json"
+    },
+    {
+      "split": "test",
+      "task": "pick_moving_target_on_the_table_high_speed",
+      "raw_episode_id": "episode5",
+      "variation": 0,
+      "seconds": 60.0,
+      "reason": "budget_exhausted",
+      "result": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/test/test__pick_moving_target_on_the_table_high_speed__episode5/episode/result.json"
+    },
+    {
+      "split": "test",
+      "task": "pick_moving_target_on_the_table_high_speed",
+      "raw_episode_id": "episode6",
+      "variation": 0,
+      "seconds": 60.0,
+      "reason": "budget_exhausted",
+      "result": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/test/test__pick_moving_target_on_the_table_high_speed__episode6/episode/result.json"
+    },
+    {
+      "split": "test",
+      "task": "pick_moving_target_on_the_table_high_speed",
+      "raw_episode_id": "episode8",
+      "variation": 0,
+      "seconds": 60.0,
+      "reason": "budget_exhausted",
+      "result": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/test/test__pick_moving_target_on_the_table_high_speed__episode8/episode/result.json"
+    },
+    {
+      "split": "test",
+      "task": "pick_moving_target_on_the_table_high_speed",
+      "raw_episode_id": "episode10",
+      "variation": 0,
+      "seconds": 60.0,
+      "reason": "budget_exhausted",
+      "result": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/test/test__pick_moving_target_on_the_table_high_speed__episode10/episode/result.json"
+    },
+    {
+      "split": "test",
+      "task": "pick_moving_target_on_the_table_high_speed",
+      "raw_episode_id": "episode13",
+      "variation": 0,
+      "seconds": 60.0,
+      "reason": "budget_exhausted",
+      "result": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/test/test__pick_moving_target_on_the_table_high_speed__episode13/episode/result.json"
+    },
+    {
+      "split": "test",
+      "task": "pick_moving_target_on_the_table_high_speed",
+      "raw_episode_id": "episode15",
+      "variation": 0,
+      "seconds": 60.0,
+      "reason": "budget_exhausted",
+      "result": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/test/test__pick_moving_target_on_the_table_high_speed__episode15/episode/result.json"
+    },
+    {
+      "split": "test",
+      "task": "pick_moving_target_on_the_table_high_speed",
+      "raw_episode_id": "episode16",
+      "variation": 0,
+      "seconds": 2.15,
+      "reason": "no_collision_qualified_stopping_action",
+      "result": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/test/test__pick_moving_target_on_the_table_high_speed__episode16/episode/result.json"
+    },
+    {
+      "split": "test",
+      "task": "pick_moving_target_on_the_table_high_speed",
+      "raw_episode_id": "episode24",
+      "variation": 1,
+      "seconds": 60.0,
+      "reason": "budget_exhausted",
+      "result": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/test/test__pick_moving_target_on_the_table_high_speed__episode24/episode/result.json"
+    },
+    {
+      "split": "test",
+      "task": "pick_moving_target_on_the_table_high_speed",
+      "raw_episode_id": "episode28",
+      "variation": 1,
+      "seconds": 60.0,
+      "reason": "budget_exhausted",
+      "result": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/test/test__pick_moving_target_on_the_table_high_speed__episode28/episode/result.json"
+    },
+    {
+      "split": "test",
+      "task": "pick_moving_target_on_the_table_high_speed",
+      "raw_episode_id": "episode37",
+      "variation": 1,
+      "seconds": 7.300000000000001,
+      "reason": "no_collision_qualified_stopping_action",
+      "result": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/test/test__pick_moving_target_on_the_table_high_speed__episode37/episode/result.json"
+    },
+    {
+      "split": "test",
+      "task": "pick_moving_target_on_the_table_high_speed",
+      "raw_episode_id": "episode39",
+      "variation": 1,
+      "seconds": 60.0,
+      "reason": "budget_exhausted",
+      "result": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/test/test__pick_moving_target_on_the_table_high_speed__episode39/episode/result.json"
+    }
+  ],
+  "source_unchanged": true,
+  "Native_sources_unchanged": true,
+  "model_pair_unchanged_across_VAL_and_TEST": true,
+  "all_resource_locks_free": true,
+  "historical_global_STOP_preserved": true,
+  "default_model_changed": false,
+  "report": {
+    "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/report.json",
+    "sha256": "e1b240fe224615e6a47fb83b0b79f7bd2f2b7c6df86fd8761924b6b49d894c09"
+  }
+}

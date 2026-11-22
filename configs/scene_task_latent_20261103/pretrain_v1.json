@@ -1,0 +1,18 @@
+{
+  "schema": "scene_task_e16_firstframe_TRAIN_internal_grouped_pretrain_v1",
+  "seed": 20261103,
+  "epochs": 40,
+  "batch_size": 32,
+  "learning_rate": 0.001,
+  "weight_decay": 0.0001,
+  "cpu_threads": 2,
+  "device": "cpu",
+  "train_cameras": ["front", "8", "16", "36"],
+  "camera_warmstart": null,
+  "camera_warmstart_prefix": "camera_encoder.",
+  "fit_authorization": "prepare and CPU check only now; root must separately schedule actual --fit",
+  "speed_is_semantic_class": false,
+  "task_ID_or_robot_forward_input": false,
+  "official_VAL_or_TEST_allowed": false,
+  "direct_replace_frozen_uniform_e_P4": false
+}

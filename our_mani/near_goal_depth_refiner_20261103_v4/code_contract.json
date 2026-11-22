@@ -1,0 +1,26 @@
+{
+  "schema": "schedule160_CPU2_geometryF_fixedLegacyBaseline_code_contract_v4",
+  "version": "near_goal_binary_current_depth_influence_schedule160_cpu2_geometryF_20261103_v4",
+  "status": "code_only_no_fit_no_calibration_no_model_weights",
+  "frozen_schedule_protocol_sha256": "0b1063e8dc52fee604da35b6358b2d84f6a9656df4c1a74e399159ec97b1dfb6",
+  "frozen_CPU2_addendum_sha256": "fe6e427276e077465f879ee894afb7c91b6fa63e672d46aa7418854e73fff2ac",
+  "geometry_version": "near_goal_cube_current_depth_geometry_F_20261103_v1",
+  "geometry_protocol_sha256": "bfddd160742313810e974968bccadeab90e05397dfeb7f3141115a10f091293f",
+  "geometry_source_map": "All five geometry modules, exact D/E/F constants and three immutable protocols, public crop and one-erosion dependencies. Current map binds checkpoint/status/oracle/calibration/source evidence and runtime.",
+  "geometry_profile": "Known opaque axis-aligned 50mm Cube. Half-pixel measurement rays on both axes. Classic affine inverse-depth local plane <=0.25mm, fixed drivermax correction; front GL3 never corrected. Current visible face medians and conditional support intervals <=5mm joint radius. Only original front metric depth supplies whole-pixel eight-intersection negative evidence; exactly two X/Y rounds, strict-open subtraction, all components retained. No statistical CI or physical guarantee.",
+  "unchanged_inputs_and_learning": "Same raw seven public input arrays, same nine-channel 64x64 current four-view crops/features, original binary depth-influence labels, TinyUNet8/2logits, CE+Dice, fresh seed261103700, AdamW3e-4/wd1e-4, no augmentation or warmstart. No absoluteXYZ/TCP/GRU/GT in forward.",
+  "training": "160 epochs,192 fit shots,batch16,12 actual optimizer steps per epoch,exact1920. Selection32 chooses epoch only. Calibration32 from four separate parents never cached or used for optimizer/epoch selection.",
+  "cache": "Byte-identical v3 cache: float32 features and uint8 labels only for fit192/selection32;129.5MiB; read-only ordered content and raw source hashes before/after.",
+  "fixed_eligibility": "Legacy frozen true-mask measurement defines old observable set, independent of new F acceptance. Exact current full32 source has160 near samples and calibration has20. New-geometry UNKNOWN never removes them from coverage denominator.",
+  "quality": "Original threshold grid[0.5,0.7,0.9,0.95,0.99]; lowest satisfying nonzero raw conservative TP/(TP+FP+U)>=0.995, fixed baseline coverage>=0.90, centre P95<=5mm, both negative groups present with zero false availability,owner-unobserved zero false availability. New F oracle must also pass >=90% coverage on fixed old160 before cache/model/AdamW construction.",
+  "CPU2_calibration": "Selected model.cpu().eval(),float32,exact32 ordered separate four-view forwards once,then fixed five-grid. NativePython Torch2.8.0+cu128/NumPy1.23.5. No GPU/CPU calibration selection. Runtime checks CPU/eval/float32/Torchthreads2 and library/source/profile identity before qualified prediction.",
+  "runtime": "Only exact v4 version,full32,160completed/1920actualsteps,status and checkpoint identity,source map,full256 oracle fixed160 ledger,all cache/history/source evidence,and four calibration parent32shot five-grid fixed20 evidence. Old versions mutually rejected. Unqualified diagnostic never produces measurement.",
+  "constraints": {
+    "old_NN8_and_v3_modified": false,
+    "Native_started": false,
+    "optimizer_steps": 0,
+    "calibration_data_read_during_code_development": false,
+    "TEST_read": false,
+    "Native_control_qualified": false
+  }
+}

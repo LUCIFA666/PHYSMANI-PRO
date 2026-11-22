@@ -1,0 +1,76 @@
+{
+  "schema": "cube_revision_serial_phase_20261104_v1",
+  "phase_id": "cube_motion_role_compile_20261104_v1",
+  "method_sources": {
+    "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/cube_motion_role_compile_preparation_v1/method_sources.json",
+    "sha256": "cc60ff9e50b5901ab713eed31822b533da397360437e116a025718bd2902db61"
+  },
+  "output_root": "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/cube_motion_role_compile_run_v1",
+  "jobs": [
+    {
+      "id": "fit",
+      "output": "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/cube_matched_motion_datasets_v1/fit",
+      "native": false,
+      "cpu": true,
+      "argv": [
+        "scripts/compile_cube_trueclock_motion_dataset_20261104_v1.py",
+        "--owner-plan",
+        "/home/ubuntu/桌面/our-mani/config/framework/cube_trueclock_motion_capture_owner_20261104_v2/plan.json",
+        "--capture-plan",
+        "/home/ubuntu/桌面/our-mani/config/framework/cube_trueclock_motion_TRAIN16_20261104_v2/plan.json",
+        "--role",
+        "fit",
+        "--output",
+        "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/cube_matched_motion_datasets_v1/fit",
+        "--compile"
+      ],
+      "json_checks": [
+        {
+          "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/cube_matched_motion_datasets_v1/fit/completion.json",
+          "fields": {
+            "complete": true,
+            "role": "fit",
+            "heldout_payloads_read": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "selection",
+      "output": "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/cube_matched_motion_datasets_v1/selection",
+      "native": false,
+      "cpu": true,
+      "argv": [
+        "scripts/compile_cube_trueclock_motion_dataset_20261104_v1.py",
+        "--owner-plan",
+        "/home/ubuntu/桌面/our-mani/config/framework/cube_trueclock_motion_capture_owner_20261104_v2/plan.json",
+        "--capture-plan",
+        "/home/ubuntu/桌面/our-mani/config/framework/cube_trueclock_motion_TRAIN16_20261104_v2/plan.json",
+        "--role",
+        "selection",
+        "--output",
+        "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/cube_matched_motion_datasets_v1/selection",
+        "--compile"
+      ],
+      "json_checks": [
+        {
+          "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/cube_matched_motion_datasets_v1/selection/completion.json",
+          "fields": {
+            "complete": true,
+            "role": "selection",
+            "heldout_payloads_read": false
+          }
+        }
+      ]
+    }
+  ],
+  "python": "/home/ubuntu/桌面/our-mani/.conda-env/bin/python",
+  "stage_timeout_seconds": {
+    "fit": 600,
+    "selection": 600
+  },
+  "stop_grace_seconds": 30,
+  "poll_seconds": 0.5,
+  "wait_timeout_seconds": 600,
+  "CF_output_root": "/home/ubuntu/桌面/our-mani/runtime/framework/cube_motion_TRAIN_20261104_v2"
+}

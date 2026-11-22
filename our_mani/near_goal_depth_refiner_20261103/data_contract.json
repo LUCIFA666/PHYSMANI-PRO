@@ -1,0 +1,64 @@
+{
+  "schema": "near_goal_depth_influence_capture_TRAIN_v1",
+  "status": "interface_contract_only_no_complete_dataset_created",
+  "label_protocol": "raw_Cube_depth_influence_innerAA_positive_outer1px_unknown_v1",
+  "public_inputs": "Exact original7 arrays and exact frozen legacy make_near_goal_crops9channel function; no labels/robot/GT/GRU/absoluteXYZ input",
+  "classification": "class1 reliable rawCube depth-positive including innerAA; class0 reliable zeroCube delta excluding unresolved/outer1pixelring;255 signednegative/invalid/conflict/GoalRGBonly/outerringUNKNOWN",
+  "measurement": "rawcrop boundaryguard BEFORE exactlyone1pixel erosion then originalquantile/confidence/2views/12points/.08mScope; no completion",
+  "manifest": {
+    "required_top": [
+      "schema",
+      "dataset_split=TRAIN",
+      "label_protocol",
+      "scope=pilot_smoke|full32",
+      "complete=true onlyafterallparentsclosed",
+      "all_native_closed=true",
+      "all_process_exits_observed=true",
+      "source_unchanged=true",
+      "partition:pointer",
+      "capture_plan:pointer",
+      "parents"
+    ],
+    "pointer": "exact{path,sha256}, allphysicalsourcepathsbound, noTESTpaths",
+    "exact_parent_ids": "near_goal_perception_train_seed261103600..631; pilot600..605,624,628",
+    "parent_folds": "600..623fit,624..627selection,628..631calibration; declaredrole retained,internalcalibration->calib",
+    "parent_fields": [
+      "parent_id",
+      "seed",
+      "role",
+      "capture:{result,owner_actual_exit,run_inputs,source_manifest} fourpointers",
+      "initial_public_rgbd:pointer toactualinitialization/public_rgbd.npz",
+      "public_sphere_fit:pointer toactualpublic_initial_sphere.json",
+      "shots:orderedshot00..07"
+    ],
+    "shot_fields": [
+      "shot_id",
+      "scene_id=parent/shot",
+      "independent_scene=true",
+      "physics_ticks=0",
+      "condition canonical",
+      "condition_detail required8classdescription",
+      "inputs:pointer",
+      "labels:pointer",
+      "annotation_metadata:pointer underlabels/"
+    ],
+    "condition": "Canonical3groups ONLY sphere_only/cube_far/near_goal. Sphere-only+gripperNear stayssphere_only; detailed variants notnewnegativegroups. Captureplan/manifest/annotationmetadata mustagree.",
+    "annotation_metadata": [
+      "scene_id",
+      "shot_id",
+      "condition",
+      "condition_detail matches predeclared shot; cube_scene_present=true physicalShape exists in this protocol",
+      "absence_from_all_camera_frusta_by_construction:bool",
+      "absence_proof:pointer forsphere_only"
+    ],
+    "absence_proof": "labels-sideSHA-bound JSON {verified:true,all_four_camera_frusta_outside:true,source:predeclared_analytic_four_camera_frusta}; neverinferredfromowner0. Sphere-onlyCubeShape maystillphysicallyexist outsideall4frusta. Nested annotationmetadata.absence_proof relativepath resolves from originalparentcapturecase (e.g. labels/outside_frusta_proof.json), not fromaggregate manifestdirectory.",
+    "label_npz": "Actualcounterfactualdepth/RGB/rawpositive/negative/invalid/boundary/conflictplanes; actualcube_pose_world isofflinecentreGTonly; scene_id/timestamp0/counted_tick0. No fakeinstances orGTpixelmask.",
+    "source_checks": "All8perparentactualresult/inputlabelpointers match; owneractualrc0/waitcomplete/stopnone/nativeclosed; actualclock0; sourcearchivefilesbyteSHA; runmapscommonacrossparents andNativebeforeafterequal; oneimmutablepublicinitialsphere/K/T; alldataboundrecheckedbeforecompletecheckpoint",
+    "pilot": "6fit/1selection/1calibration\u00d78shots structural/optimizerSMOKEonly, neverruntimequalified; full32requires24/4/4\u00d78.",
+    "parent_q_source": "Eachplannedparent.TRAIN_q_source equals actualrun.TRAIN_q_source exactly; SHA-bound(file.resolve,fileSHA,dataset,index) groups cannot crossfit/selection/calibration; differentseed alone is not independence."
+  },
+  "quality_addendum": "quality_addendum.json",
+  "training": "40epochs seed261103700 AdamWlr3e-4wd1e-4 CE+CubeDice knownlabelsonly equalparents/all8shots/4views. selectiononlyepoch,calibrationonlyfixedgrid. No pretrainedweights/augment orarchitecturesearch.",
+  "oracle": "Beforeconstructingmodel/optimizer: true rawmask->sameerosionandgeometry, noGTfill; nonzeroeligible andP95<=.005m necessary. Alwaysreportcoverage/max/allunobserved andnegativegroups.",
+  "not_qualified_by_CPU_or_two_shots": true
+}

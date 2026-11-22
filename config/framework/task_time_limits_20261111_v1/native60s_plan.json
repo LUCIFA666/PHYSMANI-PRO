@@ -1,0 +1,24 @@
+{
+  "scope": "task_time_limit_validation_only",
+  "training_authorized": false,
+  "formal_VAL_TEST": false,
+  "timeout_seconds": 600,
+  "historical_global_stop": {
+    "sha256": "e2bb2d8aff8697cf3f0c18a7a0707b2bd7e8e817d18b563513c365bf0e5a1850",
+    "mtime_ns": 1793780243677293196,
+    "inode": 220594231
+  },
+  "worker_module": "our_mani.task_time_limits_20261111_v1.native_check",
+  "cases": [
+    {
+      "id": "all16_common_backend_60s_hold",
+      "task": "push_moving_button",
+      "seed": 2611116000,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/push_moving_button/all_variations/episodes/episode100/data.h5",
+      "config": {
+        "task_time_limit_seconds": 60.0,
+        "budget_ticks": 1200
+      }
+    }
+  ]
+}

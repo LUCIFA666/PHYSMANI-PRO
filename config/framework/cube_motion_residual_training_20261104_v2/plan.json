@@ -1,0 +1,45 @@
+{
+  "schema": "cube_revision_serial_phase_20261104_v1",
+  "phase_id": "cube_motion_residual_training_20261104_v2",
+  "method_sources": {
+    "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/cube_motion_residual_training_preparation_v2/method_sources.json",
+    "sha256": "360f484313ad6bfa1e383fe14df768e2e632e31ad2f8be51062dfa93cb187c1a"
+  },
+  "output_root": "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/cube_motion_residual_training_run_v2",
+  "jobs": [
+    {
+      "id": "motion_fit200",
+      "output": "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/cube_motion_residual_training_run_v2/artifacts/fit200",
+      "native": false,
+      "cpu": false,
+      "argv": [
+        "scripts/train_cube_motion_residual_20261104_v1.py",
+        "--plan",
+        "/home/ubuntu/桌面/our-mani/config/framework/cube_motion_residual_training_20261104_v2/training.json",
+        "--plan-sha256",
+        "d169dca7509d849fd6fc06c6dbbaddea4fd0061a97a2e97ddf66563081bded19",
+        "--execute"
+      ],
+      "json_checks": [
+        {
+          "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/cube_motion_residual_training_run_v2/artifacts/fit200/fit_status.json",
+          "fields": {
+            "complete": true,
+            "training_complete": true,
+            "epochs_completed": 200,
+            "actual_optimizer_steps": 1600,
+            "heldout_payloads_read": false
+          }
+        }
+      ]
+    }
+  ],
+  "python": "/home/ubuntu/桌面/our-mani/.conda-env/bin/python",
+  "stage_timeout_seconds": {
+    "motion_fit200": 1800
+  },
+  "stop_grace_seconds": 30,
+  "poll_seconds": 0.5,
+  "wait_timeout_seconds": 1800,
+  "CF_output_root": "/home/ubuntu/桌面/our-mani/runtime/framework/cube_motion_TRAIN_20261104_v2"
+}

@@ -1,0 +1,92 @@
+{
+  "schema": "P4_position_v63_fixed_V59_development_canary4_preparation_v1",
+  "complete_preparation": true,
+  "execution_ready": true,
+  "execution_authorized": false,
+  "pending": [
+    "root_exclusive_Native_authorization"
+  ],
+  "selection_basis": "same four V59 preassigned development cases; no TEST outcomes used",
+  "reference_plan": {
+    "path": "runtime/framework/local_mpc_20261102/public_candidate_darkred_v59_development_v1/plan.json",
+    "sha256": "0c0c789e6514d8f5fe1bb0e67f70c5f7d2ccb67956cf04ce06dd96a0709c8aef"
+  },
+  "jobs": [
+    {
+      "id": "00_val_static",
+      "scene": "static",
+      "config": "config/framework/P4_position_v63_development_canaries_v1/00_val_static.json",
+      "path": "runtime/framework/local_mpc_20261102/public_candidate_position_v63_development_v1/00_val_static",
+      "evaluation": "artifacts/framework/local_mpc_20261102/P4_position_v63_development_v1/00_val_static",
+      "reference_development_parent": "00_val_static",
+      "reference_config": {
+        "path": "runtime/framework/local_mpc_20261102/public_candidate_darkred_v59_development_v1/00_val_static_config.json",
+        "sha256": "ca98a82b489fa1b35a59e2a748fd7890866e03b061f67b50dddd11ab5a58f1fb"
+      },
+      "expected_role": "positive_development"
+    },
+    {
+      "id": "03_val_uniform",
+      "scene": "uniform",
+      "config": "config/framework/P4_position_v63_development_canaries_v1/03_val_uniform.json",
+      "path": "runtime/framework/local_mpc_20261102/public_candidate_position_v63_development_v1/03_val_uniform",
+      "evaluation": "artifacts/framework/local_mpc_20261102/P4_position_v63_development_v1/03_val_uniform",
+      "reference_development_parent": "03_val_uniform",
+      "reference_config": {
+        "path": "runtime/framework/local_mpc_20261102/public_candidate_darkred_v59_development_v1/03_val_uniform_config.json",
+        "sha256": "1e2d3d174587e77ad1d571d4b246f89531d81f2a37144d289111953c9418baf3"
+      },
+      "expected_role": "positive_development"
+    },
+    {
+      "id": "uniform_002",
+      "scene": "uniform",
+      "config": "config/framework/P4_position_v63_development_canaries_v1/uniform_002.json",
+      "path": "runtime/framework/local_mpc_20261102/public_candidate_position_v63_development_v1/uniform_002",
+      "evaluation": "artifacts/framework/local_mpc_20261102/P4_position_v63_development_v1/uniform_002",
+      "reference_development_parent": "uniform_002",
+      "reference_config": {
+        "path": "runtime/framework/local_mpc_20261102/public_candidate_darkred_v59_development_v1/uniform_002_config.json",
+        "sha256": "497ffe72025446e6f35b246241509188fd8085bf0d259f79943009c48b6faf49"
+      },
+      "expected_role": "positive_development"
+    },
+    {
+      "id": "static_no_proxy",
+      "scene": "static",
+      "config": "config/framework/P4_position_v63_development_canaries_v1/static_no_proxy.json",
+      "path": "runtime/framework/local_mpc_20261102/public_candidate_position_v63_development_v1/static_no_proxy",
+      "evaluation": "artifacts/framework/local_mpc_20261102/P4_position_v63_development_v1/static_no_proxy",
+      "reference_development_parent": "static_no_proxy",
+      "reference_config": {
+        "path": "runtime/framework/local_mpc_20261102/public_candidate_darkred_v59_development_v1/static_no_proxy_config.json",
+        "sha256": "781832e238ee041a0d93da3eb3304c673f89a8d8e67a8ed80882d3d1bd11ddb9"
+      },
+      "expected_role": "counterfactual_negative_no_proxy"
+    }
+  ],
+  "all_four_run_regardless_of_task_outcome": true,
+  "retry_or_case_replacement_based_on_outcome": false,
+  "Native_started": false,
+  "formal_TEST_read": false,
+  "new_TEST_partition_modified": false,
+  "physics_dt": 0.05,
+  "control_dt": 0.1,
+  "decision_ticks": 2,
+  "model_budget": "unchanged 256/H8/88,88,80",
+  "evidence": "original6mm proof/10mm maintenance/public goal/hold unchanged",
+  "position_qualification_is_not_raw_model_or_Native_grasp_qualification": true,
+  "posthoc_task_judge": "our_mani.local_mpc_control_20261103.native_task_evaluation.evaluate_case, only after actual exit/native_closed/source verification",
+  "future_same8_devVAL": "root separately authorizes after fixed four-case development gate; not launched by this plan",
+  "launch_default": "check only; explicit execute still refuses missing real V8 certificate/freeze",
+  "freeze_SHA_external_to_config": true,
+  "position_certificate": {
+    "path": "artifacts/framework/near_goal_segmentation_20261103/position_measurement_adaptive_fresh8_v8/calibrated.pt",
+    "sha256": "a3a56410e06b0150471500407b0f70d29bbe4dcf7aa540ee08039da95feb721a"
+  },
+  "position_measurement_qualified": true,
+  "model_qualified": false,
+  "raw_mask_model_qualified": false,
+  "Native_grasp_qualified": false,
+  "execution_source_freeze": "supplied as external launcher path+SHA; delivery receipt carries exact pointer"
+}

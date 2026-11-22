@@ -1,0 +1,22 @@
+{
+  "schema": "cube_future_candidate_training_owner_20261104_v1",
+  "method_sources": {
+    "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/cube_future_candidate_training_preparation_20261104_v1/method_sources.json",
+    "sha256": "e6e710a58f802b409184ba73ce3ee7366ef0986dea74b82b21f1eaed7de6b42f"
+  },
+  "training_plan": {
+    "path": "/home/ubuntu/桌面/our-mani/config/framework/cube_future_candidate_training_20261104_v1/training.json",
+    "sha256": "24b491225ed660e2eeb3c544065ddfd8b030c6c14941a5a7b8c6af93a3da3b87"
+  },
+  "output_root": "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/cube_future_candidate_training_run_20261104_v1",
+  "fit_output": "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/cube_future_candidate_training_run_20261104_v1/artifacts/fit200",
+  "python": "/home/ubuntu/桌面/our-mani/.conda-env/bin/python",
+  "stage_timeout_seconds": {
+    "candidate_fit": 1800
+  },
+  "stop_grace_seconds": 30,
+  "poll_seconds": 0.5,
+  "wait_timeout_seconds": 1800,
+  "CF_output_root": "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/cube_future_candidate_training_run_20261104_v1/unused_native_capture",
+  "user_request": "开始吧 先训练抓方块的任务看看效果"
+}

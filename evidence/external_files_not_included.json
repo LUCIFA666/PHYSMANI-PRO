@@ -1,0 +1,65 @@
+[
+  {
+    "role": "frozen_other_task_head",
+    "original_path": "/home/ubuntu/桌面/our-mani/artifacts/framework/multitask_executor_cycle_20261112_v1/head_fit/selected.pt",
+    "bytes": 347169871,
+    "sha256": "65a906fc96ffe8d7b453fa22b47199bf153d91ff712235f001c368682e1c36af",
+    "included": false
+  },
+  {
+    "role": "cube_report.motion_recorded_pretraining.checkpoint",
+    "original_path": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/motion_weak_fit/selected.pt",
+    "bytes": 343189,
+    "sha256": "06ab680900e5e299ca7bec6e30df5bac7f0a3c9597ad2a5d87ff083f3edaf628",
+    "included": false
+  },
+  {
+    "role": "cube_report.candidate_desired_pose_pretraining.checkpoint",
+    "original_path": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/candidate_weak_fit/selected.pt",
+    "bytes": 12810763,
+    "sha256": "913fab1ea683ed6384690fe5c8654af3be52c722799f2c7e235ff59a9964568e",
+    "included": false
+  },
+  {
+    "role": "cube_report.runtime_check.motion",
+    "original_path": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/motion_fit/selected.pt",
+    "bytes": 341269,
+    "sha256": "43a0ae791d96fc1f51316b50f04b9027a3b1eca9c7a39bae3c5352e1fadcb3ee",
+    "included": false
+  },
+  {
+    "role": "cube_report.runtime_check.candidate",
+    "original_path": "/home/ubuntu/桌面/our-mani/artifacts/framework/cube_full_reuse_20261112_v1/candidate_fit/selected.pt",
+    "bytes": 12811979,
+    "sha256": "6815a099b9796d532a4bfa3fe44ef2c569b9eb9482533477d5e8d90dc2cdbc20",
+    "included": false
+  },
+  {
+    "role": "executor_continuous_posture_20261113_v22.robot_posture_bank",
+    "original_path": "/home/ubuntu/桌面/our-mani/artifacts/framework/executor_continuous_posture_20261113_v22/TRAIN_robot_posture_bank.npz",
+    "bytes": 17613,
+    "sha256": "8b68e5b62e35de421b9d7d084bfeda8b8eabda187fe723ab85c9fdc7b4abdd67",
+    "included": false
+  },
+  {
+    "role": "executor_gripper_goal_refresh_20261113_v24.robot_posture_bank",
+    "original_path": "/home/ubuntu/桌面/our-mani/artifacts/framework/executor_gripper_goal_refresh_20261113_v24/TRAIN_robot_posture_bank.npz",
+    "bytes": 17613,
+    "sha256": "8b68e5b62e35de421b9d7d084bfeda8b8eabda187fe723ab85c9fdc7b4abdd67",
+    "included": false
+  },
+  {
+    "role": "executor_release_continuous_ik_20261113_v23.robot_posture_bank",
+    "original_path": "/home/ubuntu/桌面/our-mani/artifacts/framework/executor_release_continuous_ik_20261113_v23/TRAIN_robot_posture_bank.npz",
+    "bytes": 17613,
+    "sha256": "8b68e5b62e35de421b9d7d084bfeda8b8eabda187fe723ab85c9fdc7b4abdd67",
+    "included": false
+  },
+  {
+    "role": "frozen_CLIP_text_encoder_language_branch_untrained",
+    "original_path": "/home/ubuntu/.cache/clip/RN50.pt",
+    "bytes": 255827503,
+    "sha256": "afeb0e10f9e5a86da6080e35cf09123aca3b358a0c3e3b6c78a7b63bc04b6762",
+    "included": false
+  }
+]

@@ -1,0 +1,70 @@
+{
+  "version": "physmani_paper_reported_reference_v1",
+  "authorization": "用户：你可以用论文里宣称的数据",
+  "baseline_result_source": "paper_reported_not_locally_reproduced",
+  "paper": "https://arxiv.org/pdf/2607.01938",
+  "paper_title": "PhysMani: Physics-principled 3D World Model for Dynamic Object Manipulation",
+  "primary_metric": "complete_task_success_rate_percent",
+  "task_success_reference": {
+    "table": 1,
+    "pdf_page_index": 9,
+    "printed_page": 10,
+    "test_episodes_per_task": 40,
+    "aggregation": "mean and standard deviation over best 3 models from last 5 checkpoints",
+    "std_is_confidence_interval": false,
+    "methods": {
+      "PhysMani": {
+        "pick_moving_target_on_the_table": {
+          "mean_percent": 84.2,
+          "std_percent": 3.1
+        },
+        "pick_moving_target_on_the_table_high_speed": {
+          "mean_percent": 18.3,
+          "std_percent": 2.4
+        }
+      },
+      "3DFA": {
+        "pick_moving_target_on_the_table": {
+          "mean_percent": 70.0,
+          "std_percent": 6.1
+        },
+        "pick_moving_target_on_the_table_high_speed": {
+          "mean_percent": 21.7,
+          "std_percent": 2.4
+        }
+      }
+    }
+  },
+  "trajectory_reference": {
+    "table": 2,
+    "pdf_page_index": 10,
+    "metric": "predicted versus ground-truth target center Euclidean distance",
+    "scope": "all 16 tasks, test trajectories, four camera views",
+    "PhysMani": [
+      {
+        "horizon_seconds": 0.05,
+        "error_m": 0.008
+      },
+      {
+        "horizon_seconds": 0.25,
+        "error_m": 0.039
+      },
+      {
+        "horizon_seconds": 0.5,
+        "error_m": 0.074
+      }
+    ],
+    "ours_comparability": "Our existing two-task VAL trajectory metrics have different horizons and aggregation; no direct delta is reported."
+  },
+  "reporting_rules": [
+    "Use full-framework task success for the primary comparison, never classifier AUROC or selected-subset success as framework success.",
+    "Mark paper values as reported by the authors; they are not local reproduction results.",
+    "Keep development resets separate from the original TEST benchmark.",
+    "Do not compute paired significance or success-rate deltas against paper aggregates.",
+    "The context plus SimNorm v1 is trained on TRAIN and undergoing controller-specific success collection; report formal TEST only from its frozen benchmark.",
+    "Primary PhysMani reference is Table 1, not the separately aggregated Table 4 ablation results."
+  ],
+  "new_local_baseline_run_required": false,
+  "formal_ours_test_status": "not_run",
+  "original_ngff_training": "remain_stopped"
+}

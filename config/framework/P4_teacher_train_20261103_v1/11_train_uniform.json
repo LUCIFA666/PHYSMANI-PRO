@@ -1,0 +1,133 @@
+{
+  "schema": "P4_TRAIN_truthB_public50ms_shadow_teacher_20261103_v1",
+  "authorization": "user supplied revised 12-part PLAN and requested execution",
+  "information_setting": "truth_state_teacher_plus_strictly_separate_public50ms_RGBD_GRU_shadow",
+  "formal_evaluation": false,
+  "physics_dt": 0.05,
+  "control_dt": 0.1,
+  "decision_ticks": 2,
+  "horizon_seconds": 0.8,
+  "horizon_steps": 8,
+  "num_candidates": 8,
+  "cem_sequences_total": 256,
+  "cem_iteration_sequences": [
+    88,
+    88,
+    80
+  ],
+  "task": "pick_moving_target_on_the_table",
+  "calibration_train_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/pick_moving_target_on_the_table/all_variations/episodes/episode0/data.h5",
+  "native_repo": "/home/ubuntu/桌面/phsimani/PhysMani",
+  "seed": 261103011,
+  "simulation_seconds": 8.0,
+  "joint_reference_acceleration": 12.0,
+  "joint_reference_jerk": 1000.0,
+  "gripper_velocity": 0.2,
+  "hold_seconds": 0.5,
+  "lift_height_m": 0.04,
+  "max_hold_relative_drift_m": 0.02,
+  "initial_target_position": [
+    0.29,
+    0.24,
+    0.775
+  ],
+  "uniform_velocity": [
+    -0.014142135623730949,
+    -0.014142135623730949,
+    0.0
+  ],
+  "speed_change_at_tick": 24,
+  "changed_velocity": [
+    -0.014142135623730949,
+    -0.014142135623730949,
+    0.0
+  ],
+  "reset": "full home start; all staging physics steps disclosed separately",
+  "task_success": "unchanged native task success; additional actual held/lift/hold metrics",
+  "free_motion_predictor_P1": "constant velocity and constant angular velocity, truth current state",
+  "execution_model_P1": "TRAIN-only B coupled joint response plus frozen old NN two-finger response; completion-latch contact/finger dynamics not requalified",
+  "learned_value_network": false,
+  "future_motion_P3": "retain original causal GRU plus context/SimNorm and SE3 prediction; validate physical units and time coverage",
+  "candidate_P4": "Transformer outputs object-relative pose, absolute deadline, approach and gripper requirements",
+  "old_experiment_STOP_files": "preserved; no previous owner or training job resumed",
+  "protocol_change": "100ms feedback instead of original 500ms; physical timestep remains50ms",
+  "stages": [
+    {
+      "id": "P0",
+      "name": "short duration execution interface",
+      "gate": "actual native timing, target replacement and persistent gripper verified"
+    },
+    {
+      "id": "P1",
+      "name": "truth state geometric candidates explicit cost MPC",
+      "gate": "uniform target approach/align/close/hold then speed change response"
+    },
+    {
+      "id": "P2",
+      "name": "known kinematics plus learned actual execution residual",
+      "gate": "episode-held-out multistep and action-choice improvement"
+    },
+    {
+      "id": "P3",
+      "name": "public RGBD state and retained GRU SE3 forecast",
+      "gate": "accuracy and latency within measured grasp tolerances"
+    },
+    {
+      "id": "P4",
+      "name": "handoff candidate Transformer",
+      "gate": "feasible candidate coverage and closed-loop execution"
+    },
+    {
+      "id": "P5",
+      "name": "complete grasp with contact response",
+      "gate": "robust approach alignment closure hold with attributable failures"
+    },
+    {
+      "id": "P6",
+      "name": "generalization and matched ablations",
+      "gate": "reproducible task success and performance limits with confidence intervals"
+    }
+  ],
+  "native_task_source_sha256": "39486843383652996da289048d8d5220e27c64ba55821dc00f4e536ab46f36cd",
+  "native_task_scene_sha256": "65a2ce9740f2e6104082aa6a541b88eaefdadf20f8dc5880db67d7b434a5337a",
+  "dataset_use": "train",
+  "preserve_native_height": true,
+  "terminal_goal_cost": true,
+  "workspace_lower": [
+    -0.1,
+    -0.65,
+    0.755
+  ],
+  "execution_model": "coupled",
+  "response_factory": "coupled_joint_20261103_v1",
+  "response_controller": "coupled",
+  "action_space": "joint",
+  "use_joint_goal_planner": true,
+  "diagnostic_only": true,
+  "architecture_selection_used_VAL": true,
+  "public_motion_shadow": true,
+  "public_shadow_save_frames": true,
+  "gripper_completion_latch": true,
+  "public_grasp_prototype": false,
+  "public_pregrasp_control": false,
+  "public_grasp_active_visual_v4": false,
+  "public_grasp_active_visual_v41": false,
+  "finger_response_requalified_for_runtime_protocol": false,
+  "completion_response_approximation_used": false,
+  "Native_labels_used_by_public_shadow": false,
+  "Transformer_training_started": false,
+  "automatic_task_latent_classification_claimed": false,
+  "P4_collection_metadata": {
+    "parent_id": "p4_new_TRAIN_20261103_11_seed261103011",
+    "split": "train",
+    "episode_id": "11_train_uniform",
+    "variant_id": "truthB_completion_latched_public50_shadow_v1",
+    "parent_assigned_before_episode_generation": true,
+    "randomized_initialization": false,
+    "fixed_XY_scenario_description": "negativeXY diagonal with speednorm.02",
+    "initial_z_is_placeholder_replaced_by_Native_default": true,
+    "old_NN_finger_response_is_not_requalified": true,
+    "future_truth_only_for_posthoc_contact_tau_and_outcomes": true,
+    "tau_definition": "first real50ms Nativeheld observation after actual close dispatch; API done is separate"
+  }
+}

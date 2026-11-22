@@ -1,0 +1,1794 @@
+{
+  "schema": "fourteen_task_author_arm_then_gripper_small_cycle_20261112_v7",
+  "previous_plan": {
+    "path": "/home/ubuntu/桌面/our-mani/config/framework/multitask_executor_cycle_20261112_v1/plan.json",
+    "sha256": "153a2884424d02a51e52577cc492cf422b75d0d5964c96cb2026d760e9c7c257"
+  },
+  "previous_fit_status": {
+    "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/multitask_executor_cycle_20261112_v1/head_fit/fit_status.json",
+    "sha256": "e66d8856843f3ca92fd03036540f5333722ea5c834378b6013b0a05cd94e91de"
+  },
+  "previous_retirement": {
+    "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/multitask_executor_cycle_20261112_v1/retirement_receipt.json",
+    "sha256": "b9c13acefc68fe8c936cc5ded28ce89dc67290996d3771189bdbc780cdbecf61"
+  },
+  "checkpoint": {
+    "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/multitask_executor_cycle_20261112_v1/head_fit/selected.pt",
+    "sha256": "65a906fc96ffe8d7b453fa22b47199bf153d91ff712235f001c368682e1c36af"
+  },
+  "tasks": [
+    "beat_the_rotating_buzz",
+    "beat_the_rotating_buzz_high_speed",
+    "insert_onto_rotating_peg",
+    "insert_onto_rotating_peg_high_speed",
+    "moving_basketball_in_hoop",
+    "moving_basketball_in_hoop_high_speed",
+    "place_cups_on_rotating_frame",
+    "place_cups_on_rotating_frame_high_speed",
+    "push_moving_button",
+    "push_moving_button_high_speed",
+    "put_rubbish_in_moving_bin",
+    "put_rubbish_in_moving_bin_high_speed",
+    "remove_cups_from_rotating_frame",
+    "remove_cups_from_rotating_frame_high_speed"
+  ],
+  "cases": [
+    {
+      "id": "00_beat_the_rotating_buzz_fit_0",
+      "task": "beat_the_rotating_buzz",
+      "role": "fit",
+      "seed": 2611130000,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/beat_the_rotating_buzz/all_variations/episodes/episode154/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611130000",
+      "cold_reset_seeds": [
+        2611130000,
+        3538379055,
+        2116292922,
+        4087029917,
+        2004362468
+      ]
+    },
+    {
+      "id": "00_beat_the_rotating_buzz_fit_1",
+      "task": "beat_the_rotating_buzz",
+      "role": "fit",
+      "seed": 2611130001,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/beat_the_rotating_buzz/all_variations/episodes/episode154/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611130001",
+      "cold_reset_seeds": [
+        2611130001,
+        1780829922,
+        3015781006,
+        3803187112,
+        2614323051
+      ]
+    },
+    {
+      "id": "00_beat_the_rotating_buzz_fit_2",
+      "task": "beat_the_rotating_buzz",
+      "role": "fit",
+      "seed": 2611130002,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/beat_the_rotating_buzz/all_variations/episodes/episode154/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611130002",
+      "cold_reset_seeds": [
+        2611130002,
+        3082005276,
+        2926406734,
+        1415187067,
+        1412182972
+      ]
+    },
+    {
+      "id": "00_beat_the_rotating_buzz_selection_0",
+      "task": "beat_the_rotating_buzz",
+      "role": "selection",
+      "seed": 2611130100,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/beat_the_rotating_buzz/all_variations/episodes/episode154/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611130100",
+      "cold_reset_seeds": [
+        2611130100,
+        1083850391,
+        1466052733,
+        624231398,
+        4292234552
+      ]
+    },
+    {
+      "id": "00_beat_the_rotating_buzz_validation_0",
+      "task": "beat_the_rotating_buzz",
+      "role": "validation",
+      "seed": 2611130200,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/beat_the_rotating_buzz/all_variations/episodes/episode154/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611130200",
+      "cold_reset_seeds": [
+        2611130200,
+        3902301943,
+        788606034,
+        3478415146,
+        3421900822
+      ]
+    },
+    {
+      "id": "00_beat_the_rotating_buzz_test_0",
+      "task": "beat_the_rotating_buzz",
+      "role": "test",
+      "seed": 2611130300,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/beat_the_rotating_buzz/all_variations/episodes/episode154/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611130300",
+      "cold_reset_seeds": [
+        2611130300,
+        305612688,
+        3465190159,
+        3026065413,
+        3273037025
+      ]
+    },
+    {
+      "id": "01_beat_the_rotating_buzz_high_speed_fit_0",
+      "task": "beat_the_rotating_buzz_high_speed",
+      "role": "fit",
+      "seed": 2611131000,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/beat_the_rotating_buzz_high_speed/all_variations/episodes/episode127/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611131000",
+      "cold_reset_seeds": [
+        2611131000,
+        614828085,
+        2767203696,
+        2983779342,
+        3357417390
+      ]
+    },
+    {
+      "id": "01_beat_the_rotating_buzz_high_speed_fit_1",
+      "task": "beat_the_rotating_buzz_high_speed",
+      "role": "fit",
+      "seed": 2611131001,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/beat_the_rotating_buzz_high_speed/all_variations/episodes/episode127/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611131001",
+      "cold_reset_seeds": [
+        2611131001,
+        3167105077,
+        1322687892,
+        2158772780,
+        1204355497
+      ]
+    },
+    {
+      "id": "01_beat_the_rotating_buzz_high_speed_fit_2",
+      "task": "beat_the_rotating_buzz_high_speed",
+      "role": "fit",
+      "seed": 2611131002,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/beat_the_rotating_buzz_high_speed/all_variations/episodes/episode127/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611131002",
+      "cold_reset_seeds": [
+        2611131002,
+        1180786894,
+        2491226818,
+        2920248529,
+        3472910787
+      ]
+    },
+    {
+      "id": "01_beat_the_rotating_buzz_high_speed_selection_0",
+      "task": "beat_the_rotating_buzz_high_speed",
+      "role": "selection",
+      "seed": 2611131100,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/beat_the_rotating_buzz_high_speed/all_variations/episodes/episode127/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611131100",
+      "cold_reset_seeds": [
+        2611131100,
+        336053336,
+        3814366747,
+        890864277,
+        3715996652
+      ]
+    },
+    {
+      "id": "01_beat_the_rotating_buzz_high_speed_validation_0",
+      "task": "beat_the_rotating_buzz_high_speed",
+      "role": "validation",
+      "seed": 2611131200,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/beat_the_rotating_buzz_high_speed/all_variations/episodes/episode127/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611131200",
+      "cold_reset_seeds": [
+        2611131200,
+        3460672811,
+        150581557,
+        832632339,
+        2577458204
+      ]
+    },
+    {
+      "id": "01_beat_the_rotating_buzz_high_speed_test_0",
+      "task": "beat_the_rotating_buzz_high_speed",
+      "role": "test",
+      "seed": 2611131300,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/beat_the_rotating_buzz_high_speed/all_variations/episodes/episode127/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611131300",
+      "cold_reset_seeds": [
+        2611131300,
+        1850473410,
+        546608433,
+        891020120,
+        2351191457
+      ]
+    },
+    {
+      "id": "02_insert_onto_rotating_peg_fit_0",
+      "task": "insert_onto_rotating_peg",
+      "role": "fit",
+      "seed": 2611132000,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/insert_onto_rotating_peg/all_variations/episodes/episode33/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611132000",
+      "cold_reset_seeds": [
+        2611132000,
+        4162614197,
+        2656513204,
+        138124239,
+        2792801384
+      ]
+    },
+    {
+      "id": "02_insert_onto_rotating_peg_fit_1",
+      "task": "insert_onto_rotating_peg",
+      "role": "fit",
+      "seed": 2611132001,
+      "variation": 1,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/insert_onto_rotating_peg/all_variations/episodes/episode33/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611132001",
+      "cold_reset_seeds": [
+        2611132001,
+        910719898,
+        1907605834,
+        2587999873,
+        2902281795
+      ]
+    },
+    {
+      "id": "02_insert_onto_rotating_peg_fit_2",
+      "task": "insert_onto_rotating_peg",
+      "role": "fit",
+      "seed": 2611132002,
+      "variation": 2,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/insert_onto_rotating_peg/all_variations/episodes/episode33/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611132002",
+      "cold_reset_seeds": [
+        2611132002,
+        1222610093,
+        3386162833,
+        2706668569,
+        3323279357
+      ]
+    },
+    {
+      "id": "02_insert_onto_rotating_peg_selection_0",
+      "task": "insert_onto_rotating_peg",
+      "role": "selection",
+      "seed": 2611132100,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/insert_onto_rotating_peg/all_variations/episodes/episode33/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611132100",
+      "cold_reset_seeds": [
+        2611132100,
+        1969782170,
+        3546221303,
+        1682865123,
+        3135800344
+      ]
+    },
+    {
+      "id": "02_insert_onto_rotating_peg_validation_0",
+      "task": "insert_onto_rotating_peg",
+      "role": "validation",
+      "seed": 2611132200,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/insert_onto_rotating_peg/all_variations/episodes/episode33/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611132200",
+      "cold_reset_seeds": [
+        2611132200,
+        3807217868,
+        2179875774,
+        880141735,
+        2238850565
+      ]
+    },
+    {
+      "id": "02_insert_onto_rotating_peg_test_0",
+      "task": "insert_onto_rotating_peg",
+      "role": "test",
+      "seed": 2611132300,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/insert_onto_rotating_peg/all_variations/episodes/episode33/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611132300",
+      "cold_reset_seeds": [
+        2611132300,
+        2001676558,
+        4202935838,
+        3001738803,
+        845407392
+      ]
+    },
+    {
+      "id": "03_insert_onto_rotating_peg_high_speed_fit_0",
+      "task": "insert_onto_rotating_peg_high_speed",
+      "role": "fit",
+      "seed": 2611133000,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/insert_onto_rotating_peg_high_speed/all_variations/episodes/episode144/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611133000",
+      "cold_reset_seeds": [
+        2611133000,
+        3100017994,
+        3204924548,
+        1299180142,
+        2392947475
+      ]
+    },
+    {
+      "id": "03_insert_onto_rotating_peg_high_speed_fit_1",
+      "task": "insert_onto_rotating_peg_high_speed",
+      "role": "fit",
+      "seed": 2611133001,
+      "variation": 1,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/insert_onto_rotating_peg_high_speed/all_variations/episodes/episode144/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611133001",
+      "cold_reset_seeds": [
+        2611133001,
+        343391821,
+        864547471,
+        177728403,
+        3933366180
+      ]
+    },
+    {
+      "id": "03_insert_onto_rotating_peg_high_speed_fit_2",
+      "task": "insert_onto_rotating_peg_high_speed",
+      "role": "fit",
+      "seed": 2611133002,
+      "variation": 2,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/insert_onto_rotating_peg_high_speed/all_variations/episodes/episode144/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611133002",
+      "cold_reset_seeds": [
+        2611133002,
+        3218863283,
+        1093824554,
+        2780929131,
+        2593060034
+      ]
+    },
+    {
+      "id": "03_insert_onto_rotating_peg_high_speed_selection_0",
+      "task": "insert_onto_rotating_peg_high_speed",
+      "role": "selection",
+      "seed": 2611133100,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/insert_onto_rotating_peg_high_speed/all_variations/episodes/episode144/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611133100",
+      "cold_reset_seeds": [
+        2611133100,
+        802237881,
+        2308253819,
+        3560135179,
+        3857559344
+      ]
+    },
+    {
+      "id": "03_insert_onto_rotating_peg_high_speed_validation_0",
+      "task": "insert_onto_rotating_peg_high_speed",
+      "role": "validation",
+      "seed": 2611133200,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/insert_onto_rotating_peg_high_speed/all_variations/episodes/episode144/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611133200",
+      "cold_reset_seeds": [
+        2611133200,
+        1695121338,
+        2457004206,
+        3083437128,
+        2049215313
+      ]
+    },
+    {
+      "id": "03_insert_onto_rotating_peg_high_speed_test_0",
+      "task": "insert_onto_rotating_peg_high_speed",
+      "role": "test",
+      "seed": 2611133300,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/insert_onto_rotating_peg_high_speed/all_variations/episodes/episode144/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611133300",
+      "cold_reset_seeds": [
+        2611133300,
+        2431589889,
+        1503090614,
+        1981406659,
+        935787144
+      ]
+    },
+    {
+      "id": "04_moving_basketball_in_hoop_fit_0",
+      "task": "moving_basketball_in_hoop",
+      "role": "fit",
+      "seed": 2611134000,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/moving_basketball_in_hoop/all_variations/episodes/episode131/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611134000",
+      "cold_reset_seeds": [
+        2611134000,
+        3348599812,
+        3407477161,
+        2555700062,
+        1169085417
+      ]
+    },
+    {
+      "id": "04_moving_basketball_in_hoop_fit_1",
+      "task": "moving_basketball_in_hoop",
+      "role": "fit",
+      "seed": 2611134001,
+      "variation": 1,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/moving_basketball_in_hoop/all_variations/episodes/episode131/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611134001",
+      "cold_reset_seeds": [
+        2611134001,
+        4063872036,
+        2338767024,
+        2729206391,
+        3473695898
+      ]
+    },
+    {
+      "id": "04_moving_basketball_in_hoop_fit_2",
+      "task": "moving_basketball_in_hoop",
+      "role": "fit",
+      "seed": 2611134002,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/moving_basketball_in_hoop/all_variations/episodes/episode131/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611134002",
+      "cold_reset_seeds": [
+        2611134002,
+        2916896008,
+        3926192163,
+        1412397096,
+        310824124
+      ]
+    },
+    {
+      "id": "04_moving_basketball_in_hoop_selection_0",
+      "task": "moving_basketball_in_hoop",
+      "role": "selection",
+      "seed": 2611134100,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/moving_basketball_in_hoop/all_variations/episodes/episode131/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611134100",
+      "cold_reset_seeds": [
+        2611134100,
+        2214853663,
+        2302363011,
+        952339582,
+        303570686
+      ]
+    },
+    {
+      "id": "04_moving_basketball_in_hoop_validation_0",
+      "task": "moving_basketball_in_hoop",
+      "role": "validation",
+      "seed": 2611134200,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/moving_basketball_in_hoop/all_variations/episodes/episode131/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611134200",
+      "cold_reset_seeds": [
+        2611134200,
+        930257896,
+        3936672003,
+        4251287792,
+        1780831850
+      ]
+    },
+    {
+      "id": "04_moving_basketball_in_hoop_test_0",
+      "task": "moving_basketball_in_hoop",
+      "role": "test",
+      "seed": 2611134300,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/moving_basketball_in_hoop/all_variations/episodes/episode131/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611134300",
+      "cold_reset_seeds": [
+        2611134300,
+        2352965667,
+        1426690002,
+        1134504727,
+        3179418875
+      ]
+    },
+    {
+      "id": "05_moving_basketball_in_hoop_high_speed_fit_0",
+      "task": "moving_basketball_in_hoop_high_speed",
+      "role": "fit",
+      "seed": 2611135000,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/moving_basketball_in_hoop_high_speed/all_variations/episodes/episode124/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611135000",
+      "cold_reset_seeds": [
+        2611135000,
+        3008455122,
+        1568912305,
+        1919734440,
+        2183567825
+      ]
+    },
+    {
+      "id": "05_moving_basketball_in_hoop_high_speed_fit_1",
+      "task": "moving_basketball_in_hoop_high_speed",
+      "role": "fit",
+      "seed": 2611135001,
+      "variation": 1,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/moving_basketball_in_hoop_high_speed/all_variations/episodes/episode124/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611135001",
+      "cold_reset_seeds": [
+        2611135001,
+        2300941092,
+        3635949184,
+        1644828325,
+        1653585799
+      ]
+    },
+    {
+      "id": "05_moving_basketball_in_hoop_high_speed_fit_2",
+      "task": "moving_basketball_in_hoop_high_speed",
+      "role": "fit",
+      "seed": 2611135002,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/moving_basketball_in_hoop_high_speed/all_variations/episodes/episode124/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611135002",
+      "cold_reset_seeds": [
+        2611135002,
+        3011913998,
+        997491261,
+        3161558764,
+        180906144
+      ]
+    },
+    {
+      "id": "05_moving_basketball_in_hoop_high_speed_selection_0",
+      "task": "moving_basketball_in_hoop_high_speed",
+      "role": "selection",
+      "seed": 2611135100,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/moving_basketball_in_hoop_high_speed/all_variations/episodes/episode124/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611135100",
+      "cold_reset_seeds": [
+        2611135100,
+        2595767637,
+        2238606781,
+        1096582622,
+        1815086595
+      ]
+    },
+    {
+      "id": "05_moving_basketball_in_hoop_high_speed_validation_0",
+      "task": "moving_basketball_in_hoop_high_speed",
+      "role": "validation",
+      "seed": 2611135200,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/moving_basketball_in_hoop_high_speed/all_variations/episodes/episode124/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611135200",
+      "cold_reset_seeds": [
+        2611135200,
+        2744879233,
+        498039682,
+        1055378270,
+        483513592
+      ]
+    },
+    {
+      "id": "05_moving_basketball_in_hoop_high_speed_test_0",
+      "task": "moving_basketball_in_hoop_high_speed",
+      "role": "test",
+      "seed": 2611135300,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/moving_basketball_in_hoop_high_speed/all_variations/episodes/episode124/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611135300",
+      "cold_reset_seeds": [
+        2611135300,
+        232160254,
+        3551292878,
+        2127408533,
+        4120404383
+      ]
+    },
+    {
+      "id": "06_place_cups_on_rotating_frame_fit_0",
+      "task": "place_cups_on_rotating_frame",
+      "role": "fit",
+      "seed": 2611136000,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/place_cups_on_rotating_frame/all_variations/episodes/episode316/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611136000",
+      "cold_reset_seeds": [
+        2611136000,
+        986595098,
+        1584615712,
+        3440604625,
+        1855845371
+      ]
+    },
+    {
+      "id": "06_place_cups_on_rotating_frame_fit_1",
+      "task": "place_cups_on_rotating_frame",
+      "role": "fit",
+      "seed": 2611136001,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/place_cups_on_rotating_frame/all_variations/episodes/episode316/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611136001",
+      "cold_reset_seeds": [
+        2611136001,
+        3009511700,
+        1586792900,
+        2065893145,
+        1654027272
+      ]
+    },
+    {
+      "id": "06_place_cups_on_rotating_frame_fit_2",
+      "task": "place_cups_on_rotating_frame",
+      "role": "fit",
+      "seed": 2611136002,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/place_cups_on_rotating_frame/all_variations/episodes/episode316/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611136002",
+      "cold_reset_seeds": [
+        2611136002,
+        1109735914,
+        521651825,
+        869534131,
+        541272269
+      ]
+    },
+    {
+      "id": "06_place_cups_on_rotating_frame_selection_0",
+      "task": "place_cups_on_rotating_frame",
+      "role": "selection",
+      "seed": 2611136100,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/place_cups_on_rotating_frame/all_variations/episodes/episode316/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611136100",
+      "cold_reset_seeds": [
+        2611136100,
+        197502145,
+        758082889,
+        1160760880,
+        2792615611
+      ]
+    },
+    {
+      "id": "06_place_cups_on_rotating_frame_validation_0",
+      "task": "place_cups_on_rotating_frame",
+      "role": "validation",
+      "seed": 2611136200,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/place_cups_on_rotating_frame/all_variations/episodes/episode316/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611136200",
+      "cold_reset_seeds": [
+        2611136200,
+        1306483819,
+        3101837876,
+        2804711456,
+        912667338
+      ]
+    },
+    {
+      "id": "06_place_cups_on_rotating_frame_test_0",
+      "task": "place_cups_on_rotating_frame",
+      "role": "test",
+      "seed": 2611136300,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/place_cups_on_rotating_frame/all_variations/episodes/episode316/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611136300",
+      "cold_reset_seeds": [
+        2611136300,
+        1509671022,
+        2588671549,
+        2049832656,
+        3807876086
+      ]
+    },
+    {
+      "id": "07_place_cups_on_rotating_frame_high_speed_fit_0",
+      "task": "place_cups_on_rotating_frame_high_speed",
+      "role": "fit",
+      "seed": 2611137000,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/place_cups_on_rotating_frame_high_speed/all_variations/episodes/episode212/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611137000",
+      "cold_reset_seeds": [
+        2611137000,
+        1950989717,
+        1142804604,
+        1976118144,
+        3047758297
+      ]
+    },
+    {
+      "id": "07_place_cups_on_rotating_frame_high_speed_fit_1",
+      "task": "place_cups_on_rotating_frame_high_speed",
+      "role": "fit",
+      "seed": 2611137001,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/place_cups_on_rotating_frame_high_speed/all_variations/episodes/episode212/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611137001",
+      "cold_reset_seeds": [
+        2611137001,
+        1197080311,
+        660100582,
+        216453497,
+        1655836505
+      ]
+    },
+    {
+      "id": "07_place_cups_on_rotating_frame_high_speed_fit_2",
+      "task": "place_cups_on_rotating_frame_high_speed",
+      "role": "fit",
+      "seed": 2611137002,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/place_cups_on_rotating_frame_high_speed/all_variations/episodes/episode212/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611137002",
+      "cold_reset_seeds": [
+        2611137002,
+        1426397458,
+        3951210596,
+        2416203792,
+        627908041
+      ]
+    },
+    {
+      "id": "07_place_cups_on_rotating_frame_high_speed_selection_0",
+      "task": "place_cups_on_rotating_frame_high_speed",
+      "role": "selection",
+      "seed": 2611137100,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/place_cups_on_rotating_frame_high_speed/all_variations/episodes/episode212/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611137100",
+      "cold_reset_seeds": [
+        2611137100,
+        540412859,
+        1994006072,
+        419533490,
+        2813105030
+      ]
+    },
+    {
+      "id": "07_place_cups_on_rotating_frame_high_speed_validation_0",
+      "task": "place_cups_on_rotating_frame_high_speed",
+      "role": "validation",
+      "seed": 2611137200,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/place_cups_on_rotating_frame_high_speed/all_variations/episodes/episode212/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611137200",
+      "cold_reset_seeds": [
+        2611137200,
+        2076151632,
+        3227957234,
+        193421772,
+        2273633634
+      ]
+    },
+    {
+      "id": "07_place_cups_on_rotating_frame_high_speed_test_0",
+      "task": "place_cups_on_rotating_frame_high_speed",
+      "role": "test",
+      "seed": 2611137300,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/place_cups_on_rotating_frame_high_speed/all_variations/episodes/episode212/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611137300",
+      "cold_reset_seeds": [
+        2611137300,
+        2344099481,
+        3043430436,
+        3227420209,
+        2960023109
+      ]
+    },
+    {
+      "id": "08_push_moving_button_fit_0",
+      "task": "push_moving_button",
+      "role": "fit",
+      "seed": 2611138000,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/push_moving_button/all_variations/episodes/episode179/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611138000",
+      "cold_reset_seeds": [
+        2611138000,
+        2875535879,
+        3703040232,
+        3554597207,
+        2513359870
+      ]
+    },
+    {
+      "id": "08_push_moving_button_fit_1",
+      "task": "push_moving_button",
+      "role": "fit",
+      "seed": 2611138001,
+      "variation": 1,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/push_moving_button/all_variations/episodes/episode179/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611138001",
+      "cold_reset_seeds": [
+        2611138001,
+        1074342216,
+        1358699450,
+        190847455,
+        3818277173
+      ]
+    },
+    {
+      "id": "08_push_moving_button_fit_2",
+      "task": "push_moving_button",
+      "role": "fit",
+      "seed": 2611138002,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/push_moving_button/all_variations/episodes/episode179/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611138002",
+      "cold_reset_seeds": [
+        2611138002,
+        339035429,
+        2916745595,
+        166706977,
+        481408302
+      ]
+    },
+    {
+      "id": "08_push_moving_button_selection_0",
+      "task": "push_moving_button",
+      "role": "selection",
+      "seed": 2611138100,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/push_moving_button/all_variations/episodes/episode179/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611138100",
+      "cold_reset_seeds": [
+        2611138100,
+        4279848955,
+        4000961000,
+        212227097,
+        1021335507
+      ]
+    },
+    {
+      "id": "08_push_moving_button_validation_0",
+      "task": "push_moving_button",
+      "role": "validation",
+      "seed": 2611138200,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/push_moving_button/all_variations/episodes/episode179/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611138200",
+      "cold_reset_seeds": [
+        2611138200,
+        3503543420,
+        356127785,
+        462025403,
+        2877247967
+      ]
+    },
+    {
+      "id": "08_push_moving_button_test_0",
+      "task": "push_moving_button",
+      "role": "test",
+      "seed": 2611138300,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/push_moving_button/all_variations/episodes/episode179/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611138300",
+      "cold_reset_seeds": [
+        2611138300,
+        3869624112,
+        2948962173,
+        3539347406,
+        16295771
+      ]
+    },
+    {
+      "id": "09_push_moving_button_high_speed_fit_0",
+      "task": "push_moving_button_high_speed",
+      "role": "fit",
+      "seed": 2611139000,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/push_moving_button_high_speed/all_variations/episodes/episode330/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611139000",
+      "cold_reset_seeds": [
+        2611139000,
+        3220896391,
+        2806351368,
+        4108286055,
+        3511775909
+      ]
+    },
+    {
+      "id": "09_push_moving_button_high_speed_fit_1",
+      "task": "push_moving_button_high_speed",
+      "role": "fit",
+      "seed": 2611139001,
+      "variation": 1,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/push_moving_button_high_speed/all_variations/episodes/episode330/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611139001",
+      "cold_reset_seeds": [
+        2611139001,
+        32883523,
+        2959569147,
+        1164565235,
+        4206014507
+      ]
+    },
+    {
+      "id": "09_push_moving_button_high_speed_fit_2",
+      "task": "push_moving_button_high_speed",
+      "role": "fit",
+      "seed": 2611139002,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/push_moving_button_high_speed/all_variations/episodes/episode330/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611139002",
+      "cold_reset_seeds": [
+        2611139002,
+        2280544497,
+        2829833373,
+        643916917,
+        1632069949
+      ]
+    },
+    {
+      "id": "09_push_moving_button_high_speed_selection_0",
+      "task": "push_moving_button_high_speed",
+      "role": "selection",
+      "seed": 2611139100,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/push_moving_button_high_speed/all_variations/episodes/episode330/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611139100",
+      "cold_reset_seeds": [
+        2611139100,
+        323359989,
+        1871439381,
+        453433964,
+        3867163582
+      ]
+    },
+    {
+      "id": "09_push_moving_button_high_speed_validation_0",
+      "task": "push_moving_button_high_speed",
+      "role": "validation",
+      "seed": 2611139200,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/push_moving_button_high_speed/all_variations/episodes/episode330/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611139200",
+      "cold_reset_seeds": [
+        2611139200,
+        2302319459,
+        1954256915,
+        746007675,
+        2826330653
+      ]
+    },
+    {
+      "id": "09_push_moving_button_high_speed_test_0",
+      "task": "push_moving_button_high_speed",
+      "role": "test",
+      "seed": 2611139300,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/push_moving_button_high_speed/all_variations/episodes/episode330/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611139300",
+      "cold_reset_seeds": [
+        2611139300,
+        1293161840,
+        1825936045,
+        2718023299,
+        1592919994
+      ]
+    },
+    {
+      "id": "10_put_rubbish_in_moving_bin_fit_0",
+      "task": "put_rubbish_in_moving_bin",
+      "role": "fit",
+      "seed": 2611140000,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/put_rubbish_in_moving_bin/all_variations/episodes/episode343/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611140000",
+      "cold_reset_seeds": [
+        2611140000,
+        3928197325,
+        3024226869,
+        3568802412,
+        3230780955
+      ]
+    },
+    {
+      "id": "10_put_rubbish_in_moving_bin_fit_1",
+      "task": "put_rubbish_in_moving_bin",
+      "role": "fit",
+      "seed": 2611140001,
+      "variation": 1,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/put_rubbish_in_moving_bin/all_variations/episodes/episode343/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611140001",
+      "cold_reset_seeds": [
+        2611140001,
+        3967133212,
+        4154073566,
+        752136507,
+        1402217625
+      ]
+    },
+    {
+      "id": "10_put_rubbish_in_moving_bin_fit_2",
+      "task": "put_rubbish_in_moving_bin",
+      "role": "fit",
+      "seed": 2611140002,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/put_rubbish_in_moving_bin/all_variations/episodes/episode343/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611140002",
+      "cold_reset_seeds": [
+        2611140002,
+        4161225335,
+        3906367870,
+        2483415019,
+        341406231
+      ]
+    },
+    {
+      "id": "10_put_rubbish_in_moving_bin_selection_0",
+      "task": "put_rubbish_in_moving_bin",
+      "role": "selection",
+      "seed": 2611140100,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/put_rubbish_in_moving_bin/all_variations/episodes/episode343/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611140100",
+      "cold_reset_seeds": [
+        2611140100,
+        133367575,
+        3461688903,
+        2139839105,
+        619101140
+      ]
+    },
+    {
+      "id": "10_put_rubbish_in_moving_bin_validation_0",
+      "task": "put_rubbish_in_moving_bin",
+      "role": "validation",
+      "seed": 2611140200,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/put_rubbish_in_moving_bin/all_variations/episodes/episode343/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611140200",
+      "cold_reset_seeds": [
+        2611140200,
+        3577747684,
+        1163897756,
+        2439980925,
+        3725178115
+      ]
+    },
+    {
+      "id": "10_put_rubbish_in_moving_bin_test_0",
+      "task": "put_rubbish_in_moving_bin",
+      "role": "test",
+      "seed": 2611140300,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/put_rubbish_in_moving_bin/all_variations/episodes/episode343/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611140300",
+      "cold_reset_seeds": [
+        2611140300,
+        1927956129,
+        417796272,
+        3274101930,
+        2877175701
+      ]
+    },
+    {
+      "id": "11_put_rubbish_in_moving_bin_high_speed_fit_0",
+      "task": "put_rubbish_in_moving_bin_high_speed",
+      "role": "fit",
+      "seed": 2611141000,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/put_rubbish_in_moving_bin_high_speed/all_variations/episodes/episode334/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611141000",
+      "cold_reset_seeds": [
+        2611141000,
+        978808446,
+        2224534108,
+        4045972407,
+        1551585653
+      ]
+    },
+    {
+      "id": "11_put_rubbish_in_moving_bin_high_speed_fit_1",
+      "task": "put_rubbish_in_moving_bin_high_speed",
+      "role": "fit",
+      "seed": 2611141001,
+      "variation": 1,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/put_rubbish_in_moving_bin_high_speed/all_variations/episodes/episode334/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611141001",
+      "cold_reset_seeds": [
+        2611141001,
+        4070175726,
+        3424928199,
+        69057304,
+        3714099716
+      ]
+    },
+    {
+      "id": "11_put_rubbish_in_moving_bin_high_speed_fit_2",
+      "task": "put_rubbish_in_moving_bin_high_speed",
+      "role": "fit",
+      "seed": 2611141002,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/put_rubbish_in_moving_bin_high_speed/all_variations/episodes/episode334/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611141002",
+      "cold_reset_seeds": [
+        2611141002,
+        742035000,
+        3821699707,
+        745159098,
+        2979308881
+      ]
+    },
+    {
+      "id": "11_put_rubbish_in_moving_bin_high_speed_selection_0",
+      "task": "put_rubbish_in_moving_bin_high_speed",
+      "role": "selection",
+      "seed": 2611141100,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/put_rubbish_in_moving_bin_high_speed/all_variations/episodes/episode334/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611141100",
+      "cold_reset_seeds": [
+        2611141100,
+        1097582430,
+        396635058,
+        4129891247,
+        465649586
+      ]
+    },
+    {
+      "id": "11_put_rubbish_in_moving_bin_high_speed_validation_0",
+      "task": "put_rubbish_in_moving_bin_high_speed",
+      "role": "validation",
+      "seed": 2611141200,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/put_rubbish_in_moving_bin_high_speed/all_variations/episodes/episode334/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611141200",
+      "cold_reset_seeds": [
+        2611141200,
+        3753260151,
+        1800110204,
+        3196513796,
+        1616299784
+      ]
+    },
+    {
+      "id": "11_put_rubbish_in_moving_bin_high_speed_test_0",
+      "task": "put_rubbish_in_moving_bin_high_speed",
+      "role": "test",
+      "seed": 2611141300,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/put_rubbish_in_moving_bin_high_speed/all_variations/episodes/episode334/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611141300",
+      "cold_reset_seeds": [
+        2611141300,
+        3828697604,
+        1406164190,
+        930275239,
+        2979354502
+      ]
+    },
+    {
+      "id": "12_remove_cups_from_rotating_frame_fit_0",
+      "task": "remove_cups_from_rotating_frame",
+      "role": "fit",
+      "seed": 2611142000,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/remove_cups_from_rotating_frame/all_variations/episodes/episode570/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611142000",
+      "cold_reset_seeds": [
+        2611142000,
+        2101099026,
+        3443869623,
+        2697358356,
+        1341828376
+      ]
+    },
+    {
+      "id": "12_remove_cups_from_rotating_frame_fit_1",
+      "task": "remove_cups_from_rotating_frame",
+      "role": "fit",
+      "seed": 2611142001,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/remove_cups_from_rotating_frame/all_variations/episodes/episode570/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611142001",
+      "cold_reset_seeds": [
+        2611142001,
+        370351529,
+        2161913768,
+        872157663,
+        887839480
+      ]
+    },
+    {
+      "id": "12_remove_cups_from_rotating_frame_fit_2",
+      "task": "remove_cups_from_rotating_frame",
+      "role": "fit",
+      "seed": 2611142002,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/remove_cups_from_rotating_frame/all_variations/episodes/episode570/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611142002",
+      "cold_reset_seeds": [
+        2611142002,
+        2331696902,
+        4003159232,
+        1302029446,
+        2629105529
+      ]
+    },
+    {
+      "id": "12_remove_cups_from_rotating_frame_selection_0",
+      "task": "remove_cups_from_rotating_frame",
+      "role": "selection",
+      "seed": 2611142100,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/remove_cups_from_rotating_frame/all_variations/episodes/episode570/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611142100",
+      "cold_reset_seeds": [
+        2611142100,
+        3469146590,
+        187026208,
+        1105525254,
+        2901248530
+      ]
+    },
+    {
+      "id": "12_remove_cups_from_rotating_frame_validation_0",
+      "task": "remove_cups_from_rotating_frame",
+      "role": "validation",
+      "seed": 2611142200,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/remove_cups_from_rotating_frame/all_variations/episodes/episode570/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611142200",
+      "cold_reset_seeds": [
+        2611142200,
+        4233618552,
+        2709054607,
+        680198174,
+        1823332684
+      ]
+    },
+    {
+      "id": "12_remove_cups_from_rotating_frame_test_0",
+      "task": "remove_cups_from_rotating_frame",
+      "role": "test",
+      "seed": 2611142300,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/remove_cups_from_rotating_frame/all_variations/episodes/episode570/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611142300",
+      "cold_reset_seeds": [
+        2611142300,
+        3161611469,
+        2880690879,
+        2890111699,
+        1147122342
+      ]
+    },
+    {
+      "id": "13_remove_cups_from_rotating_frame_high_speed_fit_0",
+      "task": "remove_cups_from_rotating_frame_high_speed",
+      "role": "fit",
+      "seed": 2611143000,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/remove_cups_from_rotating_frame_high_speed/all_variations/episodes/episode433/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611143000",
+      "cold_reset_seeds": [
+        2611143000,
+        2070511283,
+        3091344176,
+        2891083798,
+        2197014656
+      ]
+    },
+    {
+      "id": "13_remove_cups_from_rotating_frame_high_speed_fit_1",
+      "task": "remove_cups_from_rotating_frame_high_speed",
+      "role": "fit",
+      "seed": 2611143001,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/remove_cups_from_rotating_frame_high_speed/all_variations/episodes/episode433/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611143001",
+      "cold_reset_seeds": [
+        2611143001,
+        2027781948,
+        2344905294,
+        3803120870,
+        2133836504
+      ]
+    },
+    {
+      "id": "13_remove_cups_from_rotating_frame_high_speed_fit_2",
+      "task": "remove_cups_from_rotating_frame_high_speed",
+      "role": "fit",
+      "seed": 2611143002,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/remove_cups_from_rotating_frame_high_speed/all_variations/episodes/episode433/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611143002",
+      "cold_reset_seeds": [
+        2611143002,
+        1378128095,
+        886635547,
+        3154515885,
+        1912789896
+      ]
+    },
+    {
+      "id": "13_remove_cups_from_rotating_frame_high_speed_selection_0",
+      "task": "remove_cups_from_rotating_frame_high_speed",
+      "role": "selection",
+      "seed": 2611143100,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/remove_cups_from_rotating_frame_high_speed/all_variations/episodes/episode433/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611143100",
+      "cold_reset_seeds": [
+        2611143100,
+        1028747505,
+        1971933803,
+        89111588,
+        2536920723
+      ]
+    },
+    {
+      "id": "13_remove_cups_from_rotating_frame_high_speed_validation_0",
+      "task": "remove_cups_from_rotating_frame_high_speed",
+      "role": "validation",
+      "seed": 2611143200,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/remove_cups_from_rotating_frame_high_speed/all_variations/episodes/episode433/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611143200",
+      "cold_reset_seeds": [
+        2611143200,
+        2662799269,
+        127296434,
+        3287284046,
+        1579687306
+      ]
+    },
+    {
+      "id": "13_remove_cups_from_rotating_frame_high_speed_test_0",
+      "task": "remove_cups_from_rotating_frame_high_speed",
+      "role": "test",
+      "seed": 2611143300,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/remove_cups_from_rotating_frame_high_speed/all_variations/episodes/episode433/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611143300",
+      "cold_reset_seeds": [
+        2611143300,
+        88997744,
+        2553879439,
+        3147883278,
+        1494672690
+      ]
+    }
+  ],
+  "expected_cases": 84,
+  "preparation_uses_only_TRAIN_reset_failure": true,
+  "VAL_TEST_outcomes_observed_before_retry_rule": false,
+  "cold_reset_max_processes": 5,
+  "retry_allowed_only_before_initial_json": true,
+  "retry_error_type": "TaskEnvironmentError",
+  "valid_policy_failure_or_NativeFalse_retry_allowed": false,
+  "invalid_reset_attempts_saved_and_not_counted_as_NativeFalse": true,
+  "no_action_outcome_based_seed_selection": true,
+  "task_native_constructor_reset_validation_preserved": true,
+  "generated_reset_distribution": "native init_task sampler, conditioned on original reset validation completing",
+  "official_archived_VAL_TEST": false,
+  "small_generated_development_evaluation": true,
+  "default_entry_or_weights_changed": false,
+  "import_first_failed_reset": {
+    "case_id": "00_beat_the_rotating_buzz_fit_0",
+    "attempt": 0,
+    "owner": "/home/ubuntu/桌面/our-mani/artifacts/framework/multitask_executor_cycle_20261112_v1/native/00_beat_the_rotating_buzz_fit_0"
+  },
+  "RML_velocity_preview_corrected": true,
+  "previous_cold_reset_plan": {
+    "path": "/home/ubuntu/桌面/our-mani/config/framework/multitask_executor_cycle_20261112_v2/plan.json",
+    "sha256": "0a9d6b21c16f1c4c9949ada3ca04032dbeeab0b7c442ef8db1906ceeda5b3fc7"
+  },
+  "previous_cycle_retirement": {
+    "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/multitask_executor_cycle_20261112_v2/retirement_receipt.json",
+    "sha256": "acc8de797ff22e25c06615ddd658dcf08999008a8303b392a642e9c3aa85a1b3"
+  },
+  "same_predeclared_84_cases_and420_seeds": true,
+  "all_v3_cases_rerun_with_same_fixed_executor": true,
+  "no_VAL_TEST_outcomes_observed": true,
+  "robot_query_rollback_added": true,
+  "previous_plan_v3": {
+    "path": "/home/ubuntu/桌面/our-mani/config/framework/multitask_executor_cycle_20261112_v3/plan.json",
+    "sha256": "81bc2084749c8916ba2839d38bb46a599cb27409fc28891bafce8abaa7b7a916"
+  },
+  "previous_retirement_v3": {
+    "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/multitask_executor_cycle_20261112_v3/retirement_receipt.json",
+    "sha256": "c9f3dbfd153513405d5d90bcda6361e3a8b7775540833ee605e188ac5800ff1f"
+  },
+  "all_v4_cases_same_executor": true,
+  "previous_plan_v4": {
+    "path": "/home/ubuntu/桌面/our-mani/config/framework/multitask_executor_cycle_20261112_v4/plan.json",
+    "sha256": "b4ad2c5c5cfb82f5c4a3cb453a36c8e0ef4d1837594453700c6c004479d8f5a6"
+  },
+  "previous_retirement_v4": {
+    "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/multitask_executor_cycle_20261112_v4/retirement_receipt.json",
+    "sha256": "0df72888ff9e12fed61b09380cc088eebbcd84f29ece83add0e28881e943a6fc"
+  },
+  "RML_scalar_endpoint_extrapolation_removed": true,
+  "invalid_planned_joint_references_explicitly_rejected_before_execution": true,
+  "all_v5_cases_same_executor": true,
+  "previous_plan_v5": {
+    "path": "/home/ubuntu/桌面/our-mani/config/framework/multitask_executor_cycle_20261112_v5/plan.json",
+    "sha256": "eff9b5e37cc706135754b85a1497f6c52e29ad93a8fefc656abd2f8d1e9cb8be"
+  },
+  "previous_retirement_v5": {
+    "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/multitask_executor_cycle_20261112_v5/retirement_receipt.json",
+    "sha256": "46939bca02051d7775c06af59d63895cc20cc170760e3108ef9da3496d96325d"
+  },
+  "public_observation_cadence_seconds": 0.05,
+  "history_source": "every_actual_physics_step_not_sparse_action_endpoints",
+  "inference": "same_frozen_weights_GPU_BF16_same_as_original_cached_feature_extraction",
+  "GPU_fitting_during_Native": false,
+  "all_v6_cases_same_executor": true,
+  "previous_plan_v6": {
+    "path": "/home/ubuntu/桌面/our-mani/config/framework/multitask_executor_cycle_20261112_v6/plan.json",
+    "sha256": "591675fd7ef91f6c759185e9de7bd4c5e2f3c696e59876db0f2eca18744a8c5b"
+  },
+  "previous_retirement_v6": {
+    "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/multitask_executor_cycle_20261112_v6/retirement_receipt.json",
+    "sha256": "18cce8aa784d81198b5f042e551ca89873aff60befe9562c14bb47bdadf89ee6"
+  },
+  "gripper_sequence": "original_MoveArmThenGripper_arm_sequence_then_gripper",
+  "added_one_cm_measured_arrival_gate_removed": true,
+  "measured_arm_arrival_is_diagnostic_not_success_or_gripper_gate": true,
+  "all_v7_cases_same_executor": true
+}

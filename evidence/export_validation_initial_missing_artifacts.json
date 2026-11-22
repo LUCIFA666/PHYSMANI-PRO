@@ -1,0 +1,11 @@
+{
+  "tests_run": 178,
+  "failures": 0,
+  "errors": 2,
+  "skipped": 0,
+  "passed": false,
+  "wall_seconds": 0.6119914679729845,
+  "executed_from": "/home/ubuntu/PHYSMANI-PRO",
+  "Native_started": false,
+  "model_weights_loaded": false
+}

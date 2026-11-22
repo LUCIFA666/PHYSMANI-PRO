@@ -1,0 +1,12 @@
+{
+  "task": "push_moving_button",
+  "seed": 2611138000,
+  "variation": 0,
+  "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/push_moving_button/all_variations/episodes/episode179/data.h5",
+  "role": "TRAIN_online_expert_executor_diagnostic",
+  "profile": "explicit_button_retract_and_press",
+  "control_ticks": 2,
+  "barrier_rate": 5.0,
+  "reference_frequency": 6.0,
+  "task_specific_execution_prior": "8cm_retract_after_250ms_at_low_goal_then_measured_raise_65mm_and_100ms_dwell"
+}

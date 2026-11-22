@@ -1,0 +1,71 @@
+{
+  "version": "aligned_r07_author_sensors_task_success_calibration",
+  "dynamics_definition": "v1 causal history context + SimNorm, with a pure constant-velocity ablation",
+  "dynamics_checkpoint": "artifacts/framework/pipeline_v2/full_train_r04/dynamics/dynamics.pt",
+  "context_local_value": "artifacts/framework/aligned_r07/context_success/value.pt",
+  "cv_local_value": "artifacts/framework/aligned_r07/cv_success/value.pt",
+  "goal_calibration": "artifacts/framework/local_policy/goal_marker_calibration.json",
+  "simulation_seconds": 10.0,
+  "dt": 0.05,
+  "forecast_seconds": 1.1,
+  "warmup_ticks": 5,
+  "global_joint_acceleration": 6.0,
+  "joint_servo_lead": 1.4,
+  "local_servo_lead": 1.4,
+  "local_max_speed": 1.0,
+  "local_max_acceleration": 4.0,
+  "candidate_stride": 2,
+  "candidate_regions": [
+    [
+      0,
+      0,
+      0.07
+    ],
+    [
+      0.04,
+      0,
+      0.07
+    ],
+    [
+      -0.04,
+      0,
+      0.07
+    ]
+  ],
+  "region_radii": [
+    0.04,
+    0.04,
+    0.04
+  ],
+  "relative_speed_limit": 0.14,
+  "orientation_limit": 0.25,
+  "preposition_height": 1.02,
+  "replan_interval_seconds": 0.1,
+  "maximum_forecast_deviation": 0.06,
+  "seed": 0,
+  "value_scope": "native task success on this candidate attempt before replacement; actual global approach, causal context and remaining episode budget included",
+  "value_input_context": true,
+  "value_ranking_objective": "supported calibrated success with TRAIN-gated ranking and conservative bootstrap-disagreement margin over geometry",
+  "uncertainty_model_present": true,
+  "test_selection_permitted": false,
+  "FASTER_used": false,
+  "NGFF_used": false,
+  "gripper_velocity": 0.2,
+  "gripper_semantics": "single_grasp_attempt_per_close_transition_incremental_actuation",
+  "map_access": "shared_static_geometry_only_dynamic_target_from_method_forecast",
+  "feedback_interval_seconds": 0.05,
+  "baseline_checkpoint": "/home/ubuntu/桌面/phsimani/PhysMani/train_logs/physmani/diffusion_multitask-C120-B18-lr1e-4-2-H3-DT100/epoch_99999.pth",
+  "baseline_decision_ticks": 10,
+  "synchronous_simulation": true,
+  "strict_task_physics_clock": true,
+  "baseline_repo": "/home/ubuntu/桌面/phsimani/PhysMani",
+  "baseline_output": "/home/ubuntu/桌面/our-mani/artifacts/framework/aligned_r07/physmani",
+  "current_instance_masks": true,
+  "information_setting": "simulation_assisted_current_instance_masks_and_shared_static_map",
+  "instance_mask_provenance": "current rendered object-ID masks, matching released PhysMani world-model input; available to both methods; never future masks",
+  "baseline_executor": "released_waypoints_counted_v5_author_RGB",
+  "sensor_protocol": "shared_author_opengl_rgbd_r07",
+  "uncertainty_interpretation": "bootstrap disagreement heuristic, not a calibrated confidence interval",
+  "ranking_minimum_gain": 0.02,
+  "ranking_disagreement_multiplier": 1.0
+}

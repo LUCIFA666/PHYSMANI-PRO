@@ -1,0 +1,140 @@
+{
+  "schema": "P4_student_public_closedloop_newdevVAL_v56_preassigned_parents",
+  "formal_TEST_used": false,
+  "official_VAL_read": false,
+  "split": "val",
+  "weights_frozen": true,
+  "protocol_changed_from_v51": [
+    "postconfirmation only current visible centre consistency, no absolute TCP probe-anchor angle cap",
+    "public task completion needs public goal plus current visible liftedhold"
+  ],
+  "scenarios_and_budgets_unchanged": true,
+  "parents_preassigned_before_any_student_fit": true,
+  "jobs": [
+    {
+      "id": "00_val_static",
+      "parent_id": "p4_new_devVAL_20261103_00_seed261103100",
+      "split": "val",
+      "seed": 261103100,
+      "scene": "static",
+      "config": "config/framework/P4_student_closedloop_devVAL_v56_v1/00_val_static.json",
+      "path": "runtime/framework/local_mpc_20261102/P4_student_closedloop_devVAL_v56_v1/00_val_static",
+      "evaluation": "artifacts/framework/local_mpc_20261102/P4_student_closedloop_devVAL_v56_v1/00_val_static",
+      "paired_teacher": "runtime/framework/local_mpc_20261102/P4_teacher_devVAL_20261103_v1/00_val_static",
+      "paired_student_v51": "runtime/framework/local_mpc_20261102/P4_student_closedloop_devVAL_v51_v1/00_val_static",
+      "config_sha256": "f08d0cadb358292eed91d758455099b4d820d99cd89ccd3191a494453cc113e5"
+    },
+    {
+      "id": "01_val_static",
+      "parent_id": "p4_new_devVAL_20261103_01_seed261103101",
+      "split": "val",
+      "seed": 261103101,
+      "scene": "static",
+      "config": "config/framework/P4_student_closedloop_devVAL_v56_v1/01_val_static.json",
+      "path": "runtime/framework/local_mpc_20261102/P4_student_closedloop_devVAL_v56_v1/01_val_static",
+      "evaluation": "artifacts/framework/local_mpc_20261102/P4_student_closedloop_devVAL_v56_v1/01_val_static",
+      "paired_teacher": "runtime/framework/local_mpc_20261102/P4_teacher_devVAL_20261103_v1/01_val_static",
+      "paired_student_v51": "runtime/framework/local_mpc_20261102/P4_student_closedloop_devVAL_v51_v1/01_val_static",
+      "config_sha256": "1ada7c2d3b1871ed46d9baa6144a00e96cd0c6f76e609c80bd4cf1339239e1d6"
+    },
+    {
+      "id": "02_val_uniform",
+      "parent_id": "p4_new_devVAL_20261103_02_seed261103102",
+      "split": "val",
+      "seed": 261103102,
+      "scene": "uniform",
+      "config": "config/framework/P4_student_closedloop_devVAL_v56_v1/02_val_uniform.json",
+      "path": "runtime/framework/local_mpc_20261102/P4_student_closedloop_devVAL_v56_v1/02_val_uniform",
+      "evaluation": "artifacts/framework/local_mpc_20261102/P4_student_closedloop_devVAL_v56_v1/02_val_uniform",
+      "paired_teacher": "runtime/framework/local_mpc_20261102/P4_teacher_devVAL_20261103_v1/02_val_uniform",
+      "paired_student_v51": "runtime/framework/local_mpc_20261102/P4_student_closedloop_devVAL_v51_v1/02_val_uniform",
+      "config_sha256": "1586757ff1cc3eb92d57c1b5b726fc2c2f77931124caac7edb4d5efc16c04bb7"
+    },
+    {
+      "id": "03_val_uniform",
+      "parent_id": "p4_new_devVAL_20261103_03_seed261103103",
+      "split": "val",
+      "seed": 261103103,
+      "scene": "uniform",
+      "config": "config/framework/P4_student_closedloop_devVAL_v56_v1/03_val_uniform.json",
+      "path": "runtime/framework/local_mpc_20261102/P4_student_closedloop_devVAL_v56_v1/03_val_uniform",
+      "evaluation": "artifacts/framework/local_mpc_20261102/P4_student_closedloop_devVAL_v56_v1/03_val_uniform",
+      "paired_teacher": "runtime/framework/local_mpc_20261102/P4_teacher_devVAL_20261103_v1/03_val_uniform",
+      "paired_student_v51": "runtime/framework/local_mpc_20261102/P4_student_closedloop_devVAL_v51_v1/03_val_uniform",
+      "config_sha256": "c7f9ce928ec332affd4684bdc9e66ffd4042b21346a90c9e235787ef65d2d28f"
+    },
+    {
+      "id": "04_val_uniform",
+      "parent_id": "p4_new_devVAL_20261103_04_seed261103104",
+      "split": "val",
+      "seed": 261103104,
+      "scene": "uniform",
+      "config": "config/framework/P4_student_closedloop_devVAL_v56_v1/04_val_uniform.json",
+      "path": "runtime/framework/local_mpc_20261102/P4_student_closedloop_devVAL_v56_v1/04_val_uniform",
+      "evaluation": "artifacts/framework/local_mpc_20261102/P4_student_closedloop_devVAL_v56_v1/04_val_uniform",
+      "paired_teacher": "runtime/framework/local_mpc_20261102/P4_teacher_devVAL_20261103_v1/04_val_uniform",
+      "paired_student_v51": "runtime/framework/local_mpc_20261102/P4_student_closedloop_devVAL_v51_v1/04_val_uniform",
+      "config_sha256": "d769fc106083ac049e94324c4a9602d3f3bb0ebd54d97d873bfa26845f802402"
+    },
+    {
+      "id": "05_val_uniform",
+      "parent_id": "p4_new_devVAL_20261103_05_seed261103105",
+      "split": "val",
+      "seed": 261103105,
+      "scene": "uniform",
+      "config": "config/framework/P4_student_closedloop_devVAL_v56_v1/05_val_uniform.json",
+      "path": "runtime/framework/local_mpc_20261102/P4_student_closedloop_devVAL_v56_v1/05_val_uniform",
+      "evaluation": "artifacts/framework/local_mpc_20261102/P4_student_closedloop_devVAL_v56_v1/05_val_uniform",
+      "paired_teacher": "runtime/framework/local_mpc_20261102/P4_teacher_devVAL_20261103_v1/05_val_uniform",
+      "paired_student_v51": "runtime/framework/local_mpc_20261102/P4_student_closedloop_devVAL_v51_v1/05_val_uniform",
+      "config_sha256": "d240c86241d0b9c9f13b9724f3fb3f817c5625c572c0f1a6763b0ffcdb4a3b40"
+    },
+    {
+      "id": "06_val_speed_change",
+      "parent_id": "p4_new_devVAL_20261103_06_seed261103106",
+      "split": "val",
+      "seed": 261103106,
+      "scene": "speed_change",
+      "config": "config/framework/P4_student_closedloop_devVAL_v56_v1/06_val_speed_change.json",
+      "path": "runtime/framework/local_mpc_20261102/P4_student_closedloop_devVAL_v56_v1/06_val_speed_change",
+      "evaluation": "artifacts/framework/local_mpc_20261102/P4_student_closedloop_devVAL_v56_v1/06_val_speed_change",
+      "paired_teacher": "runtime/framework/local_mpc_20261102/P4_teacher_devVAL_20261103_v1/06_val_speed_change",
+      "paired_student_v51": "runtime/framework/local_mpc_20261102/P4_student_closedloop_devVAL_v51_v1/06_val_speed_change",
+      "config_sha256": "45a2d2451d6c1a8b2bf7fe5caaa774b623028f8976fb7486a5cfea4ee2344c22"
+    },
+    {
+      "id": "07_val_speed_change",
+      "parent_id": "p4_new_devVAL_20261103_07_seed261103107",
+      "split": "val",
+      "seed": 261103107,
+      "scene": "speed_change",
+      "config": "config/framework/P4_student_closedloop_devVAL_v56_v1/07_val_speed_change.json",
+      "path": "runtime/framework/local_mpc_20261102/P4_student_closedloop_devVAL_v56_v1/07_val_speed_change",
+      "evaluation": "artifacts/framework/local_mpc_20261102/P4_student_closedloop_devVAL_v56_v1/07_val_speed_change",
+      "paired_teacher": "runtime/framework/local_mpc_20261102/P4_teacher_devVAL_20261103_v1/07_val_speed_change",
+      "paired_student_v51": "runtime/framework/local_mpc_20261102/P4_student_closedloop_devVAL_v51_v1/07_val_speed_change",
+      "config_sha256": "e540744b0338ad8e5ad18f35ab54cbdf55a65b8aa6ee148a6a663ff52d301005"
+    }
+  ],
+  "checkpoint_sha256": "61e5827b4838649b8e477048bea56fcace18697f906fb610a3f963bba2437f60",
+  "protocol_changed_from_v52": [
+    "cache the fixed probe nominal IK destination with current qualifications",
+    "evaluate probe terminal phi at its original absolute deadline instead of rolling H8 endpoint"
+  ],
+  "protocol_changed_from_v53": [
+    "terminal phi at original absolute probe deadline only"
+  ],
+  "source_frozen_before_all_cases": true,
+  "protocol_changed_from_v54": [
+    "probe-only on-policy joint response; all nonprobe phases retain original B"
+  ],
+  "probe_parameter_sha256": "f876fbba9f2351ca6457627ab68726be2eea9f2ae435db525fde346cd5f50c32",
+  "probe_response_deployment_scope_selected_using_internal_TRAIN_report": true,
+  "internal_probe_validation_parent_count": 1,
+  "protocol_changed_from_v55": [
+    "post-confirmation current visible position maintenance10mm plus current8mm rise; initial probe proof unchanged"
+  ],
+  "candidate_goal_sphere_filter_v56": false,
+  "postconfirmed_position_maintenance_v56": true,
+  "all_model_weights_unchanged": true
+}

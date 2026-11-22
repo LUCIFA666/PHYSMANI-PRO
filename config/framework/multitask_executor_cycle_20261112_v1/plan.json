@@ -1,0 +1,3360 @@
+{
+  "schema": "fourteen_task_small_executor_cycle_20261112_v1",
+  "user_authorization": "修好其他几个任务执行器，像方块一样做小型TRAIN VAL TEST；按其余14版本推进",
+  "tasks": [
+    "beat_the_rotating_buzz",
+    "beat_the_rotating_buzz_high_speed",
+    "insert_onto_rotating_peg",
+    "insert_onto_rotating_peg_high_speed",
+    "moving_basketball_in_hoop",
+    "moving_basketball_in_hoop_high_speed",
+    "place_cups_on_rotating_frame",
+    "place_cups_on_rotating_frame_high_speed",
+    "push_moving_button",
+    "push_moving_button_high_speed",
+    "put_rubbish_in_moving_bin",
+    "put_rubbish_in_moving_bin_high_speed",
+    "remove_cups_from_rotating_frame",
+    "remove_cups_from_rotating_frame_high_speed"
+  ],
+  "historical_global_stop": {
+    "sha256": "e2bb2d8aff8697cf3f0c18a7a0707b2bd7e8e817d18b563513c365bf0e5a1850",
+    "mtime_ns": 1793780243677293196,
+    "inode": 220594231
+  },
+  "cached_TRAIN_parent_counts": {
+    "fit": 42,
+    "selection": 14
+  },
+  "cached_TRAIN_windows_per_parent": 16,
+  "cached_TRAIN": [
+    {
+      "role": "fit",
+      "task": "beat_the_rotating_buzz",
+      "chunk_index": 25,
+      "source_parent_group": "physmani:beat_the_rotating_buzz:episode154",
+      "public_chunk": {
+        "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/world_command_v3_deferred_run_v1/artifacts/public_cache/public_features/fit/parent0025.pt",
+        "sha256": "097dcbfcdf073666ba3580bacaa4fc63bedd2252f4398aa08572a076f9e54524"
+      },
+      "source_split": "train",
+      "source": {
+        "task": "beat_the_rotating_buzz",
+        "split": "train",
+        "role": "fit",
+        "raw_episode_id": "episode154",
+        "source_parent_group": "physmani:beat_the_rotating_buzz:episode154",
+        "source_path": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/beat_the_rotating_buzz/all_variations/episodes/episode154/data.h5",
+        "eligible_for_pipeline": true,
+        "offline_eligible": true,
+        "offline_quarantined": false,
+        "quarantine_reason": null,
+        "native_eval_included": false,
+        "teacher_prior_TRAIN_exposed": true,
+        "original_metadata": {
+          "task": "beat_the_rotating_buzz",
+          "raw_episode_id": "episode154",
+          "path": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/beat_the_rotating_buzz/all_variations/episodes/episode154/data.h5"
+        },
+        "frame_count": 90,
+        "physical_clock_verified": false,
+        "time_origin": "recorded_frame_index_only_unknown_physical_dt",
+        "source_stat": {
+          "size": 61022492,
+          "mtime_ns": 1776448610000000000,
+          "inode": 190186496
+        }
+      },
+      "original_pretrained_world_fit_exposed": true
+    },
+    {
+      "role": "fit",
+      "task": "beat_the_rotating_buzz",
+      "chunk_index": 6,
+      "source_parent_group": "physmani:beat_the_rotating_buzz:episode116",
+      "public_chunk": {
+        "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/world_command_v3_deferred_run_v1/artifacts/public_cache/public_features/fit/parent0006.pt",
+        "sha256": "e00954b521ca956fc22f7d4e8ef7b83e75378ac0975bab45b7e119d4ab8e907c"
+      },
+      "source_split": "train",
+      "source": {
+        "task": "beat_the_rotating_buzz",
+        "split": "train",
+        "role": "fit",
+        "raw_episode_id": "episode116",
+        "source_parent_group": "physmani:beat_the_rotating_buzz:episode116",
+        "source_path": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/beat_the_rotating_buzz/all_variations/episodes/episode116/data.h5",
+        "eligible_for_pipeline": true,
+        "offline_eligible": true,
+        "offline_quarantined": false,
+        "quarantine_reason": null,
+        "native_eval_included": false,
+        "teacher_prior_TRAIN_exposed": true,
+        "original_metadata": {
+          "task": "beat_the_rotating_buzz",
+          "raw_episode_id": "episode116",
+          "path": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/beat_the_rotating_buzz/all_variations/episodes/episode116/data.h5"
+        },
+        "frame_count": 100,
+        "physical_clock_verified": false,
+        "time_origin": "recorded_frame_index_only_unknown_physical_dt",
+        "source_stat": {
+          "size": 69415827,
+          "mtime_ns": 1776448475000000000,
+          "inode": 190186458
+        }
+      },
+      "original_pretrained_world_fit_exposed": true
+    },
+    {
+      "role": "fit",
+      "task": "beat_the_rotating_buzz",
+      "chunk_index": 85,
+      "source_parent_group": "physmani:beat_the_rotating_buzz:episode50",
+      "public_chunk": {
+        "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/world_command_v3_deferred_run_v1/artifacts/public_cache/public_features/fit/parent0085.pt",
+        "sha256": "740a3c524f27b04f3e03da3481e7c30fb6550374e48899c0f7a6dda597184f28"
+      },
+      "source_split": "train",
+      "source": {
+        "task": "beat_the_rotating_buzz",
+        "split": "train",
+        "role": "fit",
+        "raw_episode_id": "episode50",
+        "source_parent_group": "physmani:beat_the_rotating_buzz:episode50",
+        "source_path": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/beat_the_rotating_buzz/all_variations/episodes/episode50/data.h5",
+        "eligible_for_pipeline": true,
+        "offline_eligible": true,
+        "offline_quarantined": false,
+        "quarantine_reason": null,
+        "native_eval_included": false,
+        "teacher_prior_TRAIN_exposed": true,
+        "original_metadata": {
+          "task": "beat_the_rotating_buzz",
+          "raw_episode_id": "episode50",
+          "path": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/beat_the_rotating_buzz/all_variations/episodes/episode50/data.h5"
+        },
+        "frame_count": 110,
+        "physical_clock_verified": false,
+        "time_origin": "recorded_frame_index_only_unknown_physical_dt",
+        "source_stat": {
+          "size": 73574162,
+          "mtime_ns": 1776449018000000000,
+          "inode": 190186718
+        }
+      },
+      "original_pretrained_world_fit_exposed": true
+    },
+    {
+      "role": "selection",
+      "task": "beat_the_rotating_buzz",
+      "chunk_index": 1,
+      "source_parent_group": "physmani:beat_the_rotating_buzz:episode104",
+      "public_chunk": {
+        "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/world_command_v3_deferred_run_v1/artifacts/public_cache/public_features/fit/parent0001.pt",
+        "sha256": "f141d50c8912b349ebe33d5b8fc22e1baa7d260f0e25598ed42beecd9ca9f491"
+      },
+      "source_split": "train",
+      "source": {
+        "task": "beat_the_rotating_buzz",
+        "split": "train",
+        "role": "fit",
+        "raw_episode_id": "episode104",
+        "source_parent_group": "physmani:beat_the_rotating_buzz:episode104",
+        "source_path": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/beat_the_rotating_buzz/all_variations/episodes/episode104/data.h5",
+        "eligible_for_pipeline": true,
+        "offline_eligible": true,
+        "offline_quarantined": false,
+        "quarantine_reason": null,
+        "native_eval_included": false,
+        "teacher_prior_TRAIN_exposed": true,
+        "original_metadata": {
+          "task": "beat_the_rotating_buzz",
+          "raw_episode_id": "episode104",
+          "path": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/beat_the_rotating_buzz/all_variations/episodes/episode104/data.h5"
+        },
+        "frame_count": 110,
+        "physical_clock_verified": false,
+        "time_origin": "recorded_frame_index_only_unknown_physical_dt",
+        "source_stat": {
+          "size": 76336377,
+          "mtime_ns": 1776448439000000000,
+          "inode": 190186448
+        }
+      },
+      "original_pretrained_world_fit_exposed": true
+    },
+    {
+      "role": "fit",
+      "task": "beat_the_rotating_buzz_high_speed",
+      "chunk_index": 110,
+      "source_parent_group": "physmani:beat_the_rotating_buzz_high_speed:episode127",
+      "public_chunk": {
+        "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/world_command_v3_deferred_run_v1/artifacts/public_cache/public_features/fit/parent0110.pt",
+        "sha256": "a1229cde5a4b8c6cfb593e64cd48ba07266072905b317d755b60d1df537594f3"
+      },
+      "source_split": "train",
+      "source": {
+        "task": "beat_the_rotating_buzz_high_speed",
+        "split": "train",
+        "role": "fit",
+        "raw_episode_id": "episode127",
+        "source_parent_group": "physmani:beat_the_rotating_buzz_high_speed:episode127",
+        "source_path": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/beat_the_rotating_buzz_high_speed/all_variations/episodes/episode127/data.h5",
+        "eligible_for_pipeline": true,
+        "offline_eligible": true,
+        "offline_quarantined": false,
+        "quarantine_reason": null,
+        "native_eval_included": false,
+        "teacher_prior_TRAIN_exposed": true,
+        "original_metadata": {
+          "task": "beat_the_rotating_buzz_high_speed",
+          "raw_episode_id": "episode127",
+          "path": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/beat_the_rotating_buzz_high_speed/all_variations/episodes/episode127/data.h5"
+        },
+        "frame_count": 100,
+        "physical_clock_verified": false,
+        "time_origin": "recorded_frame_index_only_unknown_physical_dt",
+        "source_stat": {
+          "size": 68877508,
+          "mtime_ns": 1776449192000000000,
+          "inode": 190186768
+        }
+      },
+      "original_pretrained_world_fit_exposed": true
+    },
+    {
+      "role": "fit",
+      "task": "beat_the_rotating_buzz_high_speed",
+      "chunk_index": 111,
+      "source_parent_group": "physmani:beat_the_rotating_buzz_high_speed:episode129",
+      "public_chunk": {
+        "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/world_command_v3_deferred_run_v1/artifacts/public_cache/public_features/fit/parent0111.pt",
+        "sha256": "50f47bbbe3bdafc5c419ce12a4f41be0550a3d528bde4934b2de57a2e5881b2a"
+      },
+      "source_split": "train",
+      "source": {
+        "task": "beat_the_rotating_buzz_high_speed",
+        "split": "train",
+        "role": "fit",
+        "raw_episode_id": "episode129",
+        "source_parent_group": "physmani:beat_the_rotating_buzz_high_speed:episode129",
+        "source_path": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/beat_the_rotating_buzz_high_speed/all_variations/episodes/episode129/data.h5",
+        "eligible_for_pipeline": true,
+        "offline_eligible": true,
+        "offline_quarantined": false,
+        "quarantine_reason": null,
+        "native_eval_included": false,
+        "teacher_prior_TRAIN_exposed": true,
+        "original_metadata": {
+          "task": "beat_the_rotating_buzz_high_speed",
+          "raw_episode_id": "episode129",
+          "path": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/beat_the_rotating_buzz_high_speed/all_variations/episodes/episode129/data.h5"
+        },
+        "frame_count": 100,
+        "physical_clock_verified": false,
+        "time_origin": "recorded_frame_index_only_unknown_physical_dt",
+        "source_stat": {
+          "size": 69500997,
+          "mtime_ns": 1776449198000000000,
+          "inode": 190186770
+        }
+      },
+      "original_pretrained_world_fit_exposed": true
+    },
+    {
+      "role": "fit",
+      "task": "beat_the_rotating_buzz_high_speed",
+      "chunk_index": 162,
+      "source_parent_group": "physmani:beat_the_rotating_buzz_high_speed:episode224",
+      "public_chunk": {
+        "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/world_command_v3_deferred_run_v1/artifacts/public_cache/public_features/fit/parent0162.pt",
+        "sha256": "2059d5c0750516dd3dc485cd50daeb3b0496b282f9fcd4881498b9b97f3c297f"
+      },
+      "source_split": "train",
+      "source": {
+        "task": "beat_the_rotating_buzz_high_speed",
+        "split": "train",
+        "role": "fit",
+        "raw_episode_id": "episode224",
+        "source_parent_group": "physmani:beat_the_rotating_buzz_high_speed:episode224",
+        "source_path": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/beat_the_rotating_buzz_high_speed/all_variations/episodes/episode224/data.h5",
+        "eligible_for_pipeline": true,
+        "offline_eligible": true,
+        "offline_quarantined": false,
+        "quarantine_reason": null,
+        "native_eval_included": false,
+        "teacher_prior_TRAIN_exposed": true,
+        "original_metadata": {
+          "task": "beat_the_rotating_buzz_high_speed",
+          "raw_episode_id": "episode224",
+          "path": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/beat_the_rotating_buzz_high_speed/all_variations/episodes/episode224/data.h5"
+        },
+        "frame_count": 100,
+        "physical_clock_verified": false,
+        "time_origin": "recorded_frame_index_only_unknown_physical_dt",
+        "source_stat": {
+          "size": 68820025,
+          "mtime_ns": 1776449564000000000,
+          "inode": 190186974
+        }
+      },
+      "original_pretrained_world_fit_exposed": true
+    },
+    {
+      "role": "selection",
+      "task": "beat_the_rotating_buzz_high_speed",
+      "chunk_index": 116,
+      "source_parent_group": "physmani:beat_the_rotating_buzz_high_speed:episode14",
+      "public_chunk": {
+        "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/world_command_v3_deferred_run_v1/artifacts/public_cache/public_features/fit/parent0116.pt",
+        "sha256": "3b0f1a426e8c446b16ef33a2ac060595a0f2dc0f3cc0314bcf568257dcee4d13"
+      },
+      "source_split": "train",
+      "source": {
+        "task": "beat_the_rotating_buzz_high_speed",
+        "split": "train",
+        "role": "fit",
+        "raw_episode_id": "episode14",
+        "source_parent_group": "physmani:beat_the_rotating_buzz_high_speed:episode14",
+        "source_path": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/beat_the_rotating_buzz_high_speed/all_variations/episodes/episode14/data.h5",
+        "eligible_for_pipeline": true,
+        "offline_eligible": true,
+        "offline_quarantined": false,
+        "quarantine_reason": null,
+        "native_eval_included": false,
+        "teacher_prior_TRAIN_exposed": true,
+        "original_metadata": {
+          "task": "beat_the_rotating_buzz_high_speed",
+          "raw_episode_id": "episode14",
+          "path": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/beat_the_rotating_buzz_high_speed/all_variations/episodes/episode14/data.h5"
+        },
+        "frame_count": 100,
+        "physical_clock_verified": false,
+        "time_origin": "recorded_frame_index_only_unknown_physical_dt",
+        "source_stat": {
+          "size": 69543686,
+          "mtime_ns": 1776449233000000000,
+          "inode": 190186780
+        }
+      },
+      "original_pretrained_world_fit_exposed": true
+    },
+    {
+      "role": "fit",
+      "task": "insert_onto_rotating_peg",
+      "chunk_index": 252,
+      "source_parent_group": "physmani:insert_onto_rotating_peg:episode33",
+      "public_chunk": {
+        "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/world_command_v3_deferred_run_v1/artifacts/public_cache/public_features/fit/parent0252.pt",
+        "sha256": "1917122cb9d6faa502a4c8578d86924bd5d5bff31e7fac01c7e756d57599ef53"
+      },
+      "source_split": "train",
+      "source": {
+        "task": "insert_onto_rotating_peg",
+        "split": "train",
+        "role": "fit",
+        "raw_episode_id": "episode33",
+        "source_parent_group": "physmani:insert_onto_rotating_peg:episode33",
+        "source_path": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/insert_onto_rotating_peg/all_variations/episodes/episode33/data.h5",
+        "eligible_for_pipeline": true,
+        "offline_eligible": true,
+        "offline_quarantined": false,
+        "quarantine_reason": null,
+        "native_eval_included": false,
+        "teacher_prior_TRAIN_exposed": true,
+        "original_metadata": {
+          "task": "insert_onto_rotating_peg",
+          "raw_episode_id": "episode33",
+          "path": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/insert_onto_rotating_peg/all_variations/episodes/episode33/data.h5"
+        },
+        "frame_count": 120,
+        "physical_clock_verified": false,
+        "time_origin": "recorded_frame_index_only_unknown_physical_dt",
+        "source_stat": {
+          "size": 81241448,
+          "mtime_ns": 1776450149000000000,
+          "inode": 190187154
+        }
+      },
+      "original_pretrained_world_fit_exposed": true
+    },
+    {
+      "role": "fit",
+      "task": "insert_onto_rotating_peg",
+      "chunk_index": 230,
+      "source_parent_group": "physmani:insert_onto_rotating_peg:episode263",
+      "public_chunk": {
+        "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/world_command_v3_deferred_run_v1/artifacts/public_cache/public_features/fit/parent0230.pt",
+        "sha256": "8105eaeff2db75d1e602e63ceb136951cf179125046926a5a672c9bcde176990"
+      },
+      "source_split": "train",
+      "source": {
+        "task": "insert_onto_rotating_peg",
+        "split": "train",
+        "role": "fit",
+        "raw_episode_id": "episode263",
+        "source_parent_group": "physmani:insert_onto_rotating_peg:episode263",
+        "source_path": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/insert_onto_rotating_peg/all_variations/episodes/episode263/data.h5",
+        "eligible_for_pipeline": true,
+        "offline_eligible": true,
+        "offline_quarantined": false,
+        "quarantine_reason": null,
+        "native_eval_included": false,
+        "teacher_prior_TRAIN_exposed": true,
+        "original_metadata": {
+          "task": "insert_onto_rotating_peg",
+          "raw_episode_id": "episode263",
+          "path": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/insert_onto_rotating_peg/all_variations/episodes/episode263/data.h5"
+        },
+        "frame_count": 90,
+        "physical_clock_verified": false,
+        "time_origin": "recorded_frame_index_only_unknown_physical_dt",
+        "source_stat": {
+          "size": 60973024,
+          "mtime_ns": 1776450012000000000,
+          "inode": 190187110
+        }
+      },
+      "original_pretrained_world_fit_exposed": true
+    },
+    {
+      "role": "fit",
+      "task": "insert_onto_rotating_peg",
+      "chunk_index": 296,
+      "source_parent_group": "physmani:insert_onto_rotating_peg:episode81",
+      "public_chunk": {
+        "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/world_command_v3_deferred_run_v1/artifacts/public_cache/public_features/fit/parent0296.pt",
+        "sha256": "6a5dd4efcf6f3fe9954aca3a0b2ce1ce7c9251db41cff79de68f372b72b7b97a"
+      },
+      "source_split": "train",
+      "source": {
+        "task": "insert_onto_rotating_peg",
+        "split": "train",
+        "role": "fit",
+        "raw_episode_id": "episode81",
+        "source_parent_group": "physmani:insert_onto_rotating_peg:episode81",
+        "source_path": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/insert_onto_rotating_peg/all_variations/episodes/episode81/data.h5",
+        "eligible_for_pipeline": true,
+        "offline_eligible": true,
+        "offline_quarantined": false,
+        "quarantine_reason": null,
+        "native_eval_included": false,
+        "teacher_prior_TRAIN_exposed": true,
+        "original_metadata": {
+          "task": "insert_onto_rotating_peg",
+          "raw_episode_id": "episode81",
+          "path": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/insert_onto_rotating_peg/all_variations/episodes/episode81/data.h5"
+        },
+        "frame_count": 100,
+        "physical_clock_verified": false,
+        "time_origin": "recorded_frame_index_only_unknown_physical_dt",
+        "source_stat": {
+          "size": 67989749,
+          "mtime_ns": 1776450412000000000,
+          "inode": 190187344
+        }
+      },
+      "original_pretrained_world_fit_exposed": true
+    },
+    {
+      "role": "selection",
+      "task": "insert_onto_rotating_peg",
+      "chunk_index": 263,
+      "source_parent_group": "physmani:insert_onto_rotating_peg:episode393",
+      "public_chunk": {
+        "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/world_command_v3_deferred_run_v1/artifacts/public_cache/public_features/fit/parent0263.pt",
+        "sha256": "888de19819a35d3c3684f57209706f15b6206ebf7af09083b008505522d3fc3d"
+      },
+      "source_split": "train",
+      "source": {
+        "task": "insert_onto_rotating_peg",
+        "split": "train",
+        "role": "fit",
+        "raw_episode_id": "episode393",
+        "source_parent_group": "physmani:insert_onto_rotating_peg:episode393",
+        "source_path": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/insert_onto_rotating_peg/all_variations/episodes/episode393/data.h5",
+        "eligible_for_pipeline": true,
+        "offline_eligible": true,
+        "offline_quarantined": false,
+        "quarantine_reason": null,
+        "native_eval_included": false,
+        "teacher_prior_TRAIN_exposed": true,
+        "original_metadata": {
+          "task": "insert_onto_rotating_peg",
+          "raw_episode_id": "episode393",
+          "path": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/insert_onto_rotating_peg/all_variations/episodes/episode393/data.h5"
+        },
+        "frame_count": 110,
+        "physical_clock_verified": false,
+        "time_origin": "recorded_frame_index_only_unknown_physical_dt",
+        "source_stat": {
+          "size": 74544312,
+          "mtime_ns": 1776450219000000000,
+          "inode": 190187278
+        }
+      },
+      "original_pretrained_world_fit_exposed": true
+    },
+    {
+      "role": "fit",
+      "task": "insert_onto_rotating_peg_high_speed",
+      "chunk_index": 315,
+      "source_parent_group": "physmani:insert_onto_rotating_peg_high_speed:episode144",
+      "public_chunk": {
+        "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/world_command_v3_deferred_run_v1/artifacts/public_cache/public_features/fit/parent0315.pt",
+        "sha256": "c43b1dde08315c995173ce1248424eb622cdfb9a35f8844dfab65137ec6b6c8b"
+      },
+      "source_split": "train",
+      "source": {
+        "task": "insert_onto_rotating_peg_high_speed",
+        "split": "train",
+        "role": "fit",
+        "raw_episode_id": "episode144",
+        "source_parent_group": "physmani:insert_onto_rotating_peg_high_speed:episode144",
+        "source_path": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/insert_onto_rotating_peg_high_speed/all_variations/episodes/episode144/data.h5",
+        "eligible_for_pipeline": true,
+        "offline_eligible": true,
+        "offline_quarantined": false,
+        "quarantine_reason": null,
+        "native_eval_included": false,
+        "teacher_prior_TRAIN_exposed": true,
+        "original_metadata": {
+          "task": "insert_onto_rotating_peg_high_speed",
+          "raw_episode_id": "episode144",
+          "path": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/insert_onto_rotating_peg_high_speed/all_variations/episodes/episode144/data.h5"
+        },
+        "frame_count": 110,
+        "physical_clock_verified": false,
+        "time_origin": "recorded_frame_index_only_unknown_physical_dt",
+        "source_stat": {
+          "size": 74861493,
+          "mtime_ns": 1776450523000000000,
+          "inode": 190187382
+        }
+      },
+      "original_pretrained_world_fit_exposed": true
+    },
+    {
+      "role": "fit",
+      "task": "insert_onto_rotating_peg_high_speed",
+      "chunk_index": 394,
+      "source_parent_group": "physmani:insert_onto_rotating_peg_high_speed:episode80",
+      "public_chunk": {
+        "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/world_command_v3_deferred_run_v1/artifacts/public_cache/public_features/fit/parent0394.pt",
+        "sha256": "5fea5594af008be808b7c1ddf79f443ebe7eb1fad004468d8c89e9e4819d59fc"
+      },
+      "source_split": "train",
+      "source": {
+        "task": "insert_onto_rotating_peg_high_speed",
+        "split": "train",
+        "role": "fit",
+        "raw_episode_id": "episode80",
+        "source_parent_group": "physmani:insert_onto_rotating_peg_high_speed:episode80",
+        "source_path": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/insert_onto_rotating_peg_high_speed/all_variations/episodes/episode80/data.h5",
+        "eligible_for_pipeline": true,
+        "offline_eligible": true,
+        "offline_quarantined": false,
+        "quarantine_reason": null,
+        "native_eval_included": false,
+        "teacher_prior_TRAIN_exposed": true,
+        "original_metadata": {
+          "task": "insert_onto_rotating_peg_high_speed",
+          "raw_episode_id": "episode80",
+          "path": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/insert_onto_rotating_peg_high_speed/all_variations/episodes/episode80/data.h5"
+        },
+        "frame_count": 110,
+        "physical_clock_verified": false,
+        "time_origin": "recorded_frame_index_only_unknown_physical_dt",
+        "source_stat": {
+          "size": 74527471,
+          "mtime_ns": 1776451030000000000,
+          "inode": 190187642
+        }
+      },
+      "original_pretrained_world_fit_exposed": true
+    },
+    {
+      "role": "fit",
+      "task": "insert_onto_rotating_peg_high_speed",
+      "chunk_index": 346,
+      "source_parent_group": "physmani:insert_onto_rotating_peg_high_speed:episode24",
+      "public_chunk": {
+        "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/world_command_v3_deferred_run_v1/artifacts/public_cache/public_features/fit/parent0346.pt",
+        "sha256": "932ee20d0f0acb5b6471272080611865720c71e996604dadc83807eeaa0501de"
+      },
+      "source_split": "train",
+      "source": {
+        "task": "insert_onto_rotating_peg_high_speed",
+        "split": "train",
+        "role": "fit",
+        "raw_episode_id": "episode24",
+        "source_parent_group": "physmani:insert_onto_rotating_peg_high_speed:episode24",
+        "source_path": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/insert_onto_rotating_peg_high_speed/all_variations/episodes/episode24/data.h5",
+        "eligible_for_pipeline": true,
+        "offline_eligible": true,
+        "offline_quarantined": false,
+        "quarantine_reason": null,
+        "native_eval_included": false,
+        "teacher_prior_TRAIN_exposed": true,
+        "original_metadata": {
+          "task": "insert_onto_rotating_peg_high_speed",
+          "raw_episode_id": "episode24",
+          "path": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/insert_onto_rotating_peg_high_speed/all_variations/episodes/episode24/data.h5"
+        },
+        "frame_count": 80,
+        "physical_clock_verified": false,
+        "time_origin": "recorded_frame_index_only_unknown_physical_dt",
+        "source_stat": {
+          "size": 54215554,
+          "mtime_ns": 1776450721000000000,
+          "inode": 190187444
+        }
+      },
+      "original_pretrained_world_fit_exposed": true
+    },
+    {
+      "role": "selection",
+      "task": "insert_onto_rotating_peg_high_speed",
+      "chunk_index": 382,
+      "source_parent_group": "physmani:insert_onto_rotating_peg_high_speed:episode48",
+      "public_chunk": {
+        "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/world_command_v3_deferred_run_v1/artifacts/public_cache/public_features/fit/parent0382.pt",
+        "sha256": "cb1fabf2454348615d3b5a9c70913f91e80bb68af72f9b3d854e408ccb0d0c90"
+      },
+      "source_split": "train",
+      "source": {
+        "task": "insert_onto_rotating_peg_high_speed",
+        "split": "train",
+        "role": "fit",
+        "raw_episode_id": "episode48",
+        "source_parent_group": "physmani:insert_onto_rotating_peg_high_speed:episode48",
+        "source_path": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/insert_onto_rotating_peg_high_speed/all_variations/episodes/episode48/data.h5",
+        "eligible_for_pipeline": true,
+        "offline_eligible": true,
+        "offline_quarantined": false,
+        "quarantine_reason": null,
+        "native_eval_included": false,
+        "teacher_prior_TRAIN_exposed": true,
+        "original_metadata": {
+          "task": "insert_onto_rotating_peg_high_speed",
+          "raw_episode_id": "episode48",
+          "path": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/insert_onto_rotating_peg_high_speed/all_variations/episodes/episode48/data.h5"
+        },
+        "frame_count": 100,
+        "physical_clock_verified": false,
+        "time_origin": "recorded_frame_index_only_unknown_physical_dt",
+        "source_stat": {
+          "size": 67954807,
+          "mtime_ns": 1776450961000000000,
+          "inode": 190187618
+        }
+      },
+      "original_pretrained_world_fit_exposed": true
+    },
+    {
+      "role": "fit",
+      "task": "moving_basketball_in_hoop",
+      "chunk_index": 406,
+      "source_parent_group": "physmani:moving_basketball_in_hoop:episode131",
+      "public_chunk": {
+        "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/world_command_v3_deferred_run_v1/artifacts/public_cache/public_features/fit/parent0406.pt",
+        "sha256": "053502f39872267b4b0a7d6dbcac36f437405c57929d9fc9dc813c844d4114c6"
+      },
+      "source_split": "train",
+      "source": {
+        "task": "moving_basketball_in_hoop",
+        "split": "train",
+        "role": "fit",
+        "raw_episode_id": "episode131",
+        "source_parent_group": "physmani:moving_basketball_in_hoop:episode131",
+        "source_path": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/moving_basketball_in_hoop/all_variations/episodes/episode131/data.h5",
+        "eligible_for_pipeline": true,
+        "offline_eligible": true,
+        "offline_quarantined": false,
+        "quarantine_reason": null,
+        "native_eval_included": false,
+        "teacher_prior_TRAIN_exposed": true,
+        "original_metadata": {
+          "task": "moving_basketball_in_hoop",
+          "raw_episode_id": "episode131",
+          "path": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/moving_basketball_in_hoop/all_variations/episodes/episode131/data.h5"
+        },
+        "frame_count": 70,
+        "physical_clock_verified": false,
+        "time_origin": "recorded_frame_index_only_unknown_physical_dt",
+        "source_stat": {
+          "size": 48444440,
+          "mtime_ns": 1776473371000000000,
+          "inode": 190187666
+        }
+      },
+      "original_pretrained_world_fit_exposed": true
+    },
+    {
+      "role": "fit",
+      "task": "moving_basketball_in_hoop",
+      "chunk_index": 429,
+      "source_parent_group": "physmani:moving_basketball_in_hoop:episode228",
+      "public_chunk": {
+        "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/world_command_v3_deferred_run_v1/artifacts/public_cache/public_features/fit/parent0429.pt",
+        "sha256": "b478d7c443e9305590ff8687149a97d2ee0c052a3c335f33efaf07d6d0e590e1"
+      },
+      "source_split": "train",
+      "source": {
+        "task": "moving_basketball_in_hoop",
+        "split": "train",
+        "role": "fit",
+        "raw_episode_id": "episode228",
+        "source_parent_group": "physmani:moving_basketball_in_hoop:episode228",
+        "source_path": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/moving_basketball_in_hoop/all_variations/episodes/episode228/data.h5",
+        "eligible_for_pipeline": true,
+        "offline_eligible": true,
+        "offline_quarantined": false,
+        "quarantine_reason": null,
+        "native_eval_included": false,
+        "teacher_prior_TRAIN_exposed": true,
+        "original_metadata": {
+          "task": "moving_basketball_in_hoop",
+          "raw_episode_id": "episode228",
+          "path": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/moving_basketball_in_hoop/all_variations/episodes/episode228/data.h5"
+        },
+        "frame_count": 70,
+        "physical_clock_verified": false,
+        "time_origin": "recorded_frame_index_only_unknown_physical_dt",
+        "source_stat": {
+          "size": 48099196,
+          "mtime_ns": 1776473498000000000,
+          "inode": 190187712
+        }
+      },
+      "original_pretrained_world_fit_exposed": true
+    },
+    {
+      "role": "fit",
+      "task": "moving_basketball_in_hoop",
+      "chunk_index": 418,
+      "source_parent_group": "physmani:moving_basketball_in_hoop:episode175",
+      "public_chunk": {
+        "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/world_command_v3_deferred_run_v1/artifacts/public_cache/public_features/fit/parent0418.pt",
+        "sha256": "f4ef450010a38f7eda9152ffe98e82f95e6090f2cf5841e6631e42a9d0922e5e"
+      },
+      "source_split": "train",
+      "source": {
+        "task": "moving_basketball_in_hoop",
+        "split": "train",
+        "role": "fit",
+        "raw_episode_id": "episode175",
+        "source_parent_group": "physmani:moving_basketball_in_hoop:episode175",
+        "source_path": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/moving_basketball_in_hoop/all_variations/episodes/episode175/data.h5",
+        "eligible_for_pipeline": true,
+        "offline_eligible": true,
+        "offline_quarantined": false,
+        "quarantine_reason": null,
+        "native_eval_included": false,
+        "teacher_prior_TRAIN_exposed": true,
+        "original_metadata": {
+          "task": "moving_basketball_in_hoop",
+          "raw_episode_id": "episode175",
+          "path": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/moving_basketball_in_hoop/all_variations/episodes/episode175/data.h5"
+        },
+        "frame_count": 100,
+        "physical_clock_verified": false,
+        "time_origin": "recorded_frame_index_only_unknown_physical_dt",
+        "source_stat": {
+          "size": 69919192,
+          "mtime_ns": 1776473439000000000,
+          "inode": 190187690
+        }
+      },
+      "original_pretrained_world_fit_exposed": true
+    },
+    {
+      "role": "selection",
+      "task": "moving_basketball_in_hoop",
+      "chunk_index": 446,
+      "source_parent_group": "physmani:moving_basketball_in_hoop:episode295",
+      "public_chunk": {
+        "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/world_command_v3_deferred_run_v1/artifacts/public_cache/public_features/fit/parent0446.pt",
+        "sha256": "e2d9f35b74a11ec35b14f25ce488370cb83702bfac1c9fde82ce2e7d3a6582b3"
+      },
+      "source_split": "train",
+      "source": {
+        "task": "moving_basketball_in_hoop",
+        "split": "train",
+        "role": "fit",
+        "raw_episode_id": "episode295",
+        "source_parent_group": "physmani:moving_basketball_in_hoop:episode295",
+        "source_path": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/moving_basketball_in_hoop/all_variations/episodes/episode295/data.h5",
+        "eligible_for_pipeline": true,
+        "offline_eligible": true,
+        "offline_quarantined": false,
+        "quarantine_reason": null,
+        "native_eval_included": false,
+        "teacher_prior_TRAIN_exposed": true,
+        "original_metadata": {
+          "task": "moving_basketball_in_hoop",
+          "raw_episode_id": "episode295",
+          "path": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/moving_basketball_in_hoop/all_variations/episodes/episode295/data.h5"
+        },
+        "frame_count": 70,
+        "physical_clock_verified": false,
+        "time_origin": "recorded_frame_index_only_unknown_physical_dt",
+        "source_stat": {
+          "size": 48472807,
+          "mtime_ns": 1776473586000000000,
+          "inode": 190187746
+        }
+      },
+      "original_pretrained_world_fit_exposed": true
+    },
+    {
+      "role": "fit",
+      "task": "moving_basketball_in_hoop_high_speed",
+      "chunk_index": 512,
+      "source_parent_group": "physmani:moving_basketball_in_hoop_high_speed:episode124",
+      "public_chunk": {
+        "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/world_command_v3_deferred_run_v1/artifacts/public_cache/public_features/fit/parent0512.pt",
+        "sha256": "6596f86d00637439e1028ff1416c7e29e0027ccdd5cad60fc4177809ebb1c6ec"
+      },
+      "source_split": "train",
+      "source": {
+        "task": "moving_basketball_in_hoop_high_speed",
+        "split": "train",
+        "role": "fit",
+        "raw_episode_id": "episode124",
+        "source_parent_group": "physmani:moving_basketball_in_hoop_high_speed:episode124",
+        "source_path": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/moving_basketball_in_hoop_high_speed/all_variations/episodes/episode124/data.h5",
+        "eligible_for_pipeline": true,
+        "offline_eligible": true,
+        "offline_quarantined": false,
+        "quarantine_reason": null,
+        "native_eval_included": false,
+        "teacher_prior_TRAIN_exposed": true,
+        "original_metadata": {
+          "task": "moving_basketball_in_hoop_high_speed",
+          "raw_episode_id": "episode124",
+          "path": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/moving_basketball_in_hoop_high_speed/all_variations/episodes/episode124/data.h5"
+        },
+        "frame_count": 100,
+        "physical_clock_verified": false,
+        "time_origin": "recorded_frame_index_only_unknown_physical_dt",
+        "source_stat": {
+          "size": 69010650,
+          "mtime_ns": 1776473923000000000,
+          "inode": 190187980
+        }
+      },
+      "original_pretrained_world_fit_exposed": true
+    },
+    {
+      "role": "fit",
+      "task": "moving_basketball_in_hoop_high_speed",
+      "chunk_index": 578,
+      "source_parent_group": "physmani:moving_basketball_in_hoop_high_speed:episode63",
+      "public_chunk": {
+        "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/world_command_v3_deferred_run_v1/artifacts/public_cache/public_features/fit/parent0578.pt",
+        "sha256": "24cd34cf726d482905b2129c93fa10d3b1e41df89534a772c8d06035a2bc4b2c"
+      },
+      "source_split": "train",
+      "source": {
+        "task": "moving_basketball_in_hoop_high_speed",
+        "split": "train",
+        "role": "fit",
+        "raw_episode_id": "episode63",
+        "source_parent_group": "physmani:moving_basketball_in_hoop_high_speed:episode63",
+        "source_path": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/moving_basketball_in_hoop_high_speed/all_variations/episodes/episode63/data.h5",
+        "eligible_for_pipeline": true,
+        "offline_eligible": true,
+        "offline_quarantined": false,
+        "quarantine_reason": null,
+        "native_eval_included": false,
+        "teacher_prior_TRAIN_exposed": true,
+        "original_metadata": {
+          "task": "moving_basketball_in_hoop_high_speed",
+          "raw_episode_id": "episode63",
+          "path": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/moving_basketball_in_hoop_high_speed/all_variations/episodes/episode63/data.h5"
+        },
+        "frame_count": 70,
+        "physical_clock_verified": false,
+        "time_origin": "recorded_frame_index_only_unknown_physical_dt",
+        "source_stat": {
+          "size": 48697091,
+          "mtime_ns": 1776474303000000000,
+          "inode": 190188214
+        }
+      },
+      "original_pretrained_world_fit_exposed": true
+    },
+    {
+      "role": "fit",
+      "task": "moving_basketball_in_hoop_high_speed",
+      "chunk_index": 505,
+      "source_parent_group": "physmani:moving_basketball_in_hoop_high_speed:episode104",
+      "public_chunk": {
+        "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/world_command_v3_deferred_run_v1/artifacts/public_cache/public_features/fit/parent0505.pt",
+        "sha256": "bfa46a5105060c91889812b6a3688e6fca0a60b56dff5915c6d01da9ea834e3e"
+      },
+      "source_split": "train",
+      "source": {
+        "task": "moving_basketball_in_hoop_high_speed",
+        "split": "train",
+        "role": "fit",
+        "raw_episode_id": "episode104",
+        "source_parent_group": "physmani:moving_basketball_in_hoop_high_speed:episode104",
+        "source_path": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/moving_basketball_in_hoop_high_speed/all_variations/episodes/episode104/data.h5",
+        "eligible_for_pipeline": true,
+        "offline_eligible": true,
+        "offline_quarantined": false,
+        "quarantine_reason": null,
+        "native_eval_included": false,
+        "teacher_prior_TRAIN_exposed": true,
+        "original_metadata": {
+          "task": "moving_basketball_in_hoop_high_speed",
+          "raw_episode_id": "episode104",
+          "path": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/moving_basketball_in_hoop_high_speed/all_variations/episodes/episode104/data.h5"
+        },
+        "frame_count": 80,
+        "physical_clock_verified": false,
+        "time_origin": "recorded_frame_index_only_unknown_physical_dt",
+        "source_stat": {
+          "size": 55165741,
+          "mtime_ns": 1776473883000000000,
+          "inode": 190187966
+        }
+      },
+      "original_pretrained_world_fit_exposed": true
+    },
+    {
+      "role": "selection",
+      "task": "moving_basketball_in_hoop_high_speed",
+      "chunk_index": 599,
+      "source_parent_group": "physmani:moving_basketball_in_hoop_high_speed:episode99",
+      "public_chunk": {
+        "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/world_command_v3_deferred_run_v1/artifacts/public_cache/public_features/fit/parent0599.pt",
+        "sha256": "71100bdd97c0e725caab849d89379d1bbce2d732f46f4177bb6794a1400fc7e8"
+      },
+      "source_split": "train",
+      "source": {
+        "task": "moving_basketball_in_hoop_high_speed",
+        "split": "train",
+        "role": "fit",
+        "raw_episode_id": "episode99",
+        "source_parent_group": "physmani:moving_basketball_in_hoop_high_speed:episode99",
+        "source_path": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/moving_basketball_in_hoop_high_speed/all_variations/episodes/episode99/data.h5",
+        "eligible_for_pipeline": true,
+        "offline_eligible": true,
+        "offline_quarantined": false,
+        "quarantine_reason": null,
+        "native_eval_included": false,
+        "teacher_prior_TRAIN_exposed": true,
+        "original_metadata": {
+          "task": "moving_basketball_in_hoop_high_speed",
+          "raw_episode_id": "episode99",
+          "path": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/moving_basketball_in_hoop_high_speed/all_variations/episodes/episode99/data.h5"
+        },
+        "frame_count": 60,
+        "physical_clock_verified": false,
+        "time_origin": "recorded_frame_index_only_unknown_physical_dt",
+        "source_stat": {
+          "size": 41351443,
+          "mtime_ns": 1776474418000000000,
+          "inode": 190188256
+        }
+      },
+      "original_pretrained_world_fit_exposed": true
+    },
+    {
+      "role": "fit",
+      "task": "place_cups_on_rotating_frame",
+      "chunk_index": 786,
+      "source_parent_group": "physmani:place_cups_on_rotating_frame:episode316",
+      "public_chunk": {
+        "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/world_command_v3_deferred_run_v1/artifacts/public_cache/public_features/fit/parent0786.pt",
+        "sha256": "bccd8c9924d9a5d3d2467cd63a2e96f70fa630521b02d4cd571f5f187c4d1682"
+      },
+      "source_split": "train",
+      "source": {
+        "task": "place_cups_on_rotating_frame",
+        "split": "train",
+        "role": "fit",
+        "raw_episode_id": "episode316",
+        "source_parent_group": "physmani:place_cups_on_rotating_frame:episode316",
+        "source_path": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/place_cups_on_rotating_frame/all_variations/episodes/episode316/data.h5",
+        "eligible_for_pipeline": true,
+        "offline_eligible": true,
+        "offline_quarantined": false,
+        "quarantine_reason": null,
+        "native_eval_included": false,
+        "teacher_prior_TRAIN_exposed": true,
+        "original_metadata": {
+          "task": "place_cups_on_rotating_frame",
+          "raw_episode_id": "episode316",
+          "path": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/place_cups_on_rotating_frame/all_variations/episodes/episode316/data.h5"
+        },
+        "frame_count": 100,
+        "physical_clock_verified": false,
+        "time_origin": "recorded_frame_index_only_unknown_physical_dt",
+        "source_stat": {
+          "size": 69847310,
+          "mtime_ns": 1776475363000000000,
+          "inode": 190188954
+        }
+      },
+      "original_pretrained_world_fit_exposed": true
+    },
+    {
+      "role": "fit",
+      "task": "place_cups_on_rotating_frame",
+      "chunk_index": 818,
+      "source_parent_group": "physmani:place_cups_on_rotating_frame:episode517",
+      "public_chunk": {
+        "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/world_command_v3_deferred_run_v1/artifacts/public_cache/public_features/fit/parent0818.pt",
+        "sha256": "0afbd025b9b5c0f8be82fb6cd2000230937812e5c6e43a27f08eec964787e131"
+      },
+      "source_split": "train",
+      "source": {
+        "task": "place_cups_on_rotating_frame",
+        "split": "train",
+        "role": "fit",
+        "raw_episode_id": "episode517",
+        "source_parent_group": "physmani:place_cups_on_rotating_frame:episode517",
+        "source_path": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/place_cups_on_rotating_frame/all_variations/episodes/episode517/data.h5",
+        "eligible_for_pipeline": true,
+        "offline_eligible": true,
+        "offline_quarantined": false,
+        "quarantine_reason": null,
+        "native_eval_included": false,
+        "teacher_prior_TRAIN_exposed": true,
+        "original_metadata": {
+          "task": "place_cups_on_rotating_frame",
+          "raw_episode_id": "episode517",
+          "path": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/place_cups_on_rotating_frame/all_variations/episodes/episode517/data.h5"
+        },
+        "frame_count": 90,
+        "physical_clock_verified": false,
+        "time_origin": "recorded_frame_index_only_unknown_physical_dt",
+        "source_stat": {
+          "size": 63116786,
+          "mtime_ns": 1776475616000000000,
+          "inode": 190189120
+        }
+      },
+      "original_pretrained_world_fit_exposed": true
+    },
+    {
+      "role": "fit",
+      "task": "place_cups_on_rotating_frame",
+      "chunk_index": 812,
+      "source_parent_group": "physmani:place_cups_on_rotating_frame:episode473",
+      "public_chunk": {
+        "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/world_command_v3_deferred_run_v1/artifacts/public_cache/public_features/fit/parent0812.pt",
+        "sha256": "c984a8192d431840a509cf30b6d8e3e762d1905af2c4680415598fe0a2e20a7e"
+      },
+      "source_split": "train",
+      "source": {
+        "task": "place_cups_on_rotating_frame",
+        "split": "train",
+        "role": "fit",
+        "raw_episode_id": "episode473",
+        "source_parent_group": "physmani:place_cups_on_rotating_frame:episode473",
+        "source_path": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/place_cups_on_rotating_frame/all_variations/episodes/episode473/data.h5",
+        "eligible_for_pipeline": true,
+        "offline_eligible": true,
+        "offline_quarantined": false,
+        "quarantine_reason": null,
+        "native_eval_included": false,
+        "teacher_prior_TRAIN_exposed": true,
+        "original_metadata": {
+          "task": "place_cups_on_rotating_frame",
+          "raw_episode_id": "episode473",
+          "path": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/place_cups_on_rotating_frame/all_variations/episodes/episode473/data.h5"
+        },
+        "frame_count": 110,
+        "physical_clock_verified": false,
+        "time_origin": "recorded_frame_index_only_unknown_physical_dt",
+        "source_stat": {
+          "size": 76698132,
+          "mtime_ns": 1776475572000000000,
+          "inode": 190189108
+        }
+      },
+      "original_pretrained_world_fit_exposed": true
+    },
+    {
+      "role": "selection",
+      "task": "place_cups_on_rotating_frame",
+      "chunk_index": 819,
+      "source_parent_group": "physmani:place_cups_on_rotating_frame:episode540",
+      "public_chunk": {
+        "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/world_command_v3_deferred_run_v1/artifacts/public_cache/public_features/fit/parent0819.pt",
+        "sha256": "0e2b2376b98f670bfa80f71ce5a5d942eb5de1d4bdfdf4ed5620c380493fe926"
+      },
+      "source_split": "train",
+      "source": {
+        "task": "place_cups_on_rotating_frame",
+        "split": "train",
+        "role": "fit",
+        "raw_episode_id": "episode540",
+        "source_parent_group": "physmani:place_cups_on_rotating_frame:episode540",
+        "source_path": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/place_cups_on_rotating_frame/all_variations/episodes/episode540/data.h5",
+        "eligible_for_pipeline": true,
+        "offline_eligible": true,
+        "offline_quarantined": false,
+        "quarantine_reason": null,
+        "native_eval_included": false,
+        "teacher_prior_TRAIN_exposed": true,
+        "original_metadata": {
+          "task": "place_cups_on_rotating_frame",
+          "raw_episode_id": "episode540",
+          "path": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/place_cups_on_rotating_frame/all_variations/episodes/episode540/data.h5"
+        },
+        "frame_count": 100,
+        "physical_clock_verified": false,
+        "time_origin": "recorded_frame_index_only_unknown_physical_dt",
+        "source_stat": {
+          "size": 70167751,
+          "mtime_ns": 1776475624000000000,
+          "inode": 190189122
+        }
+      },
+      "original_pretrained_world_fit_exposed": true
+    },
+    {
+      "role": "fit",
+      "task": "place_cups_on_rotating_frame_high_speed",
+      "chunk_index": 867,
+      "source_parent_group": "physmani:place_cups_on_rotating_frame_high_speed:episode212",
+      "public_chunk": {
+        "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/world_command_v3_deferred_run_v1/artifacts/public_cache/public_features/fit/parent0867.pt",
+        "sha256": "275316a0dd510de8a0f3cebe46aeee172dd2286cae9feeb6aa19759c59698e17"
+      },
+      "source_split": "train",
+      "source": {
+        "task": "place_cups_on_rotating_frame_high_speed",
+        "split": "train",
+        "role": "fit",
+        "raw_episode_id": "episode212",
+        "source_parent_group": "physmani:place_cups_on_rotating_frame_high_speed:episode212",
+        "source_path": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/place_cups_on_rotating_frame_high_speed/all_variations/episodes/episode212/data.h5",
+        "eligible_for_pipeline": true,
+        "offline_eligible": true,
+        "offline_quarantined": false,
+        "quarantine_reason": null,
+        "native_eval_included": false,
+        "teacher_prior_TRAIN_exposed": true,
+        "original_metadata": {
+          "task": "place_cups_on_rotating_frame_high_speed",
+          "raw_episode_id": "episode212",
+          "path": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/place_cups_on_rotating_frame_high_speed/all_variations/episodes/episode212/data.h5"
+        },
+        "frame_count": 170,
+        "physical_clock_verified": false,
+        "time_origin": "recorded_frame_index_only_unknown_physical_dt",
+        "source_stat": {
+          "size": 119108468,
+          "mtime_ns": 1776476038000000000,
+          "inode": 190189218
+        }
+      },
+      "original_pretrained_world_fit_exposed": true
+    },
+    {
+      "role": "fit",
+      "task": "place_cups_on_rotating_frame_high_speed",
+      "chunk_index": 903,
+      "source_parent_group": "physmani:place_cups_on_rotating_frame_high_speed:episode4",
+      "public_chunk": {
+        "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/world_command_v3_deferred_run_v1/artifacts/public_cache/public_features/fit/parent0903.pt",
+        "sha256": "e0b418dd4a6ef2d49cddb4acfdd58a7234dab6e296b913b94c73f7cd534a3c4b"
+      },
+      "source_split": "train",
+      "source": {
+        "task": "place_cups_on_rotating_frame_high_speed",
+        "split": "train",
+        "role": "fit",
+        "raw_episode_id": "episode4",
+        "source_parent_group": "physmani:place_cups_on_rotating_frame_high_speed:episode4",
+        "source_path": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/place_cups_on_rotating_frame_high_speed/all_variations/episodes/episode4/data.h5",
+        "eligible_for_pipeline": true,
+        "offline_eligible": true,
+        "offline_quarantined": false,
+        "quarantine_reason": null,
+        "native_eval_included": false,
+        "teacher_prior_TRAIN_exposed": true,
+        "original_metadata": {
+          "task": "place_cups_on_rotating_frame_high_speed",
+          "raw_episode_id": "episode4",
+          "path": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/place_cups_on_rotating_frame_high_speed/all_variations/episodes/episode4/data.h5"
+        },
+        "frame_count": 100,
+        "physical_clock_verified": false,
+        "time_origin": "recorded_frame_index_only_unknown_physical_dt",
+        "source_stat": {
+          "size": 70001299,
+          "mtime_ns": 1776476345000000000,
+          "inode": 190189392
+        }
+      },
+      "original_pretrained_world_fit_exposed": true
+    },
+    {
+      "role": "fit",
+      "task": "place_cups_on_rotating_frame_high_speed",
+      "chunk_index": 842,
+      "source_parent_group": "physmani:place_cups_on_rotating_frame_high_speed:episode105",
+      "public_chunk": {
+        "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/world_command_v3_deferred_run_v1/artifacts/public_cache/public_features/fit/parent0842.pt",
+        "sha256": "a4f0e5e5d149ac66f68e9bd17332f69656a08184452d67b49381c08b69a90c27"
+      },
+      "source_split": "train",
+      "source": {
+        "task": "place_cups_on_rotating_frame_high_speed",
+        "split": "train",
+        "role": "fit",
+        "raw_episode_id": "episode105",
+        "source_parent_group": "physmani:place_cups_on_rotating_frame_high_speed:episode105",
+        "source_path": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/place_cups_on_rotating_frame_high_speed/all_variations/episodes/episode105/data.h5",
+        "eligible_for_pipeline": true,
+        "offline_eligible": true,
+        "offline_quarantined": false,
+        "quarantine_reason": null,
+        "native_eval_included": false,
+        "teacher_prior_TRAIN_exposed": true,
+        "original_metadata": {
+          "task": "place_cups_on_rotating_frame_high_speed",
+          "raw_episode_id": "episode105",
+          "path": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/place_cups_on_rotating_frame_high_speed/all_variations/episodes/episode105/data.h5"
+        },
+        "frame_count": 150,
+        "physical_clock_verified": false,
+        "time_origin": "recorded_frame_index_only_unknown_physical_dt",
+        "source_stat": {
+          "size": 105442694,
+          "mtime_ns": 1776475809000000000,
+          "inode": 190189168
+        }
+      },
+      "original_pretrained_world_fit_exposed": true
+    },
+    {
+      "role": "selection",
+      "task": "place_cups_on_rotating_frame_high_speed",
+      "chunk_index": 858,
+      "source_parent_group": "physmani:place_cups_on_rotating_frame_high_speed:episode184",
+      "public_chunk": {
+        "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/world_command_v3_deferred_run_v1/artifacts/public_cache/public_features/fit/parent0858.pt",
+        "sha256": "424b32ce48139e7cb8e4938e5d675eb04fd9accb8b52914c82a8da0738040e65"
+      },
+      "source_split": "train",
+      "source": {
+        "task": "place_cups_on_rotating_frame_high_speed",
+        "split": "train",
+        "role": "fit",
+        "raw_episode_id": "episode184",
+        "source_parent_group": "physmani:place_cups_on_rotating_frame_high_speed:episode184",
+        "source_path": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/place_cups_on_rotating_frame_high_speed/all_variations/episodes/episode184/data.h5",
+        "eligible_for_pipeline": true,
+        "offline_eligible": true,
+        "offline_quarantined": false,
+        "quarantine_reason": null,
+        "native_eval_included": false,
+        "teacher_prior_TRAIN_exposed": true,
+        "original_metadata": {
+          "task": "place_cups_on_rotating_frame_high_speed",
+          "raw_episode_id": "episode184",
+          "path": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/place_cups_on_rotating_frame_high_speed/all_variations/episodes/episode184/data.h5"
+        },
+        "frame_count": 120,
+        "physical_clock_verified": false,
+        "time_origin": "recorded_frame_index_only_unknown_physical_dt",
+        "source_stat": {
+          "size": 83554157,
+          "mtime_ns": 1776475951000000000,
+          "inode": 190189200
+        }
+      },
+      "original_pretrained_world_fit_exposed": true
+    },
+    {
+      "role": "fit",
+      "task": "push_moving_button",
+      "chunk_index": 955,
+      "source_parent_group": "physmani:push_moving_button:episode179",
+      "public_chunk": {
+        "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/world_command_v3_deferred_run_v1/artifacts/public_cache/public_features/fit/parent0955.pt",
+        "sha256": "37a3179025e7927eaca3803ca7f6674773dafb8deb096f818d1f20eb83aabc2e"
+      },
+      "source_split": "train",
+      "source": {
+        "task": "push_moving_button",
+        "split": "train",
+        "role": "fit",
+        "raw_episode_id": "episode179",
+        "source_parent_group": "physmani:push_moving_button:episode179",
+        "source_path": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/push_moving_button/all_variations/episodes/episode179/data.h5",
+        "eligible_for_pipeline": true,
+        "offline_eligible": true,
+        "offline_quarantined": false,
+        "quarantine_reason": null,
+        "native_eval_included": false,
+        "teacher_prior_TRAIN_exposed": true,
+        "original_metadata": {
+          "task": "push_moving_button",
+          "raw_episode_id": "episode179",
+          "path": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/push_moving_button/all_variations/episodes/episode179/data.h5"
+        },
+        "frame_count": 84,
+        "physical_clock_verified": false,
+        "time_origin": "recorded_frame_index_only_unknown_physical_dt",
+        "source_stat": {
+          "size": 57358856,
+          "mtime_ns": 1776476715000000000,
+          "inode": 190189496
+        }
+      },
+      "original_pretrained_world_fit_exposed": true
+    },
+    {
+      "role": "fit",
+      "task": "push_moving_button",
+      "chunk_index": 998,
+      "source_parent_group": "physmani:push_moving_button:episode448",
+      "public_chunk": {
+        "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/world_command_v3_deferred_run_v1/artifacts/public_cache/public_features/fit/parent0998.pt",
+        "sha256": "9817d24ba804b95e5cce1a26f403c0bf49aebaa5ae9d5c34e0f191f73c5142f2"
+      },
+      "source_split": "train",
+      "source": {
+        "task": "push_moving_button",
+        "split": "train",
+        "role": "fit",
+        "raw_episode_id": "episode448",
+        "source_parent_group": "physmani:push_moving_button:episode448",
+        "source_path": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/push_moving_button/all_variations/episodes/episode448/data.h5",
+        "eligible_for_pipeline": true,
+        "offline_eligible": true,
+        "offline_quarantined": false,
+        "quarantine_reason": null,
+        "native_eval_included": false,
+        "teacher_prior_TRAIN_exposed": true,
+        "original_metadata": {
+          "task": "push_moving_button",
+          "raw_episode_id": "episode448",
+          "path": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/push_moving_button/all_variations/episodes/episode448/data.h5"
+        },
+        "frame_count": 20,
+        "physical_clock_verified": false,
+        "time_origin": "recorded_frame_index_only_unknown_physical_dt",
+        "source_stat": {
+          "size": 13498109,
+          "mtime_ns": 1776476791000000000,
+          "inode": 190189582
+        }
+      },
+      "original_pretrained_world_fit_exposed": true
+    },
+    {
+      "role": "fit",
+      "task": "push_moving_button",
+      "chunk_index": 1017,
+      "source_parent_group": "physmani:push_moving_button:episode607",
+      "public_chunk": {
+        "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/world_command_v3_deferred_run_v1/artifacts/public_cache/public_features/fit/parent1017.pt",
+        "sha256": "f49a04a668a937aa297971b1420b1ca21d8f2f5c42394b22627df75cf78d8a4e"
+      },
+      "source_split": "train",
+      "source": {
+        "task": "push_moving_button",
+        "split": "train",
+        "role": "fit",
+        "raw_episode_id": "episode607",
+        "source_parent_group": "physmani:push_moving_button:episode607",
+        "source_path": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/push_moving_button/all_variations/episodes/episode607/data.h5",
+        "eligible_for_pipeline": true,
+        "offline_eligible": true,
+        "offline_quarantined": false,
+        "quarantine_reason": null,
+        "native_eval_included": false,
+        "teacher_prior_TRAIN_exposed": true,
+        "original_metadata": {
+          "task": "push_moving_button",
+          "raw_episode_id": "episode607",
+          "path": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/push_moving_button/all_variations/episodes/episode607/data.h5"
+        },
+        "frame_count": 22,
+        "physical_clock_verified": false,
+        "time_origin": "recorded_frame_index_only_unknown_physical_dt",
+        "source_stat": {
+          "size": 14830250,
+          "mtime_ns": 1776476823000000000,
+          "inode": 190189620
+        }
+      },
+      "original_pretrained_world_fit_exposed": true
+    },
+    {
+      "role": "selection",
+      "task": "push_moving_button",
+      "chunk_index": 963,
+      "source_parent_group": "physmani:push_moving_button:episode235",
+      "public_chunk": {
+        "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/world_command_v3_deferred_run_v1/artifacts/public_cache/public_features/fit/parent0963.pt",
+        "sha256": "f9d62d46779fc0ea3185b5f75163170f13c747f23fd2594ed88ad2a1953949d4"
+      },
+      "source_split": "train",
+      "source": {
+        "task": "push_moving_button",
+        "split": "train",
+        "role": "fit",
+        "raw_episode_id": "episode235",
+        "source_parent_group": "physmani:push_moving_button:episode235",
+        "source_path": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/push_moving_button/all_variations/episodes/episode235/data.h5",
+        "eligible_for_pipeline": true,
+        "offline_eligible": true,
+        "offline_quarantined": false,
+        "quarantine_reason": null,
+        "native_eval_included": false,
+        "teacher_prior_TRAIN_exposed": true,
+        "original_metadata": {
+          "task": "push_moving_button",
+          "raw_episode_id": "episode235",
+          "path": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/push_moving_button/all_variations/episodes/episode235/data.h5"
+        },
+        "frame_count": 20,
+        "physical_clock_verified": false,
+        "time_origin": "recorded_frame_index_only_unknown_physical_dt",
+        "source_stat": {
+          "size": 13501844,
+          "mtime_ns": 1776476730000000000,
+          "inode": 190189512
+        }
+      },
+      "original_pretrained_world_fit_exposed": true
+    },
+    {
+      "role": "fit",
+      "task": "push_moving_button_high_speed",
+      "chunk_index": 1077,
+      "source_parent_group": "physmani:push_moving_button_high_speed:episode330",
+      "public_chunk": {
+        "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/world_command_v3_deferred_run_v1/artifacts/public_cache/public_features/fit/parent1077.pt",
+        "sha256": "1905034ab5c9030297f961a02412af0e5abdbc6d6155ac9478a6bdc5cdc5fae0"
+      },
+      "source_split": "train",
+      "source": {
+        "task": "push_moving_button_high_speed",
+        "split": "train",
+        "role": "fit",
+        "raw_episode_id": "episode330",
+        "source_parent_group": "physmani:push_moving_button_high_speed:episode330",
+        "source_path": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/push_moving_button_high_speed/all_variations/episodes/episode330/data.h5",
+        "eligible_for_pipeline": true,
+        "offline_eligible": true,
+        "offline_quarantined": false,
+        "quarantine_reason": null,
+        "native_eval_included": false,
+        "teacher_prior_TRAIN_exposed": true,
+        "original_metadata": {
+          "task": "push_moving_button_high_speed",
+          "raw_episode_id": "episode330",
+          "path": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/push_moving_button_high_speed/all_variations/episodes/episode330/data.h5"
+        },
+        "frame_count": 28,
+        "physical_clock_verified": false,
+        "time_origin": "recorded_frame_index_only_unknown_physical_dt",
+        "source_stat": {
+          "size": 18824381,
+          "mtime_ns": 1776476995000000000,
+          "inode": 190189740
+        }
+      },
+      "original_pretrained_world_fit_exposed": true
+    },
+    {
+      "role": "fit",
+      "task": "push_moving_button_high_speed",
+      "chunk_index": 1081,
+      "source_parent_group": "physmani:push_moving_button_high_speed:episode359",
+      "public_chunk": {
+        "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/world_command_v3_deferred_run_v1/artifacts/public_cache/public_features/fit/parent1081.pt",
+        "sha256": "00f16ea51f24828e000b4cae357df58f3d5df7017a0616a438c8d4909af679df"
+      },
+      "source_split": "train",
+      "source": {
+        "task": "push_moving_button_high_speed",
+        "split": "train",
+        "role": "fit",
+        "raw_episode_id": "episode359",
+        "source_parent_group": "physmani:push_moving_button_high_speed:episode359",
+        "source_path": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/push_moving_button_high_speed/all_variations/episodes/episode359/data.h5",
+        "eligible_for_pipeline": true,
+        "offline_eligible": true,
+        "offline_quarantined": false,
+        "quarantine_reason": null,
+        "native_eval_included": false,
+        "teacher_prior_TRAIN_exposed": true,
+        "original_metadata": {
+          "task": "push_moving_button_high_speed",
+          "raw_episode_id": "episode359",
+          "path": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/push_moving_button_high_speed/all_variations/episodes/episode359/data.h5"
+        },
+        "frame_count": 96,
+        "physical_clock_verified": false,
+        "time_origin": "recorded_frame_index_only_unknown_physical_dt",
+        "source_stat": {
+          "size": 64763484,
+          "mtime_ns": 1776477017000000000,
+          "inode": 190189748
+        }
+      },
+      "original_pretrained_world_fit_exposed": true
+    },
+    {
+      "role": "fit",
+      "task": "push_moving_button_high_speed",
+      "chunk_index": 1084,
+      "source_parent_group": "physmani:push_moving_button_high_speed:episode392",
+      "public_chunk": {
+        "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/world_command_v3_deferred_run_v1/artifacts/public_cache/public_features/fit/parent1084.pt",
+        "sha256": "2ae6b68282b9e90ef84782417fd8b40c4ded407111a10db46df32a63086a1b66"
+      },
+      "source_split": "train",
+      "source": {
+        "task": "push_moving_button_high_speed",
+        "split": "train",
+        "role": "fit",
+        "raw_episode_id": "episode392",
+        "source_parent_group": "physmani:push_moving_button_high_speed:episode392",
+        "source_path": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/push_moving_button_high_speed/all_variations/episodes/episode392/data.h5",
+        "eligible_for_pipeline": true,
+        "offline_eligible": true,
+        "offline_quarantined": false,
+        "quarantine_reason": null,
+        "native_eval_included": false,
+        "teacher_prior_TRAIN_exposed": true,
+        "original_metadata": {
+          "task": "push_moving_button_high_speed",
+          "raw_episode_id": "episode392",
+          "path": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/push_moving_button_high_speed/all_variations/episodes/episode392/data.h5"
+        },
+        "frame_count": 91,
+        "physical_clock_verified": false,
+        "time_origin": "recorded_frame_index_only_unknown_physical_dt",
+        "source_stat": {
+          "size": 61406286,
+          "mtime_ns": 1776477034000000000,
+          "inode": 190189754
+        }
+      },
+      "original_pretrained_world_fit_exposed": true
+    },
+    {
+      "role": "selection",
+      "task": "push_moving_button_high_speed",
+      "chunk_index": 1065,
+      "source_parent_group": "physmani:push_moving_button_high_speed:episode236",
+      "public_chunk": {
+        "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/world_command_v3_deferred_run_v1/artifacts/public_cache/public_features/fit/parent1065.pt",
+        "sha256": "22fab4ca315c804ab59332543cf176f2db9752b6906df6eeb7039669d18640ba"
+      },
+      "source_split": "train",
+      "source": {
+        "task": "push_moving_button_high_speed",
+        "split": "train",
+        "role": "fit",
+        "raw_episode_id": "episode236",
+        "source_parent_group": "physmani:push_moving_button_high_speed:episode236",
+        "source_path": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/push_moving_button_high_speed/all_variations/episodes/episode236/data.h5",
+        "eligible_for_pipeline": true,
+        "offline_eligible": true,
+        "offline_quarantined": false,
+        "quarantine_reason": null,
+        "native_eval_included": false,
+        "teacher_prior_TRAIN_exposed": true,
+        "original_metadata": {
+          "task": "push_moving_button_high_speed",
+          "raw_episode_id": "episode236",
+          "path": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/push_moving_button_high_speed/all_variations/episodes/episode236/data.h5"
+        },
+        "frame_count": 28,
+        "physical_clock_verified": false,
+        "time_origin": "recorded_frame_index_only_unknown_physical_dt",
+        "source_stat": {
+          "size": 18872761,
+          "mtime_ns": 1776476958000000000,
+          "inode": 190189716
+        }
+      },
+      "original_pretrained_world_fit_exposed": true
+    },
+    {
+      "role": "fit",
+      "task": "put_rubbish_in_moving_bin",
+      "chunk_index": 1168,
+      "source_parent_group": "physmani:put_rubbish_in_moving_bin:episode343",
+      "public_chunk": {
+        "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/world_command_v3_deferred_run_v1/artifacts/public_cache/public_features/fit/parent1168.pt",
+        "sha256": "dac04c3fb274e9c22c6883ab9e0a387ce2327c69880367354cac2ca4dc9a66a5"
+      },
+      "source_split": "train",
+      "source": {
+        "task": "put_rubbish_in_moving_bin",
+        "split": "train",
+        "role": "fit",
+        "raw_episode_id": "episode343",
+        "source_parent_group": "physmani:put_rubbish_in_moving_bin:episode343",
+        "source_path": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/put_rubbish_in_moving_bin/all_variations/episodes/episode343/data.h5",
+        "eligible_for_pipeline": true,
+        "offline_eligible": true,
+        "offline_quarantined": false,
+        "quarantine_reason": null,
+        "native_eval_included": false,
+        "teacher_prior_TRAIN_exposed": true,
+        "original_metadata": {
+          "task": "put_rubbish_in_moving_bin",
+          "raw_episode_id": "episode343",
+          "path": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/put_rubbish_in_moving_bin/all_variations/episodes/episode343/data.h5"
+        },
+        "frame_count": 90,
+        "physical_clock_verified": false,
+        "time_origin": "recorded_frame_index_only_unknown_physical_dt",
+        "source_stat": {
+          "size": 61068037,
+          "mtime_ns": 1776477402000000000,
+          "inode": 190189926
+        }
+      },
+      "original_pretrained_world_fit_exposed": true
+    },
+    {
+      "role": "fit",
+      "task": "put_rubbish_in_moving_bin",
+      "chunk_index": 1155,
+      "source_parent_group": "physmani:put_rubbish_in_moving_bin:episode231",
+      "public_chunk": {
+        "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/world_command_v3_deferred_run_v1/artifacts/public_cache/public_features/fit/parent1155.pt",
+        "sha256": "511cffb406018dc5f15ca727325a20aa5312ebe1cdee6100da4a87e3a0213a74"
+      },
+      "source_split": "train",
+      "source": {
+        "task": "put_rubbish_in_moving_bin",
+        "split": "train",
+        "role": "fit",
+        "raw_episode_id": "episode231",
+        "source_parent_group": "physmani:put_rubbish_in_moving_bin:episode231",
+        "source_path": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/put_rubbish_in_moving_bin/all_variations/episodes/episode231/data.h5",
+        "eligible_for_pipeline": true,
+        "offline_eligible": true,
+        "offline_quarantined": false,
+        "quarantine_reason": null,
+        "native_eval_included": false,
+        "teacher_prior_TRAIN_exposed": true,
+        "original_metadata": {
+          "task": "put_rubbish_in_moving_bin",
+          "raw_episode_id": "episode231",
+          "path": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/put_rubbish_in_moving_bin/all_variations/episodes/episode231/data.h5"
+        },
+        "frame_count": 90,
+        "physical_clock_verified": false,
+        "time_origin": "recorded_frame_index_only_unknown_physical_dt",
+        "source_stat": {
+          "size": 61393895,
+          "mtime_ns": 1776477317000000000,
+          "inode": 190189900
+        }
+      },
+      "original_pretrained_world_fit_exposed": true
+    },
+    {
+      "role": "fit",
+      "task": "put_rubbish_in_moving_bin",
+      "chunk_index": 1143,
+      "source_parent_group": "physmani:put_rubbish_in_moving_bin:episode123",
+      "public_chunk": {
+        "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/world_command_v3_deferred_run_v1/artifacts/public_cache/public_features/fit/parent1143.pt",
+        "sha256": "aca13abc9f6d6070823c005ef4b60ef46db7bed27ccceabf9fad6da645445a8d"
+      },
+      "source_split": "train",
+      "source": {
+        "task": "put_rubbish_in_moving_bin",
+        "split": "train",
+        "role": "fit",
+        "raw_episode_id": "episode123",
+        "source_parent_group": "physmani:put_rubbish_in_moving_bin:episode123",
+        "source_path": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/put_rubbish_in_moving_bin/all_variations/episodes/episode123/data.h5",
+        "eligible_for_pipeline": true,
+        "offline_eligible": true,
+        "offline_quarantined": false,
+        "quarantine_reason": null,
+        "native_eval_included": false,
+        "teacher_prior_TRAIN_exposed": true,
+        "original_metadata": {
+          "task": "put_rubbish_in_moving_bin",
+          "raw_episode_id": "episode123",
+          "path": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/put_rubbish_in_moving_bin/all_variations/episodes/episode123/data.h5"
+        },
+        "frame_count": 100,
+        "physical_clock_verified": false,
+        "time_origin": "recorded_frame_index_only_unknown_physical_dt",
+        "source_stat": {
+          "size": 68128672,
+          "mtime_ns": 1776477228000000000,
+          "inode": 190189872
+        }
+      },
+      "original_pretrained_world_fit_exposed": true
+    },
+    {
+      "role": "selection",
+      "task": "put_rubbish_in_moving_bin",
+      "chunk_index": 1163,
+      "source_parent_group": "physmani:put_rubbish_in_moving_bin:episode323",
+      "public_chunk": {
+        "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/world_command_v3_deferred_run_v1/artifacts/public_cache/public_features/fit/parent1163.pt",
+        "sha256": "18d61b0232d345605fa2fda8cc25d15c8083a0d4702e8e81acebca8cf5d81eca"
+      },
+      "source_split": "train",
+      "source": {
+        "task": "put_rubbish_in_moving_bin",
+        "split": "train",
+        "role": "fit",
+        "raw_episode_id": "episode323",
+        "source_parent_group": "physmani:put_rubbish_in_moving_bin:episode323",
+        "source_path": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/put_rubbish_in_moving_bin/all_variations/episodes/episode323/data.h5",
+        "eligible_for_pipeline": true,
+        "offline_eligible": true,
+        "offline_quarantined": false,
+        "quarantine_reason": null,
+        "native_eval_included": false,
+        "teacher_prior_TRAIN_exposed": true,
+        "original_metadata": {
+          "task": "put_rubbish_in_moving_bin",
+          "raw_episode_id": "episode323",
+          "path": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/put_rubbish_in_moving_bin/all_variations/episodes/episode323/data.h5"
+        },
+        "frame_count": 70,
+        "physical_clock_verified": false,
+        "time_origin": "recorded_frame_index_only_unknown_physical_dt",
+        "source_stat": {
+          "size": 47684259,
+          "mtime_ns": 1776477363000000000,
+          "inode": 190189916
+        }
+      },
+      "original_pretrained_world_fit_exposed": true
+    },
+    {
+      "role": "fit",
+      "task": "put_rubbish_in_moving_bin_high_speed",
+      "chunk_index": 1284,
+      "source_parent_group": "physmani:put_rubbish_in_moving_bin_high_speed:episode334",
+      "public_chunk": {
+        "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/world_command_v3_deferred_run_v1/artifacts/public_cache/public_features/fit/parent1284.pt",
+        "sha256": "d762f94c1257be89c07d01e028be59bcb65409c9a1b3e1e6ca5e0bdf64baceb1"
+      },
+      "source_split": "train",
+      "source": {
+        "task": "put_rubbish_in_moving_bin_high_speed",
+        "split": "train",
+        "role": "fit",
+        "raw_episode_id": "episode334",
+        "source_parent_group": "physmani:put_rubbish_in_moving_bin_high_speed:episode334",
+        "source_path": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/put_rubbish_in_moving_bin_high_speed/all_variations/episodes/episode334/data.h5",
+        "eligible_for_pipeline": true,
+        "offline_eligible": true,
+        "offline_quarantined": false,
+        "quarantine_reason": null,
+        "native_eval_included": false,
+        "teacher_prior_TRAIN_exposed": true,
+        "original_metadata": {
+          "task": "put_rubbish_in_moving_bin_high_speed",
+          "raw_episode_id": "episode334",
+          "path": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/put_rubbish_in_moving_bin_high_speed/all_variations/episodes/episode334/data.h5"
+        },
+        "frame_count": 100,
+        "physical_clock_verified": false,
+        "time_origin": "recorded_frame_index_only_unknown_physical_dt",
+        "source_stat": {
+          "size": 68273219,
+          "mtime_ns": 1776478159000000000,
+          "inode": 190190160
+        }
+      },
+      "original_pretrained_world_fit_exposed": true
+    },
+    {
+      "role": "fit",
+      "task": "put_rubbish_in_moving_bin_high_speed",
+      "chunk_index": 1270,
+      "source_parent_group": "physmani:put_rubbish_in_moving_bin_high_speed:episode297",
+      "public_chunk": {
+        "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/world_command_v3_deferred_run_v1/artifacts/public_cache/public_features/fit/parent1270.pt",
+        "sha256": "1d25beaba583c63dbced02dcc0a82cd7884bc8ce0bb7920747ad1c9617c3217a"
+      },
+      "source_split": "train",
+      "source": {
+        "task": "put_rubbish_in_moving_bin_high_speed",
+        "split": "train",
+        "role": "fit",
+        "raw_episode_id": "episode297",
+        "source_parent_group": "physmani:put_rubbish_in_moving_bin_high_speed:episode297",
+        "source_path": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/put_rubbish_in_moving_bin_high_speed/all_variations/episodes/episode297/data.h5",
+        "eligible_for_pipeline": true,
+        "offline_eligible": true,
+        "offline_quarantined": false,
+        "quarantine_reason": null,
+        "native_eval_included": false,
+        "teacher_prior_TRAIN_exposed": true,
+        "original_metadata": {
+          "task": "put_rubbish_in_moving_bin_high_speed",
+          "raw_episode_id": "episode297",
+          "path": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/put_rubbish_in_moving_bin_high_speed/all_variations/episodes/episode297/data.h5"
+        },
+        "frame_count": 90,
+        "physical_clock_verified": false,
+        "time_origin": "recorded_frame_index_only_unknown_physical_dt",
+        "source_stat": {
+          "size": 61565096,
+          "mtime_ns": 1776478050000000000,
+          "inode": 190190132
+        }
+      },
+      "original_pretrained_world_fit_exposed": true
+    },
+    {
+      "role": "fit",
+      "task": "put_rubbish_in_moving_bin_high_speed",
+      "chunk_index": 1324,
+      "source_parent_group": "physmani:put_rubbish_in_moving_bin_high_speed:episode468",
+      "public_chunk": {
+        "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/world_command_v3_deferred_run_v1/artifacts/public_cache/public_features/fit/parent1324.pt",
+        "sha256": "8ef49841c8c8fa88dba56ab83011567b1cfa81edd58ef093fe653af942e118bf"
+      },
+      "source_split": "train",
+      "source": {
+        "task": "put_rubbish_in_moving_bin_high_speed",
+        "split": "train",
+        "role": "fit",
+        "raw_episode_id": "episode468",
+        "source_parent_group": "physmani:put_rubbish_in_moving_bin_high_speed:episode468",
+        "source_path": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/put_rubbish_in_moving_bin_high_speed/all_variations/episodes/episode468/data.h5",
+        "eligible_for_pipeline": true,
+        "offline_eligible": true,
+        "offline_quarantined": false,
+        "quarantine_reason": null,
+        "native_eval_included": false,
+        "teacher_prior_TRAIN_exposed": true,
+        "original_metadata": {
+          "task": "put_rubbish_in_moving_bin_high_speed",
+          "raw_episode_id": "episode468",
+          "path": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/put_rubbish_in_moving_bin_high_speed/all_variations/episodes/episode468/data.h5"
+        },
+        "frame_count": 70,
+        "physical_clock_verified": false,
+        "time_origin": "recorded_frame_index_only_unknown_physical_dt",
+        "source_stat": {
+          "size": 47725958,
+          "mtime_ns": 1776478450000000000,
+          "inode": 190190240
+        }
+      },
+      "original_pretrained_world_fit_exposed": true
+    },
+    {
+      "role": "selection",
+      "task": "put_rubbish_in_moving_bin_high_speed",
+      "chunk_index": 1292,
+      "source_parent_group": "physmani:put_rubbish_in_moving_bin_high_speed:episode372",
+      "public_chunk": {
+        "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/world_command_v3_deferred_run_v1/artifacts/public_cache/public_features/fit/parent1292.pt",
+        "sha256": "003219504c81897d93809325faeff8197f453086dfef52afd6cb4684261f54cf"
+      },
+      "source_split": "train",
+      "source": {
+        "task": "put_rubbish_in_moving_bin_high_speed",
+        "split": "train",
+        "role": "fit",
+        "raw_episode_id": "episode372",
+        "source_parent_group": "physmani:put_rubbish_in_moving_bin_high_speed:episode372",
+        "source_path": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/put_rubbish_in_moving_bin_high_speed/all_variations/episodes/episode372/data.h5",
+        "eligible_for_pipeline": true,
+        "offline_eligible": true,
+        "offline_quarantined": false,
+        "quarantine_reason": null,
+        "native_eval_included": false,
+        "teacher_prior_TRAIN_exposed": true,
+        "original_metadata": {
+          "task": "put_rubbish_in_moving_bin_high_speed",
+          "raw_episode_id": "episode372",
+          "path": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/put_rubbish_in_moving_bin_high_speed/all_variations/episodes/episode372/data.h5"
+        },
+        "frame_count": 130,
+        "physical_clock_verified": false,
+        "time_origin": "recorded_frame_index_only_unknown_physical_dt",
+        "source_stat": {
+          "size": 89062650,
+          "mtime_ns": 1776478213000000000,
+          "inode": 190190176
+        }
+      },
+      "original_pretrained_world_fit_exposed": true
+    },
+    {
+      "role": "fit",
+      "task": "remove_cups_from_rotating_frame",
+      "chunk_index": 1431,
+      "source_parent_group": "physmani:remove_cups_from_rotating_frame:episode570",
+      "public_chunk": {
+        "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/world_command_v3_deferred_run_v1/artifacts/public_cache/public_features/fit/parent1431.pt",
+        "sha256": "f7b64e096cae5093078f9feb81a5fc48cf76c1e81ac8598d937a8872a9c3f280"
+      },
+      "source_split": "train",
+      "source": {
+        "task": "remove_cups_from_rotating_frame",
+        "split": "train",
+        "role": "fit",
+        "raw_episode_id": "episode570",
+        "source_parent_group": "physmani:remove_cups_from_rotating_frame:episode570",
+        "source_path": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/remove_cups_from_rotating_frame/all_variations/episodes/episode570/data.h5",
+        "eligible_for_pipeline": true,
+        "offline_eligible": true,
+        "offline_quarantined": false,
+        "quarantine_reason": null,
+        "native_eval_included": false,
+        "teacher_prior_TRAIN_exposed": true,
+        "original_metadata": {
+          "task": "remove_cups_from_rotating_frame",
+          "raw_episode_id": "episode570",
+          "path": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/remove_cups_from_rotating_frame/all_variations/episodes/episode570/data.h5"
+        },
+        "frame_count": 60,
+        "physical_clock_verified": false,
+        "time_origin": "recorded_frame_index_only_unknown_physical_dt",
+        "source_stat": {
+          "size": 41542865,
+          "mtime_ns": 1776479076000000000,
+          "inode": 190316835
+        }
+      },
+      "original_pretrained_world_fit_exposed": true
+    },
+    {
+      "role": "fit",
+      "task": "remove_cups_from_rotating_frame",
+      "chunk_index": 1390,
+      "source_parent_group": "physmani:remove_cups_from_rotating_frame:episode425",
+      "public_chunk": {
+        "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/world_command_v3_deferred_run_v1/artifacts/public_cache/public_features/fit/parent1390.pt",
+        "sha256": "719b21856f728a8721279a40ae8b0df42c2951d16a0861b19b386f8fc6f6358b"
+      },
+      "source_split": "train",
+      "source": {
+        "task": "remove_cups_from_rotating_frame",
+        "split": "train",
+        "role": "fit",
+        "raw_episode_id": "episode425",
+        "source_parent_group": "physmani:remove_cups_from_rotating_frame:episode425",
+        "source_path": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/remove_cups_from_rotating_frame/all_variations/episodes/episode425/data.h5",
+        "eligible_for_pipeline": true,
+        "offline_eligible": true,
+        "offline_quarantined": false,
+        "quarantine_reason": null,
+        "native_eval_included": false,
+        "teacher_prior_TRAIN_exposed": true,
+        "original_metadata": {
+          "task": "remove_cups_from_rotating_frame",
+          "raw_episode_id": "episode425",
+          "path": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/remove_cups_from_rotating_frame/all_variations/episodes/episode425/data.h5"
+        },
+        "frame_count": 90,
+        "physical_clock_verified": false,
+        "time_origin": "recorded_frame_index_only_unknown_physical_dt",
+        "source_stat": {
+          "size": 61995516,
+          "mtime_ns": 1776478837000000000,
+          "inode": 190316753
+        }
+      },
+      "original_pretrained_world_fit_exposed": true
+    },
+    {
+      "role": "fit",
+      "task": "remove_cups_from_rotating_frame",
+      "chunk_index": 1434,
+      "source_parent_group": "physmani:remove_cups_from_rotating_frame:episode72",
+      "public_chunk": {
+        "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/world_command_v3_deferred_run_v1/artifacts/public_cache/public_features/fit/parent1434.pt",
+        "sha256": "b2a0eb7c5f13b1c7c4f8e62f3983f692db912e936943ac5d391acffec5f55eff"
+      },
+      "source_split": "train",
+      "source": {
+        "task": "remove_cups_from_rotating_frame",
+        "split": "train",
+        "role": "fit",
+        "raw_episode_id": "episode72",
+        "source_parent_group": "physmani:remove_cups_from_rotating_frame:episode72",
+        "source_path": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/remove_cups_from_rotating_frame/all_variations/episodes/episode72/data.h5",
+        "eligible_for_pipeline": true,
+        "offline_eligible": true,
+        "offline_quarantined": false,
+        "quarantine_reason": null,
+        "native_eval_included": false,
+        "teacher_prior_TRAIN_exposed": true,
+        "original_metadata": {
+          "task": "remove_cups_from_rotating_frame",
+          "raw_episode_id": "episode72",
+          "path": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/remove_cups_from_rotating_frame/all_variations/episodes/episode72/data.h5"
+        },
+        "frame_count": 80,
+        "physical_clock_verified": false,
+        "time_origin": "recorded_frame_index_only_unknown_physical_dt",
+        "source_stat": {
+          "size": 55417413,
+          "mtime_ns": 1776479091000000000,
+          "inode": 190316841
+        }
+      },
+      "original_pretrained_world_fit_exposed": true
+    },
+    {
+      "role": "selection",
+      "task": "remove_cups_from_rotating_frame",
+      "chunk_index": 1422,
+      "source_parent_group": "physmani:remove_cups_from_rotating_frame:episode554",
+      "public_chunk": {
+        "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/world_command_v3_deferred_run_v1/artifacts/public_cache/public_features/fit/parent1422.pt",
+        "sha256": "47c9f7b819bfcb4957262d9614fd5217557f528a17872fe348236a136b450625"
+      },
+      "source_split": "train",
+      "source": {
+        "task": "remove_cups_from_rotating_frame",
+        "split": "train",
+        "role": "fit",
+        "raw_episode_id": "episode554",
+        "source_parent_group": "physmani:remove_cups_from_rotating_frame:episode554",
+        "source_path": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/remove_cups_from_rotating_frame/all_variations/episodes/episode554/data.h5",
+        "eligible_for_pipeline": true,
+        "offline_eligible": true,
+        "offline_quarantined": false,
+        "quarantine_reason": null,
+        "native_eval_included": false,
+        "teacher_prior_TRAIN_exposed": true,
+        "original_metadata": {
+          "task": "remove_cups_from_rotating_frame",
+          "raw_episode_id": "episode554",
+          "path": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/remove_cups_from_rotating_frame/all_variations/episodes/episode554/data.h5"
+        },
+        "frame_count": 60,
+        "physical_clock_verified": false,
+        "time_origin": "recorded_frame_index_only_unknown_physical_dt",
+        "source_stat": {
+          "size": 41560565,
+          "mtime_ns": 1776479024000000000,
+          "inode": 190316817
+        }
+      },
+      "original_pretrained_world_fit_exposed": true
+    },
+    {
+      "role": "fit",
+      "task": "remove_cups_from_rotating_frame_high_speed",
+      "chunk_index": 1506,
+      "source_parent_group": "physmani:remove_cups_from_rotating_frame_high_speed:episode433",
+      "public_chunk": {
+        "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/world_command_v3_deferred_run_v1/artifacts/public_cache/public_features/fit/parent1506.pt",
+        "sha256": "28f9481069803605d7feccf9df9fdfc675895c870f38df27737e6fc2bc14c006"
+      },
+      "source_split": "train",
+      "source": {
+        "task": "remove_cups_from_rotating_frame_high_speed",
+        "split": "train",
+        "role": "fit",
+        "raw_episode_id": "episode433",
+        "source_parent_group": "physmani:remove_cups_from_rotating_frame_high_speed:episode433",
+        "source_path": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/remove_cups_from_rotating_frame_high_speed/all_variations/episodes/episode433/data.h5",
+        "eligible_for_pipeline": true,
+        "offline_eligible": true,
+        "offline_quarantined": false,
+        "quarantine_reason": null,
+        "native_eval_included": false,
+        "teacher_prior_TRAIN_exposed": true,
+        "original_metadata": {
+          "task": "remove_cups_from_rotating_frame_high_speed",
+          "raw_episode_id": "episode433",
+          "path": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/remove_cups_from_rotating_frame_high_speed/all_variations/episodes/episode433/data.h5"
+        },
+        "frame_count": 120,
+        "physical_clock_verified": false,
+        "time_origin": "recorded_frame_index_only_unknown_physical_dt",
+        "source_stat": {
+          "size": 83703782,
+          "mtime_ns": 1776479614000000000,
+          "inode": 190447857
+        }
+      },
+      "original_pretrained_world_fit_exposed": true
+    },
+    {
+      "role": "fit",
+      "task": "remove_cups_from_rotating_frame_high_speed",
+      "chunk_index": 1452,
+      "source_parent_group": "physmani:remove_cups_from_rotating_frame_high_speed:episode162",
+      "public_chunk": {
+        "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/world_command_v3_deferred_run_v1/artifacts/public_cache/public_features/fit/parent1452.pt",
+        "sha256": "8a0827204314046fb6fd4ab61371ab525bf73cb56845427325d651ad829ba4f6"
+      },
+      "source_split": "train",
+      "source": {
+        "task": "remove_cups_from_rotating_frame_high_speed",
+        "split": "train",
+        "role": "fit",
+        "raw_episode_id": "episode162",
+        "source_parent_group": "physmani:remove_cups_from_rotating_frame_high_speed:episode162",
+        "source_path": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/remove_cups_from_rotating_frame_high_speed/all_variations/episodes/episode162/data.h5",
+        "eligible_for_pipeline": true,
+        "offline_eligible": true,
+        "offline_quarantined": false,
+        "quarantine_reason": null,
+        "native_eval_included": false,
+        "teacher_prior_TRAIN_exposed": true,
+        "original_metadata": {
+          "task": "remove_cups_from_rotating_frame_high_speed",
+          "raw_episode_id": "episode162",
+          "path": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/remove_cups_from_rotating_frame_high_speed/all_variations/episodes/episode162/data.h5"
+        },
+        "frame_count": 130,
+        "physical_clock_verified": false,
+        "time_origin": "recorded_frame_index_only_unknown_physical_dt",
+        "source_stat": {
+          "size": 89691522,
+          "mtime_ns": 1776479214000000000,
+          "inode": 190447749
+        }
+      },
+      "original_pretrained_world_fit_exposed": true
+    },
+    {
+      "role": "fit",
+      "task": "remove_cups_from_rotating_frame_high_speed",
+      "chunk_index": 1469,
+      "source_parent_group": "physmani:remove_cups_from_rotating_frame_high_speed:episode250",
+      "public_chunk": {
+        "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/world_command_v3_deferred_run_v1/artifacts/public_cache/public_features/fit/parent1469.pt",
+        "sha256": "7257e25ca6ab586ac367605f95277a28cecc1dd15ca03003806dbffe2333289c"
+      },
+      "source_split": "train",
+      "source": {
+        "task": "remove_cups_from_rotating_frame_high_speed",
+        "split": "train",
+        "role": "fit",
+        "raw_episode_id": "episode250",
+        "source_parent_group": "physmani:remove_cups_from_rotating_frame_high_speed:episode250",
+        "source_path": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/remove_cups_from_rotating_frame_high_speed/all_variations/episodes/episode250/data.h5",
+        "eligible_for_pipeline": true,
+        "offline_eligible": true,
+        "offline_quarantined": false,
+        "quarantine_reason": null,
+        "native_eval_included": false,
+        "teacher_prior_TRAIN_exposed": true,
+        "original_metadata": {
+          "task": "remove_cups_from_rotating_frame_high_speed",
+          "raw_episode_id": "episode250",
+          "path": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/remove_cups_from_rotating_frame_high_speed/all_variations/episodes/episode250/data.h5"
+        },
+        "frame_count": 100,
+        "physical_clock_verified": false,
+        "time_origin": "recorded_frame_index_only_unknown_physical_dt",
+        "source_stat": {
+          "size": 69804899,
+          "mtime_ns": 1776479337000000000,
+          "inode": 190447783
+        }
+      },
+      "original_pretrained_world_fit_exposed": true
+    },
+    {
+      "role": "selection",
+      "task": "remove_cups_from_rotating_frame_high_speed",
+      "chunk_index": 1507,
+      "source_parent_group": "physmani:remove_cups_from_rotating_frame_high_speed:episode442",
+      "public_chunk": {
+        "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/world_command_v3_deferred_run_v1/artifacts/public_cache/public_features/fit/parent1507.pt",
+        "sha256": "c57dbfd404e7be14117404c0d7692a09e1b72ca8c909ee75e006d1dbc85d90b7"
+      },
+      "source_split": "train",
+      "source": {
+        "task": "remove_cups_from_rotating_frame_high_speed",
+        "split": "train",
+        "role": "fit",
+        "raw_episode_id": "episode442",
+        "source_parent_group": "physmani:remove_cups_from_rotating_frame_high_speed:episode442",
+        "source_path": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/remove_cups_from_rotating_frame_high_speed/all_variations/episodes/episode442/data.h5",
+        "eligible_for_pipeline": true,
+        "offline_eligible": true,
+        "offline_quarantined": false,
+        "quarantine_reason": null,
+        "native_eval_included": false,
+        "teacher_prior_TRAIN_exposed": true,
+        "original_metadata": {
+          "task": "remove_cups_from_rotating_frame_high_speed",
+          "raw_episode_id": "episode442",
+          "path": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/remove_cups_from_rotating_frame_high_speed/all_variations/episodes/episode442/data.h5"
+        },
+        "frame_count": 120,
+        "physical_clock_verified": false,
+        "time_origin": "recorded_frame_index_only_unknown_physical_dt",
+        "source_stat": {
+          "size": 83254483,
+          "mtime_ns": 1776479621000000000,
+          "inode": 190447859
+        }
+      },
+      "original_pretrained_world_fit_exposed": true
+    }
+  ],
+  "cached_public_manifest": {
+    "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/world_command_v3_deferred_run_v1/artifacts/public_cache/cache_manifest.json",
+    "sha256": "074ef1694b958619b675fd46a0a40a264bef74529032db061425af32f86348ad"
+  },
+  "inventory_manifest": {
+    "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/current_network16_data_manifest_v1/manifest.json",
+    "sha256": "c03a4fb31140a5aab7a49ad5d771955a56e5adfb6facfe31aa6b269769b9559b"
+  },
+  "cases": [
+    {
+      "id": "00_beat_the_rotating_buzz_fit_0",
+      "task": "beat_the_rotating_buzz",
+      "role": "fit",
+      "seed": 2611130000,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/beat_the_rotating_buzz/all_variations/episodes/episode154/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611130000"
+    },
+    {
+      "id": "00_beat_the_rotating_buzz_fit_1",
+      "task": "beat_the_rotating_buzz",
+      "role": "fit",
+      "seed": 2611130001,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/beat_the_rotating_buzz/all_variations/episodes/episode154/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611130001"
+    },
+    {
+      "id": "00_beat_the_rotating_buzz_fit_2",
+      "task": "beat_the_rotating_buzz",
+      "role": "fit",
+      "seed": 2611130002,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/beat_the_rotating_buzz/all_variations/episodes/episode154/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611130002"
+    },
+    {
+      "id": "00_beat_the_rotating_buzz_selection_0",
+      "task": "beat_the_rotating_buzz",
+      "role": "selection",
+      "seed": 2611130100,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/beat_the_rotating_buzz/all_variations/episodes/episode154/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611130100"
+    },
+    {
+      "id": "00_beat_the_rotating_buzz_validation_0",
+      "task": "beat_the_rotating_buzz",
+      "role": "validation",
+      "seed": 2611130200,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/beat_the_rotating_buzz/all_variations/episodes/episode154/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611130200"
+    },
+    {
+      "id": "00_beat_the_rotating_buzz_test_0",
+      "task": "beat_the_rotating_buzz",
+      "role": "test",
+      "seed": 2611130300,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/beat_the_rotating_buzz/all_variations/episodes/episode154/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611130300"
+    },
+    {
+      "id": "01_beat_the_rotating_buzz_high_speed_fit_0",
+      "task": "beat_the_rotating_buzz_high_speed",
+      "role": "fit",
+      "seed": 2611131000,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/beat_the_rotating_buzz_high_speed/all_variations/episodes/episode127/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611131000"
+    },
+    {
+      "id": "01_beat_the_rotating_buzz_high_speed_fit_1",
+      "task": "beat_the_rotating_buzz_high_speed",
+      "role": "fit",
+      "seed": 2611131001,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/beat_the_rotating_buzz_high_speed/all_variations/episodes/episode127/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611131001"
+    },
+    {
+      "id": "01_beat_the_rotating_buzz_high_speed_fit_2",
+      "task": "beat_the_rotating_buzz_high_speed",
+      "role": "fit",
+      "seed": 2611131002,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/beat_the_rotating_buzz_high_speed/all_variations/episodes/episode127/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611131002"
+    },
+    {
+      "id": "01_beat_the_rotating_buzz_high_speed_selection_0",
+      "task": "beat_the_rotating_buzz_high_speed",
+      "role": "selection",
+      "seed": 2611131100,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/beat_the_rotating_buzz_high_speed/all_variations/episodes/episode127/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611131100"
+    },
+    {
+      "id": "01_beat_the_rotating_buzz_high_speed_validation_0",
+      "task": "beat_the_rotating_buzz_high_speed",
+      "role": "validation",
+      "seed": 2611131200,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/beat_the_rotating_buzz_high_speed/all_variations/episodes/episode127/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611131200"
+    },
+    {
+      "id": "01_beat_the_rotating_buzz_high_speed_test_0",
+      "task": "beat_the_rotating_buzz_high_speed",
+      "role": "test",
+      "seed": 2611131300,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/beat_the_rotating_buzz_high_speed/all_variations/episodes/episode127/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611131300"
+    },
+    {
+      "id": "02_insert_onto_rotating_peg_fit_0",
+      "task": "insert_onto_rotating_peg",
+      "role": "fit",
+      "seed": 2611132000,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/insert_onto_rotating_peg/all_variations/episodes/episode33/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611132000"
+    },
+    {
+      "id": "02_insert_onto_rotating_peg_fit_1",
+      "task": "insert_onto_rotating_peg",
+      "role": "fit",
+      "seed": 2611132001,
+      "variation": 1,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/insert_onto_rotating_peg/all_variations/episodes/episode33/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611132001"
+    },
+    {
+      "id": "02_insert_onto_rotating_peg_fit_2",
+      "task": "insert_onto_rotating_peg",
+      "role": "fit",
+      "seed": 2611132002,
+      "variation": 2,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/insert_onto_rotating_peg/all_variations/episodes/episode33/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611132002"
+    },
+    {
+      "id": "02_insert_onto_rotating_peg_selection_0",
+      "task": "insert_onto_rotating_peg",
+      "role": "selection",
+      "seed": 2611132100,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/insert_onto_rotating_peg/all_variations/episodes/episode33/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611132100"
+    },
+    {
+      "id": "02_insert_onto_rotating_peg_validation_0",
+      "task": "insert_onto_rotating_peg",
+      "role": "validation",
+      "seed": 2611132200,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/insert_onto_rotating_peg/all_variations/episodes/episode33/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611132200"
+    },
+    {
+      "id": "02_insert_onto_rotating_peg_test_0",
+      "task": "insert_onto_rotating_peg",
+      "role": "test",
+      "seed": 2611132300,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/insert_onto_rotating_peg/all_variations/episodes/episode33/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611132300"
+    },
+    {
+      "id": "03_insert_onto_rotating_peg_high_speed_fit_0",
+      "task": "insert_onto_rotating_peg_high_speed",
+      "role": "fit",
+      "seed": 2611133000,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/insert_onto_rotating_peg_high_speed/all_variations/episodes/episode144/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611133000"
+    },
+    {
+      "id": "03_insert_onto_rotating_peg_high_speed_fit_1",
+      "task": "insert_onto_rotating_peg_high_speed",
+      "role": "fit",
+      "seed": 2611133001,
+      "variation": 1,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/insert_onto_rotating_peg_high_speed/all_variations/episodes/episode144/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611133001"
+    },
+    {
+      "id": "03_insert_onto_rotating_peg_high_speed_fit_2",
+      "task": "insert_onto_rotating_peg_high_speed",
+      "role": "fit",
+      "seed": 2611133002,
+      "variation": 2,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/insert_onto_rotating_peg_high_speed/all_variations/episodes/episode144/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611133002"
+    },
+    {
+      "id": "03_insert_onto_rotating_peg_high_speed_selection_0",
+      "task": "insert_onto_rotating_peg_high_speed",
+      "role": "selection",
+      "seed": 2611133100,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/insert_onto_rotating_peg_high_speed/all_variations/episodes/episode144/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611133100"
+    },
+    {
+      "id": "03_insert_onto_rotating_peg_high_speed_validation_0",
+      "task": "insert_onto_rotating_peg_high_speed",
+      "role": "validation",
+      "seed": 2611133200,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/insert_onto_rotating_peg_high_speed/all_variations/episodes/episode144/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611133200"
+    },
+    {
+      "id": "03_insert_onto_rotating_peg_high_speed_test_0",
+      "task": "insert_onto_rotating_peg_high_speed",
+      "role": "test",
+      "seed": 2611133300,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/insert_onto_rotating_peg_high_speed/all_variations/episodes/episode144/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611133300"
+    },
+    {
+      "id": "04_moving_basketball_in_hoop_fit_0",
+      "task": "moving_basketball_in_hoop",
+      "role": "fit",
+      "seed": 2611134000,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/moving_basketball_in_hoop/all_variations/episodes/episode131/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611134000"
+    },
+    {
+      "id": "04_moving_basketball_in_hoop_fit_1",
+      "task": "moving_basketball_in_hoop",
+      "role": "fit",
+      "seed": 2611134001,
+      "variation": 1,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/moving_basketball_in_hoop/all_variations/episodes/episode131/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611134001"
+    },
+    {
+      "id": "04_moving_basketball_in_hoop_fit_2",
+      "task": "moving_basketball_in_hoop",
+      "role": "fit",
+      "seed": 2611134002,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/moving_basketball_in_hoop/all_variations/episodes/episode131/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611134002"
+    },
+    {
+      "id": "04_moving_basketball_in_hoop_selection_0",
+      "task": "moving_basketball_in_hoop",
+      "role": "selection",
+      "seed": 2611134100,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/moving_basketball_in_hoop/all_variations/episodes/episode131/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611134100"
+    },
+    {
+      "id": "04_moving_basketball_in_hoop_validation_0",
+      "task": "moving_basketball_in_hoop",
+      "role": "validation",
+      "seed": 2611134200,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/moving_basketball_in_hoop/all_variations/episodes/episode131/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611134200"
+    },
+    {
+      "id": "04_moving_basketball_in_hoop_test_0",
+      "task": "moving_basketball_in_hoop",
+      "role": "test",
+      "seed": 2611134300,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/moving_basketball_in_hoop/all_variations/episodes/episode131/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611134300"
+    },
+    {
+      "id": "05_moving_basketball_in_hoop_high_speed_fit_0",
+      "task": "moving_basketball_in_hoop_high_speed",
+      "role": "fit",
+      "seed": 2611135000,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/moving_basketball_in_hoop_high_speed/all_variations/episodes/episode124/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611135000"
+    },
+    {
+      "id": "05_moving_basketball_in_hoop_high_speed_fit_1",
+      "task": "moving_basketball_in_hoop_high_speed",
+      "role": "fit",
+      "seed": 2611135001,
+      "variation": 1,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/moving_basketball_in_hoop_high_speed/all_variations/episodes/episode124/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611135001"
+    },
+    {
+      "id": "05_moving_basketball_in_hoop_high_speed_fit_2",
+      "task": "moving_basketball_in_hoop_high_speed",
+      "role": "fit",
+      "seed": 2611135002,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/moving_basketball_in_hoop_high_speed/all_variations/episodes/episode124/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611135002"
+    },
+    {
+      "id": "05_moving_basketball_in_hoop_high_speed_selection_0",
+      "task": "moving_basketball_in_hoop_high_speed",
+      "role": "selection",
+      "seed": 2611135100,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/moving_basketball_in_hoop_high_speed/all_variations/episodes/episode124/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611135100"
+    },
+    {
+      "id": "05_moving_basketball_in_hoop_high_speed_validation_0",
+      "task": "moving_basketball_in_hoop_high_speed",
+      "role": "validation",
+      "seed": 2611135200,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/moving_basketball_in_hoop_high_speed/all_variations/episodes/episode124/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611135200"
+    },
+    {
+      "id": "05_moving_basketball_in_hoop_high_speed_test_0",
+      "task": "moving_basketball_in_hoop_high_speed",
+      "role": "test",
+      "seed": 2611135300,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/moving_basketball_in_hoop_high_speed/all_variations/episodes/episode124/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611135300"
+    },
+    {
+      "id": "06_place_cups_on_rotating_frame_fit_0",
+      "task": "place_cups_on_rotating_frame",
+      "role": "fit",
+      "seed": 2611136000,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/place_cups_on_rotating_frame/all_variations/episodes/episode316/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611136000"
+    },
+    {
+      "id": "06_place_cups_on_rotating_frame_fit_1",
+      "task": "place_cups_on_rotating_frame",
+      "role": "fit",
+      "seed": 2611136001,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/place_cups_on_rotating_frame/all_variations/episodes/episode316/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611136001"
+    },
+    {
+      "id": "06_place_cups_on_rotating_frame_fit_2",
+      "task": "place_cups_on_rotating_frame",
+      "role": "fit",
+      "seed": 2611136002,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/place_cups_on_rotating_frame/all_variations/episodes/episode316/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611136002"
+    },
+    {
+      "id": "06_place_cups_on_rotating_frame_selection_0",
+      "task": "place_cups_on_rotating_frame",
+      "role": "selection",
+      "seed": 2611136100,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/place_cups_on_rotating_frame/all_variations/episodes/episode316/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611136100"
+    },
+    {
+      "id": "06_place_cups_on_rotating_frame_validation_0",
+      "task": "place_cups_on_rotating_frame",
+      "role": "validation",
+      "seed": 2611136200,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/place_cups_on_rotating_frame/all_variations/episodes/episode316/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611136200"
+    },
+    {
+      "id": "06_place_cups_on_rotating_frame_test_0",
+      "task": "place_cups_on_rotating_frame",
+      "role": "test",
+      "seed": 2611136300,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/place_cups_on_rotating_frame/all_variations/episodes/episode316/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611136300"
+    },
+    {
+      "id": "07_place_cups_on_rotating_frame_high_speed_fit_0",
+      "task": "place_cups_on_rotating_frame_high_speed",
+      "role": "fit",
+      "seed": 2611137000,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/place_cups_on_rotating_frame_high_speed/all_variations/episodes/episode212/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611137000"
+    },
+    {
+      "id": "07_place_cups_on_rotating_frame_high_speed_fit_1",
+      "task": "place_cups_on_rotating_frame_high_speed",
+      "role": "fit",
+      "seed": 2611137001,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/place_cups_on_rotating_frame_high_speed/all_variations/episodes/episode212/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611137001"
+    },
+    {
+      "id": "07_place_cups_on_rotating_frame_high_speed_fit_2",
+      "task": "place_cups_on_rotating_frame_high_speed",
+      "role": "fit",
+      "seed": 2611137002,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/place_cups_on_rotating_frame_high_speed/all_variations/episodes/episode212/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611137002"
+    },
+    {
+      "id": "07_place_cups_on_rotating_frame_high_speed_selection_0",
+      "task": "place_cups_on_rotating_frame_high_speed",
+      "role": "selection",
+      "seed": 2611137100,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/place_cups_on_rotating_frame_high_speed/all_variations/episodes/episode212/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611137100"
+    },
+    {
+      "id": "07_place_cups_on_rotating_frame_high_speed_validation_0",
+      "task": "place_cups_on_rotating_frame_high_speed",
+      "role": "validation",
+      "seed": 2611137200,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/place_cups_on_rotating_frame_high_speed/all_variations/episodes/episode212/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611137200"
+    },
+    {
+      "id": "07_place_cups_on_rotating_frame_high_speed_test_0",
+      "task": "place_cups_on_rotating_frame_high_speed",
+      "role": "test",
+      "seed": 2611137300,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/place_cups_on_rotating_frame_high_speed/all_variations/episodes/episode212/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611137300"
+    },
+    {
+      "id": "08_push_moving_button_fit_0",
+      "task": "push_moving_button",
+      "role": "fit",
+      "seed": 2611138000,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/push_moving_button/all_variations/episodes/episode179/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611138000"
+    },
+    {
+      "id": "08_push_moving_button_fit_1",
+      "task": "push_moving_button",
+      "role": "fit",
+      "seed": 2611138001,
+      "variation": 1,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/push_moving_button/all_variations/episodes/episode179/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611138001"
+    },
+    {
+      "id": "08_push_moving_button_fit_2",
+      "task": "push_moving_button",
+      "role": "fit",
+      "seed": 2611138002,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/push_moving_button/all_variations/episodes/episode179/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611138002"
+    },
+    {
+      "id": "08_push_moving_button_selection_0",
+      "task": "push_moving_button",
+      "role": "selection",
+      "seed": 2611138100,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/push_moving_button/all_variations/episodes/episode179/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611138100"
+    },
+    {
+      "id": "08_push_moving_button_validation_0",
+      "task": "push_moving_button",
+      "role": "validation",
+      "seed": 2611138200,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/push_moving_button/all_variations/episodes/episode179/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611138200"
+    },
+    {
+      "id": "08_push_moving_button_test_0",
+      "task": "push_moving_button",
+      "role": "test",
+      "seed": 2611138300,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/push_moving_button/all_variations/episodes/episode179/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611138300"
+    },
+    {
+      "id": "09_push_moving_button_high_speed_fit_0",
+      "task": "push_moving_button_high_speed",
+      "role": "fit",
+      "seed": 2611139000,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/push_moving_button_high_speed/all_variations/episodes/episode330/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611139000"
+    },
+    {
+      "id": "09_push_moving_button_high_speed_fit_1",
+      "task": "push_moving_button_high_speed",
+      "role": "fit",
+      "seed": 2611139001,
+      "variation": 1,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/push_moving_button_high_speed/all_variations/episodes/episode330/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611139001"
+    },
+    {
+      "id": "09_push_moving_button_high_speed_fit_2",
+      "task": "push_moving_button_high_speed",
+      "role": "fit",
+      "seed": 2611139002,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/push_moving_button_high_speed/all_variations/episodes/episode330/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611139002"
+    },
+    {
+      "id": "09_push_moving_button_high_speed_selection_0",
+      "task": "push_moving_button_high_speed",
+      "role": "selection",
+      "seed": 2611139100,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/push_moving_button_high_speed/all_variations/episodes/episode330/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611139100"
+    },
+    {
+      "id": "09_push_moving_button_high_speed_validation_0",
+      "task": "push_moving_button_high_speed",
+      "role": "validation",
+      "seed": 2611139200,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/push_moving_button_high_speed/all_variations/episodes/episode330/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611139200"
+    },
+    {
+      "id": "09_push_moving_button_high_speed_test_0",
+      "task": "push_moving_button_high_speed",
+      "role": "test",
+      "seed": 2611139300,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/push_moving_button_high_speed/all_variations/episodes/episode330/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611139300"
+    },
+    {
+      "id": "10_put_rubbish_in_moving_bin_fit_0",
+      "task": "put_rubbish_in_moving_bin",
+      "role": "fit",
+      "seed": 2611140000,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/put_rubbish_in_moving_bin/all_variations/episodes/episode343/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611140000"
+    },
+    {
+      "id": "10_put_rubbish_in_moving_bin_fit_1",
+      "task": "put_rubbish_in_moving_bin",
+      "role": "fit",
+      "seed": 2611140001,
+      "variation": 1,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/put_rubbish_in_moving_bin/all_variations/episodes/episode343/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611140001"
+    },
+    {
+      "id": "10_put_rubbish_in_moving_bin_fit_2",
+      "task": "put_rubbish_in_moving_bin",
+      "role": "fit",
+      "seed": 2611140002,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/put_rubbish_in_moving_bin/all_variations/episodes/episode343/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611140002"
+    },
+    {
+      "id": "10_put_rubbish_in_moving_bin_selection_0",
+      "task": "put_rubbish_in_moving_bin",
+      "role": "selection",
+      "seed": 2611140100,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/put_rubbish_in_moving_bin/all_variations/episodes/episode343/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611140100"
+    },
+    {
+      "id": "10_put_rubbish_in_moving_bin_validation_0",
+      "task": "put_rubbish_in_moving_bin",
+      "role": "validation",
+      "seed": 2611140200,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/put_rubbish_in_moving_bin/all_variations/episodes/episode343/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611140200"
+    },
+    {
+      "id": "10_put_rubbish_in_moving_bin_test_0",
+      "task": "put_rubbish_in_moving_bin",
+      "role": "test",
+      "seed": 2611140300,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/put_rubbish_in_moving_bin/all_variations/episodes/episode343/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611140300"
+    },
+    {
+      "id": "11_put_rubbish_in_moving_bin_high_speed_fit_0",
+      "task": "put_rubbish_in_moving_bin_high_speed",
+      "role": "fit",
+      "seed": 2611141000,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/put_rubbish_in_moving_bin_high_speed/all_variations/episodes/episode334/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611141000"
+    },
+    {
+      "id": "11_put_rubbish_in_moving_bin_high_speed_fit_1",
+      "task": "put_rubbish_in_moving_bin_high_speed",
+      "role": "fit",
+      "seed": 2611141001,
+      "variation": 1,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/put_rubbish_in_moving_bin_high_speed/all_variations/episodes/episode334/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611141001"
+    },
+    {
+      "id": "11_put_rubbish_in_moving_bin_high_speed_fit_2",
+      "task": "put_rubbish_in_moving_bin_high_speed",
+      "role": "fit",
+      "seed": 2611141002,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/put_rubbish_in_moving_bin_high_speed/all_variations/episodes/episode334/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611141002"
+    },
+    {
+      "id": "11_put_rubbish_in_moving_bin_high_speed_selection_0",
+      "task": "put_rubbish_in_moving_bin_high_speed",
+      "role": "selection",
+      "seed": 2611141100,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/put_rubbish_in_moving_bin_high_speed/all_variations/episodes/episode334/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611141100"
+    },
+    {
+      "id": "11_put_rubbish_in_moving_bin_high_speed_validation_0",
+      "task": "put_rubbish_in_moving_bin_high_speed",
+      "role": "validation",
+      "seed": 2611141200,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/put_rubbish_in_moving_bin_high_speed/all_variations/episodes/episode334/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611141200"
+    },
+    {
+      "id": "11_put_rubbish_in_moving_bin_high_speed_test_0",
+      "task": "put_rubbish_in_moving_bin_high_speed",
+      "role": "test",
+      "seed": 2611141300,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/put_rubbish_in_moving_bin_high_speed/all_variations/episodes/episode334/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611141300"
+    },
+    {
+      "id": "12_remove_cups_from_rotating_frame_fit_0",
+      "task": "remove_cups_from_rotating_frame",
+      "role": "fit",
+      "seed": 2611142000,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/remove_cups_from_rotating_frame/all_variations/episodes/episode570/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611142000"
+    },
+    {
+      "id": "12_remove_cups_from_rotating_frame_fit_1",
+      "task": "remove_cups_from_rotating_frame",
+      "role": "fit",
+      "seed": 2611142001,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/remove_cups_from_rotating_frame/all_variations/episodes/episode570/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611142001"
+    },
+    {
+      "id": "12_remove_cups_from_rotating_frame_fit_2",
+      "task": "remove_cups_from_rotating_frame",
+      "role": "fit",
+      "seed": 2611142002,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/remove_cups_from_rotating_frame/all_variations/episodes/episode570/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611142002"
+    },
+    {
+      "id": "12_remove_cups_from_rotating_frame_selection_0",
+      "task": "remove_cups_from_rotating_frame",
+      "role": "selection",
+      "seed": 2611142100,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/remove_cups_from_rotating_frame/all_variations/episodes/episode570/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611142100"
+    },
+    {
+      "id": "12_remove_cups_from_rotating_frame_validation_0",
+      "task": "remove_cups_from_rotating_frame",
+      "role": "validation",
+      "seed": 2611142200,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/remove_cups_from_rotating_frame/all_variations/episodes/episode570/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611142200"
+    },
+    {
+      "id": "12_remove_cups_from_rotating_frame_test_0",
+      "task": "remove_cups_from_rotating_frame",
+      "role": "test",
+      "seed": 2611142300,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/remove_cups_from_rotating_frame/all_variations/episodes/episode570/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611142300"
+    },
+    {
+      "id": "13_remove_cups_from_rotating_frame_high_speed_fit_0",
+      "task": "remove_cups_from_rotating_frame_high_speed",
+      "role": "fit",
+      "seed": 2611143000,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/remove_cups_from_rotating_frame_high_speed/all_variations/episodes/episode433/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611143000"
+    },
+    {
+      "id": "13_remove_cups_from_rotating_frame_high_speed_fit_1",
+      "task": "remove_cups_from_rotating_frame_high_speed",
+      "role": "fit",
+      "seed": 2611143001,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/remove_cups_from_rotating_frame_high_speed/all_variations/episodes/episode433/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611143001"
+    },
+    {
+      "id": "13_remove_cups_from_rotating_frame_high_speed_fit_2",
+      "task": "remove_cups_from_rotating_frame_high_speed",
+      "role": "fit",
+      "seed": 2611143002,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/remove_cups_from_rotating_frame_high_speed/all_variations/episodes/episode433/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611143002"
+    },
+    {
+      "id": "13_remove_cups_from_rotating_frame_high_speed_selection_0",
+      "task": "remove_cups_from_rotating_frame_high_speed",
+      "role": "selection",
+      "seed": 2611143100,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/remove_cups_from_rotating_frame_high_speed/all_variations/episodes/episode433/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611143100"
+    },
+    {
+      "id": "13_remove_cups_from_rotating_frame_high_speed_validation_0",
+      "task": "remove_cups_from_rotating_frame_high_speed",
+      "role": "validation",
+      "seed": 2611143200,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/remove_cups_from_rotating_frame_high_speed/all_variations/episodes/episode433/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611143200"
+    },
+    {
+      "id": "13_remove_cups_from_rotating_frame_high_speed_test_0",
+      "task": "remove_cups_from_rotating_frame_high_speed",
+      "role": "test",
+      "seed": 2611143300,
+      "variation": 0,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/remove_cups_from_rotating_frame_high_speed/all_variations/episodes/episode433/data.h5",
+      "task_time_limit_seconds": 60.0,
+      "budget_ticks": 1200,
+      "generated_reset": true,
+      "archived_official_source": false,
+      "parent_id": "new_native_seed:2611143300"
+    }
+  ],
+  "Native_case_counts": {
+    "fit": 42,
+    "selection": 14,
+    "validation": 14,
+    "test": 14
+  },
+  "original_encoder": {
+    "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/semantic_task_e207M_v2_deferred_run_v3/artifacts/fit10/selected.pt",
+    "sha256": "0d8fe15f459e521c4b04f5dda1757bf37d2816a376d3182af889f4e9c0d10924"
+  },
+  "original_world": {
+    "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/world_command_v3_deferred_run_v1/artifacts/fit5/selected.pt",
+    "sha256": "59afa7407f4332bb757981f575a83a93ea9e41a6e5b8b0d357d74b2ed4991ac7"
+  },
+  "training": {
+    "epochs": 150,
+    "steps_per_epoch": 8,
+    "windows_per_parent_per_step": 2,
+    "learning_rate": 3e-05,
+    "weight_decay": 0.01,
+    "seed": 20261112,
+    "fitted_components": [
+      "position_head",
+      "rotation_head",
+      "opening_head",
+      "demo_likelihood_head"
+    ],
+    "frozen_visual_encoder_and_world_backbone": true
+  },
+  "policy_family": "existing_public_RGBD_world_command_model; not Cube_GRU_candidate_model",
+  "language_branch_used": false,
+  "Native_success_supervision_used_for_BC": false,
+  "training_targets": "recorded_expert_future_command_intent_not_actual_contact",
+  "source_clock": "recorded_frame_order; physical_dt_unverified",
+  "fresh_native_generated_VAL_TEST": true,
+  "official_archived_VAL_TEST": false,
+  "base_model_previously_selected_on_old_validation": true,
+  "new_VAL_TEST_resets_not_used_for_training_or_selection": true,
+  "Native_at_most": 1,
+  "GPU_fitting_Native_overlap": false,
+  "success_authority": "original_task.success_first_true_at_actual50ms",
+  "historical_cube_baselines_untouched": true
+}

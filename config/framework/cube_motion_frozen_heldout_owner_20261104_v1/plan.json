@@ -1,0 +1,86 @@
+{
+  "schema": "cube_revision_serial_phase_20261104_v1",
+  "phase_id": "cube_motion_frozen_heldout_20261104_v1",
+  "method_sources": {
+    "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/cube_motion_frozen_heldout_preparation_v1/method_sources.json",
+    "sha256": "ddcbc9a3f0c88319586d4d9f0eda7dc20a9b7bc4cedaf6ca53b377d0b1db6515"
+  },
+  "output_root": "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/cube_motion_frozen_heldout_run_v1",
+  "jobs": [
+    {
+      "id": "compile_heldout",
+      "native": false,
+      "cpu": true,
+      "output": "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/cube_matched_motion_datasets_v1/heldout",
+      "argv": [
+        "scripts/compile_cube_trueclock_motion_dataset_20261104_v1.py",
+        "--owner-plan",
+        "/home/ubuntu/桌面/our-mani/config/framework/cube_trueclock_motion_capture_owner_20261104_v2/plan.json",
+        "--capture-plan",
+        "/home/ubuntu/桌面/our-mani/config/framework/cube_trueclock_motion_TRAIN16_20261104_v2/plan.json",
+        "--role",
+        "heldout",
+        "--selected-training-completion",
+        "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/cube_motion_residual_training_run_v2/artifacts/fit200/fit_status.json",
+        "--selected-training-completion-sha256",
+        "2d5ecbc447eaef298387dcbffdd775e09d843f60016cecd547ba187197893485",
+        "--output",
+        "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/cube_matched_motion_datasets_v1/heldout",
+        "--compile"
+      ],
+      "json_checks": [
+        {
+          "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/cube_matched_motion_datasets_v1/heldout/completion.json",
+          "fields": {
+            "complete": true,
+            "role": "heldout",
+            "heldout_payloads_read": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "evaluate_heldout",
+      "native": false,
+      "cpu": true,
+      "output": "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/cube_motion_selected703_heldout_evaluation_v1",
+      "argv": [
+        "scripts/evaluate_cube_motion_residual_20261104_v1.py",
+        "--dataset",
+        "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/cube_matched_motion_datasets_v1/heldout",
+        "--selected",
+        "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/cube_motion_residual_training_run_v2/artifacts/fit200/selected.pt",
+        "--selected-sha256",
+        "703bc89d4ff6f1460ed90530926fc8a869bf7df2d0530d3bb96161da04e5cf0c",
+        "--fit-status",
+        "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/cube_motion_residual_training_run_v2/artifacts/fit200/fit_status.json",
+        "--fit-status-sha256",
+        "2d5ecbc447eaef298387dcbffdd775e09d843f60016cecd547ba187197893485",
+        "--output",
+        "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/cube_motion_selected703_heldout_evaluation_v1",
+        "--evaluate"
+      ],
+      "json_checks": [
+        {
+          "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/cube_motion_selected703_heldout_evaluation_v1/completion.json",
+          "fields": {
+            "complete": true,
+            "role": "heldout",
+            "Native_started": false,
+            "GPU_used": false
+          }
+        }
+      ]
+    }
+  ],
+  "python": "/home/ubuntu/桌面/our-mani/.conda-env/bin/python",
+  "stage_timeout_seconds": {
+    "compile_heldout": 900,
+    "evaluate_heldout": 900
+  },
+  "stop_grace_seconds": 30,
+  "poll_seconds": 0.5,
+  "wait_timeout_seconds": 900,
+  "CF_output_root": "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/cube_matched_motion_datasets_v1",
+  "protocol": "One-time four-parent motion-component heldout scoring after selected703 freeze; no official TEST640 package; never feed these outcomes into this selected model"
+}

@@ -1,0 +1,128 @@
+{
+  "schema": "local_mpc_previous_module_reuse_audit_20261102",
+  "actual_CPU_load_verified": [
+    {
+      "module": "our_mani.multitask.context_se3.MultiBodyContextDynamics",
+      "checkpoint": "artifacts/framework/multitask_r10/context_joint16_after_executor_v671/dynamics.pt",
+      "sha256": "ebec3d1b3a83ceb0d4fb3bc889f8b62376cb4581071f53de29e0b6bd71c162ef",
+      "training_complete": true,
+      "validated_training_horizon_seconds": 1.1
+    },
+    {
+      "module": "our_mani.hierarchy_20261030.segmentation.PublicSemanticSegmenter",
+      "checkpoint": "artifacts/framework/multitask_r10/hierarchy_20261030/segmentation_v1/model.pt",
+      "sha256": "afc61f48ad841e63e73c4da7821687748140e8d5ae3b8afaebfa17a4ef60f407",
+      "training_complete": true,
+      "public_features_only": true
+    }
+  ],
+  "reuse": [
+    {
+      "component": "GRU plus context/SimNorm plus SE3 integration",
+      "source": "our_mani/multitask/context_se3.py",
+      "decision": "retain architecture and completed frozen checkpoint for P3 baseline",
+      "conditions": [
+        "history features21 and state19 must retain trained normalization",
+        "forecast normalized tokens are not meter coordinates; use decoded Forecast positions/rotations/twists",
+        "800ms horizon fits trained1.1s; grasp timestamps must refer to actual same-time contact",
+        "existing observe clears history if gap>75ms: 100ms feedback requires real50ms perception history or retraining/adaptation for100ms; do not fabricate intermediate observations",
+        "predict only accepts dt50ms: forecast16 true50ms steps then select indices2,4,...16 for MPC100ms endpoints",
+        "at least5 real causal50ms frames required; do not duplicate observations during startup",
+        "attached objects use measured controlled relative motion, not free-body forecast",
+        "16dim motion context and external/attached/released modes are not the new operation/task latent; keep them separate",
+        "checkpoint architecture SHA binding means implement bridges in new files, not edits to frozen context_se3 source",
+        "old controller wrappers permanently disable external forecasts after first close; new recovery bridge must re-establish external motion from observable evidence and rebuild genuine history"
+      ],
+      "integration_stage": "P3"
+    },
+    {
+      "component": "public RGBD segmentation and causal tracking",
+      "source": "our_mani/hierarchy_20261030/segmentation.py and tracking.py",
+      "decision": "retain loading, projection, registration and uncertainty/visibility contracts",
+      "conditions": [
+        "re-measure closed-loop accuracy and latency",
+        "do not import native pose or instance masks into public-only mode",
+        "task-blind blind frontend available; speed/task ID must not silently select estimator",
+        "semantic segmenter class registry has no block class; reuse it for frame/peg/ring only, not moving-block segmentation",
+        "moving-block public baseline uses RedBoxTracker with measured position but world-axis identity rotation prior, explicitly unobservable orientation"
+      ],
+      "integration_stage": "P3"
+    },
+    {
+      "component": "camera calibration and public geometry",
+      "source": "our_mani/perception.py; our_mani/hierarchy_block_20261102/data.py:geometry_points",
+      "decision": "reuse CameraCalibration, meter depth, signed intrinsics and camera-to-world transforms",
+      "conditions": [
+        "explicit timestamps and original image dimensions",
+        "do not mistake normalized/rot6 data for physical pose"
+      ]
+    },
+    {
+      "component": "native counted ticks and incremental gripper",
+      "source": "our_mani/aligned/protocol.py; our_mani/sensor_alignment/physmani_executor_v6.py:_apply_direct_target",
+      "decision": "reuse behavior and clock checks in new independent2tick adapter",
+      "conditions": [
+        "do not reuse old10tick hard contract",
+        "grasp is original proximity-checked attachment, not new force attachment",
+        "count reset staging separately and all rollout physics ticks"
+      ]
+    },
+    {
+      "component": "native task geometry, motor parameters and success",
+      "source": "original PhysMani/PyRep/RLBench source and TTM",
+      "decision": "retain unmodified physical setup and native success checks",
+      "conditions": [
+        "new100ms control protocol explicitly labeled",
+        "additional hold metric is separately reported"
+      ]
+    },
+    {
+      "component": "rotation symmetry and causal finite differences",
+      "source": "our_mani/multitask/rotation_equivalence.py; context_se3.py:finite_difference_twist",
+      "decision": "reuse numerical utilities as needed",
+      "conditions": [
+        "only certified object symmetries",
+        "world angular velocity and omega cross r at grasp point"
+      ]
+    },
+    {
+      "component": "visible lift goal from public RGBD",
+      "source": "our_mani/goal_perception.py:RedGoalMarker",
+      "decision": "reuse TRAIN-calibrated sphere fit and cache only under explicit static-goal assumption",
+      "new_public_replay_evidence": "artifacts/framework/local_mpc_20261102/reuse_goal_marker_public_replay_v1.json",
+      "new_position_error_m": 0.0011176950820113065,
+      "steady_inference_seconds_approximately": 0.008,
+      "cold_first_call_seconds": 2.1605,
+      "conditions": [
+        "task-specific visible red sphere prior",
+        "Native goal only used for diagnostic metric, never inference"
+      ]
+    }
+  ],
+  "do_not_directly_reuse": [
+    {
+      "component": "old candidate head weights",
+      "reason": "old labels refer to first closed advice time while expert target already predicts0.5s; not the new contact state/deadline semantics; prior centimeter gates failed"
+    },
+    {
+      "component": "old feedback action head weights",
+      "reason": "trained on expert advice with500ms macro actions, not actual100ms execution response; prior expert-goal execution also had large error"
+    },
+    {
+      "component": "old expert HDF5 advice as dynamics actions",
+      "reason": "advice is not necessarily the executed command; no valid actual(s,u,h,dt,snext) assumption"
+    },
+    {
+      "component": "old value/success heads",
+      "reason": "first new plan uses explicit local grasp costs and no separate learned task value"
+    },
+    {
+      "component": "old10tick RRT/RML executor wrapper",
+      "reason": "last-tick gripper command, incomplete path cleanup and fixed500ms contract conflict with100ms synchronous feedback"
+    }
+  ],
+  "old_sources_modified": false,
+  "old_STOP_removed": false,
+  "old_jobs_resumed": false,
+  "TEST_opened_for_this_audit": false
+}

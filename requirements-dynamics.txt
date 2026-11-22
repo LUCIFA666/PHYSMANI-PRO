@@ -1,0 +1,8 @@
+# Install PyTorch first from its CUDA 12.8 index on RTX 5090:
+# python -m pip install torch==2.8.0 --index-url https://download.pytorch.org/whl/cu128
+# Install torch-cluster from the matching PyG wheel index:
+# python -m pip install torch-cluster==1.6.3+pt28cu128 --no-index \
+#   -f https://data.pyg.org/whl/torch-2.8.0+cu128.html --no-deps
+numpy==1.26.4
+scipy==1.15.3
+torchdiffeq==0.2.5

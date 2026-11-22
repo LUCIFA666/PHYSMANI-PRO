@@ -1,0 +1,423 @@
+{
+  "schema": "P4_new_heldout_TEST_partition_20261103_v1",
+  "split": "test",
+  "policy_independent_fixed_partition": true,
+  "all_splits_assigned_before_TEST_generation": true,
+  "parent_seed_XY_motion_must_not_change_with_controller_revision": true,
+  "no_task_results_read": true,
+  "Native_started": false,
+  "official_VAL_or_TEST_data_read": false,
+  "scope": "new heldout TEST under modified control protocol, not official PhysMani TEST or multi-task/rotation generalization",
+  "preassigned_partitions": {
+    "train": {
+      "path": "config/framework/P4_teacher_train_20261103_v1/plan.json",
+      "sha256": "8d302cdc4129eaec0ae77c8fbdf3f9fa99bdafa4794783fdc8adb3a865b1493d"
+    },
+    "devval": {
+      "path": "config/framework/P4_teacher_devVAL_20261103_v1/plan.json",
+      "sha256": "3e2c84f506a3f6e81ab1ffcdf71393023c282dd18a232ab7378f02c22a012381"
+    }
+  },
+  "jobs": [
+    {
+      "id": "00_test_static",
+      "parent_id": "p4_new_heldout_TEST_20261103_00_seed261103200",
+      "split": "test",
+      "seed": 261103200,
+      "scene": "static",
+      "motion_kind": "static",
+      "initial_xy": [
+        0.16,
+        -0.18
+      ],
+      "initial_velocity_m_s": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "speed_change_at_tick": 24,
+      "changed_velocity_m_s": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "boundary_bounce_preserved": true,
+      "initial_uniform_is_not_a_no_bounce_guarantee": true
+    },
+    {
+      "id": "01_test_static",
+      "parent_id": "p4_new_heldout_TEST_20261103_01_seed261103201",
+      "split": "test",
+      "seed": 261103201,
+      "scene": "static",
+      "motion_kind": "static",
+      "initial_xy": [
+        0.28,
+        0.1
+      ],
+      "initial_velocity_m_s": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "speed_change_at_tick": 24,
+      "changed_velocity_m_s": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "boundary_bounce_preserved": true,
+      "initial_uniform_is_not_a_no_bounce_guarantee": true
+    },
+    {
+      "id": "02_test_uniform",
+      "parent_id": "p4_new_heldout_TEST_20261103_02_seed261103202",
+      "split": "test",
+      "seed": 261103202,
+      "scene": "uniform",
+      "motion_kind": "initial_uniform",
+      "initial_xy": [
+        0.08,
+        -0.18
+      ],
+      "initial_velocity_m_s": [
+        0.02,
+        0.0,
+        0.0
+      ],
+      "speed_change_at_tick": 24,
+      "changed_velocity_m_s": [
+        0.02,
+        0.0,
+        0.0
+      ],
+      "boundary_bounce_preserved": true,
+      "initial_uniform_is_not_a_no_bounce_guarantee": true
+    },
+    {
+      "id": "03_test_uniform",
+      "parent_id": "p4_new_heldout_TEST_20261103_03_seed261103203",
+      "split": "test",
+      "seed": 261103203,
+      "scene": "uniform",
+      "motion_kind": "initial_uniform",
+      "initial_xy": [
+        0.32,
+        0.18
+      ],
+      "initial_velocity_m_s": [
+        -0.04,
+        0.0,
+        0.0
+      ],
+      "speed_change_at_tick": 24,
+      "changed_velocity_m_s": [
+        -0.04,
+        0.0,
+        0.0
+      ],
+      "boundary_bounce_preserved": true,
+      "initial_uniform_is_not_a_no_bounce_guarantee": true
+    },
+    {
+      "id": "04_test_uniform",
+      "parent_id": "p4_new_heldout_TEST_20261103_04_seed261103204",
+      "split": "test",
+      "seed": 261103204,
+      "scene": "uniform",
+      "motion_kind": "initial_uniform",
+      "initial_xy": [
+        0.2,
+        -0.34
+      ],
+      "initial_velocity_m_s": [
+        0.0,
+        0.08,
+        0.0
+      ],
+      "speed_change_at_tick": 24,
+      "changed_velocity_m_s": [
+        0.0,
+        0.08,
+        0.0
+      ],
+      "boundary_bounce_preserved": true,
+      "initial_uniform_is_not_a_no_bounce_guarantee": true
+    },
+    {
+      "id": "05_test_uniform",
+      "parent_id": "p4_new_heldout_TEST_20261103_05_seed261103205",
+      "split": "test",
+      "seed": 261103205,
+      "scene": "uniform",
+      "motion_kind": "initial_uniform",
+      "initial_xy": [
+        0.24,
+        0.34
+      ],
+      "initial_velocity_m_s": [
+        0.0,
+        -0.12,
+        0.0
+      ],
+      "speed_change_at_tick": 24,
+      "changed_velocity_m_s": [
+        0.0,
+        -0.12,
+        0.0
+      ],
+      "boundary_bounce_preserved": true,
+      "initial_uniform_is_not_a_no_bounce_guarantee": true
+    },
+    {
+      "id": "06_test_uniform",
+      "parent_id": "p4_new_heldout_TEST_20261103_06_seed261103206",
+      "split": "test",
+      "seed": 261103206,
+      "scene": "uniform",
+      "motion_kind": "initial_uniform_novel_speed",
+      "initial_xy": [
+        0.12,
+        -0.1
+      ],
+      "initial_velocity_m_s": [
+        0.0,
+        0.03,
+        0.0
+      ],
+      "speed_change_at_tick": 24,
+      "changed_velocity_m_s": [
+        0.0,
+        0.03,
+        0.0
+      ],
+      "boundary_bounce_preserved": true,
+      "initial_uniform_is_not_a_no_bounce_guarantee": true
+    },
+    {
+      "id": "07_test_uniform",
+      "parent_id": "p4_new_heldout_TEST_20261103_07_seed261103207",
+      "split": "test",
+      "seed": 261103207,
+      "scene": "uniform",
+      "motion_kind": "initial_uniform_novel_speed",
+      "initial_xy": [
+        0.28,
+        0.26
+      ],
+      "initial_velocity_m_s": [
+        -0.04242640687119285,
+        -0.04242640687119285,
+        0.0
+      ],
+      "speed_change_at_tick": 24,
+      "changed_velocity_m_s": [
+        -0.04242640687119285,
+        -0.04242640687119285,
+        0.0
+      ],
+      "boundary_bounce_preserved": true,
+      "initial_uniform_is_not_a_no_bounce_guarantee": true
+    },
+    {
+      "id": "08_test_uniform",
+      "parent_id": "p4_new_heldout_TEST_20261103_08_seed261103208",
+      "split": "test",
+      "seed": 261103208,
+      "scene": "uniform",
+      "motion_kind": "initial_uniform_novel_speed",
+      "initial_xy": [
+        0.16,
+        0.34
+      ],
+      "initial_velocity_m_s": [
+        0.0,
+        -0.1,
+        0.0
+      ],
+      "speed_change_at_tick": 24,
+      "changed_velocity_m_s": [
+        0.0,
+        -0.1,
+        0.0
+      ],
+      "boundary_bounce_preserved": true,
+      "initial_uniform_is_not_a_no_bounce_guarantee": true
+    },
+    {
+      "id": "09_test_uniform",
+      "parent_id": "p4_new_heldout_TEST_20261103_09_seed261103209",
+      "split": "test",
+      "seed": 261103209,
+      "scene": "uniform",
+      "motion_kind": "initial_uniform",
+      "initial_xy": [
+        0.2,
+        -0.18
+      ],
+      "initial_velocity_m_s": [
+        0.0848528137423857,
+        0.0848528137423857,
+        0.0
+      ],
+      "speed_change_at_tick": 24,
+      "changed_velocity_m_s": [
+        0.0848528137423857,
+        0.0848528137423857,
+        0.0
+      ],
+      "boundary_bounce_preserved": true,
+      "initial_uniform_is_not_a_no_bounce_guarantee": true
+    },
+    {
+      "id": "10_test_speed_change",
+      "parent_id": "p4_new_heldout_TEST_20261103_10_seed261103210",
+      "split": "test",
+      "seed": 261103210,
+      "scene": "speed_change",
+      "motion_kind": "acceleration",
+      "initial_xy": [
+        0.08,
+        -0.34
+      ],
+      "initial_velocity_m_s": [
+        0.02,
+        0.0,
+        0.0
+      ],
+      "speed_change_at_tick": 24,
+      "changed_velocity_m_s": [
+        0.08,
+        0.0,
+        0.0
+      ],
+      "boundary_bounce_preserved": true,
+      "initial_uniform_is_not_a_no_bounce_guarantee": true
+    },
+    {
+      "id": "11_test_speed_change",
+      "parent_id": "p4_new_heldout_TEST_20261103_11_seed261103211",
+      "split": "test",
+      "seed": 261103211,
+      "scene": "speed_change",
+      "motion_kind": "deceleration",
+      "initial_xy": [
+        0.32,
+        0.34
+      ],
+      "initial_velocity_m_s": [
+        -0.12,
+        0.0,
+        0.0
+      ],
+      "speed_change_at_tick": 20,
+      "changed_velocity_m_s": [
+        -0.03,
+        0.0,
+        0.0
+      ],
+      "boundary_bounce_preserved": true,
+      "initial_uniform_is_not_a_no_bounce_guarantee": true
+    },
+    {
+      "id": "12_test_speed_change",
+      "parent_id": "p4_new_heldout_TEST_20261103_12_seed261103212",
+      "split": "test",
+      "seed": 261103212,
+      "scene": "speed_change",
+      "motion_kind": "reversal",
+      "initial_xy": [
+        0.12,
+        0.18
+      ],
+      "initial_velocity_m_s": [
+        0.0,
+        -0.04,
+        0.0
+      ],
+      "speed_change_at_tick": 28,
+      "changed_velocity_m_s": [
+        0.0,
+        0.06,
+        0.0
+      ],
+      "boundary_bounce_preserved": true,
+      "initial_uniform_is_not_a_no_bounce_guarantee": true
+    },
+    {
+      "id": "13_test_speed_change",
+      "parent_id": "p4_new_heldout_TEST_20261103_13_seed261103213",
+      "split": "test",
+      "seed": 261103213,
+      "scene": "speed_change",
+      "motion_kind": "deceleration",
+      "initial_xy": [
+        0.28,
+        -0.26
+      ],
+      "initial_velocity_m_s": [
+        0.0,
+        0.1,
+        0.0
+      ],
+      "speed_change_at_tick": 30,
+      "changed_velocity_m_s": [
+        0.0,
+        0.02,
+        0.0
+      ],
+      "boundary_bounce_preserved": true,
+      "initial_uniform_is_not_a_no_bounce_guarantee": true
+    },
+    {
+      "id": "14_test_speed_change",
+      "parent_id": "p4_new_heldout_TEST_20261103_14_seed261103214",
+      "split": "test",
+      "seed": 261103214,
+      "scene": "speed_change",
+      "motion_kind": "diagonal_reversal",
+      "initial_xy": [
+        0.2,
+        0.26
+      ],
+      "initial_velocity_m_s": [
+        0.021213203435596423,
+        -0.021213203435596423,
+        0.0
+      ],
+      "speed_change_at_tick": 32,
+      "changed_velocity_m_s": [
+        -0.056568542494923796,
+        0.056568542494923796,
+        0.0
+      ],
+      "boundary_bounce_preserved": true,
+      "initial_uniform_is_not_a_no_bounce_guarantee": true
+    },
+    {
+      "id": "15_test_speed_change",
+      "parent_id": "p4_new_heldout_TEST_20261103_15_seed261103215",
+      "split": "test",
+      "seed": 261103215,
+      "scene": "speed_change",
+      "motion_kind": "acceleration",
+      "initial_xy": [
+        0.24,
+        -0.34
+      ],
+      "initial_velocity_m_s": [
+        0.0,
+        0.06,
+        0.0
+      ],
+      "speed_change_at_tick": 26,
+      "changed_velocity_m_s": [
+        0.0,
+        0.12,
+        0.0
+      ],
+      "boundary_bounce_preserved": true,
+      "initial_uniform_is_not_a_no_bounce_guarantee": true
+    }
+  ]
+}

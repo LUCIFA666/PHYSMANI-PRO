@@ -1,0 +1,117 @@
+{
+  "schema": "Cube_corrected_forecast_matched_candidate_native_development_20261104_v1",
+  "reference": {
+    "path": "config/framework/P4_position_dwell_v72_development_canaries_v1/00_val_static.json",
+    "sha256": "ebc11b7da749556482bc0167d8683714acec9dd29816d39122386a066362fa13"
+  },
+  "baseline_execution_plan": {
+    "path": "config/framework/cube_v72_live_20261104_v1/plan.json",
+    "sha256": "7d6bd9f31282995f64e418994b720405de1e98a7c8a50928320760e7914a0f3b"
+  },
+  "preparation_only": true,
+  "execution_authorized": false,
+  "formal_VAL_TEST": false,
+  "native_repo": "/home/ubuntu/桌面/phsimani/PhysMani",
+  "profiles_order": [
+    "corrected_legacy",
+    "corrected_matched"
+  ],
+  "cases": [
+    {
+      "id": "ordinary_00",
+      "task": "pick_moving_target_on_the_table",
+      "seed": 2611041100,
+      "variation": 0,
+      "simulation_seconds": 8.0,
+      "budget_ticks": 160,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/pick_moving_target_on_the_table/all_variations/episodes/episode0/data.h5",
+      "native_source_sha256": "39486843383652996da289048d8d5220e27c64ba55821dc00f4e536ab46f36cd",
+      "native_scene_sha256": "65a2ce9740f2e6104082aa6a541b88eaefdadf20f8dc5880db67d7b434a5337a"
+    },
+    {
+      "id": "ordinary_01",
+      "task": "pick_moving_target_on_the_table",
+      "seed": 2611041101,
+      "variation": 0,
+      "simulation_seconds": 8.0,
+      "budget_ticks": 160,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/pick_moving_target_on_the_table/all_variations/episodes/episode0/data.h5",
+      "native_source_sha256": "39486843383652996da289048d8d5220e27c64ba55821dc00f4e536ab46f36cd",
+      "native_scene_sha256": "65a2ce9740f2e6104082aa6a541b88eaefdadf20f8dc5880db67d7b434a5337a"
+    },
+    {
+      "id": "highspeed_00",
+      "task": "pick_moving_target_on_the_table_high_speed",
+      "seed": 2611041110,
+      "variation": 0,
+      "simulation_seconds": 8.0,
+      "budget_ticks": 160,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/pick_moving_target_on_the_table_high_speed/all_variations/episodes/episode100/data.h5",
+      "native_source_sha256": "51a16de1de230213e9bf798411c0286baa9125330cb0f344790891a9c3292bb7",
+      "native_scene_sha256": "8c0c2ca1537344cc7e7cf8292324bad1fc3e652cf655141169c750fd3479ab4c"
+    },
+    {
+      "id": "highspeed_01",
+      "task": "pick_moving_target_on_the_table_high_speed",
+      "seed": 2611041111,
+      "variation": 0,
+      "simulation_seconds": 8.0,
+      "budget_ticks": 160,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/pick_moving_target_on_the_table_high_speed/all_variations/episodes/episode100/data.h5",
+      "native_source_sha256": "51a16de1de230213e9bf798411c0286baa9125330cb0f344790891a9c3292bb7",
+      "native_scene_sha256": "8c0c2ca1537344cc7e7cf8292324bad1fc3e652cf655141169c750fd3479ab4c"
+    }
+  ],
+  "reserved_profiles": {
+    "corrected_matched_reobserve": {
+      "enabled": false,
+      "reason": "requires separate add-only supervisor/runner protocol"
+    }
+  },
+  "all_cases_regardless_of_task_outcome": true,
+  "retry_or_replacement": false,
+  "control_policy": "Original V72 phase/physics/proof/maintenance/finger-response/CEM/top8/exactq dispatch; only explicit corrected motion and candidate provider change",
+  "native_motion": "native-generated actual task original init_episode/task.step; no customuniform overwrite",
+  "runtime_profile": "current_runtime_after_host_library_update; old_v820_OS_equivalence_not_claimed",
+  "motion_forecast": {
+    "checkpoint": "artifacts/framework/local_mpc_20261102/cube_motion_residual_training_run_v1/artifacts/fit100/selected.pt",
+    "sha256": "ddc34a2be530f941aeeae7e02b4c47114a0dfc37a05aa42ba30b16b7084d26ea",
+    "actual_epochs": 100,
+    "actual_optimizer_steps": 800,
+    "selected_epoch": 100,
+    "evidence": [
+      {
+        "path": "artifacts/framework/local_mpc_20261102/cube_motion_residual_training_run_v1/artifacts/fit100/fit_status.json",
+        "sha256": "9d6403e4245e8994763faefcecb5687f22413d9bebc5e88b71ceb4d286657c6a"
+      },
+      {
+        "path": "artifacts/framework/local_mpc_20261102/cube_motion_residual_training_run_v1/artifacts/fit100/selection_report.json",
+        "sha256": "53a72ee021b428143edd3c8c12afb51047ae18d13d1806c383d80437a3f87aea"
+      },
+      {
+        "path": "artifacts/framework/local_mpc_20261102/cube_motion_residual_training_run_v1/artifacts/fit100/weight_transfer.json",
+        "sha256": "6ed7f816062765672e666a909c480df80326790a52725e5af50120cca35795b0"
+      }
+    ]
+  },
+  "candidate_profiles": {
+    "corrected_legacy": {
+      "checkpoint": "artifacts/framework/local_mpc_20261102/P4_candidate_training_v1/final.pt",
+      "sha256": "61e5827b4838649b8e477048bea56fcace18697f906fb610a3f963bba2437f60",
+      "evidence": [
+        {
+          "path": "artifacts/framework/local_mpc_20261102/P4_candidate_training_v1/model_freeze_before_newdevVAL.json",
+          "sha256": "524d151cab131bdea6b17d58a7df5134f751dedf9067c084443827c36637a63b"
+        }
+      ]
+    },
+    "corrected_matched": {
+      "checkpoint": null,
+      "sha256": null,
+      "evidence": [],
+      "status": "pending_actual_matched_teacher_fit; no dummy/model substitution"
+    }
+  },
+  "source_archive_contract": "all repository code/models/plans canonical ROOT-relative; seven external Native sources separate and never passed to repository archive",
+  "execution_scope": "Prepared only. Root finalizes after real checkpoint/source freeze; one Native process at a time, actual waits, no formal VAL/TEST or implicit recovery"
+}

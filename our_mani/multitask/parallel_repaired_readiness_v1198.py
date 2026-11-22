@@ -1,0 +1,758 @@
+"""Read-only mixed-control TRAIN192 qualification; original identities survive.
+
+The old serial prefix, a preserved parallel accepted set and a new remaining
+set keep their actual three graph identities. Accepted Native cases never rerun.
+"""
+from copy import deepcopy
+import hashlib
+import importlib
+import math
+import re
+import errno
+import os
+from datetime import datetime
+from pathlib import Path
+
+from . import repaired_readiness_v1144 as base
+from . import repaired_policy_graph_v1143 as graphs
+from .repaired_readiness_v1144 import (require, same, pointer, read_json, digest,
+    make_graph_witness, validate_sampling_case, _phase, _stamp, _key,
+    _attestation, _motion, TASKS, METHODS, BLOCKS, HASHES)
+
+SOURCE='our_mani/multitask/parallel_repaired_readiness_v1198.py'
+READINESS_SCHEMA='r10_mixed_control_TRAIN192_readiness_v1198'
+LINEAGE_SCHEMA='r10_mixed_control_TRAIN192_lineage_v1198'
+SUFFIX_PLAN_SCHEMA='r10_parallel_fixed_TRAIN_suffix_plan_v1197'
+OWNER_SOURCE='scripts/run_parallel_repaired_owner_v1197_r10.py'
+INHERITED_ENTRY=dict(root='project',path='scripts/run_repaired_policy_case_v1167_r10.py',
+    sha256='0c01bf0091bc8c4728581b36ff8630a961f7cdb9b0b889b79c31ceb3b9a25175')
+JOB_FIELDS=('job_id','task','method','raw_episode_id','split','configuration','out','runtime','source_row_sha256')
+GUARD_SOURCE='our_mani/multitask/parallel_repaired_resource_guard_v1195.py'
+PARENT_GUARD_SOURCE='our_mani/multitask/post_completed_TEST_resource_guard_v1106.py'
+MIDDLE_AUDITOR_SOURCE='our_mani/multitask/parallel_repaired_readiness_v1190.py'
+MIDDLE_GUARD_SOURCE='our_mani/multitask/parallel_repaired_resource_guard_v1187.py'
+
+
+def _job(value):
+    require(type(value) is dict and all(k in value for k in JOB_FIELDS),'complete nine-field resource job required')
+    return {k:value[k] for k in JOB_FIELDS}
+
+
+def _typed(ref, prefix, basename=None):
+    ref=pointer(ref);p=Path(ref['path'])
+    require(ref['root']=='project' and ref['path'].startswith(prefix)
+        and not p.is_absolute() and '..' not in p.parts and p.as_posix()==ref['path']
+        and (basename is None or p.name==basename), 'typed project qualification metadata required')
+    return ref
+
+
+def compare_physical(old, new):
+    added=set(new['roots'])-set(old['roots'])
+    require(added<= {'host_tools'},'only the explicit control-only host_tools root may be added')
+    if added:
+        binary=pointer(new['control']['static_inputs'].get('parallel_taskset_binary'))
+        require(binary['root']=='host_tools' and binary['path']=='taskset',
+            'new host_tools root must name the graph-pinned control taskset')
+    require(same(old['physical'],new['physical'])
+        and all(new['roots'].get(k)==v for k,v in old['roots'].items())
+        and old['tasks']==new['tasks'] and old['methods']==new['methods']
+        and same(pointer(old['train_source_manifest']),pointer(new['train_source_manifest'])),
+        'entire physical graph, roots and original TRAIN manifest must remain unchanged')
+    def physical_rows(g):
+        return [{k:v for k,v in row.items() if k not in ('train','evaluation')} for row in g['routes']]
+    require(same(physical_rows(old),physical_rows(new))
+        and old['physical_policy_sha256']==new['physical_policy_sha256'],
+        'all48 physical/config/model/checkpoint/frozen-input rows and physical fingerprint must match')
+    def used_roots(value):
+        if type(value) is dict:
+            found={value.get('root','project')} if {'path','sha256'}<=set(value) else set()
+            return found|set().union(*(used_roots(v) for v in value.values()))
+        if type(value) is list:return set().union(*(used_roots(v) for v in value))
+        return set()
+    require(not (added & used_roots([new['physical'],*physical_rows(new)])),
+        'additional host control roots cannot alter physical dependencies')
+    return new['physical_policy_sha256']
+
+
+def _predecessor(root, graph, exit_ref):
+    module=importlib.import_module('scripts.run_parallel_repaired_owner_v1197_r10')
+    source=dict(root='project',path=OWNER_SOURCE,sha256=hashlib.sha256(Path(module.__file__).read_bytes()).hexdigest())
+    require(Path(module.__file__).resolve()==root/OWNER_SOURCE
+        and same(pointer(graph['control']['components']['train_owner']),source),
+        'actual new1197 prefix inspector must be frozen in the control graph')
+    return module.inspect_predecessor(root,exit_ref)
+
+
+def _retired_development_batch(root,graph,exit_ref):
+    module=importlib.import_module('scripts.run_parallel_repaired_owner_v1197_r10')
+    source=dict(root='project',path=OWNER_SOURCE,sha256=hashlib.sha256(Path(module.__file__).read_bytes()).hexdigest())
+    require(Path(module.__file__).resolve()==root/OWNER_SOURCE
+        and same(pointer(graph['control']['components']['train_owner']),source),
+        'actual frozen1197 retired development batch reader required')
+    return module.inspect_retired_partial_batch(root,exit_ref)
+
+
+def _parallel_handoff(root,graph,exit_ref):
+    module=importlib.import_module('scripts.run_parallel_repaired_owner_v1197_r10')
+    source=dict(root='project',path=OWNER_SOURCE,sha256=hashlib.sha256(Path(module.__file__).read_bytes()).hexdigest())
+    require(Path(module.__file__).resolve()==root/OWNER_SOURCE
+        and same(pointer(graph['control']['components']['train_owner']),source),
+        'actual frozen1197 parallel handoff reader required')
+    return module.inspect_parallel_handoff(root,exit_ref)
+
+
+def validate_parallel_handoff_summary(value):
+    require(type(value) is dict and type(value.get('preserved_count')) is int
+        and 0<=value['preserved_count']<=118
+        and type(value.get('completed_records')) is list and len(value['completed_records'])==value['preserved_count']
+        and type(value.get('completed_job_ids')) is list and len(value['completed_job_ids'])==value['preserved_count']
+        and all(type(j) is str for j in value['completed_job_ids'])
+        and len(set(value['completed_job_ids']))==value['preserved_count']
+        and [row.get('job_id') for row in value['completed_records']]==value['completed_job_ids']
+        and type(value.get('CPU_only_records')) is list
+        and value.get('all_child_processes_dead') is True and value.get('Native_killed') is False
+        and value.get('case_graphs_relabelled') is False
+        and value.get('completed_records_reused_without_reexecution') is True,
+        'actual closed parallel accepted set and honest reuse without Native reexecution required')
+    return value
+
+
+def _middle_auditor(root,middle_graph,new_graph):
+    """Run the original frozen1190 receipt semantics on the original middle graph."""
+    module=importlib.import_module('our_mani.multitask.parallel_repaired_readiness_v1190')
+    require(Path(module.__file__).resolve()==root/MIDDLE_AUDITOR_SOURCE,
+        'actual original1190 middle auditor module required')
+    for component,name in (('train_auditor',MIDDLE_AUDITOR_SOURCE),('resource_guard',MIDDLE_GUARD_SOURCE)):
+        actual=dict(root='project',path=name,sha256=hashlib.sha256((root/name).read_bytes()).hexdigest())
+        require(same(pointer(middle_graph['control']['components'][component]),actual)
+            and any(same(pointer(ref),actual) for ref in new_graph['control']['sources_map'].values()),
+            'original middle auditor/guard must remain frozen in both graph declarations')
+    return module
+
+
+def validate_retired_development_batch(value):
+    require(type(value) is dict and all(type(value.get(key)) is int and value[key]==count
+        for key,count in (('attempted_CPU_cases',4),('attempted_Native_cases',2),
+            ('completed_accepted_cases',1),('infrastructure_failed',3),('repeated_development_Native_cases',2)))
+        and value.get('all_child_processes_dead') is True
+        and value.get('original_results_retained') is True
+        and value.get('accepted_into_new_cohort') is False
+        and value.get('source_outcomes_used_for_rerun_or_version_selection') is False
+        and value.get('historical_Native_reexecution_disclosed') is True
+        and value.get('scientific_qualification_granted') is False
+        and type(value.get('Native_development_records')) is list and len(value['Native_development_records'])==2
+        and type(value.get('completed_records')) is list and len(value['completed_records'])==1
+        and type(value.get('phases')) is list and len(value['phases'])==6,
+        'whole retired failed control batch and both Native development records must survive without new acceptance')
+    return value
+
+
+def _suffix_owner(root, refs, plan_ref, graph_ref, graph, count):
+    require(type(refs) is dict and set(refs)=={'launch','terminal','exec_completion'},
+        'actual complete new suffix owner evidence required')
+    directory=str(Path(plan_ref['path']).parent)+'/'
+    values={}
+    for key,ref in refs.items():
+        ref=_typed(ref,directory)
+        require(Path(ref['path']).parent==Path(directory), 'suffix owner evidence escaped owner namespace')
+        if key in ('launch','terminal'):
+            require(ref['path']==directory+key+'.json','actual owner metadata filename required')
+        values[key]=read_json(root,ref)[0]
+    launch,terminal,exit=values['launch'],values['terminal'],values['exec_completion']
+    proc=base._process(launch.get('process'))
+    require(same(pointer(launch.get('source')),pointer(graph['control']['components']['train_owner']))
+        and same(pointer(launch.get('plan')),plan_ref), 'actual suffix owner/source/plan mismatch')
+    _stamp(launch,graph_ref,graph);_stamp(terminal,graph_ref,graph)
+    require(terminal.get('complete') is True and type(terminal.get('completed')) is int
+        and terminal['completed']==count and type(terminal.get('attempted')) is int
+        and terminal['attempted']==count and type(terminal.get('infrastructure_failed')) is int
+        and terminal['infrastructure_failed']==0
+        and terminal.get('active') is None and terminal.get('automatic_retry') is False
+        and same(base._process(terminal.get('process')),proc)
+        and same(pointer(terminal.get('plan')),plan_ref), 'suffix must naturally complete every remaining attempt')
+    require(same(base._process(exit.get('process')),proc)
+        and exit.get('actual_tool_exit_observed') is True and exit.get('natural_completion') is True
+        and type(exit.get('returncode')) is int and exit['returncode']==0
+        and same(pointer(exit.get('plan')),plan_ref)
+        and same(pointer(exit.get('terminal')),pointer(refs['terminal'])) and base._not_live(proc),
+        'Root actual suffix natural exit0/dead master required')
+    return values
+
+
+def validate_broker_session(session, session_ref, graph_ref, graph):
+    """Audit saved parent-owned lock evidence; never reopen a dead parent's FDs."""
+    from .post_completed_TEST_resource_guard_v1106 import LOCKS
+    require(session.get('schema')=='r10_parent_owned_parallel_resource_session_v1195'
+        and same(pointer(session.get('graph')),pointer(graph_ref))
+        and session.get('test_only') is False, 'actual graph-bound1195 resource session required')
+    guard=pointer(session.get('guard'));parent_guard=pointer(session.get('parent_guard'))
+    require(guard['root']=='project' and guard['path']==GUARD_SOURCE
+        and same(guard,pointer(graph['control']['components']['resource_guard']))
+        and parent_guard['root']=='project' and parent_guard['path']==PARENT_GUARD_SOURCE
+        and any(same(parent_guard,pointer(ref)) for ref in graph['control']['sources_map'].values()),
+        'actual graph-frozen1195 guard and inherited1106 source required')
+    locks=session.get('parent_global_locks')
+    require(type(locks) is list and [row.get('path') for row in locks if type(row) is dict]==list(LOCKS),
+        'complete original1106 parent FD/kernel FLOCK evidence required')
+    require(all(type(row) is dict and all(type(row.get(key)) is int and row[key]>=0
+        for key in ('device','inode','fd')) for row in locks), 'strict saved parent lock identities required')
+    boot=session.get('boot_id');broker=session.get('parent_broker',{})
+    require(type(boot) is str and re.fullmatch(r'[0-9a-f]{8}(?:-[0-9a-f]{4}){3}-[0-9a-f]{12}',boot)
+        and type(broker) is dict
+        and broker.get('schema')=='r10_live_parent_lock_broker_v1195'
+        and broker.get('transport')=='AF_UNIX_abstract'
+        and type(broker.get('address')) is str and re.fullmatch(r'our-mani-1195-[0-9a-f]{48}',broker['address'])
+        and same(base._process(broker.get('owner')),base._process(session.get('owner')))
+        and broker.get('boot_id')==boot
+        and type(broker.get('uid')) is int and broker['uid']>=0
+        and type(broker.get('gid')) is int and broker['gid']>=0
+        and broker.get('verification')=='parent_namespace_FD_and_kernel_FLOCK'
+        and broker.get('inherited_lock_descriptors_passed_to_children') is False,
+        'saved authenticated parent-namespace broker declaration required')
+    require(pointer(session_ref)['path']==session.get('runtime','')+'/resources/session.json',
+        'broker belongs to this exact master session')
+    return broker
+
+
+def validate_broker_verification(proof, session, session_ref, claim_ref, claim):
+    """Validate an offline broker response, without claiming direct child FD access."""
+    broker=session['parent_broker']
+    require(type(proof) is dict and proof.get('schema')=='r10_parent_lock_broker_verification_v1195'
+        and same(pointer(proof.get('session')),session_ref)
+        and same(pointer(proof.get('claim')),claim_ref)
+        and same(base._process(proof.get('owner')),base._process(session['owner']))
+        and same(base._process(proof.get('client')),base._process(claim['process']))
+        and proof.get('boot_id')==session['boot_id']
+        and type(proof.get('nonce')) is str and re.fullmatch(r'[0-9a-f]{64}',proof['nonce'])
+        and proof.get('parent_FD_verified') is True and proof.get('kernel_FLOCK_verified') is True
+        and proof.get('client_direct_parent_FD_read') is False
+        and proof.get('server_authenticated_by_SO_PEERCRED') is True
+        and proof.get('client_authenticated_by_SO_PEERCRED') is True
+        and same(proof.get('lock_proof'),session['parent_global_locks'])
+        and same(pointer(proof.get('guard')),pointer(session['guard']))
+        and same(pointer(proof.get('parent_guard')),pointer(session['parent_guard'])),
+        'actual authenticated parent FD/kernel proof bound to this exact child claim required')
+    for field in ('job_id','phase','slot','gpu_slot'):
+        expected=claim['job']['job_id'] if field=='job_id' else claim.get(field)
+        require(type(proof.get(field)) is type(expected) and proof.get(field)==expected,
+            'broker proof changed actual job/phase/slot: '+field)
+    for who in ('server','client'):
+        for key in ('uid','gid'):
+            value=proof.get(who+'_'+key)
+            require(type(value) is int and value==broker[key], 'broker peer credential mismatch')
+    validate_per_FD_kernel_evidence(proof,session)
+    try:
+        checked=datetime.fromisoformat(proof.get('checked_utc'))
+    except (TypeError,ValueError):
+        require(False,'actual broker verification UTC time required')
+    require(checked.tzinfo is not None and checked.utcoffset() is not None,
+        'broker verification time must include its UTC offset')
+    return proof
+
+
+def validate_per_FD_kernel_evidence(proof,session):
+    """Check recorded per-descriptor kernel locks and separate conflict probes."""
+    require(proof.get('parent_kernel_verification')=='per_FD_fdinfo',
+        'parent kernel evidence must use the actual per-FD fdinfo interface')
+    locks=session['parent_global_locks'];rows=proof.get('per_FD_lock_evidence')
+    conflicts=proof.get('independent_conflict_evidence')
+    require(type(rows) is list and type(conflicts) is list and len(rows)==len(conflicts)==len(locks),
+        'complete ordered per-FD and independent conflict evidence required')
+    for lock,row,conflict in zip(locks,rows,conflicts):
+        require(type(row) is dict and type(conflict) is dict,
+            'per-FD and conflict evidence rows must be objects')
+        for field in ('path','device','inode','fd'):
+            require(type(row.get(field)) is type(lock[field]) and row.get(field)==lock[field],
+                'per-FD evidence changed the actual parent descriptor identity')
+        require(type(row.get('owner_pid')) is int and row['owner_pid']==session['owner']['pid']
+            and row.get('lock_type')=='FLOCK' and row.get('advisory')=='ADVISORY'
+            and row.get('mode')=='WRITE' and type(row.get('start')) is int and row['start']==0
+            and row.get('end')=='EOF' and row.get('FD_stat_before_after_verified') is True,
+            'actual parent per-FD exclusive full-file lock and before/after stat proof required')
+        raw=row.get('raw')
+        match=re.fullmatch(r'lock:\s+\d+:\s+FLOCK\s+ADVISORY\s+WRITE\s+(\d+)\s+([0-9a-fA-F]+):([0-9a-fA-F]+):(\d+)\s+0\s+EOF\s*',raw) if type(raw) is str else None
+        require(match is not None and int(match[1])==session['owner']['pid']
+            and (int(match[2],16),int(match[3],16),int(match[4]))==
+                (os.major(lock['device']),os.minor(lock['device']),lock['inode']),
+            'raw actual fdinfo row must bind owner, file identity and exclusive range')
+        for field in ('path','device','inode'):
+            require(type(conflict.get(field)) is type(lock[field]) and conflict.get(field)==lock[field],
+                'independent conflict proof changed the actual lock file')
+        require(type(conflict.get('conflict_errno')) is int
+            and conflict['conflict_errno'] in (errno.EAGAIN,errno.EWOULDBLOCK)
+            and conflict.get('confirmed') is True,
+            'separate child open/flock EX|NB must actually fail with EAGAIN/EWOULDBLOCK')
+
+
+def validate_master_session(root, refs, plan_ref, graph_ref, graph, jobs):
+    """All case leases must descend from this one actual master/plan/session."""
+    plan_ref=_typed(plan_ref,'runtime/framework/parallel_repaired_owner_v1197/','plan.json')
+    plan,_=read_json(root,plan_ref)
+    directory=str(Path(plan_ref['path']).parent)+'/'
+    launch,_=read_json(root,_typed(refs['launch'],directory,'launch.json'))
+    terminal,_=read_json(root,_typed(refs['terminal'],directory,'terminal.json'))
+    runtime=str(Path(plan_ref['path']).parent)
+    session_ref=_typed(launch.get('resource_session'),runtime+'/resources/','session.json')
+    require(session_ref['path']==runtime+'/resources/session.json'
+        and same(pointer(terminal.get('resource_session')),session_ref),
+        'one exact master session is required')
+    session,_=read_json(root,session_ref)
+    _stamp(session,graph_ref,graph)
+    validate_broker_session(session,session_ref,graph_ref,graph)
+    require(same(pointer(session.get('plan')),plan_ref)
+        and same(base._process(session.get('owner')),base._process(launch.get('process')))
+        and session.get('runtime')==runtime and session.get('split')==plan.get('split')
+        and same(session.get('jobs'),[_job(j) for j in jobs])
+        and same(session.get('profile'),plan.get('profile')),
+        'session owner/plan/exact source jobs/profile mismatch')
+    from .parallel_repaired_resource_guard_v1195 import _profile
+    _profile(session['profile'])
+    return session_ref
+
+
+def validate_parallel_phase(root, sidecar, launch, job, graph_ref, graph, *, check):
+    """Offline receipts only; do not require an already-exited session to be live."""
+    graph_ref=pointer(graph_ref)
+    phase='CPU_check' if check else 'native'
+    receipt=sidecar.get('resource_scope_receipt',{})
+    require(receipt.get('schema')=='r10_parallel_child_resource_receipt_v1195'
+        and receipt.get('purpose')=='child_slot' and receipt.get('phase')==phase
+        and receipt.get('Native_authorized') is (not check)
+        and receipt.get('test_only') is False and receipt.get('body_completed') is True
+        and receipt.get('restored') is True and receipt.get('leases_removed') is True
+        and receipt.get('errors')==[] and receipt.get('parent_global_locks_verified') is True
+        and receipt.get('child_empty_inventory_claimed') is False
+        and same(base._process(receipt.get('process')),base._process(sidecar.get('process'))),
+        'real completed1195 child resource receipt required')
+    _stamp(receipt,graph_ref,graph)
+    session_ref=_typed(sidecar.get('resource_session'),'runtime/framework/parallel_repaired_owner_v1197/','session.json')
+    session,_=read_json(root,session_ref)
+    validate_broker_session(session,session_ref,graph_ref,graph)
+    require(session_ref['path']==session.get('runtime','')+'/resources/session.json',
+        'exact session runtime path required')
+    expected_claim=session.get('runtime','')+'/resources/claims/'+str(job.get('job_id'))+'_'+phase+'/claim.json'
+    claim_pointer=_typed(receipt.get('claim'),'runtime/framework/parallel_repaired_owner_v1197/','claim.json')
+    require(claim_pointer['path']==expected_claim,'exact same-session job-phase claim required')
+    claim,claim_ref=read_json(root,claim_pointer)
+    require(session.get('schema')=='r10_parent_owned_parallel_resource_session_v1195'
+        and same(pointer(receipt.get('session')),session_ref)
+        and same(pointer(claim.get('session')),session_ref)
+        and claim.get('schema')=='r10_once_only_parallel_resource_claim_v1195'
+        and claim.get('phase')==phase and claim.get('automatic_retry') is False
+        and claim.get('test_only') is False
+        and same(base._process(claim.get('process')),base._process(sidecar['process']))
+        and same(base._process(session.get('owner')),base._process(receipt.get('actual_parent'))),
+        'actual session/claim/parent/process mismatch')
+    _stamp(session,graph_ref,graph)
+    require(same(pointer(session.get('guard')),pointer(graph['control']['components']['resource_guard']))
+        and session.get('test_only') is False, 'graph-frozen real resource session required')
+    require(same(pointer(session.get('graph')),graph_ref), 'resource session graph mismatch')
+    # Empty inventory was checked by the parent BEFORE it launched this cohort.
+    # A parallel child must never assert that its live siblings do not exist.
+    inventory=session.get('parent_resource_proof',{}).get('host_inventory',{})
+    require(inventory.get('host_visibility_available') is True
+        and inventory.get('ancestor_chain_complete') is True
+        and inventory.get('same_uid_inventory_incomplete') is False
+        and inventory.get('live_project_native_processes')==[]
+        and receipt.get('parent1106_empty_inventory_checked_at_session_start_only') is True,
+        'actual parent initial inventory is required, not an empty child host')
+    initial=sidecar.get('resource_proof',{})
+    for field in ('schema','purpose','phase','slot','gpu_slot','job_id','process','session','claim',
+            'parent_global_locks_verified','child_empty_inventory_claimed'):
+        require(same(initial.get(field),receipt.get(field)), 'initial/final resource evidence mismatch: '+field)
+    admission=validate_broker_verification(receipt.get('parent_broker_admission'),session,session_ref,claim_ref,claim)
+    final=validate_broker_verification(receipt.get('parent_broker_final'),session,session_ref,claim_ref,claim)
+    require(same(initial.get('parent_broker_admission'),admission)
+        and 'parent_broker_final' not in initial and admission['nonce']!=final['nonce'],
+        'distinct actual admission/final broker exchanges required; no final proof at admission')
+    require(same(claim.get('job'),_job(job)) and any(same(item,_job(job)) for item in session.get('jobs',[])),
+        'exact same-session nine-field resource job required')
+    slot=receipt.get('slot');gpu=receipt.get('gpu_slot')
+    bound=session['profile']['max_CPU_preflight_slots' if check else 'max_native_slots']
+    require(type(bound) is int and type(slot) is int and 0<=slot<bound
+        and type(claim.get('slot')) is int and claim['slot']==slot
+        and receipt.get('job_id')==job.get('job_id') and sidecar.get('resource_job_id')==job.get('job_id')
+        and type(sidecar.get('resource_slot')) is int and sidecar.get('resource_slot')==slot
+        and type(sidecar.get('resource_gpu_slot')) is type(gpu) and sidecar.get('resource_gpu_slot')==gpu,
+        'actual bounded case slot mismatch')
+    if not check and job['method']=='physmani':
+        require(type(gpu) is int and 0<=gpu<session['profile']['max_GPU_slots'], 'bounded actual GPU slot required')
+    else:
+        require(gpu is None, 'CPU/geometry must not claim a GPU slot')
+    require(type(claim.get('gpu_slot')) is type(gpu) and claim.get('gpu_slot')==gpu
+        and sidecar.get('private_process_paths_restored') is True,
+        'actual GPU claim/private path restoration mismatch')
+    terminal_name=str(Path(claim_ref['path']).with_name('terminal.json'))
+    terminal_ref=dict(root='project',path=terminal_name,
+        sha256=hashlib.sha256((Path(root)/terminal_name).read_bytes()).hexdigest())
+    terminal,_=read_json(root,terminal_ref)
+    require(same(terminal,receipt), 'slot terminal differs from final sidecar receipt')
+    argv=launch.get('argv')
+    for flag,value in (('--resource-session',session_ref['path']),('--resource-session-sha256',session_ref['sha256']),
+            ('--resource-job-id',job['job_id']),('--resource-slot',str(slot))):
+        base._option(argv,flag,value)
+    if gpu is not None:base._option(argv,'--resource-gpu-slot',str(gpu))
+    else:require('--resource-gpu-slot' not in argv,'unassigned GPU argv forbidden')
+    validate_CPU_affinity(root,sidecar,launch,session,graph,slot=slot,check=check)
+    return dict(session=session_ref,claim=claim_ref,terminal=terminal_ref,phase=phase,slot=slot,gpu_slot=gpu)
+
+
+def validate_CPU_affinity(root,sidecar,launch,session,graph,*,slot,check):
+    """Only stored OS receipts/metadata; never query or change an OS mask here."""
+    plan,_=read_json(root,_typed(session.get('plan'),'runtime/framework/parallel_repaired_owner_v1197/','plan.json'))
+    affinity=plan.get('CPU_affinity',{})
+    ref=_typed(graph['control']['static_inputs']['parallel_CPU_affinity_profile'],
+        'artifacts/framework/multitask_r10/','parallel_CPU_affinity_profile.json')
+    data,_=read_json(root,ref)
+    require(data.get('schema')=='r10_parallel_repaired_CPU_affinity_v1202'
+        and same(pointer(affinity.get('profile_ref')),ref)
+        and same({k:v for k,v in affinity.items() if k!='profile_ref'},data)
+        and data.get('physical_core_count')==16 and data.get('max_native_slots')==12
+        and data.get('bitwise_equivalence_claimed') is False,
+        'exact graph-bound16-core CPU affinity declaration required')
+    groups=data.get('core_groups');native=data.get('native_slot_cpus');pool=data.get('control_and_CPU_preflight_cpus')
+    allowed=data.get('allowed_logical_cpus')
+    require(type(groups) is list and len(groups)==16 and type(native) is list and len(native)==12
+        and type(pool) is list and len(pool)==8 and pool==sorted(set(pool))
+        and all(type(v) is int and v>=0 for v in pool)
+        and all(type(c) is list and len(c)==2 and c==sorted(set(c))
+            and all(type(v) is int and v>=0 for v in c) for c in native)
+        and len({v for c in native for v in c})==24
+        and not (set(pool)&{v for c in native for v in c})
+        and allowed==sorted(set(pool)|{v for c in native for v in c})
+        and all(c in [g.get('cpus') for g in groups] for c in native)
+        and sum(set(g.get('cpus',[]))<=set(pool) for g in groups)==4,
+        '12 separate whole Native cores and disjoint4-core CPU pool required')
+    binary=pointer(data.get('taskset_binary'))
+    require(binary['root']=='host_tools' and binary['path']=='taskset'
+        and same(binary,pointer(graph['control']['static_inputs']['parallel_taskset_binary']))
+        and graph['roots'].get('host_tools')==data.get('taskset_root')
+        and data.get('taskset_runs_outside820_as_control_tool') is True,
+        'actual taskset control binary must be graph-pinned')
+    tool=Path(data['taskset_root'])/'taskset'
+    require(tool.resolve()==tool and tool.is_file()
+        and hashlib.sha256(tool.read_bytes()).hexdigest()==binary['sha256'],'taskset binary changed')
+    cpus=pool if check else native[slot]
+    argv=launch.get('argv')
+    require(type(argv) is list and argv[:3]==[str(tool),'--cpu-list',','.join(map(str,cpus))]
+        and launch.get('expected_CPU_cpus')==cpus,
+        'graph-pinned taskset and exact phase mask must be the outermost argv')
+    proof=sidecar.get('CPU_affinity_receipt',{})
+    for label in ('before','after'):
+        snap=proof.get(label,{});threads=snap.get('thread_cpus');vanished=snap.get('vanished_thread_ids')
+        require(same(pointer(snap.get('profile')),ref) and snap.get('expected_cpus')==cpus
+            and snap.get('actual_main_cpus')==cpus and snap.get('all_threads_checked') is True
+            and type(snap.get('additional_native_calls')) is int and snap['additional_native_calls']==0
+            and type(threads) is list and bool(threads)
+            and all(type(t) is dict and type(t.get('tid')) is int and t['tid']>0 and t.get('cpus')==cpus for t in threads)
+            and len({t['tid'] for t in threads})==len(threads) and sidecar['process']['pid'] in {t['tid'] for t in threads}
+            and type(vanished) is list and all(type(t) is int and t>0 for t in vanished),
+            'actual main/all-thread mask must match before and after execution')
+    return ref
+
+
+def _audit_records(root, graph_ref, graph, jobs, records, sources, seen, *, parallel=False, master_session=None):
+    profile,protocol=base._profile(graph,root)
+    routes = {(r['task'], r['method']):r for r in graph['routes']}; record_map = {_key(r):r for r in records}
+    result = []
+    resource_inputs=[]
+    processes, case_paths, evidence_paths, all_processes = seen
+    for job in jobs:
+        key = _key(job); row = record_map[key]; route = routes[(key[0], key[2])]
+        require(type(row.get('attempt')) is int and row['attempt'] == 1, 'exactly one actual attempt per source required')
+        for field, prefix in (('out','artifacts/framework/multitask_r10/'), ('runtime','runtime/framework/')):
+            name = job.get(field)
+            require(type(name) is str and name.startswith(prefix) and Path(name).as_posix() == name
+                and '..' not in Path(name).parts, 'explicit fresh project case namespaces required')
+        source = sources[key[:2]]
+        witness = make_graph_witness(graph_ref, graph, route, source, split='train')
+        # Classify every addressed JSON role before opening any supplied bytes.
+        for field,name in (('case','case.json'),('owned_hooks','owned_hook_receipt.json')):
+            ref=_typed(row.get(field),job['out']+'/',name)
+            require(ref['path']==job['out']+'/'+name,'case evidence escaped its exact planned path')
+        for phase in ('CPU_check','native'):
+            refs=row.get(phase)
+            require(type(refs) is dict and set(refs)=={'launch','terminal','sidecar'},'exact phase evidence required')
+            for kind in ('launch','terminal'):
+                _typed(refs[kind],'runtime/framework/',kind+'.json')
+                if parallel:
+                    runtime=str(Path(master_session['path']).parent.parent)
+                    name=runtime+'/children/'+key[0]+'/'+key[1]+'/'+key[2]+'/'+phase+'/'+kind+'.json'
+                    require(pointer(refs[kind])['path']==name,'new phase owner path mismatch')
+            sidecar_ref=_typed(refs['sidecar'],job['runtime']+'/'+phase+'/','worker_sidecar.json')
+            require(sidecar_ref['path']==job['runtime']+'/'+phase+'/worker_sidecar.json','exact sidecar path required')
+        cpu, cpu_refs, cpu_process = _phase(root, row.get('CPU_check'), job, route, graph_ref, graph, witness, check=True)
+        native, native_refs, native_process = _phase(root, row.get('native'), job, route, graph_ref, graph, witness, check=False)
+        current=[]
+        for sidecar,refs,check in ((cpu,cpu_refs,True),(native,native_refs,False)):
+            launch,_=read_json(root,refs['launch'])
+            for process in (base._process(launch['process']),base._process(sidecar['process'])):
+                token=(process['pid'],process['start_ticks'])
+                require(token not in all_processes,'actual outer/inner process reused between cases/phases')
+                all_processes.add(token);current.append(token)
+                require(base._not_live(process),'completed case process still live')
+            if parallel:
+                resource=validate_parallel_phase(root,sidecar,launch,job,graph_ref,graph,check=check)
+                require(master_session is not None and same(resource['session'],master_session),
+                    'every parallel case must use the actual master session')
+                resource_inputs.extend(resource[k] for k in ('session','claim','terminal'))
+        require(cpu_process not in processes and native_process not in processes and cpu_process != native_process,
+            'a fresh actual CPU/native worker process is required for every case')
+        processes.update((cpu_process, native_process))
+        for phase_refs in (cpu_refs, native_refs):
+            for reference in phase_refs.values():
+                require(reference['path'] not in evidence_paths, 'per-case execution evidence cannot be reused')
+                evidence_paths.add(reference['path'])
+        case, case_ref = read_json(root, row.get('case'))
+        require(case_ref['path'] == job['out']+'/case.json' and case_ref['path'] not in case_paths, 'fresh planned native case required')
+        case_paths.add(case_ref['path'])
+        require(case.get('task') == key[0] and case.get('method') == key[2] and case.get('split') == 'train'
+            and case.get('source_raw_episode_id') == key[1] and type(case.get('process_id')) is int and case['process_id'] == native_process[0]
+            and case.get('automatic_retry') is False and case.get('TEST_used_for_fitting') is False
+            and same(case.get('graph_witness'), witness), 'actual case source/worker/graph branch differs')
+        identity = case.get('identity', {}); no_sha = dict(identity); no_sha.pop('sha256', None)
+        require(identity.get('version') == 'r10_fresh_case_identity_v1'
+            and identity.get('split') == 'train' and identity.get('task') == key[0] and identity.get('method') == key[2]
+            and identity.get('source_raw_episode_id') == key[1] and identity.get('parent_raw_episode_id') == key[1]
+            and identity.get('raw_episode_id') == key[1]+'__policy_aug_r0'
+            and type(identity.get('replica')) is int and identity['replica'] == 0
+            and identity.get('exploration_seed') is None and identity.get('demo_only') is True
+            and identity.get('development_demo_only') is True and identity.get('fitting_source') is False
+            and identity.get('formal_validation_metric') is False
+            and case.get('raw_episode_id') == identity['raw_episode_id'] and case.get('parent_raw_episode_id') == key[1]
+            and case.get('case_isolation') == 'fresh_simulator_process_per_episode'
+            and case.get('formal_test_used') is False and case.get('original_source_motion_replayed') is False
+            and case.get('recorded_initial_conditions',{}).get('metric_only') is True
+            and case.get('recorded_initial_conditions',{}).get('policy_use_allowed') is False,
+            'actual unaugmented first-parent original TRAIN identity and metric-only reset required')
+        execution_protocol = case.get('execution_protocol', {})
+        if parallel:
+            require(same(pointer(execution_protocol.get('inherited742_preflight_entry')),INHERITED_ENTRY)
+                and execution_protocol.get('actual_worker_verified_by_new_control_graph') is True
+                and execution_protocol.get('preflight_entry_is_actual_outer_worker') is False,
+                'actual1196 worker and inherited1167 preflight must not be conflated')
+        require(type(execution_protocol.get('schema')) is str and bool(execution_protocol['schema'])
+            and identity.get('execution_protocol_schema') == execution_protocol['schema']
+            and identity.get('execution_protocol_sha256') == digest(execution_protocol)
+            and same(cpu['execution'].get('execution_protocol'),execution_protocol)
+            and same(native['execution'].get('execution_protocol'),execution_protocol),
+            'CPU/native/case actual new execution protocol identity differs')
+        for field,expected_value in (('actual_worker',route['train']['worker']),
+                ('actual_preparer',route['train']['preparer']),('inherited_consumer',route['train']['consumer']),
+                ('source_overlay_lock',graph['physical']['source_overlay_lock'])):
+            require(same(pointer(execution_protocol.get(field)),pointer(expected_value)), 'new execution source differs: '+field)
+        require(execution_protocol.get('selected_physical_factory') == route['physical_factory']
+            and same(execution_protocol.get('factory_binding'),witness['factory_binding'])
+            and execution_protocol.get('execution_branch') == witness['model_branch']
+            and execution_protocol.get('actual_split') == 'train'
+            and execution_protocol.get('component_purpose') == 'train_qualification'
+            and execution_protocol.get('automatic_retry') is False
+            and execution_protocol.get('original_745_execution_acceptance_granted') is False
+            and execution_protocol.get('qualification_granted_by_worker') is False
+            and execution_protocol.get('formal_score_contribution') is False
+            and type(execution_protocol.get('additional_native_getter_observe_predict_or_success_calls')) is int
+            and execution_protocol['additional_native_getter_observe_predict_or_success_calls'] == 0
+            and same(execution_protocol.get('unchanged_action_outcome_sampling'),protocol),
+            'new declared factory/purpose cannot claim legacy acceptance, change sampling or add Native observations')
+        _stamp(execution_protocol, graph_ref, graph)
+        require(same(pointer(case.get('source_overlay_lock')),graph['physical']['source_overlay_lock'])
+            and case.get('original_745_execution_acceptance_granted') is False
+            and case.get('qualification_granted_by_worker') is False
+            and case.get('formal_score_contribution') is False,
+            'honest new case namespace/protocol cannot impersonate previous acceptance')
+        require(identity.get('sha256') == digest(no_sha)
+            and identity.get('config_sha256') == route['configuration']['sha256']
+            and identity.get('frozen_inputs_sha256') == route['frozen_inputs']['sha256']
+            and identity.get('source_row_sha256') == digest(source)
+            and identity.get('graph_sha256') == graph_ref['sha256']
+            and all(identity.get(k) == graph[k] for k in HASHES)
+            and same(cpu['execution'].get('identity'), identity) and same(native['execution'].get('identity'), identity),
+            'CPU/native/case actual graph/config/source identity differs')
+        domain = case.get('component_domain', {})
+        require(domain.get('schema') == 'r10_source_bound_RML_component_purpose_v640'
+            and domain.get('purpose') == 'train_qualification' and domain.get('split') == 'train'
+            and domain.get('task') == key[0] and domain.get('method') == key[2] and domain.get('raw_episode_id') == key[1],
+            'genuine fixed-TRAIN component purpose required')
+        require(domain.get('VAL_TEST_relabelled_as_TRAIN') is False and domain.get('policy_sha256') is None
+            and same(cpu['execution'].get('component_domain'), domain)
+            and same(native['execution'].get('component_domain'), domain), 'CPU/native genuine640 TRAIN domain differs')
+        require(same(pointer(native['execution'].get('case')), case_ref)
+            and native['execution'].get('native_success') is case.get('official_task_success')
+            and native['execution'].get('native_failure') is case.get('native_terminal_failure'), 'native sidecar/outcome differs')
+        require(same(pointer(protocol.get('runtime_consumer')), pointer(route['train']['consumer'])), 'actual original consumer differs from741 protocol')
+        validate_sampling_case(case, protocol, block=key[0] in BLOCKS, case_version=route['train']['case_schema'])
+        _attestation(case, profile); motion_pass = _motion(case)
+        hooks, hook_ref = read_json(root, row.get('owned_hooks'))
+        require(hook_ref['path'] == job['out']+'/owned_hook_receipt.json' and hooks.get('actual_split') == 'train'
+            and type(hooks.get('reset')) is list and type(hooks.get('paths')) is list
+            and all(v.get('complete') is True for v in hooks['reset'])
+            and all(v.get('close_complete') is True for v in hooks['paths']), 'actual reset/RML cleanup evidence required')
+        if key[0] not in BLOCKS:
+            require(len(hooks['reset']) == 1, 'one original captured core reset required')
+        if parallel:
+            require(same(hooks.get('graph_witness'),witness)
+                and same(hooks.get('execution_protocol'),execution_protocol),
+                'actual new hooks must retain the same graph/protocol identity')
+        result.append(dict(task=key[0], raw=key[1], method=key[2], status='completed',
+            native_success=case['official_task_success'], native_terminal_failure=case['native_terminal_failure'],
+            motion_pass=motion_pass, counted_ticks=case['counted_clock']['ticks'], case=case_ref,
+            owned_hooks=hook_ref, CPU_check=cpu_refs, native=native_refs, old_protocol_case_reused=False,
+            case_graph=graph_ref,control_segment='new_parallel_suffix' if parallel else 'old_serial_prefix'))
+    for reference in resource_inputs:read_json(root,reference)
+    return result
+
+
+def audit_mixed_train192(root, graph_ref, lineage_ref):
+    root=Path(root).resolve()
+    graph_ref=_typed(graph_ref,'artifacts/framework/multitask_r10/','policy_graph.json')
+    lineage_ref=_typed(lineage_ref,'runtime/framework/','lineage.json')
+    graph=graphs.read_policy_graph(root,graph_ref)
+    actual=dict(root='project',path=SOURCE,sha256=hashlib.sha256(Path(__file__).read_bytes()).hexdigest())
+    require(same(pointer(graph['control']['components']['train_auditor']),actual)
+        and graph['control']['contracts']['readiness_schema']==READINESS_SCHEMA,
+        'actual1198 mixed-control auditor must precede execution')
+    lineage,lineage_ref=read_json(root,lineage_ref)
+    require(lineage.get('schema')==LINEAGE_SCHEMA and lineage.get('complete') is True
+        and lineage.get('mixed_control_lineage') is True
+        and lineage.get('automatic_retry') is False and lineage.get('source_outcome_filtering') is False
+        and lineage.get('case_graphs_relabelled') is False, 'honest complete mixed-control lineage required')
+    _stamp(lineage,graph_ref,graph)
+    retired=validate_retired_development_batch(lineage.get('retired_development_batch'))
+    actual_retired=_retired_development_batch(root,graph,retired.get('exit'))
+    require(same(retired,actual_retired)
+        and lineage.get('historical_Native_reexecution_disclosed') is True
+        and type(lineage.get('repeated_development_Native_cases')) is int
+        and lineage['repeated_development_Native_cases']==2,
+        'exact retired batch reinspection and historical Native repeat disclosure required')
+    handoff=validate_parallel_handoff_summary(lineage.get('parallel_handoff'))
+    require(same(handoff,_parallel_handoff(root,graph,handoff.get('exit'))),
+        'exact Root-observed parallel handoff must be fully reinspected')
+    predecessor=_predecessor(root,graph,lineage.get('predecessor_exit'))
+    old_graph_ref=pointer(predecessor['old_graph'])
+    old=graphs.read_policy_graph(root,old_graph_ref);compare_physical(old,graph)
+    original,original_ref=read_json(root,predecessor['original_plan'])
+    base._stamp(original,old_graph_ref,old)
+    jobs=original.get('jobs');prefix=predecessor['records'];k=predecessor['completed_prefix_count']
+    require(type(k) is int and 0<=k<192 and type(jobs) is list and len(jobs)==192
+        and len(prefix)==k and [_key(v) for v in prefix]==[_key(v) for v in jobs[:k]],
+        'actual closed prefix must be the original192 plan prefix')
+    manifest,manifest_ref=read_json(root,graph['train_source_manifest']);sources=base._sources(manifest)
+    expected={(t,raw,m) for t,raw in sources for m in METHODS}
+    require(len({_key(v) for v in jobs})==192 and {_key(v) for v in jobs}==expected,
+        'the exact original first4 by16 by3 grid must remain')
+    middle_graph_ref=pointer(handoff.get('old1194_graph'))
+    middle_graph=graphs.read_policy_graph(root,middle_graph_ref);compare_physical(old,middle_graph);compare_physical(middle_graph,graph)
+    middle_auditor=_middle_auditor(root,middle_graph,graph)
+    middle_plan,middle_plan_ref=read_json(root,_typed(handoff.get('plan'),'runtime/framework/parallel_repaired_owner_v1189/train/','plan.json'))
+    _stamp(middle_plan,middle_graph_ref,middle_graph)
+    require(middle_plan.get('schema')=='r10_parallel_fixed_TRAIN_suffix_plan_v1189'
+        and middle_plan.get('split')=='train' and type(middle_plan.get('global_expected_cases')) is int
+        and middle_plan['global_expected_cases']==192 and type(middle_plan.get('preserved_prefix_count')) is int
+        and middle_plan['preserved_prefix_count']==k
+        and same(middle_plan.get('retired_partial_batch'),retired),
+        'middle accepted set must come from the actual fixed original suffix and retired-batch chain')
+    original_by_id={f'j{index:04d}':job for index,job in enumerate(jobs)}
+    middle_by_id={job.get('job_id'):job for job in middle_plan.get('jobs',[])}
+    middle_ids=handoff['completed_job_ids'];middle_records=handoff['completed_records'];middle_count=handoff['preserved_count']
+    allowed_ids=[f'j{index:04d}' for index in range(k,192)]
+    require(type(middle_plan.get('jobs')) is list and len(middle_plan['jobs'])==192-k
+        and len(middle_by_id)==192-k and set(middle_by_id)==set(allowed_ids)
+        and set(middle_ids)<=set(allowed_ids)
+        and middle_ids==[jid for jid in allowed_ids if jid in set(middle_ids)],
+        'preserved parallel set may be noncontiguous but must retain original global job order')
+    middle_jobs=[middle_by_id[jid] for jid in middle_ids]
+    for job,row in zip(middle_jobs,middle_records):
+        require(_key(job)==_key(row)==_key(original_by_id[job['job_id']]),
+            'middle accepted Native source/method identity must remain unchanged')
+    remaining_ids=[jid for jid in allowed_ids if jid not in set(middle_ids)]
+    remaining_original=[original_by_id[jid] for jid in remaining_ids];remaining_count=len(remaining_ids)
+    require(k+middle_count+remaining_count==192,'three accepted source partitions must total exactly192')
+    plan,plan_ref=read_json(root,_typed(lineage.get('suffix_plan'),'runtime/framework/parallel_repaired_owner_v1197/train/','plan.json'))
+    require(same(plan.get('retired_partial_batch'),retired),
+        'planned cohort must retain the same retired development batch without reusing its results')
+    require(same(plan.get('preserved_parallel_segment'),handoff)
+        and type(plan.get('preserved_parallel_count')) is int and plan['preserved_parallel_count']==middle_count,
+        'new plan must preserve the complete accepted parallel handoff set without reexecution')
+    require(plan.get('schema')==SUFFIX_PLAN_SCHEMA and plan.get('split')=='train'
+        and type(plan.get('global_expected_cases')) is int and plan['global_expected_cases']==192
+        and type(plan.get('preserved_prefix_count')) is int and plan['preserved_prefix_count']==k
+        and type(plan.get('expected_cases')) is int and plan['expected_cases']==remaining_count
+        and same(plan.get('predecessor'),predecessor) and plan.get('automatic_retry') is False
+        and plan.get('source_outcome_filtering') is False, 'mechanical fixed suffix plan required')
+    _stamp(plan,graph_ref,graph)
+    suffix_jobs=plan.get('jobs');suffix=lineage.get('records')
+    require(type(suffix_jobs) is list and len(suffix_jobs)==remaining_count and type(suffix) is list and len(suffix)==remaining_count
+        and [v.get('job_id') for v in suffix_jobs]==remaining_ids
+        and [v.get('job_id') for v in suffix]==remaining_ids
+        and [_key(v) for v in suffix_jobs]==[_key(v) for v in remaining_original]
+        and {_key(v) for v in suffix}=={_key(v) for v in suffix_jobs},
+        'new controller may execute only the original remaining set; no preserved Native may rerun')
+    for previous,current in zip(remaining_original,suffix_jobs):
+        require(current.get('source_row_sha256')==previous.get('source_row_sha256')
+            and same(pointer(current.get('configuration')),pointer(previous.get('configuration'))),
+            'suffix source/config changed')
+        for field,prefix_name in (('out','artifacts/framework/multitask_r10/parallel_repaired_policy_v1196/train/'),
+                ('runtime','runtime/framework/parallel_repaired_policy_v1196/train/')):
+            name=current.get(field)
+            require(type(name) is str and name.startswith(prefix_name)
+                and Path(name).as_posix()==name and '..' not in Path(name).parts,
+                'new suffix evidence must remain in actual1196 TRAIN namespaces')
+    for job in middle_jobs:
+        previous=original_by_id[job['job_id']]
+        require(job.get('source_row_sha256')==previous.get('source_row_sha256')
+            and same(pointer(job.get('configuration')),pointer(previous.get('configuration'))),
+            'preserved middle source/config changed')
+    _suffix_owner(root,lineage.get('suffix_owner'),plan_ref,graph_ref,graph,remaining_count)
+    master_session=validate_master_session(root,lineage['suffix_owner'],plan_ref,graph_ref,graph,suffix_jobs)
+    middle_session=middle_auditor.validate_master_session(root,
+        {key:handoff[key] for key in ('launch','terminal')},middle_plan_ref,middle_graph_ref,middle_graph,middle_plan['jobs'])
+    require(same(pointer(handoff.get('session')),middle_session), 'actual old master session must survive unchanged')
+    previous_master,_=read_json(root,middle_session);new_master,_=read_json(root,master_session)
+    require(not same(base._process(previous_master.get('owner')),base._process(new_master.get('owner'))),
+        'the new controller cannot reuse the retired parallel owner process identity')
+    all_jobs=jobs[:k]+middle_jobs+suffix_jobs
+    require(len({j['out'] for j in all_jobs})==len({j['runtime'] for j in all_jobs})==192,
+        'all old/new case outputs and runtimes must be distinct')
+    seen=(set(),set(),set(),set())
+    result=_audit_records(root,old_graph_ref,old,jobs[:k],prefix,sources,seen)
+    middle_result=middle_auditor._audit_records(root,middle_graph_ref,middle_graph,middle_jobs,middle_records,
+        sources,seen,parallel=True,master_session=middle_session)
+    for record in middle_result:
+        record.update(control_segment='preserved_parallel_middle',preserved_without_reexecution=True,case_graphs_relabelled=False)
+    result+=middle_result
+    result+=_audit_records(root,graph_ref,graph,suffix_jobs,suffix,sources,seen,parallel=True,master_session=master_session)
+    require(len(result)==192, 'all original192 outcomes must survive')
+    require(same(graphs.read_policy_graph(root,graph_ref),graph)
+        and same(graphs.read_policy_graph(root,old_graph_ref),old)
+        and same(graphs.read_policy_graph(root,middle_graph_ref),middle_graph), 'source graph changed during audit')
+    # Recheck every immutable reference after all per-case reads.
+    refs=[lineage_ref,original_ref,plan_ref,lineage['predecessor_exit'],*lineage['suffix_owner'].values()]
+    refs.extend(handoff[key] for key in ('exit','plan','launch','status','terminal','session','old1194_graph'))
+    refs.extend(predecessor[k] for k in ('launch','status','failure','exit') if k in predecessor)
+    for row in [*prefix,*middle_records,*suffix]:
+        refs.extend((row['case'],row['owned_hooks']))
+        for phase in ('CPU_check','native'):refs.extend(row[phase].values())
+    for reference in refs:read_json(root,reference)
+    result.sort(key=lambda x:(x['task'],x['raw'],x['method']))
+    return dict(schema=READINESS_SCHEMA,graph=graph_ref,lineage=lineage_ref,
+        **{key:graph[key] for key in HASHES},old_graph=old_graph_ref,original_plan=original_ref,
+        TRAIN_manifest=manifest_ref,complete=True,completed=192,method_case_count=192,
+        source_count=64,task_ready_count=16,preserved_prefix_count=k,new_suffix_count=remaining_count,
+        parallel_handoff=handoff,preserved_parallel_count=middle_count,control_segment_count=3,
+        preserved_parallel_results_reused_without_reexecution=True,middle_graph=middle_graph_ref,
+        qualification_kind='mixed_control_lineage',mixed_control_lineage=True,
+        case_graphs_relabelled=False,old1144_full_same_graph_readiness_claimed=False,
+        new_graph_executed_all192=False,same_physical_policy=True,cases=result,
+        retired_development_batch=retired,historical_Native_reexecution_disclosed=True,
+        repeated_development_Native_cases=2,retired_development_records_not_counted_in_accepted192=True,
+        native_success_is_not_an_admission_threshold=True,motion_is_diagnostic_only=True,
+        all_failures_retained=True,automatic_retry=False,source_outcome_filtering=False,
+        VAL_read=False,TEST_read=False,Native_started_by_auditor=False,GPU_started_by_auditor=False)
+
+
+def require_readiness_proof(root,graph_ref,proof_ref):
+    saved,_=read_json(root,_typed(proof_ref,'runtime/framework/','readiness.json'))
+    require(saved.get('schema')==READINESS_SCHEMA,'new mixed-control readiness schema required')
+    actual=audit_mixed_train192(root,graph_ref,saved.get('lineage'))
+    require(same(saved,actual),'mixed-control saved readiness differs from complete reaudit')
+    return actual

@@ -1,0 +1,165 @@
+{
+  "schema": "P4_position_response_v68_fixed6_development_frozen_v1",
+  "complete_preparation": true,
+  "execution_ready": true,
+  "execution_authorized": true,
+  "preparation_only": false,
+  "pending": [],
+  "jobs": [
+    {
+      "id": "00_val_static",
+      "scene": "static",
+      "config": "config/framework/P4_position_response_v68_development_canaries_v1/00_val_static.json",
+      "path": "runtime/framework/local_mpc_20261102/public_candidate_response_seed_v68_development_v1/00_val_static",
+      "evaluation": "artifacts/framework/local_mpc_20261102/V68_development_originaljudge_v1/00_val_static",
+      "reference_config": {
+        "path": "config/framework/P4_position_v67_development_canaries_v1/00_val_static.json",
+        "sha256": "57479a8c9b5b38fd79259e1707c21d35865ed4ccb2ddeb2f5ff201980de3302e"
+      },
+      "reference_plan": {
+        "path": "config/framework/P4_position_v67_development_canaries_v1/plan.json",
+        "sha256": "328f75b5c0fa637f56e99e7b8f4576da716cca89b79741a031ebc9d0cf5b3055"
+      },
+      "expected_role": "positive_development"
+    },
+    {
+      "id": "01_val_static",
+      "scene": "static",
+      "config": "config/framework/P4_position_response_v68_development_canaries_v1/01_val_static.json",
+      "path": "runtime/framework/local_mpc_20261102/public_candidate_response_seed_v68_development_v1/01_val_static",
+      "evaluation": "artifacts/framework/local_mpc_20261102/V68_development_originaljudge_v1/01_val_static",
+      "reference_config": {
+        "path": "config/framework/P4_student_closedloop_devVAL_v67_v1/01_val_static.json",
+        "sha256": "d71731fef7c882ccdb349418b9c9073452b5d24a90c876570df2f65f37ed9f08"
+      },
+      "reference_plan": {
+        "path": "config/framework/P4_student_closedloop_devVAL_v67_v1/plan.json",
+        "sha256": "f87e6eb631623440d86efaf63097a106fa784fb8c6223e18e92386cc4526b90b"
+      },
+      "expected_role": "positive_development"
+    },
+    {
+      "id": "03_val_uniform",
+      "scene": "uniform",
+      "config": "config/framework/P4_position_response_v68_development_canaries_v1/03_val_uniform.json",
+      "path": "runtime/framework/local_mpc_20261102/public_candidate_response_seed_v68_development_v1/03_val_uniform",
+      "evaluation": "artifacts/framework/local_mpc_20261102/V68_development_originaljudge_v1/03_val_uniform",
+      "reference_config": {
+        "path": "config/framework/P4_position_v67_development_canaries_v1/03_val_uniform.json",
+        "sha256": "105dc12c8ec3c4822033e1d043199462f82317dccb5a43efeee7ec1a1a775cac"
+      },
+      "reference_plan": {
+        "path": "config/framework/P4_position_v67_development_canaries_v1/plan.json",
+        "sha256": "328f75b5c0fa637f56e99e7b8f4576da716cca89b79741a031ebc9d0cf5b3055"
+      },
+      "expected_role": "positive_development"
+    },
+    {
+      "id": "04_val_uniform",
+      "scene": "uniform",
+      "config": "config/framework/P4_position_response_v68_development_canaries_v1/04_val_uniform.json",
+      "path": "runtime/framework/local_mpc_20261102/public_candidate_response_seed_v68_development_v1/04_val_uniform",
+      "evaluation": "artifacts/framework/local_mpc_20261102/V68_development_originaljudge_v1/04_val_uniform",
+      "reference_config": {
+        "path": "config/framework/P4_student_closedloop_devVAL_v67_v1/04_val_uniform.json",
+        "sha256": "4e6bcc272220942ade7c08a5eececb1ff1be1254129c1913bc4afa23f8c29987"
+      },
+      "reference_plan": {
+        "path": "config/framework/P4_student_closedloop_devVAL_v67_v1/plan.json",
+        "sha256": "f87e6eb631623440d86efaf63097a106fa784fb8c6223e18e92386cc4526b90b"
+      },
+      "expected_role": "positive_development"
+    },
+    {
+      "id": "uniform_002",
+      "scene": "uniform",
+      "config": "config/framework/P4_position_response_v68_development_canaries_v1/uniform_002.json",
+      "path": "runtime/framework/local_mpc_20261102/public_candidate_response_seed_v68_development_v1/uniform_002",
+      "evaluation": "artifacts/framework/local_mpc_20261102/V68_development_originaljudge_v1/uniform_002",
+      "reference_config": {
+        "path": "config/framework/P4_position_v67_development_canaries_v1/uniform_002.json",
+        "sha256": "8c807568a60e76428e62c50e291f4344fa183b93ccbfcb95a68f437de01c9968"
+      },
+      "reference_plan": {
+        "path": "config/framework/P4_position_v67_development_canaries_v1/plan.json",
+        "sha256": "328f75b5c0fa637f56e99e7b8f4576da716cca89b79741a031ebc9d0cf5b3055"
+      },
+      "expected_role": "positive_development"
+    },
+    {
+      "id": "static_no_proxy",
+      "scene": "static",
+      "config": "config/framework/P4_position_response_v68_development_canaries_v1/static_no_proxy.json",
+      "path": "runtime/framework/local_mpc_20261102/public_candidate_response_seed_v68_development_v1/static_no_proxy",
+      "evaluation": "artifacts/framework/local_mpc_20261102/V68_development_originaljudge_v1/static_no_proxy",
+      "reference_config": {
+        "path": "config/framework/P4_position_v67_development_canaries_v1/static_no_proxy.json",
+        "sha256": "8a4deae02093f45367c5c7d4d2ff273ec6dfd63e3a3a1fd6b850d13cdb7a6f11"
+      },
+      "reference_plan": {
+        "path": "config/framework/P4_position_v67_development_canaries_v1/plan.json",
+        "sha256": "328f75b5c0fa637f56e99e7b8f4576da716cca89b79741a031ebc9d0cf5b3055"
+      },
+      "expected_role": "counterfactual_negative_no_proxy"
+    }
+  ],
+  "fixed_order": [
+    "00_val_static",
+    "01_val_static",
+    "03_val_uniform",
+    "04_val_uniform",
+    "uniform_002",
+    "static_no_proxy"
+  ],
+  "all_six_run_regardless_of_task_outcome": true,
+  "retry_or_case_replacement_based_on_outcome": false,
+  "reference_selection": "00/03/002/noProxy from closed V67fixed4;01/04 from closed V67full8; predeclared6, no TEST result used",
+  "Native_started": false,
+  "fit_started": false,
+  "formal_TEST_read": false,
+  "physics_dt": 0.05,
+  "control_dt": 0.1,
+  "decision_ticks": 2,
+  "model_budget": "unchanged256/H8/88,88,80",
+  "sole_controller_change": "One first-iteration88-sequence slot is recomputed from fresh current model response; total256 unchanged",
+  "weights_unchanged": true,
+  "position_checkpoint_sha256": "ee079d1f0ea302f65ed4123c5137328005f582f5347e282497dc2d2e07dc0884",
+  "source_seed_scope_only_not_grasp_or_raw_or_composite_qualification": true,
+  "all_original_globalgoal_cost_and_success_criteria_unchanged": true,
+  "natural_witness_only": true,
+  "active_new_probe_execution": false,
+  "original_selected_action_endpoint_plus7_path_checks_preserved": true,
+  "public_goal_and_finalNativegoal_plus_currenthold_reported_separately": true,
+  "finalized_utc": "2026-11-03T07:26:02.809493+00:00",
+  "generator_precheck": {
+    "path": "artifacts/framework/local_mpc_20261102/V68_static_domain_response_seed_three_public_anchors_v1/receipt.json",
+    "sha256": "fb703297d5fefa577e5bea50fa15a31df366a6b96ae3c56affc9ca6a41b0d912"
+  },
+  "original_C_static_diagnostic_only": {
+    "path": "artifacts/framework/local_mpc_20261102/V67_C_static_collision_replay_actual3_v2/receipt.json",
+    "sha256": "721e9d248cf6af167756a5eeb711584d4727201fd82d2218f3faae57741556e6"
+  },
+  "fresh_proposal_budget": {
+    "ordinary": 255,
+    "fresh_response": 1,
+    "injection_iteration": 0,
+    "total_CEM": 256,
+    "iteration_sequences": [
+      88,
+      88,
+      80
+    ]
+  },
+  "additional_generator_cost": {
+    "measured_three_anchor_seconds": [
+      0.285,
+      0.287,
+      0.289
+    ],
+    "execution_model_batch_calls_per_generation": 96,
+    "not_included_in_256_CEM_sequence_count": true,
+    "realtime_qualified": false
+  },
+  "original_selected_collision_queries_repeated_on_actual_selected_q_every_frame": true,
+  "complete_grasp_or_force_qualification_claimed": false
+}

@@ -1,0 +1,31 @@
+{
+  "schema": "binary_depth_influence_quality_owner_unknown_coverage_addendum_v1",
+  "source": "Rootpre-fitprotocolclarifications, noNN/dataoutcome-basedthresholdchange",
+  "quality_protocol": "binary_depth_influence_conservative_PPV_coverage_v1",
+  "fixed_threshold_grid": [
+    0.5,
+    0.7,
+    0.9,
+    0.95,
+    0.99
+  ],
+  "required": [
+    "nonzeroTP+FP+U",
+    "TP/(TP+FP+U)>=.995",
+    "oracleeligible>0",
+    "coverage>=.90 oforacleeligible",
+    "Sphere-onlyandCube-fargroupspresent/framefalseavailable0",
+    "allowner-unobservedframesfalseavailable0",
+    "qualifiedcentreP95<=.005m"
+  ],
+  "U": "EveryadmittedpredictedCubeon255intheobservedcropdomain, includingouter1pixelzero-ring/signednegative/invalid/conflict/RGBonlyGoal. NeveromitUfromdenominator.",
+  "report": [
+    "perparent/percanonicalcondition/percamera rawknownPPV/TP/FP/FN/U",
+    "UNKNOWN predictionsCube/knownzero/abstain perreason/percamera; overlappingreasonmasksdeclared",
+    "allowner-unobservedrecords/availablecount",
+    "knownlabelBrier/NLL/ECE explicitlypartial",
+    "oraclecoverage/pointcounts/4viewcounts/errorpergroupandmax"
+  ],
+  "owner0": "Unobserveddepthinfluencesupervision, notassertedphysicalorvisualabsence.",
+  "noStatisticalGuarantee": "Bounds are finite-cohortlabel-completionbounds; correlatedpixelssamplesare not independenttrials."
+}

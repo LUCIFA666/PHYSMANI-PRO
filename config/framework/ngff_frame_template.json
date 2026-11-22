@@ -1,0 +1,14 @@
+{
+  "status": "requires_train_split_calibration_before_PhysMani_evaluation",
+  "metres_per_model_unit": null,
+  "seconds_per_model_unit": null,
+  "world_origin": null,
+  "boundary_model": null,
+  "coordinate_definition": "model_xyz=(world_xyz-world_origin)/metres_per_model_unit",
+  "time_definition": "model_time=world_seconds/seconds_per_model_unit",
+  "original_model_gravity": -5.0,
+  "gravity_mapping": "gravity_world=gravity_model*metres_per_model_unit/seconds_per_model_unit^2",
+  "initial_euler_angles": "zero, because input geometry is already in current world orientation",
+  "driven_motion": "must validate table-supported and externally driven targets on train/validation data",
+  "test_split_may_be_used_for_calibration": false
+}

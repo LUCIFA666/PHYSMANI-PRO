@@ -1,0 +1,79 @@
+{
+  "schema": "large_network_training_continuation_20261104_v1",
+  "allowed_scope": "semantic_e_and_Cube_centre_pilot_only",
+  "all_task_Native_VAL_TEST_authorized": false,
+  "python": "/home/ubuntu/physmani-conda/envs/physmani5090/bin/python",
+  "output_root": "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/large_network_training_continuation_run_v1",
+  "e_fit_root": "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/semantic_task_e207M_fit_v1",
+  "e_actual_exit": "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/semantic_task_e207M_Root_execution_v1/fit_actual_exit.json",
+  "e_delivery": {
+    "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/semantic_task_e207M_fit_code_delivery_v1/method_sources.json",
+    "sha256": "4278cd04820dbcced1a7d29ecfae114efe2aa763c76e85364222aadc7fbcef28"
+  },
+  "e_authorization": {
+    "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/semantic_task_e207M_Root_execution_v1/GPU_authorization.json",
+    "sha256": "0c378068158a3235b4836124ef1bb69ea79844fb72e2717fa7ad9638b4762b5c"
+  },
+  "split_manifest": {
+    "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/current_network16_data_manifest_v1/manifest.json",
+    "sha256": "c03a4fb31140a5aab7a49ad5d771955a56e5adfb6facfe31aa6b269769b9559b"
+  },
+  "preprocess_completion": {
+    "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/current_network16_RGBD256_preprocess_v1/completion.json",
+    "sha256": "57988d7190a6e0436abca2fde8630616c690e8fb440e562bbd5668284811ed7a"
+  },
+  "CF_delivery": {
+    "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/current_cube_dual_crop_CF_cap12_v3_capture_preparation_v1/receipt.json",
+    "sha256": "2cc9524a1d924273e9ecc30b287468cd44a4364ead63a7e365913ce6060b94a8"
+  },
+  "CF_prepared_snapshot": {
+    "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/current_cube_dual_crop_CF_cap12_v3_capture_preparation_v1/source_snapshot/config/framework/current_cube_dual_crop_CF_pilot40_cap12_20261104_v3/plan.json",
+    "sha256": "c2acef4daeb533623ba300044c8387f45b0d19c21e5035c999ea110ab9ae67d7"
+  },
+  "CF_final_admission": "/home/ubuntu/桌面/our-mani/config/framework/large_network_training_continuation_20261104_v1/CF_admission.json",
+  "QA_admission": "/home/ubuntu/桌面/our-mani/config/framework/large_network_training_continuation_20261104_v1/QA_admission.json",
+  "CF_output_root": "/home/ubuntu/桌面/our-mani/runtime/framework/near_goal_perception_20261103/current_cube_dual_crop_CF_pilot40_v3",
+  "centre_delivery": {
+    "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/current_cube_centre_large_training_code_delivery_v1/receipt.json",
+    "sha256": "22561de40128b94420914d652d7dd927cb7228be45d2daa3fa026bba6aaced48"
+  },
+  "encoder": {
+    "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/near_goal_segmentation_20261103/full32_geometryF_unknownKL_fit_v5/selected.pt",
+    "sha256": "dbf998242ad13fea26ede9c4b17a0e2bfd0daeb581331d21342af9a6b6d06bfa"
+  },
+  "method_sources": {
+    "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/large_network_training_continuation_preparation_v1/method_sources.json",
+    "sha256": "879d80f3ddc4186555d63c7a665f007c1e2e2e8a504f6f3123f53202a46cb0e0"
+  },
+  "stages": [
+    "semantic_selected_evaluation",
+    "CF_first_fit13",
+    "CF_first_fit_QA",
+    "CF_remaining39",
+    "CF_all40_audit",
+    "CF_compile",
+    "centre_GPU_preflight",
+    "centre_fit40",
+    "centre_selection_predict208",
+    "centre_selection_score208",
+    "centre_reserved_predict104",
+    "centre_reserved_score104"
+  ],
+  "wait_timeout_seconds": 172800,
+  "poll_seconds": 2,
+  "stop_grace_seconds": 60,
+  "stage_timeout_seconds": {
+    "semantic_selected_evaluation": 7200,
+    "CF_first_fit13": 900,
+    "CF_first_fit_QA": 600,
+    "CF_remaining39": 14400,
+    "CF_all40_audit": 600,
+    "CF_compile": 3600,
+    "centre_GPU_preflight": 1800,
+    "centre_fit40": 28800,
+    "centre_selection_predict208": 3600,
+    "centre_selection_score208": 1200,
+    "centre_reserved_predict104": 3600,
+    "centre_reserved_score104": 1200
+  }
+}

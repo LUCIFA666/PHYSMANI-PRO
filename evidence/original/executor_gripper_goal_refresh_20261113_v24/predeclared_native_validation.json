@@ -1,0 +1,14 @@
+{
+  "cases": [
+    "/home/ubuntu/桌面/our-mani/config/framework/executor_gripper_goal_refresh_20261113_v24/native_validation/00_cup_seed2611164201.json",
+    "/home/ubuntu/桌面/our-mani/config/framework/executor_gripper_goal_refresh_20261113_v24/native_validation/01_cup_seed2611164203.json",
+    "/home/ubuntu/桌面/our-mani/config/framework/executor_gripper_goal_refresh_20261113_v24/native_validation/02_cup_seed2611164200.json",
+    "/home/ubuntu/桌面/our-mani/config/framework/executor_gripper_goal_refresh_20261113_v24/native_validation/03_cup_seed2611164202.json"
+  ],
+  "Native_slot_dependency": "/home/ubuntu/桌面/our-mani/artifacts/framework/executor_continuous_posture_20261113_v22/release_alignment/batch_receipt.json",
+  "changed_variable": "same-stage fresh world pose accepted while preserving committed gripper event",
+  "kept": "identical seeds, 5mm terminal release, exact pose, Native physics and success, IK, 60s",
+  "NN_forward_calls": 0,
+  "optimizer_steps": 0,
+  "formal_VAL_TEST": false
+}

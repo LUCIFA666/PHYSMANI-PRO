@@ -1,0 +1,66 @@
+{
+  "schema": "world_command_v3_deferred_owner_20261104_v1",
+  "component_only": true,
+  "all_task_Native_VAL_TEST_authorized": false,
+  "child_owns_global_resource_locks": true,
+  "automatic_OOM_fallback": false,
+  "python": "/home/ubuntu/physmani-conda/envs/physmani5090/bin/python",
+  "output_root": "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/world_command_v3_deferred_run_v1",
+  "e2_output_root": "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/semantic_task_e207M_v2_deferred_run_v3",
+  "CF_output_root": "/home/ubuntu/桌面/our-mani/runtime/framework/near_goal_perception_20261103/current_cube_dual_crop_CF_pilot40_v3",
+  "e2_owner_source": {
+    "path": "/home/ubuntu/桌面/our-mani/scripts/run_semantic_task_e_v2_deferred_20261104_v3.py",
+    "sha256": "c372bdc98a26b8625c76f47484ec04b65a330a460a602f257d4c82489102e6a2"
+  },
+  "e2_plan": {
+    "path": "/home/ubuntu/桌面/our-mani/config/framework/semantic_task_e_v2_deferred_20261104_v3/plan.json",
+    "sha256": "84bfcb635f065f9c070f363a5d8338af8c951f5ea49c3377a9ba52c5647735a8"
+  },
+  "world_method_sources": {
+    "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/world_TCP_fine_v3_complete_pipeline_preparation_v1/method_sources.json",
+    "sha256": "0f7c8d09a243d8a0d08bec258ce5f33300f66e72cf9345f7290f2ccf093c90db"
+  },
+  "world_config": {
+    "path": "/home/ubuntu/桌面/our-mani/config/framework/world_tcp_command_fine_20261104_v3/pilot.json",
+    "sha256": "49a49172892eb5c63326a630867d3882b46e79a78cd32ea3cec19dc7c747f623"
+  },
+  "subset": {
+    "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/world_TCP_command_stage16_subset_v2/subset.json",
+    "sha256": "eeb22774a62e548e45353b00fc17900bb56e6d438dc24e02c0fea4954ac06212"
+  },
+  "method_sources": {
+    "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/world_command_v3_deferred_owner_preparation_v1/method_sources.json",
+    "sha256": "4021a17635e3f9f89c3714f0de22520ae016382a995bd39874b524e863300882"
+  },
+  "lifecycle_helper": {
+    "path": "/home/ubuntu/桌面/our-mani/scripts/run_large_network_training_continuation_20261104_v1.py",
+    "sha256": "defc843082b625b457696d8b6861b11fa574bb18e50d40c7e5bd150770e67132"
+  },
+  "stages": [
+    "world_GPU_canary4",
+    "world_GPU_public_cache",
+    "world_CPU_join_commands",
+    "world_GPU_fit5",
+    "world_GPU_selection_predict5168",
+    "world_CPU_selection_score5168"
+  ],
+  "stage_timeout_seconds": {
+    "world_GPU_canary4": 1800,
+    "world_GPU_public_cache": 21600,
+    "world_CPU_join_commands": 3600,
+    "world_GPU_fit5": 43200,
+    "world_GPU_selection_predict5168": 7200,
+    "world_CPU_selection_score5168": 7200
+  },
+  "wait_timeout_seconds": 172800,
+  "poll_seconds": 2,
+  "stop_grace_seconds": 60,
+  "Root13223_parent_wait_claimed": false,
+  "quality_gate": "none; complete source-bound1930step e2 and fixed646 diagnostics, no arbitrary accuracy cutoff",
+  "no_automatic_retry_or_resume": true,
+  "resource_policy": "owner singleton only; no global locks while waiting or around children; GPU children self-acquire exact runtime/framework global pair",
+  "stage_API": {
+    "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/world_TCP_fine_v3_complete_pipeline_preparation_v1/stage_API.json",
+    "sha256": "77e824e538466a4f397802a3d7ef453460319383c57e2db1ec28cff24c7c621a"
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "task": "place_cups_on_rotating_frame",
+  "phase": "stability",
+  "cases": [
+    "/home/ubuntu/桌面/our-mani/config/framework/taskwise_executor_validation_20261113_v2/place_cups_on_rotating_frame/00_cup_seed2611164100.json",
+    "/home/ubuntu/桌面/our-mani/config/framework/taskwise_executor_validation_20261113_v2/place_cups_on_rotating_frame/01_cup_seed2611164101.json",
+    "/home/ubuntu/桌面/our-mani/config/framework/taskwise_executor_validation_20261113_v2/place_cups_on_rotating_frame/02_cup_seed2611164102.json",
+    "/home/ubuntu/桌面/our-mani/config/framework/taskwise_executor_validation_20261113_v2/place_cups_on_rotating_frame/03_cup_seed2611164103.json",
+    "/home/ubuntu/桌面/our-mani/config/framework/taskwise_executor_validation_20261113_v2/place_cups_on_rotating_frame/04_cup_seed2611164104.json",
+    "/home/ubuntu/桌面/our-mani/config/framework/taskwise_executor_validation_20261113_v2/place_cups_on_rotating_frame/05_cup_seed2611164105.json",
+    "/home/ubuntu/桌面/our-mani/config/framework/taskwise_executor_validation_20261113_v2/place_cups_on_rotating_frame/06_cup_seed2611164106.json",
+    "/home/ubuntu/桌面/our-mani/config/framework/taskwise_executor_validation_20261113_v2/place_cups_on_rotating_frame/07_cup_seed2611164107.json",
+    "/home/ubuntu/桌面/our-mani/config/framework/taskwise_executor_validation_20261113_v2/place_cups_on_rotating_frame/08_cup_seed2611164108.json",
+    "/home/ubuntu/桌面/our-mani/config/framework/taskwise_executor_validation_20261113_v2/place_cups_on_rotating_frame/09_cup_seed2611164109.json"
+  ],
+  "worker_namespace": "executor_guided_approach_20261113_v20",
+  "validated_development_seeds": [
+    2611164000,
+    2611164002,
+    2611164001,
+    2611144000
+  ],
+  "fresh_seeds_disjoint": true,
+  "variation_scope": [
+    0
+  ],
+  "user_instruction": "修复其他任务执行器时，对已经修好的可以进行稳定性验证，然后小范围TRAIN VAL TEST，然后全量TRAIN VAL TEST；每个任务独立推进",
+  "phase_order": [
+    "executor_repair",
+    "stability",
+    "small_train",
+    "small_val",
+    "small_test",
+    "full_train",
+    "full_val",
+    "full_test"
+  ],
+  "per_task_independent_progress": true,
+  "shared_resources": {
+    "Native_at_most": 1,
+    "GPU_fitting_Native_overlap": false
+  },
+  "Native_slot_dependency": "/home/ubuntu/桌面/our-mani/artifacts/framework/executor_guided_approach_20261113_v20/native_validation/batch_receipt.json",
+  "qualification": {
+    "minimum_original_native_successes": 9,
+    "total": 10,
+    "no_reference_limit_violations": true,
+    "no_prohibited_table_contacts": true,
+    "no_hardware_model_faults": true,
+    "all_actual_wait_completed": true
+  },
+  "TRAIN_oracle_only": true,
+  "formal_VAL_TEST": false,
+  "NN_forward_calls": 0,
+  "task_time_limit_seconds": 60,
+  "full_recorded_source_counts": {
+    "train": 100,
+    "validation": 20,
+    "test": 40
+  },
+  "recorded_TEST_payloads_read": 0,
+  "later_training_reuses_collected_TRAIN": true,
+  "no_VAL_TEST_reused_for_refitting_or_strategy_selection": true,
+  "previous_stability_report": "/home/ubuntu/桌面/our-mani/artifacts/framework/taskwise_executor_validation_20261113_v1/place_cups_on_rotating_frame/stability_report.json",
+  "fresh_seeds_disjoint_from_previous_stability": true
+}

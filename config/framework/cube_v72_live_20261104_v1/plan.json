@@ -1,0 +1,97 @@
+{
+  "schema": "Cube_V72_current_runtime_paired_candidate_development_20261104_v1",
+  "reference": {
+    "path": "config/framework/P4_position_dwell_v72_development_canaries_v1/00_val_static.json",
+    "sha256": "ebc11b7da749556482bc0167d8683714acec9dd29816d39122386a066362fa13"
+  },
+  "preparation_only": false,
+  "execution_authorized": true,
+  "formal_VAL_TEST": false,
+  "native_repo": "/home/ubuntu/桌面/phsimani/PhysMani",
+  "profiles_order": [
+    "legacy_pilot",
+    "cube_candidate_v1"
+  ],
+  "cases": [
+    {
+      "id": "ordinary_00",
+      "task": "pick_moving_target_on_the_table",
+      "seed": 2611041100,
+      "variation": 0,
+      "simulation_seconds": 8.0,
+      "budget_ticks": 160,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/pick_moving_target_on_the_table/all_variations/episodes/episode0/data.h5",
+      "native_source_sha256": "39486843383652996da289048d8d5220e27c64ba55821dc00f4e536ab46f36cd",
+      "native_scene_sha256": "65a2ce9740f2e6104082aa6a541b88eaefdadf20f8dc5880db67d7b434a5337a"
+    },
+    {
+      "id": "ordinary_01",
+      "task": "pick_moving_target_on_the_table",
+      "seed": 2611041101,
+      "variation": 0,
+      "simulation_seconds": 8.0,
+      "budget_ticks": 160,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/pick_moving_target_on_the_table/all_variations/episodes/episode0/data.h5",
+      "native_source_sha256": "39486843383652996da289048d8d5220e27c64ba55821dc00f4e536ab46f36cd",
+      "native_scene_sha256": "65a2ce9740f2e6104082aa6a541b88eaefdadf20f8dc5880db67d7b434a5337a"
+    },
+    {
+      "id": "highspeed_00",
+      "task": "pick_moving_target_on_the_table_high_speed",
+      "seed": 2611041110,
+      "variation": 0,
+      "simulation_seconds": 8.0,
+      "budget_ticks": 160,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/pick_moving_target_on_the_table_high_speed/all_variations/episodes/episode100/data.h5",
+      "native_source_sha256": "51a16de1de230213e9bf798411c0286baa9125330cb0f344790891a9c3292bb7",
+      "native_scene_sha256": "8c0c2ca1537344cc7e7cf8292324bad1fc3e652cf655141169c750fd3479ab4c"
+    },
+    {
+      "id": "highspeed_01",
+      "task": "pick_moving_target_on_the_table_high_speed",
+      "seed": 2611041111,
+      "variation": 0,
+      "simulation_seconds": 8.0,
+      "budget_ticks": 160,
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/pick_moving_target_on_the_table_high_speed/all_variations/episodes/episode100/data.h5",
+      "native_source_sha256": "51a16de1de230213e9bf798411c0286baa9125330cb0f344790891a9c3292bb7",
+      "native_scene_sha256": "8c0c2ca1537344cc7e7cf8292324bad1fc3e652cf655141169c750fd3479ab4c"
+    }
+  ],
+  "all_cases_regardless_of_task_outcome": true,
+  "retry_or_replacement": false,
+  "control_policy": "V72 current public GRU/unchanged vision/probe/reverification/hold/relative-speed/phase gates",
+  "native_motion": "native-generated actual task original init_episode/task.step; no customuniform overwrite",
+  "runtime_profile": "current_runtime_after_host_library_update; old_v820_OS_equivalence_not_claimed",
+  "candidate_profiles": {
+    "legacy_pilot": {
+      "checkpoint": "artifacts/framework/local_mpc_20261102/P4_candidate_training_v1/final.pt",
+      "sha256": "61e5827b4838649b8e477048bea56fcace18697f906fb610a3f963bba2437f60",
+      "evidence": [
+        {
+          "path": "artifacts/framework/local_mpc_20261102/P4_candidate_training_v1/model_freeze_before_newdevVAL.json",
+          "sha256": "524d151cab131bdea6b17d58a7df5134f751dedf9067c084443827c36637a63b"
+        }
+      ]
+    },
+    "cube_candidate_v1": {
+      "checkpoint": "artifacts/framework/local_mpc_20261102/cube_future_candidate_training_run_20261104_v1/artifacts/fit200/selected.pt",
+      "sha256": "81391a2d26f0a601f76364306ee9b924edddc7f3dd38276000de96859e34553b",
+      "evidence": [
+        {
+          "path": "artifacts/framework/local_mpc_20261102/cube_future_candidate_training_run_20261104_v1/artifacts/fit200/fit_status.json",
+          "sha256": "8fe7287042683e3e1f337ed38f9934ebeea37243046da2a49071d42dd0037c35"
+        },
+        {
+          "path": "artifacts/framework/local_mpc_20261102/cube_future_candidate_training_run_20261104_v1/artifacts/fit200/selection_report.json",
+          "sha256": "ebafc769a94b278acfbe9886de2be8a4d5c29f0d67cdb46476d8fbd28490c203"
+        }
+      ],
+      "actual_updates": 1400,
+      "selected_epoch": 75,
+      "training_source": "ordinary Cube existing fit224 / development selection112; highspeed transfer not new supervision",
+      "spec_carrier": "torch checkpoint payload model_spec; JSON-roundtripped spec unsupported"
+    }
+  },
+  "execution_scope": "Root explicitly authorized paired four generated TRAIN development cases per profile; no formalVAL/TEST"
+}

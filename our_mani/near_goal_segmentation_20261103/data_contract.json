@@ -1,0 +1,44 @@
+{
+  "schema": "near_goal_current_rgbd_capture_train_v1",
+  "scope": "pilot_smoke or full32; independent zero-tick scene shots, not a trajectory",
+  "public_npz_exact_keys": {
+    "rgb": "uint8 [4,256,256,3], raw unchanged",
+    "depth_m": "float32 [4,256,256], metric camera-Z, invalid depth preserved",
+    "K": "float64 [4,3,3], original signed intrinsics",
+    "T": "float64 [4,4,4], camera-to-world",
+    "public_sphere_center": "float64 [3], one initial public RGBD marker fit per parent, immutable",
+    "camera_names": "unicode [front,8,16,36]",
+    "timestamp": "finite scalar actual scene clock 0 for each independent zero-tick shot"
+  },
+  "labels_sibling_npz": {
+    "semantic_role_ids": "uint8 [4,256,256]: 0 background,1 visible Cube,2 visible renderable goalSphere,255 ignore",
+    "cube_center_world": "float64 [3], offline oracle/score only; NaN allowed if cube_present=false",
+    "cube_present": "bool scalar, offline evaluation only",
+    "optional_privileged_fields": "rendered_instance_ids and Cube pose may be retained only here or labels metadata; never input features"
+  },
+  "manifest": {
+    "required_top_flags": ["complete=true", "dataset_split=TRAIN", "all_native_closed=true", "all_process_exits_observed=true", "source_unchanged=true"],
+    "parent_counts": {"full32": {"fit":24,"selection":4,"calibration":4}, "pilot_smoke": {"fit":6,"selection":1,"calibration":1}},
+    "parent_keys": ["parent_id", "role", "public_sphere_fit", "shots"],
+    "sphere_keys": ["center_world", "source_kind=initial_public_RGBD_RedGoalMarker", "GT_pose_used=false", "source_frame_id", "source_rgbd_sha256", "calibration_sha256", "fit_metadata_sha256"],
+    "sphere_calibration_hash": "data.calibration_digest: SHA256 canonical JSON sorted K/T/camera_names lists",
+    "shot_keys": ["shot_id", "scene_id", "independent_scene=true", "physics_ticks=0", "condition", "inputs:{path,sha256}", "labels:{path,sha256}"],
+    "shots_per_parent":8,
+    "role_mapping": "declared calibration explicitly maps to internal calib, original role retained; no fold migration",
+    "condition_groups": ["sphere_only", "cube_far", "overlap", "dark_side", "occlusion", "other predeclared acquisition groups"],
+    "condition_not_an_input":true
+  },
+  "crop": {"shape":[4,9,64,64],"resizing":false,"center":"round-half-up projection of immutable public sphere","origin":"projected integer centre minus32","padding":"zero features plus explicit invalid-crop mask; labels ignore255","relative_geometry":"camera point minus camera sphere, divided by0.1m; no absolute worldXYZ"},
+  "near_scope_m":0.08,
+  "Cube_far_rule":"Never relabel real visible Cube pixels background. Correct segmentation outside near_scope remains semantically correct; refiner_available=false from PUBLIC derived geometry scope gate.",
+  "Sphere_only_rule":"zero Cube instance label only if no Cube rendered; fully invisible Cube is unobserved, never completed from GT",
+  "geometry":"current masked actual depth, original q01/q99 midpoint with z=q98-.025 and min(1,views/3)*min(1,points/60); orientation unobserved identity prior, no history or completed cloud",
+  "unknown":"low pixel confidence, crop boundary contact, <12 real depth points, <2 views, original geometry confidence<.5 or public8cm scope failure",
+  "pre_fit_oracle_gate":"visible Cube label mask + REAL depth + SAME geometry. Report coverage/group/max; qualified-visible centre P95<=.005m is necessary, not sufficient. Failure stops before NN fit, never substitutes GT centre.",
+  "training":{"seed":261103700,"epochs":40,"optimizer":"AdamW","lr":0.0003,"weight_decay":0.0001,"loss":"CE+foregroundDice","weights":"random fresh UNet8, four views shared","parent_weighting":"all8shots and4views equal; every parent equal","selection":"selection4 only chooses epoch","calibration":"calibration4 only chooses lowest [.5,.7,.9,.95,.99] meeting Cube pixel precision>=.995, both Sphere-only/Cube-far present with zero falseavailable, qualified-visible centre P95<=.005m; none=>unqualified"},
+  "prohibited_inputs":["Native instance or role IDs","GT object pose or centre","TCP/q/held/success","GRU or controlled prediction","task/condition ID","future observations","absolute worldXYZ"],
+  "historical_VAL_TEST_fit_or_threshold_use":false,
+  "old_insertion_semantic_weights_reused":false,
+  "old_TRAIN_frames_given_fake_pixel_labels":false,
+  "Native_or_training_started_by_this_contract":false
+}

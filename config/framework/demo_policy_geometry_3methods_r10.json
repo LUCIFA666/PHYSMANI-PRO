@@ -1,0 +1,10 @@
+{
+  "videos_per_method_per_task": 1,
+  "methods": [
+    "cv_geometry",
+    "context_geometry",
+    "physmani"
+  ],
+  "selection": "fixed first official TEST manifest source independent of outcome",
+  "capture": "already observed frames only; encode after native cleanup"
+}

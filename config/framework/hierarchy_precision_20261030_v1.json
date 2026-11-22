@@ -1,0 +1,22 @@
+{
+  "version": "hierarchy_precision_20261030_v1",
+  "seed": 20261030,
+  "epochs": 120,
+  "skill_batch_size": 128,
+  "candidate_batch_size": 64,
+  "learning_rate": 0.0003,
+  "weight_decay": 0.001,
+  "gradient_clip_norm": 5.0,
+  "target_error_m": 0.03,
+  "maximum_error_m": 0.05,
+  "validation_scope": "all declared offline validation samples for each head and task; no Native or TEST selection",
+  "qualification": "each observed candidate and TCP sample must be within 0.05m; report mean goal 0.03m separately; missing or nonfinite samples fail",
+  "checkpoint_selection": "minimize worst task/head fraction above 0.05m, then worst task/head maximum, then worst task/head mean on offline validation only",
+  "original_GRU_context_weights": "unchanged",
+  "scene_classifier": "frozen v1 causal RGBD encoder, no task metadata input",
+  "trainable": ["spatial_geometry_branch", "shared_skill_embedding", "candidate_transformer", "skill_policy", "candidate_relative_time_head"],
+  "point_score_semantics": "expert_handoff_point_imitation_probability_not_native_success_probability",
+  "time_label": "max(first_expert_close_frame-anchor_frame,0)*0.05; nominal cache frame clock, not verified original HDF5 timestamp",
+  "TEST_used_for_training_or_selection": false,
+  "native_launch_requires_precision_gate": true
+}

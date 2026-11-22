@@ -1,0 +1,309 @@
+"""Geometry actor with persistent verified Hermite references and direct setpoints.
+
+Observation, learned models, native physics and the original sampled motion
+gates are shared with the preceding feedback backend. Installation order is
+measured-feedback controller, causal retarget, then persistent reference stream.
+"""
+from copy import deepcopy
+from contextlib import ExitStack
+from .specs import TASK_SPECS
+from pathlib import Path
+from types import MethodType
+
+from .evaluation import digest, file_sha
+from .protocol import MultitaskProtocolError
+from . import factory
+from scripts.evaluate_multitask_case_r10 import NativeBackend
+
+OVERLAY_SCHEMA = 'r10_geometry_continuous_reference_direct_policy_overlay_v55'
+IDENTITY_SCHEMA = 'r10_geometry_continuous_reference_direct_continuation_v55'
+METHODS = ('cv_geometry', 'context_geometry')
+
+
+def require(value, message):
+    if not value:
+        raise MultitaskProtocolError(message)
+
+
+def _source(root, path):
+    path = Path(path).resolve()
+    require(path.is_relative_to(root), 'persistent-reference source leaves the project')
+    return dict(path=str(path.relative_to(root)), sha256=file_sha(path))
+
+
+def persistent_reference_policy_overlay(root, feedback_configuration, reference_configuration, retarget_configuration):
+    """Bind the normalized control settings and all overlay sources."""
+    from .feedback_interaction import feedback_binding
+    from .task_reference_v37 import continuous_reference_binding
+    from .causal_retarget_interaction import retarget_binding
+    root = Path(root).resolve()
+    feedback = feedback_binding(feedback_configuration)
+    reference = continuous_reference_binding(reference_configuration)
+    retarget = retarget_binding(retarget_configuration)
+    return dict(schema=OVERLAY_SCHEMA,
+        configurations=dict(feedback=deepcopy(feedback['normalized_config']),
+            persistent_reference=deepcopy(reference['normalized_config']),
+            causal_retarget=deepcopy(retarget['normalized_config'])),
+        sources=dict(actor_backend=_source(root, __file__),
+            feedback_controller=_source(root, root / 'our_mani/multitask/feedback_interaction.py'),
+            persistent_reference=_source(root, root / 'our_mani/multitask/task_reference_v37.py'),
+            direct_dispatch=_source(root, root / 'our_mani/multitask/task_dispatch_v43.py'),
+            causal_retarget=_source(root, root / 'our_mani/multitask/causal_retarget_interaction.py'),
+            bounded_approach=_source(root, root / 'our_mani/multitask/bounded_approach_v36.py'),
+            task_spherical_geometry=_source(root,root/'our_mani/multitask/task_spherical_enclosure_v18.py'),
+            public_sphere_support=_source(root,root/'our_mani/multitask/supported_sphere_attachment_v10.py'),
+            colour_runtime=_source(root,root/'our_mani/multitask/colour_runtime_v18.py'),
+            terminal_candidates=_source(root,root/'our_mani/multitask/terminal_candidate_generator_v51.py'),
+            public_held_mesh=_source(root,root/'our_mani/multitask/public_held_mesh_v33.py'),
+            ring_runtime=_source(root,root/'our_mani/multitask/ring_runtime_v25.py'),
+            full_TRAIN_ring_proof=_source(root,root/'our_mani/multitask/ring_affordance_v21.py'),
+            placement_clearance=_source(root,root/'our_mani/multitask/placement_clearance_v50.py'),
+            remove_runtime=_source(root,root/'our_mani/multitask/remove_runtime_v48.py'),
+            ring_operational_gauge=_source(root,root/'our_mani/multitask/ring_operational_gauge_v54.py')))
+
+
+def verify_persistent_reference_policy_overlay(root, protocol):
+    overlay = protocol.get('policy_overlay')
+    require(isinstance(overlay, dict)
+        and set(overlay) == {'schema', 'configurations', 'sources'}
+        and overlay.get('schema') == OVERLAY_SCHEMA,
+        'explicit geometry feedback/persistent-reference overlay is required')
+    configurations = overlay['configurations']
+    require(isinstance(configurations, dict) and set(configurations) == {'feedback', 'persistent_reference', 'causal_retarget'},
+        'all normalized controller configurations are required')
+    expected = persistent_reference_policy_overlay(root, configurations['feedback'], configurations['persistent_reference'], configurations['causal_retarget'])
+    require(overlay == expected, 'persistent-reference source or normalized configurations changed')
+    require(protocol.get('dt') == .05 and protocol.get('simulation_seconds') == 10.,
+        'persistent-reference overlay preserves the original 50ms/10-second task budget')
+    return expected
+
+
+def persistent_reference_continuation_identity(root, protocol, task, predictor, library, candidate, mpc):
+    require(predictor in ('cv', 'context'), 'persistent-reference predictor must be CV or Context')
+    overlay = verify_persistent_reference_policy_overlay(root, protocol)
+    task_bindings={}
+    if TASK_SPECS[task].family=='moving_basketball_in_hoop':
+        from .task_spherical_enclosure_v18 import geometry_binding
+        geometry=geometry_binding(root,protocol,task)
+        require(protocol.get('task_spherical_geometry_v18',{}).get(task)==geometry,'freeze exact task sphere geometry')
+        task_bindings['spherical_geometry']=geometry
+        from .supported_sphere_attachment_v10 import binding as support_binding
+        support=support_binding(root)
+        require(protocol.get('public_support_attachment_v10')==support,'freeze current public support/attachment source')
+        task_bindings['public_support_attachment']=support
+    if TASK_SPECS[task].family in ('insert_onto_rotating_peg','push_moving_button'):
+        from .colour_runtime_v18 import binding as colour_binding
+        colour=colour_binding(root,protocol['learned_artifacts'][task]['colour'])
+        require(protocol.get('colour_runtime_v18')==colour,'freeze exact current-public colour adapter')
+        task_bindings['colour_runtime']=colour
+    if task in ('put_rubbish_in_moving_bin','put_rubbish_in_moving_bin_high_speed'):
+        from .public_held_mesh_v33 import binding as held_binding
+        held=held_binding(root,protocol,task)
+        require(protocol.get('public_held_mesh_v33',{}).get(task)==held,'freeze public held mesh binding')
+        task_bindings['held_mesh']=held
+    if task=='insert_onto_rotating_peg':
+        from .ring_runtime_v25 import binding as ring_binding
+        ring=ring_binding(root,protocol['ring_affordances'][task],protocol['ring_runtime_v25'][task]['replay_report'])
+        require(protocol['ring_runtime_v25'][task]==ring,'freeze complete TRAIN ring runtime binding')
+        task_bindings['ring_runtime']=ring
+    if task in ('put_rubbish_in_moving_bin','put_rubbish_in_moving_bin_high_speed'):
+        from .placement_clearance_v50 import binding as clearance_binding
+        clear=clearance_binding(root,protocol,task)
+        require(protocol.get('placement_clearance_v50',{}).get(task)==clear,'freeze clearance placement goal')
+        task_bindings['placement_clearance']=clear
+    if task in ('remove_cups_from_rotating_frame','remove_cups_from_rotating_frame_high_speed'):
+        from .remove_runtime_v48 import binding as remove_binding
+        remove=remove_binding(root,protocol,task)
+        require(protocol['remove_runtime_v48'][task]['binding']==remove,'freeze public remove binding')
+        task_bindings['remove_runtime']=remove
+    if task=='insert_onto_rotating_peg':
+        from .ring_operational_gauge_v54 import binding as gauge_binding
+        gauge=gauge_binding(root,protocol,task)
+        require(protocol.get('ring_operational_gauge_v54',{}).get(task)==gauge,'freeze certified operational gauge')
+        task_bindings['ring_operational_gauge']=gauge
+    original = factory.continuation_identity(root, protocol, task, predictor, library, candidate, mpc)
+    value = dict(version=IDENTITY_SCHEMA, task=task, predictor=predictor,
+        original_continuation=original, policy_overlay=overlay,task_bindings=task_bindings,
+        continuation_selection_policy='geometry', downstream_selection_policy='geometry',
+        original_physics_and_observation_sources_unchanged=True,
+        installation_order=['observed_feedback_controller', 'continuous_reference_with_retarget_before_commit'],
+        fresh_public_sampled_collision=True, actual_tracking_guaranteed=False)
+    return dict(value, sha256=digest(value))
+
+
+def persistent_reference_actor_model_preflight(root, prepared):
+    """Check CPU model loaders and frozen executable bindings before native use."""
+    from .interaction import InteractionLibrary, CandidateConfig, MPCConfig
+    from scripts.evaluate_multitask_case_r10 import locked_digest
+    root = Path(root).resolve()
+    args, config, files = prepared['args'], prepared['config'], prepared['files']
+    require(args.method in METHODS, 'persistent-reference backend accepts geometry methods only')
+    require(args.task in TASK_SPECS, 'only the fourteen registered multitask actors are accepted')
+    overlay = verify_persistent_reference_policy_overlay(root, config)
+    for value in overlay['sources'].values():
+        require(locked_digest(root / value['path'], files) == value['sha256'],
+            'persistent-reference executable source omitted from actual frozen lock')
+    from .causal_retarget_interaction import retarget_binding
+    from .task_reference_v37 import continuous_reference_binding
+    for dependencies in (retarget_binding(overlay['configurations']['causal_retarget']),
+            continuous_reference_binding(overlay['configurations']['persistent_reference'])):
+        for name, checksum in dependencies['original_sources_sha256'].items():
+            require(locked_digest(root / name, files) == checksum,
+                'controller original dependency differs from frozen inputs')
+    artifacts = config['learned_artifacts'][args.task]
+    if TASK_SPECS[args.task].family in ('insert_onto_rotating_peg','push_moving_button'):
+        for path,checksum in config['colour_runtime_v18']['inputs_sha256'].items():
+            require(locked_digest(Path(path),files)==checksum,'colour runtime evidence omitted from actual lock')
+    library = InteractionLibrary.load(factory.artifact_path(root, artifacts['interaction']))
+    require(library.task_spec.task_name == args.task, 'persistent-reference fitted library task differs')
+    fit = library.metadata.get('fit_configuration', {})
+    require(library.metadata.get('development_support_override') is False
+        and fit.get('development_only') is False and fit.get('minimum_completed_parent_sources', 0) >= 8,
+        'persistent-reference actor retains the original completed-TRAIN support gate')
+    predictor = args.method.split('_', 1)[0]
+    identity = persistent_reference_continuation_identity(root, config, args.task, predictor, library,
+        CandidateConfig(**config['candidate_config']), MPCConfig(**config['mpc_config']))
+    require(config.get('continuation_identities', {}).get(args.task, {}).get(predictor) == identity['sha256'],
+        'freeze the actual feedback/persistent-reference continuation identity')
+    if args.task=='insert_onto_rotating_peg':
+        for name,checksum in config['ring_runtime_v25'][args.task]['inputs_sha256'].items():
+            require(locked_digest(root/name,files)==checksum,'ring complete proof input missing from actual lock')
+    context = None
+    if predictor == 'context':
+        from .context_se3 import MultiBodyContextDynamics
+        context = MultiBodyContextDynamics(factory.artifact_path(root, config['context_checkpoint']))
+        source = context.metadata['training_source_manifest']
+        locked_digest(context.path.parent / source['path_relative_to_checkpoint'], files)
+    return dict(interaction_library_sha256=library.sha256, continuation_identity=identity,
+        policy_overlay=overlay, context_checkpoint_sha256=None if context is None else context.checkpoint_sha256,
+        all_loaders_CPU_only=True, native_started=False, geometry_only=True)
+
+
+def create_persistent_reference_actor(root, env, protocol, method, descriptions, *,
+        purpose='evaluation', exploration_seed=None):
+    """Keep original observation/physics and install both wrappers before act()."""
+    from .interaction import InteractionLibrary, CandidateConfig, MPCConfig, InteractionController
+    from .feedback_interaction import install_feedback_controller
+    from .task_reference_v37 import install_continuous_reference
+    require(method in METHODS, 'persistent-reference backend accepts geometry methods only')
+    predictor, ranking = method.split('_', 1)
+    require(exploration_seed is None or purpose == 'train_collection',
+        'first-candidate exploration remains TRAIN geometry only')
+    task = env.spec.task_name
+    library = InteractionLibrary.load(factory.artifact_path(root, protocol['learned_artifacts'][task]['interaction']))
+    candidate, mpc = CandidateConfig(**protocol['candidate_config']), MPCConfig(**protocol['mpc_config'])
+    extended = persistent_reference_continuation_identity(root, protocol, task, predictor, library, candidate, mpc)
+    require(protocol.get('continuation_identities', {}).get(task, {}).get(predictor) == extended['sha256'],
+        'actual persistent-reference actor continuation differs from its frozen protocol')
+    base_protocol = deepcopy(protocol)
+    base_protocol.setdefault('continuation_identities', {}).setdefault(task, {})[predictor] = extended['original_continuation']['sha256']
+    with ExitStack() as scopes:
+        if task in ('put_rubbish_in_moving_bin','put_rubbish_in_moving_bin_high_speed'):
+            from .public_held_mesh_v33 import install_registration as register_held
+            scopes.enter_context(register_held(env.map_service,protocol,root,task))
+        if task=='insert_onto_rotating_peg':
+            from .ring_runtime_v25 import factory_ring_scope
+            scopes.enter_context(factory_ring_scope(root,protocol,task))
+        if env.spec.family=='moving_basketball_in_hoop':
+            from .task_spherical_enclosure_v18 import install_registration,bind_geometry_port
+            scopes.enter_context(install_registration(env.map_service,protocol,root,task))
+        if env.spec.family in ('insert_onto_rotating_peg','push_moving_button'):
+            from .colour_runtime_v18 import factory_colour_scope
+            scopes.enter_context(factory_colour_scope(root,protocol,task,purpose=purpose))
+        actor,original=factory.create_actor(root,env,base_protocol,method,descriptions,purpose=purpose,exploration_seed=exploration_seed)
+    if env.spec.family=='moving_basketball_in_hoop':
+        bind_geometry_port(actor)
+        from .supported_sphere_attachment_v10 import install as install_public_support
+        install_public_support(actor,protocol,root)
+    if task in ('put_rubbish_in_moving_bin','put_rubbish_in_moving_bin_high_speed'):
+        from .public_held_mesh_v33 import install as install_held
+        install_held(actor,protocol,root,task)
+    require(original == extended['original_continuation'], 'original actor construction changed')
+    if task in ('remove_cups_from_rotating_frame','remove_cups_from_rotating_frame_high_speed'):
+        from .remove_runtime_v48 import install as install_remove
+        install_remove(actor,protocol,root,task)
+    old = actor.controller
+    from .terminal_candidate_generator_v51 import TerminalCandidateGenerator
+    previous_generator=old.generator
+    terminal_generator=TerminalCandidateGenerator(old.library,previous_generator.reachability,previous_generator.collision_check,
+        previous_generator.config,ring_affordance=previous_generator.ring_affordance,
+        allow_development_ring_affordance=previous_generator.allow_development_ring_affordance)
+    actor.controller = InteractionController(old.library, terminal_generator, old.mpc,
+        predictor=predictor, ranking=ranking, continuation_sha256=extended['sha256'], success_model=None,
+        first_candidate_sampler=old.first_candidate_sampler,
+        collection_purpose='train' if purpose == 'train_collection' else None,
+        gripper_timing_config=old.gripper_timing_config)
+    if task in ('put_rubbish_in_moving_bin','put_rubbish_in_moving_bin_high_speed'):
+        from .placement_clearance_v50 import PlacementClearance
+        clear=PlacementClearance(actor,protocol,root,task);terminal_generator.placement_clearance=clear
+    actor.ranking = ranking
+    configurations = extended['policy_overlay']['configurations']
+    if task=='insert_onto_rotating_peg':
+        from .ring_operational_gauge_v54 import install as install_ring_gauge
+        install_ring_gauge(actor,protocol,root,task)
+    install_feedback_controller(actor, configurations['feedback'])
+    install_continuous_reference(actor, configurations['persistent_reference'],
+        retarget_config=configurations['causal_retarget'])
+    if task in ('put_rubbish_in_moving_bin','put_rubbish_in_moving_bin_high_speed'):
+        clear.install_completion(actor.controller)
+        require(actor.controller._phase_done.__self__ is actor.controller,'completion wrapper must bind the final actual controller')
+    # Record only already supplied state; no extra camera, FK or physics query.
+    observed_trace = []
+    previous_step = actor.controller.step
+    def traced_step(controller, state, forecast, remaining_seconds):
+        command = previous_step(state, forecast, remaining_seconds)
+        ball = state.bodies.get(env.spec.primary_manipulated_roles[0])
+        goal = controller.goal
+        observed_trace.append(dict(
+            time=float(state.robot.timestamp),
+            tcp_xyzw=state.robot.pose.xyzw().tolist(),
+            joints=state.robot.joints.tolist(),
+            joint_velocities=state.robot.joint_velocities.tolist(),
+            manipulated_body_xyzw=None if ball is None else ball.pose.xyzw().tolist(),
+            manipulated_body_visible=None if ball is None else bool(ball.visible),
+            manipulated_body_observed_at=None if ball is None else float(ball.timestamp),
+            phase_index=int(controller.phase_index),
+            active_candidate_id=None if goal is None else goal.candidate_id,
+            committed_reference_xyzw=None if goal is None else goal.reference_pose.xyzw().tolist(),
+            phase_epoch=None if goal is None else float(goal.selected_at),
+            phase_deadline=None if goal is None else float(goal.selected_at + goal.phase_budget),
+            observed_contact=bool(state.robot.contact),
+            observed_gripper_open=bool(state.robot.gripper_open),
+            requested_opening_before_outer_dispatch=actor.requested_opening,
+            public_motion_modes={key:info.get('motion_mode') for key,info in state.perception_metadata.get('bodies',{}).items()},
+            controller_diagnostics=deepcopy(controller.last_diagnostics),
+            inner_proposed_command=command.get('command'),
+            inner_proposal_is_not_outer_actual_issued_receipt=True))
+        return command
+    actor.controller.step = MethodType(traced_step, actor.controller)
+    previous_metrics = actor.metrics_report
+    def traced_metrics(instance):
+        report = dict(previous_metrics())
+        report['executor_observed_state_trace'] = deepcopy(observed_trace)
+        return report
+    actor.metrics_report = MethodType(traced_metrics, actor)
+    return actor, extended
+
+
+class ContinuousReferenceNativeBackend(NativeBackend):
+    def __init__(self):
+        from .task_dispatch_v43 import CountedDirectDispatcher
+        self.direct_dispatcher = CountedDirectDispatcher()
+
+    def dispatch(self, env, command):
+        return self.direct_dispatcher.dispatch(env, command)
+
+    def actor(self, prepared, env, descriptions):
+        args = prepared['args']
+        root = Path(__file__).resolve().parents[2]
+        actor, identity = create_persistent_reference_actor(root, env, prepared['config'], args.method, descriptions,
+            purpose='train_collection' if args.split == 'train' else
+                'validation_collection' if args.split == 'validation' else 'evaluation',
+            exploration_seed=args.exploration_seed)
+        self.direct_dispatcher.bind_manager(actor.continuous_reference_manager)
+        previous_metrics = actor.metrics_report
+        dispatcher = self.direct_dispatcher
+        def metrics(instance):
+            return dict(previous_metrics(), task_dispatch_v43=dispatcher.receipt())
+        actor.metrics_report = MethodType(metrics, actor)
+        return actor, identity

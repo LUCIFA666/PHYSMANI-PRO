@@ -1,0 +1,205 @@
+{
+  "schema": "Cube_native_contact_feedback_frozen_heldout4_20261104_v1",
+  "reference": {
+    "path": "config/framework/P4_position_dwell_v72_development_canaries_v1/00_val_static.json",
+    "sha256": "ebc11b7da749556482bc0167d8683714acec9dd29816d39122386a066362fa13"
+  },
+  "baseline_execution_plan": {
+    "path": "config/framework/cube_v72_live_20261104_v1/plan.json",
+    "sha256": "7d6bd9f31282995f64e418994b720405de1e98a7c8a50928320760e7914a0f3b"
+  },
+  "preparation_only": false,
+  "execution_authorized": true,
+  "formal_VAL_TEST": false,
+  "native_repo": "/home/ubuntu/桌面/phsimani/PhysMani",
+  "profiles_order": [
+    "native_contact_matched"
+  ],
+  "cases": [
+    {
+      "task": "pick_moving_target_on_the_table",
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/pick_moving_target_on_the_table/all_variations/episodes/episode0/data.h5",
+      "native_source_sha256": "39486843383652996da289048d8d5220e27c64ba55821dc00f4e536ab46f36cd",
+      "native_scene_sha256": "65a2ce9740f2e6104082aa6a541b88eaefdadf20f8dc5880db67d7b434a5337a",
+      "id": "Cube_native_generated_ordinary_seed2611042006",
+      "seed": 2611042006,
+      "variation": 0,
+      "simulation_seconds": 8.0,
+      "budget_ticks": 160,
+      "parent_id": "Cube_native_generated_ordinary_seed2611042006",
+      "source_parent_group": "Cube_native_generated_ordinary_seed2611042006",
+      "role": "heldout",
+      "speed_group": "ordinary",
+      "partition_row": {
+        "parent_id": "Cube_native_generated_ordinary_seed2611042006",
+        "source_parent_group": "Cube_native_generated_ordinary_seed2611042006",
+        "task": "pick_moving_target_on_the_table",
+        "speed_group": "ordinary",
+        "seed": 2611042006,
+        "variation": 0,
+        "role": "heldout",
+        "dataset_use": "train",
+        "generated_TRAIN_not_HDF_episode_replay": true,
+        "motion_capture_allowed": true,
+        "contact_teacher_capture_allowed": false,
+        "fit_allowed": false,
+        "selection_allowed": false,
+        "heldout_future_score_only": true,
+        "replace_after_failure": false,
+        "Native_motion_schedule_overwrite_allowed": false
+      }
+    },
+    {
+      "task": "pick_moving_target_on_the_table",
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/pick_moving_target_on_the_table/all_variations/episodes/episode0/data.h5",
+      "native_source_sha256": "39486843383652996da289048d8d5220e27c64ba55821dc00f4e536ab46f36cd",
+      "native_scene_sha256": "65a2ce9740f2e6104082aa6a541b88eaefdadf20f8dc5880db67d7b434a5337a",
+      "id": "Cube_native_generated_ordinary_seed2611042007",
+      "seed": 2611042007,
+      "variation": 0,
+      "simulation_seconds": 8.0,
+      "budget_ticks": 160,
+      "parent_id": "Cube_native_generated_ordinary_seed2611042007",
+      "source_parent_group": "Cube_native_generated_ordinary_seed2611042007",
+      "role": "heldout",
+      "speed_group": "ordinary",
+      "partition_row": {
+        "parent_id": "Cube_native_generated_ordinary_seed2611042007",
+        "source_parent_group": "Cube_native_generated_ordinary_seed2611042007",
+        "task": "pick_moving_target_on_the_table",
+        "speed_group": "ordinary",
+        "seed": 2611042007,
+        "variation": 0,
+        "role": "heldout",
+        "dataset_use": "train",
+        "generated_TRAIN_not_HDF_episode_replay": true,
+        "motion_capture_allowed": true,
+        "contact_teacher_capture_allowed": false,
+        "fit_allowed": false,
+        "selection_allowed": false,
+        "heldout_future_score_only": true,
+        "replace_after_failure": false,
+        "Native_motion_schedule_overwrite_allowed": false
+      }
+    },
+    {
+      "task": "pick_moving_target_on_the_table_high_speed",
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/pick_moving_target_on_the_table_high_speed/all_variations/episodes/episode100/data.h5",
+      "native_source_sha256": "51a16de1de230213e9bf798411c0286baa9125330cb0f344790891a9c3292bb7",
+      "native_scene_sha256": "8c0c2ca1537344cc7e7cf8292324bad1fc3e652cf655141169c750fd3479ab4c",
+      "id": "Cube_native_generated_high_speed_seed2611042106",
+      "seed": 2611042106,
+      "variation": 0,
+      "simulation_seconds": 8.0,
+      "budget_ticks": 160,
+      "parent_id": "Cube_native_generated_high_speed_seed2611042106",
+      "source_parent_group": "Cube_native_generated_high_speed_seed2611042106",
+      "role": "heldout",
+      "speed_group": "high_speed",
+      "partition_row": {
+        "parent_id": "Cube_native_generated_high_speed_seed2611042106",
+        "source_parent_group": "Cube_native_generated_high_speed_seed2611042106",
+        "task": "pick_moving_target_on_the_table_high_speed",
+        "speed_group": "high_speed",
+        "seed": 2611042106,
+        "variation": 0,
+        "role": "heldout",
+        "dataset_use": "train",
+        "generated_TRAIN_not_HDF_episode_replay": true,
+        "motion_capture_allowed": true,
+        "contact_teacher_capture_allowed": false,
+        "fit_allowed": false,
+        "selection_allowed": false,
+        "heldout_future_score_only": true,
+        "replace_after_failure": false,
+        "Native_motion_schedule_overwrite_allowed": false
+      }
+    },
+    {
+      "task": "pick_moving_target_on_the_table_high_speed",
+      "calibration_episode": "/home/ubuntu/桌面/phsimani/PhysMani/data/rmt/physmani_bench/train_package_compressed/pick_moving_target_on_the_table_high_speed/all_variations/episodes/episode100/data.h5",
+      "native_source_sha256": "51a16de1de230213e9bf798411c0286baa9125330cb0f344790891a9c3292bb7",
+      "native_scene_sha256": "8c0c2ca1537344cc7e7cf8292324bad1fc3e652cf655141169c750fd3479ab4c",
+      "id": "Cube_native_generated_high_speed_seed2611042107",
+      "seed": 2611042107,
+      "variation": 0,
+      "simulation_seconds": 8.0,
+      "budget_ticks": 160,
+      "parent_id": "Cube_native_generated_high_speed_seed2611042107",
+      "source_parent_group": "Cube_native_generated_high_speed_seed2611042107",
+      "role": "heldout",
+      "speed_group": "high_speed",
+      "partition_row": {
+        "parent_id": "Cube_native_generated_high_speed_seed2611042107",
+        "source_parent_group": "Cube_native_generated_high_speed_seed2611042107",
+        "task": "pick_moving_target_on_the_table_high_speed",
+        "speed_group": "high_speed",
+        "seed": 2611042107,
+        "variation": 0,
+        "role": "heldout",
+        "dataset_use": "train",
+        "generated_TRAIN_not_HDF_episode_replay": true,
+        "motion_capture_allowed": true,
+        "contact_teacher_capture_allowed": false,
+        "fit_allowed": false,
+        "selection_allowed": false,
+        "heldout_future_score_only": true,
+        "replace_after_failure": false,
+        "Native_motion_schedule_overwrite_allowed": false
+      }
+    }
+  ],
+  "reserved_profiles": {
+    "corrected_matched_reobserve": {
+      "enabled": false,
+      "reason": "requires separate add-only supervisor/runner protocol"
+    }
+  },
+  "all_cases_regardless_of_task_outcome": true,
+  "retry_or_replacement": false,
+  "control_policy": "Original public RGBD/GRU/candidate FREE search and collision checks; Native membership feedback for carry; Native task.success is sole episode success/termination criterion",
+  "native_motion": "native-generated actual task original init_episode/task.step; no customuniform overwrite",
+  "runtime_profile": "current_runtime_after_host_library_update; old_v820_OS_equivalence_not_claimed",
+  "motion_forecast": {
+    "checkpoint": "artifacts/framework/local_mpc_20261102/cube_motion_residual_training_run_v2/artifacts/fit200/selected.pt",
+    "sha256": "703bc89d4ff6f1460ed90530926fc8a869bf7df2d0530d3bb96161da04e5cf0c",
+    "evidence": [
+      {
+        "path": "artifacts/framework/local_mpc_20261102/cube_motion_residual_training_run_v2/artifacts/fit200/fit_status.json",
+        "sha256": "2d5ecbc447eaef298387dcbffdd775e09d843f60016cecd547ba187197893485"
+      }
+    ]
+  },
+  "candidate_profiles": {
+    "native_contact_matched": {
+      "checkpoint": "artifacts/framework/local_mpc_20261102/cube_native_success_candidate_training_run_v1/artifacts/fit150/selected.pt",
+      "sha256": "ea38ec8cdc36388e7eb682e962afdf5cf4b03e58373222484fdc34130f82f7f1",
+      "evidence": [
+        {
+          "path": "artifacts/framework/local_mpc_20261102/cube_native_success_candidate_training_run_v1/artifacts/fit150/fit_status.json",
+          "sha256": "a7a355ae6731dcdc6032540578bff95c09ac70a465ac2dd3f605291433dd4aed"
+        }
+      ]
+    }
+  },
+  "source_archive_contract": "all repository code/models/plans canonical ROOT-relative; seven external Native sources separate and never passed to repository archive",
+  "execution_scope": "Four independent generated heldout task execution tests, not official TEST640 package; no new fitting or selection from these outcomes",
+  "diagnostic_scope": "Exactly four predeclared generated-TRAIN heldout parents, frozen ea38 candidate/703 forecaster; no fit/selection or formal official TEST package",
+  "Root_authorization": "User: continue TRAIN VAL TEST and 修正, Native task.success only. Frozen703/ea38 and Native-contact controller chosen before these execution outcomes; preserve all4 heldout parents regardless of result.",
+  "episode_success_judge": "original_Native_task_success_any_actual_physics_tick",
+  "Native_contact_feedback_used": true,
+  "Native_target_pose_used_by_policy": false,
+  "visual_success_gate": false,
+  "success_protocol": {
+    "path": "config/framework/cube_native_success_protocol_20261104_v1/protocol.json",
+    "sha256": "cfa854179a187d70d4d5c5b002e71146f1573c406607c9b01ec60fc13fff9db1"
+  },
+  "partition": {
+    "path": "artifacts/framework/local_mpc_20261102/cube_matched_motion_candidate_partition_20261104_v1/partition.json",
+    "sha256": "38ac76250d382d36b3c28b01cc8551a25cc95edb850a3c21cc9bf1b47d3ade6a"
+  },
+  "heldout_evaluation_only": true,
+  "weights_locked_before_heldout_outcomes": true,
+  "prior_heldout_payloads_read": false,
+  "prior_heldout_recordings_read": false
+}

@@ -1,0 +1,150 @@
+{
+  "schema": "cube_revision_serial_phase_20261104_v1",
+  "phase_id": "cube_motion_only_native_20261104_v1",
+  "method_sources": {
+    "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/cube_motion_only_native_preparation_v1/method_sources.json",
+    "sha256": "1433cbb2679fa18851e91bfd4cd87b513225a02dec78ab537927c808348bdc56"
+  },
+  "output_root": "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/cube_motion_only_native_run_v1",
+  "jobs": [
+    {
+      "id": "ordinary_00",
+      "output": "/home/ubuntu/桌面/our-mani/runtime/framework/cube_motion_only_native_20261104_v1/corrected_legacy/ordinary_00",
+      "native": true,
+      "cpu": false,
+      "argv": [
+        "scripts/launch_cube_motion_only_native_20261104_v1.py",
+        "--plan",
+        "/home/ubuntu/桌面/our-mani/config/framework/cube_motion_only_native_20261104_v1/plan.json",
+        "--case-id",
+        "ordinary_00",
+        "--profile",
+        "corrected_legacy",
+        "--source-freeze",
+        "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/cube_motion_only_native_preparation_v1/execution_source_freeze.json",
+        "--source-freeze-sha256",
+        "0294a55b38010721e0170e7bd6636c11e8bb302b4d058456b76b255278782fd8",
+        "--output",
+        "/home/ubuntu/桌面/our-mani/runtime/framework/cube_motion_only_native_20261104_v1/corrected_legacy/ordinary_00",
+        "--execute"
+      ],
+      "json_checks": [
+        {
+          "path": "/home/ubuntu/桌面/our-mani/runtime/framework/cube_motion_only_native_20261104_v1/corrected_legacy/ordinary_00/worker_exit.json",
+          "fields": {
+            "exit_code": 0,
+            "native_closed": true,
+            "result_recorded": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "ordinary_01",
+      "output": "/home/ubuntu/桌面/our-mani/runtime/framework/cube_motion_only_native_20261104_v1/corrected_legacy/ordinary_01",
+      "native": true,
+      "cpu": false,
+      "argv": [
+        "scripts/launch_cube_motion_only_native_20261104_v1.py",
+        "--plan",
+        "/home/ubuntu/桌面/our-mani/config/framework/cube_motion_only_native_20261104_v1/plan.json",
+        "--case-id",
+        "ordinary_01",
+        "--profile",
+        "corrected_legacy",
+        "--source-freeze",
+        "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/cube_motion_only_native_preparation_v1/execution_source_freeze.json",
+        "--source-freeze-sha256",
+        "0294a55b38010721e0170e7bd6636c11e8bb302b4d058456b76b255278782fd8",
+        "--output",
+        "/home/ubuntu/桌面/our-mani/runtime/framework/cube_motion_only_native_20261104_v1/corrected_legacy/ordinary_01",
+        "--execute"
+      ],
+      "json_checks": [
+        {
+          "path": "/home/ubuntu/桌面/our-mani/runtime/framework/cube_motion_only_native_20261104_v1/corrected_legacy/ordinary_01/worker_exit.json",
+          "fields": {
+            "exit_code": 0,
+            "native_closed": true,
+            "result_recorded": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "highspeed_00",
+      "output": "/home/ubuntu/桌面/our-mani/runtime/framework/cube_motion_only_native_20261104_v1/corrected_legacy/highspeed_00",
+      "native": true,
+      "cpu": false,
+      "argv": [
+        "scripts/launch_cube_motion_only_native_20261104_v1.py",
+        "--plan",
+        "/home/ubuntu/桌面/our-mani/config/framework/cube_motion_only_native_20261104_v1/plan.json",
+        "--case-id",
+        "highspeed_00",
+        "--profile",
+        "corrected_legacy",
+        "--source-freeze",
+        "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/cube_motion_only_native_preparation_v1/execution_source_freeze.json",
+        "--source-freeze-sha256",
+        "0294a55b38010721e0170e7bd6636c11e8bb302b4d058456b76b255278782fd8",
+        "--output",
+        "/home/ubuntu/桌面/our-mani/runtime/framework/cube_motion_only_native_20261104_v1/corrected_legacy/highspeed_00",
+        "--execute"
+      ],
+      "json_checks": [
+        {
+          "path": "/home/ubuntu/桌面/our-mani/runtime/framework/cube_motion_only_native_20261104_v1/corrected_legacy/highspeed_00/worker_exit.json",
+          "fields": {
+            "exit_code": 0,
+            "native_closed": true,
+            "result_recorded": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "highspeed_01",
+      "output": "/home/ubuntu/桌面/our-mani/runtime/framework/cube_motion_only_native_20261104_v1/corrected_legacy/highspeed_01",
+      "native": true,
+      "cpu": false,
+      "argv": [
+        "scripts/launch_cube_motion_only_native_20261104_v1.py",
+        "--plan",
+        "/home/ubuntu/桌面/our-mani/config/framework/cube_motion_only_native_20261104_v1/plan.json",
+        "--case-id",
+        "highspeed_01",
+        "--profile",
+        "corrected_legacy",
+        "--source-freeze",
+        "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/cube_motion_only_native_preparation_v1/execution_source_freeze.json",
+        "--source-freeze-sha256",
+        "0294a55b38010721e0170e7bd6636c11e8bb302b4d058456b76b255278782fd8",
+        "--output",
+        "/home/ubuntu/桌面/our-mani/runtime/framework/cube_motion_only_native_20261104_v1/corrected_legacy/highspeed_01",
+        "--execute"
+      ],
+      "json_checks": [
+        {
+          "path": "/home/ubuntu/桌面/our-mani/runtime/framework/cube_motion_only_native_20261104_v1/corrected_legacy/highspeed_01/worker_exit.json",
+          "fields": {
+            "exit_code": 0,
+            "native_closed": true,
+            "result_recorded": true
+          }
+        }
+      ]
+    }
+  ],
+  "python": "/home/ubuntu/桌面/our-mani/.conda-env/bin/python",
+  "stage_timeout_seconds": {
+    "ordinary_00": 900,
+    "ordinary_01": 900,
+    "highspeed_00": 900,
+    "highspeed_01": 900
+  },
+  "stop_grace_seconds": 30,
+  "poll_seconds": 0.5,
+  "wait_timeout_seconds": 900,
+  "CF_output_root": "/home/ubuntu/桌面/our-mani/runtime/framework/cube_motion_only_native_20261104_v1"
+}

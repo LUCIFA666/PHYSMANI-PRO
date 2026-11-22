@@ -1,0 +1,282 @@
+{
+  "schema": "cube_revision_serial_phase_20261104_v2",
+  "phase_id": "cube_native_contact_paired8_20261104_v1",
+  "method_sources": {
+    "path": "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/cube_native_contact_paired8_preparation_v1/method_sources.json",
+    "sha256": "4941a6be4973e8b159e213cf6525261e4cc10d7966679b9e5e36c93ba08d2307"
+  },
+  "output_root": "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/cube_native_contact_paired8_run_v1",
+  "jobs": [
+    {
+      "id": "native_contact_legacy_ordinary_00",
+      "output": "/home/ubuntu/桌面/our-mani/runtime/framework/cube_native_contact_worker_20261104_v1/native_contact_legacy/ordinary_00",
+      "native": true,
+      "cpu": false,
+      "argv": [
+        "scripts/launch_cube_native_contact_worker_20261104_v1.py",
+        "--plan",
+        "/home/ubuntu/桌面/our-mani/config/framework/cube_native_contact_worker_20261104_v1/plan.json",
+        "--case-id",
+        "ordinary_00",
+        "--profile",
+        "native_contact_legacy",
+        "--source-freeze",
+        "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/cube_native_contact_paired8_preparation_v1/execution_source_freeze.json",
+        "--source-freeze-sha256",
+        "6b8bea7c3290be0f9ae61e1fd11b6fa7d2e5b1b54d7dcee0e890b4a79438c8e3",
+        "--output",
+        "/home/ubuntu/桌面/our-mani/runtime/framework/cube_native_contact_worker_20261104_v1/native_contact_legacy/ordinary_00",
+        "--execute"
+      ],
+      "json_checks": [
+        {
+          "path": "/home/ubuntu/桌面/our-mani/runtime/framework/cube_native_contact_worker_20261104_v1/native_contact_legacy/ordinary_00/worker_exit.json",
+          "fields": {
+            "exit_code": 0,
+            "native_closed": true,
+            "result_recorded": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "native_contact_legacy_ordinary_01",
+      "output": "/home/ubuntu/桌面/our-mani/runtime/framework/cube_native_contact_worker_20261104_v1/native_contact_legacy/ordinary_01",
+      "native": true,
+      "cpu": false,
+      "argv": [
+        "scripts/launch_cube_native_contact_worker_20261104_v1.py",
+        "--plan",
+        "/home/ubuntu/桌面/our-mani/config/framework/cube_native_contact_worker_20261104_v1/plan.json",
+        "--case-id",
+        "ordinary_01",
+        "--profile",
+        "native_contact_legacy",
+        "--source-freeze",
+        "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/cube_native_contact_paired8_preparation_v1/execution_source_freeze.json",
+        "--source-freeze-sha256",
+        "6b8bea7c3290be0f9ae61e1fd11b6fa7d2e5b1b54d7dcee0e890b4a79438c8e3",
+        "--output",
+        "/home/ubuntu/桌面/our-mani/runtime/framework/cube_native_contact_worker_20261104_v1/native_contact_legacy/ordinary_01",
+        "--execute"
+      ],
+      "json_checks": [
+        {
+          "path": "/home/ubuntu/桌面/our-mani/runtime/framework/cube_native_contact_worker_20261104_v1/native_contact_legacy/ordinary_01/worker_exit.json",
+          "fields": {
+            "exit_code": 0,
+            "native_closed": true,
+            "result_recorded": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "native_contact_legacy_highspeed_00",
+      "output": "/home/ubuntu/桌面/our-mani/runtime/framework/cube_native_contact_worker_20261104_v1/native_contact_legacy/highspeed_00",
+      "native": true,
+      "cpu": false,
+      "argv": [
+        "scripts/launch_cube_native_contact_worker_20261104_v1.py",
+        "--plan",
+        "/home/ubuntu/桌面/our-mani/config/framework/cube_native_contact_worker_20261104_v1/plan.json",
+        "--case-id",
+        "highspeed_00",
+        "--profile",
+        "native_contact_legacy",
+        "--source-freeze",
+        "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/cube_native_contact_paired8_preparation_v1/execution_source_freeze.json",
+        "--source-freeze-sha256",
+        "6b8bea7c3290be0f9ae61e1fd11b6fa7d2e5b1b54d7dcee0e890b4a79438c8e3",
+        "--output",
+        "/home/ubuntu/桌面/our-mani/runtime/framework/cube_native_contact_worker_20261104_v1/native_contact_legacy/highspeed_00",
+        "--execute"
+      ],
+      "json_checks": [
+        {
+          "path": "/home/ubuntu/桌面/our-mani/runtime/framework/cube_native_contact_worker_20261104_v1/native_contact_legacy/highspeed_00/worker_exit.json",
+          "fields": {
+            "exit_code": 0,
+            "native_closed": true,
+            "result_recorded": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "native_contact_legacy_highspeed_01",
+      "output": "/home/ubuntu/桌面/our-mani/runtime/framework/cube_native_contact_worker_20261104_v1/native_contact_legacy/highspeed_01",
+      "native": true,
+      "cpu": false,
+      "argv": [
+        "scripts/launch_cube_native_contact_worker_20261104_v1.py",
+        "--plan",
+        "/home/ubuntu/桌面/our-mani/config/framework/cube_native_contact_worker_20261104_v1/plan.json",
+        "--case-id",
+        "highspeed_01",
+        "--profile",
+        "native_contact_legacy",
+        "--source-freeze",
+        "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/cube_native_contact_paired8_preparation_v1/execution_source_freeze.json",
+        "--source-freeze-sha256",
+        "6b8bea7c3290be0f9ae61e1fd11b6fa7d2e5b1b54d7dcee0e890b4a79438c8e3",
+        "--output",
+        "/home/ubuntu/桌面/our-mani/runtime/framework/cube_native_contact_worker_20261104_v1/native_contact_legacy/highspeed_01",
+        "--execute"
+      ],
+      "json_checks": [
+        {
+          "path": "/home/ubuntu/桌面/our-mani/runtime/framework/cube_native_contact_worker_20261104_v1/native_contact_legacy/highspeed_01/worker_exit.json",
+          "fields": {
+            "exit_code": 0,
+            "native_closed": true,
+            "result_recorded": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "native_contact_matched_ordinary_00",
+      "output": "/home/ubuntu/桌面/our-mani/runtime/framework/cube_native_contact_worker_20261104_v1/native_contact_matched/ordinary_00",
+      "native": true,
+      "cpu": false,
+      "argv": [
+        "scripts/launch_cube_native_contact_worker_20261104_v1.py",
+        "--plan",
+        "/home/ubuntu/桌面/our-mani/config/framework/cube_native_contact_worker_20261104_v1/plan.json",
+        "--case-id",
+        "ordinary_00",
+        "--profile",
+        "native_contact_matched",
+        "--source-freeze",
+        "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/cube_native_contact_paired8_preparation_v1/execution_source_freeze.json",
+        "--source-freeze-sha256",
+        "6b8bea7c3290be0f9ae61e1fd11b6fa7d2e5b1b54d7dcee0e890b4a79438c8e3",
+        "--output",
+        "/home/ubuntu/桌面/our-mani/runtime/framework/cube_native_contact_worker_20261104_v1/native_contact_matched/ordinary_00",
+        "--execute"
+      ],
+      "json_checks": [
+        {
+          "path": "/home/ubuntu/桌面/our-mani/runtime/framework/cube_native_contact_worker_20261104_v1/native_contact_matched/ordinary_00/worker_exit.json",
+          "fields": {
+            "exit_code": 0,
+            "native_closed": true,
+            "result_recorded": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "native_contact_matched_ordinary_01",
+      "output": "/home/ubuntu/桌面/our-mani/runtime/framework/cube_native_contact_worker_20261104_v1/native_contact_matched/ordinary_01",
+      "native": true,
+      "cpu": false,
+      "argv": [
+        "scripts/launch_cube_native_contact_worker_20261104_v1.py",
+        "--plan",
+        "/home/ubuntu/桌面/our-mani/config/framework/cube_native_contact_worker_20261104_v1/plan.json",
+        "--case-id",
+        "ordinary_01",
+        "--profile",
+        "native_contact_matched",
+        "--source-freeze",
+        "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/cube_native_contact_paired8_preparation_v1/execution_source_freeze.json",
+        "--source-freeze-sha256",
+        "6b8bea7c3290be0f9ae61e1fd11b6fa7d2e5b1b54d7dcee0e890b4a79438c8e3",
+        "--output",
+        "/home/ubuntu/桌面/our-mani/runtime/framework/cube_native_contact_worker_20261104_v1/native_contact_matched/ordinary_01",
+        "--execute"
+      ],
+      "json_checks": [
+        {
+          "path": "/home/ubuntu/桌面/our-mani/runtime/framework/cube_native_contact_worker_20261104_v1/native_contact_matched/ordinary_01/worker_exit.json",
+          "fields": {
+            "exit_code": 0,
+            "native_closed": true,
+            "result_recorded": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "native_contact_matched_highspeed_00",
+      "output": "/home/ubuntu/桌面/our-mani/runtime/framework/cube_native_contact_worker_20261104_v1/native_contact_matched/highspeed_00",
+      "native": true,
+      "cpu": false,
+      "argv": [
+        "scripts/launch_cube_native_contact_worker_20261104_v1.py",
+        "--plan",
+        "/home/ubuntu/桌面/our-mani/config/framework/cube_native_contact_worker_20261104_v1/plan.json",
+        "--case-id",
+        "highspeed_00",
+        "--profile",
+        "native_contact_matched",
+        "--source-freeze",
+        "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/cube_native_contact_paired8_preparation_v1/execution_source_freeze.json",
+        "--source-freeze-sha256",
+        "6b8bea7c3290be0f9ae61e1fd11b6fa7d2e5b1b54d7dcee0e890b4a79438c8e3",
+        "--output",
+        "/home/ubuntu/桌面/our-mani/runtime/framework/cube_native_contact_worker_20261104_v1/native_contact_matched/highspeed_00",
+        "--execute"
+      ],
+      "json_checks": [
+        {
+          "path": "/home/ubuntu/桌面/our-mani/runtime/framework/cube_native_contact_worker_20261104_v1/native_contact_matched/highspeed_00/worker_exit.json",
+          "fields": {
+            "exit_code": 0,
+            "native_closed": true,
+            "result_recorded": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "native_contact_matched_highspeed_01",
+      "output": "/home/ubuntu/桌面/our-mani/runtime/framework/cube_native_contact_worker_20261104_v1/native_contact_matched/highspeed_01",
+      "native": true,
+      "cpu": false,
+      "argv": [
+        "scripts/launch_cube_native_contact_worker_20261104_v1.py",
+        "--plan",
+        "/home/ubuntu/桌面/our-mani/config/framework/cube_native_contact_worker_20261104_v1/plan.json",
+        "--case-id",
+        "highspeed_01",
+        "--profile",
+        "native_contact_matched",
+        "--source-freeze",
+        "/home/ubuntu/桌面/our-mani/artifacts/framework/local_mpc_20261102/cube_native_contact_paired8_preparation_v1/execution_source_freeze.json",
+        "--source-freeze-sha256",
+        "6b8bea7c3290be0f9ae61e1fd11b6fa7d2e5b1b54d7dcee0e890b4a79438c8e3",
+        "--output",
+        "/home/ubuntu/桌面/our-mani/runtime/framework/cube_native_contact_worker_20261104_v1/native_contact_matched/highspeed_01",
+        "--execute"
+      ],
+      "json_checks": [
+        {
+          "path": "/home/ubuntu/桌面/our-mani/runtime/framework/cube_native_contact_worker_20261104_v1/native_contact_matched/highspeed_01/worker_exit.json",
+          "fields": {
+            "exit_code": 0,
+            "native_closed": true,
+            "result_recorded": true
+          }
+        }
+      ]
+    }
+  ],
+  "python": "/home/ubuntu/桌面/our-mani/.conda-env/bin/python",
+  "stage_timeout_seconds": {
+    "native_contact_legacy_ordinary_00": 900,
+    "native_contact_legacy_ordinary_01": 900,
+    "native_contact_legacy_highspeed_00": 900,
+    "native_contact_legacy_highspeed_01": 900,
+    "native_contact_matched_ordinary_00": 900,
+    "native_contact_matched_ordinary_01": 900,
+    "native_contact_matched_highspeed_00": 900,
+    "native_contact_matched_highspeed_01": 900
+  },
+  "stop_grace_seconds": 30,
+  "poll_seconds": 0.5,
+  "wait_timeout_seconds": 900,
+  "CF_output_root": "/home/ubuntu/桌面/our-mani/runtime/framework/cube_native_contact_worker_20261104_v1"
+}
